@@ -175,48 +175,10 @@
       width: 100%;
       box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     }
-    .gsmart-cta-card {
-      background: linear-gradient(90deg, #0b0c10 80%, #ffeb3b 120%);
-      color: #ffeb3b;
-      border-radius: 18px;
-      padding: 2.7rem 2rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .gsmart-cta-card h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #ffeb3b;
-      letter-spacing: 1px;
-    }
-    .gsmart-cta-card p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-    .gsmart-cta-card .btn-cta {
-      font-size: 1.1rem;
-      padding: 0.75rem 2.5rem;
-      background: #ffeb3b;
-      color: #0b0c10;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(255,235,59,0.13);
-      transition: background 0.3s, color 0.3s, transform 0.2s;
-    }
-    .gsmart-cta-card .btn-cta:hover {
-      background: #fffde7;
-      color: #0b0c10;
-      transform: translateY(-2px) scale(1.04);
-    }
     @media (max-width: 768px) {
       .gsmart-card-header h1 { font-size: 1.5rem; }
       .gsmart-card-header h2 { font-size: 1.2rem; }
-      .gsmart-card-content, .gsmart-card-header, .gsmart-cta-card { padding: 1.2rem 0.7rem; }
+      .gsmart-card-content, .gsmart-card-header { padding: 1.2rem 0.7rem; }
       .gsmart-tech-card, .gsmart-support-card { flex-direction: column; gap: 1rem; }
       .gsmart-feature-list { gap: 0.7rem; }
     }
@@ -379,9 +341,9 @@
   </div>
 
   <!-- CTA Card -->
-  <div class="gsmart-cta-card container" data-aos="fade-up">
-    <h3><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-SMART בפעולה?</h3>
-    <p>צור קשר עם צוות דרונר ונשמח להדגים את המערכת אצלך באתר.</p>
+  <div class="cta-card container" data-aos="fade-up"><!-- shared CTA design -->
+    <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-SMART בפעולה?</h3>
+    <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את המערכת אצלך באתר.</p>
     <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
   </div>
 <!-- Footer for pages/products folder -->
