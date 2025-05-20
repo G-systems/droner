@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>G-DOCK PRO – תחנות D135 ו-D100</title>
+  <title>G-DOCK – תחנות D135 ו-D100</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
     body { background: #f7f7f7; }
-    .gdock-card {
+    .gsmart-card, .gdock-card, .djidock-card {
       background: #fff;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
@@ -20,70 +20,62 @@
       position: relative;
       transition: box-shadow 0.2s;
     }
-    .gdock-card:hover {
+    .gsmart-card:hover, .gdock-card:hover, .djidock-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,0.16);
     }
-    /* Hero style with background image */
-    .gdock-card-header {
+    .gsmart-card-header, .gdock-card-header, .djidock-card-header {
       position: relative;
       color: #fff;
-      padding: 2.7rem 2rem 1.5rem 2rem;
+      padding: 2.5rem 2rem 1.5rem 2rem;
       text-align: center;
-      overflow: hidden; /* allow image to fill */
+      overflow: hidden;
     }
-    .gdock-card-header .image-container {
+    .gsmart-card-header .image-container,
+    .gdock-card-header .image-container,
+    .djidock-card-header .image-container {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+      top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
     }
-    .gdock-card-header .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.55); /* darken for readability */
+    .gsmart-card-header .image-container img,
+    .gdock-card-header .image-container img,
+    .djidock-card-header .image-container img {
+      width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);
     }
-    .gdock-card-header .header-content {
+    .gsmart-card-header .header-content,
+    .gdock-card-header .header-content,
+    .djidock-card-header .header-content {
       position: relative;
       z-index: 2;
     }
-    .gdock-card-header h1 {
-      color: #ffeb3b;
-      font-size: 2.7rem;
+    .gsmart-card-header h1, .gdock-card-header h1, .djidock-card-header h1,
+    .gsmart-card-header h2, .gdock-card-header h2, .djidock-card-header h2 {
       font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
-      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      color: #ffeb3b;
+      text-shadow: 0 2px 8px #0b0c10;
     }
-    .gdock-card-header p {
-      font-size: 1.3rem;
+    .gsmart-card-header h1, .gdock-card-header h1, .djidock-card-header h1 { font-size: 2.5rem; }
+    .gsmart-card-header h2, .gdock-card-header h2, .djidock-card-header h2 { font-size: 2rem; }
+    .gsmart-card-header p, .gdock-card-header p, .djidock-card-header p {
       color: #fff;
-      max-width: 600px;
-      margin: 0 auto;
-      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      text-shadow: 0 2px 8px #0b0c10;
     }
-    .gdock-card-img {
-      width: 100%;
-      object-fit: cover;
-      max-height: 340px;
-      border-radius: 0 0 22px 22px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    }
-    .gdock-card-content {
+    .gsmart-card-content, .gdock-card-content, .djidock-card-content {
       padding: 2rem 2rem 1.5rem 2rem;
       font-size: 1.15rem;
       color: #222;
     }
-    .gdock-feature-list {
+    .gsmart-feature-list, .gdock-feature-list, .djidock-feature-list {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       justify-content: center;
       margin: 2rem 0 0 0;
     }
-    .gdock-feature-item {
+    .gsmart-feature-item, .gdock-feature-item, .djidock-feature-item {
       background: #fffde7;
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(255,235,59,0.08);
@@ -94,18 +86,18 @@
       text-align: center;
       transition: background 0.2s, transform 0.2s;
     }
-    .gdock-feature-item:hover {
+    .gsmart-feature-item:hover, .gdock-feature-item:hover, .djidock-feature-item:hover {
       background: #ffeb3b;
       color: #000;
       transform: translateY(-4px) scale(1.04);
     }
-    .gdock-feature-icon {
+    .gsmart-feature-icon, .gdock-feature-icon, .djidock-feature-icon {
       font-size: 2.2rem;
       color: #ffeb3b;
       margin-bottom: 0.7rem;
       display: block;
     }
-    .gdock-advantage-card {
+    .gsmart-advantage-card, .gdock-advantage-card, .djidock-advantage-card {
       background: linear-gradient(120deg, #ffeb3b 60%, #fff 100%);
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -116,32 +108,56 @@
       gap: 1.5rem;
       transition: box-shadow 0.2s;
     }
-    .gdock-advantage-card .fa {
+    .gsmart-advantage-card .fa, .gdock-advantage-card .fa, .djidock-advantage-card .fa {
       font-size: 2.5rem;
       color: #0b0c10;
       min-width: 48px;
     }
-    .gdock-gallery {
+    .gsmart-support-card, .djidock-support-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
       display: flex;
-      gap: 1.5rem;
+      align-items: center;
+      gap: 2rem;
       flex-wrap: wrap;
-      justify-content: center;
       margin-bottom: 2rem;
     }
-    .gdock-gallery img {
+    .gsmart-support-card img, .djidock-support-card img {
       border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      width: 320px;
-      height: 180px;
-      object-fit: cover;
-      background: #000;
+      max-width: 200px;
+      width: 100%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    }
+    .cta-card {
+      background: #fffde7;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 2rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .btn-cta {
+      background: linear-gradient(90deg, #ffeb3b 0%, #ffc107 100%);
+      color: #000;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 4px 15px rgba(255,235,59,0.13);
+      transition: all 0.3s ease;
+    }
+    .btn-cta:hover {
+      background: linear-gradient(90deg, #ffc107 0%, #ffeb3b 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,235,59,0.18);
     }
     @media (max-width: 768px) {
-      .gdock-card-header h1 { font-size: 1.5rem; }
-      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem; }
-      .gdock-feature-list { gap: 0.7rem; }
-      .gdock-gallery { gap: 0.7rem; }
-      .gdock-gallery img { width: 100%; height: 120px; }
+      .gsmart-card-header h1, .gdock-card-header h1, .djidock-card-header h1 { font-size: 1.5rem; }
+      .gsmart-card-header h2, .gdock-card-header h2, .djidock-card-header h2 { font-size: 1.2rem; }
+      .gsmart-card-content, .gdock-card-content, .djidock-card-content,
+      .gsmart-card-header, .gdock-card-header, .djidock-card-header { padding: 1.2rem 0.7rem; }
+      .gsmart-feature-list, .gdock-feature-list, .djidock-feature-list { gap: 0.7rem; }
+      .gsmart-advantage-card, .gdock-advantage-card, .djidock-advantage-card,
+      .gsmart-support-card, .djidock-support-card { flex-direction: column; gap: 1rem; }
     }
   </style>
 </head>
@@ -193,10 +209,9 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- Hero Card -->
-   <div class="gdock-card mt-5" data-aos="fade-up">
+  <!-- HERO -->
+  <div class="gdock-card mt-5" data-aos="fade-up">
     <div class="gdock-card-header">
-      <!-- Background image for hero card -->
       <div class="image-container">
         <img src="../../assets/images/hero-bg.jpg" alt="רקע G-DOCK" />
       </div>
@@ -205,82 +220,149 @@
         <p>תחנות עגינה אוטונומיות לרחפני Matrice 300/350 ו-Matrice 30 – אינטגרציה מלאה, אמינות גבוהה, שליטה קלה</p>
       </div>
     </div>
-  </div>
-
-  <!-- D135 Card -->
-  <div class="gdock-card" data-aos="fade-up">
-    <div class="gdock-card-content">
-      <h2 class="mb-3"><i class="fas fa-cube ms-2"></i>תחנת D135 – Matrice 300/350</h2>
-      <p>
-        תחנת <b>D135</b> היא תחנת עגינה מקצועית ואוטונומית, המותאמת במיוחד לדגמי Matrice 300 RTK ו-Matrice 350 RTK של DJI. התחנה כוללת מערכות טעינה אוטומטית, בקרת טמפרטורה חכמה, חיישנים מטאורולוגיים מובנים, אנטנת RTK, וניטור בזמן אמת של סטטוס התחנה.
-      </p>
-      <div class="gdock-feature-list">
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
-          <b>מידות</b>
-          <div>1645×1290×1575 מ"מ (סגור), 1645×1290×962 מ"מ (פתוח)</div>
+  <!-- D135 & D100 Cards Section -->
+  <div class="container my-5" data-aos="fade-up">
+    <div class="row g-4 justify-content-center align-items-stretch">
+      <!-- D135 Card -->
+      <div class="col-lg-6 col-md-12">
+        <div class="gdock-card h-100">
+          <div class="gdock-card-content">
+            <h2 class="mb-3"><i class="fas fa-cube ms-2"></i>תחנת D135 – Matrice 300/350</h2>
+            <p>
+              תחנת <b>D135</b> היא תחנת עגינה מקצועית ואוטונומית, המותאמת במיוחד לדגמי Matrice 300 RTK ו-Matrice 350 RTK של DJI. התחנה כוללת מערכות טעינה אוטומטית, בקרת טמפרטורה חכמה, חיישנים מטאורולוגיים מובנים, אנטנת RTK, וניטור בזמן אמת של סטטוס התחנה.
+            </p>
+            <div class="gdock-feature-list flex-wrap">
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
+                <b>מידות</b>
+                <div>1645×1290×1575 מ"מ (סגור), 1645×1290×962 מ"מ (פתוח)</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-weight-hanging"></i></span>
+                <b>משקל</b>
+                <div>275 ק"ג</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon">
+                  <i class="fas fa-location-slash"></i>
+                  <i class="fas fa-signal ms-2"></i>
+                </span>
+                <b>טיסה ללא GPS</b>
+                <div>יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
+                <b>תקן עמידות</b>
+                <div>IP54 – עמידות גבוהה לתנאי סביבה קשים</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-thermometer-half"></i></span>
+                <b>בקרת טמפרטורה</b>
+                <div>חכמה ואוטומטית</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
+                <b>טעינה אוטומטית</b>
+                <div>הטענה מהירה של הרחפן</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-satellite-dish"></i></span>
+                <b>ניטור בזמן אמת</b>
+                <div>סטטוס התחנה, חיישנים מטאורולוגיים, אנטנת RTK</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-weight-hanging"></i></span>
-          <b>משקל</b>
-          <div>275 ק"ג</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
-          <b>תקן עמידות</b>
-          <div>IP54 – עמידות גבוהה לתנאי סביבה קשים</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-thermometer-half"></i></span>
-          <b>בקרת טמפרטורה</b>
-          <div>חכמה ואוטומטית</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
-          <b>טעינה אוטומטית</b>
-          <div>הטענה מהירה של הרחפן</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-satellite-dish"></i></span>
-          <b>ניטור בזמן אמת</b>
-          <div>סטטוס התחנה, חיישנים מטאורולוגיים, אנטנת RTK</div>
+      </div>
+      <!-- D100 Card -->
+      <div class="col-lg-6 col-md-12">
+        <div class="gdock-card h-100">
+          <div class="gdock-card-content">
+            <h2 class="mb-3"><i class="fas fa-cube ms-2"></i>תחנת D100 – Matrice 30</h2>
+            <p>
+              תחנת <b>D100</b> קומפקטית, מיועדת לעבודה עם רחפן DJI Matrice 30 למשימות ניטור מהירות ויעילות. כוללת תפעול אוטונומי מלא, טעינה אוטומטית, עמידות גבוהה (IP55), ומערכות ניטור עצמי והתראות אוטומטיות.
+            </p>
+            <div class="gdock-feature-list flex-wrap">
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
+                <b>טעינה אוטומטית</b>
+                <div>מערכת טעינה מהירה ואוטונומית</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
+                <b>תקן עמידות</b>
+                <div>IP55 – עמידות גבוהה בתנאי סביבה מגוונים</div>
+              </div>
+              <div class="gdock-feature-item">
+                <span class="gdock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
+                <b>ניטור והתראות</b>
+                <div>מערכות ניטור עצמי והתראות אוטומטיות</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- D100 Card -->
-  <div class="gdock-card" data-aos="fade-up">
-    <div class="gdock-card-content">
-      <h2 class="mb-3"><i class="fas fa-cube ms-2"></i>תחנת D100 – Matrice 30</h2>
-      <p>
-        תחנת <b>D100</b> קומפקטית, מיועדת לעבודה עם רחפן DJI Matrice 30 למשימות ניטור מהירות ויעילות. כוללת תפעול אוטונומי מלא, טעינה אוטומטית, עמידות גבוהה (IP55), ומערכות ניטור עצמי והתראות אוטומטיות.
-      </p>
-      <div class="gdock-feature-list">
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
-          <b>טעינה אוטומטית</b>
-          <div>מערכת טעינה מהירה ואוטונומית</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
-          <b>תקן עמידות</b>
-          <div>IP55 – עמידות גבוהה בתנאי סביבה מגוונים</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
-          <b>ניטור והתראות</b>
-          <div>מערכות ניטור עצמי והתראות אוטומטיות</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Advantages Cards -->
+  <style>
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+    }
+    .gdock-feature-item {
+      background: #fffde7;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.2rem 1rem;
+      min-width: 180px;
+      max-width: 260px;
+      flex: 1 1 180px;
+      text-align: center;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      color: #222;
+      margin-bottom: 0;
+    }
+    /* Hover: light yellow background (#ffeb3b), dark text */
+    .gdock-feature-item:hover {
+      background: #ffeb3b;
+      color: #000;
+      transform: translateY(-4px) scale(1.04);
+    }
+    .gdock-feature-item:hover .gdock-feature-icon {
+      color: #000;
+    }
+    @media (max-width: 991px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 140px;
+        max-width: 100%;
+        padding: 1rem 0.5rem;
+        font-size: 0.98rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-feature-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 0;
+        width: 100%;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+  <!-- יתרונות ללקוח -->
   <div class="container" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
     <div class="gdock-advantage-card">
-      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-user-cog"></i>
       <div>
         <b>פתרון מקצועי ומותאם</b><br>
         תחנות עגינה ייעודיות לדגמי Matrice, עם אינטגרציה מלאה למערכות שליטה.
@@ -309,142 +391,187 @@
     </div>
   </div>
 
-  <!-- Video Card -->
-  <div class="gdock-card" data-aos="fade-up">
-    <div class="gdock-card-content text-center">
-      <h2 class="mb-4"><i class="fas fa-video ms-2"></i>הכירו את תחנות D135 ו-D100 בפעולה</h2>
-      <video controls class="w-100 rounded shadow" style="max-width: 700px;">
+  <!-- Video Section -->
+  <div class="container my-5" data-aos="fade-up">
+    <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>הכירו את תחנות D135 ו-D100 בפעולה</h2>
+    <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
+      <video controls class="w-100 h-100" poster="../../assets/images/dock-d135-thumb.jpg">
         <source src="../../assets/videos/dock-d135-demo.mp4" type="video/mp4">
         הדפדפן שלך אינו תומך בניגון וידאו.
       </video>
     </div>
   </div>
 
-  <!-- CTA Card -->
- <div class="cta-card container" data-aos="fade-up"><!-- shared CTA design -->
-    <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-DOCK PRO בפעולה?</h3>
-    <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
-    <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
+  <!-- Support Card -->
+  <div class="gsmart-support-card container" data-aos="fade-up">
+    <div>
+      <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
+      <p>
+        צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
+      </p>
+    </div>
+    <img src="../../assets/images/gsmart-support.jpg" alt="תמיכה טכנית G-DOCK">
   </div>
 
-  <!-- Footer for pages/products folder -->
-<footer class="main-footer-modern py-5">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
-        <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+  <!-- CTA Card -->
+<div class="cta-card container text-center" data-aos="fade-up" style="background: #fff;">
+  <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-DOCK בפעולה?</h3>
+  <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
+  <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
+</div>
+
+  <!-- Footer (same as g-smart.html) -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../../index.html" class="footer-link">בית</a>
+            <a href="../about.html" class="footer-link">אודות</a>
+            <a href="g-smart.html" class="footer-link">G-SMART</a>
+            <a href="dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="../contact.html" class="footer-link">צור קשר</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
-          <a href="../../index.html" class="footer-link">בית</a>
-          <a href="../about.html" class="footer-link">אודות</a>
-          <a href="g-smart.html" class="footer-link">G-SMART</a>
-          <a href="dock-d135.html" class="footer-link">G-DOCK</a>
-          <a href="g-control.html" class="footer-link">G-CONTROL</a>
-          <a href="../contact.html" class="footer-link">צור קשר</a>
-        </nav>
-      </div>
-      <div class="col-md-4 text-center text-md-start">
-        <div class="footer-contact mb-2">
-          <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
-            <i class="fa fa-phone ms-2"></i>052-387-6112
-          </a>
-        </div>
-        <div class="footer-contact mb-2">
-          <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
-            <i class="fa fa-envelope ms-2"></i>info@droner.co.il
-          </a>
-        </div>
-        <div class="footer-social">
-          <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
       </div>
     </div>
-    <hr class="footer-divider my-4">
-    <div class="text-center small footer-copyright">
-      &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
-    </div>
-  </div>
-  <style>
-    .main-footer-modern {
-      background: linear-gradient(120deg, #0b0c10 70%, #ffeb3b 120%);
-      color: #fff;
-      border-radius: 0 0 18px 18px;
-      box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
-      margin-top: 0;
-      font-family: 'Rubik', sans-serif;
-    }
-    .main-footer-modern .footer-logo {
-      background: #fff;
-      border-radius: 12px;
-      padding: 0.5rem 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    }
-    .main-footer-modern .footer-links {
-      gap: 1.2rem !important;
-    }
-    .main-footer-modern .footer-link {
-      color: #fff;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 1.08rem;
-      transition: color 0.2s;
-      position: relative;
-      padding-bottom: 2px;
-    }
-    .main-footer-modern .footer-link:hover,
-    .main-footer-modern .footer-link:focus {
-      color: #ffeb3b;
-      text-decoration: underline;
-    }
-    .main-footer-modern .footer-contact {
-      color: #fffde7;
-      font-size: 1rem;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .main-footer-modern .footer-contact i {
-      color: #ffeb3b;
-      font-size: 1.1em;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social {
-      margin-top: 0.5rem;
-    }
-    .main-footer-modern .footer-social-link {
-      color: #fff;
-      margin-left: 0.7rem;
-      font-size: 1.35rem;
-      transition: color 0.2s, transform 0.2s;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social-link:hover {
-      color: #ffeb3b;
-      transform: scale(1.15);
-    }
-    .main-footer-modern .footer-divider {
-      border-color: #ffeb3b;
-      opacity: 0.7;
-    }
-    @media (max-width: 768px) {
+    <style>
       .main-footer-modern {
-        border-radius: 0;
-        padding: 2rem 0.5rem;
+        background: linear-gradient(120deg, #0b0c10 70%, #ffeb3b 120%);
+        color: #fff;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
+        margin-top: 0;
+        font-family: 'Rubik', sans-serif;
+      }
+      .main-footer-modern .footer-logo {
+        background: #fff;
+        border-radius: 12px;
+        padding: 0.5rem 1.5rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       }
       .main-footer-modern .footer-links {
-        gap: 0.7rem !important;
+        gap: 1.2rem !important;
       }
       .main-footer-modern .footer-link {
-        font-size: 1rem;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 1.08rem;
+        transition: color 0.2s;
+        position: relative;
+        padding-bottom: 2px;
       }
-    }
-  </style>
-</footer>
+      .main-footer-modern .footer-link:hover,
+      .main-footer-modern .footer-link:focus {
+        color: #ffeb3b;
+        text-decoration: underline;
+      }
+      .main-footer-modern .footer-contact {
+        color: #fffde7;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .main-footer-modern .footer-contact i {
+        color: #ffeb3b;
+        font-size: 1.1em;
+        vertical-align: middle;
+      }
+      .main-footer-modern .footer-social {
+        margin-top: 0.5rem;
+      }
+      .main-footer-modern .footer-social-link {
+        color: #fff;
+        margin-left: 0.7rem;
+        font-size: 1.35rem;
+        transition: color 0.2s, transform 0.2s;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .main-footer-modern .footer-social-link:hover {
+        color: #ffeb3b;
+        transform: scale(1.15);
+      }
+      .main-footer-modern .footer-divider {
+        border-color: #ffeb3b;
+        opacity: 0.7;
+      }
+      @media (max-width: 768px) {
+        .main-footer-modern {
+          border-radius: 0;
+          padding: 2rem 0.5rem;
+        }
+        .main-footer-modern .footer-links {
+          gap: 0.7rem !important;
+        }
+        .main-footer-modern .footer-link {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">כניסת לקוחות</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">אימייל</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">סיסמה</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">התחבר</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60">
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -456,6 +583,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
       const toggleButton = document.getElementById('translateToggle');
       if (!toggleButton) return;
       let lang = localStorage.getItem('siteLang') || 'he';
