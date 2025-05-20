@@ -1,0 +1,76 @@
+html[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Rubik', 'Poppins', sans-serif;
+    transition: direction 0.5s, text-align 0.5s;
+}
+
+html[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+    font-family: 'Rubik', 'Poppins', sans-serif;
+    transition: direction 0.5s, text-align 0.5s;
+}
+
+button, nav a {
+    transition: transform 0.3s, box-shadow 0.3s, background 0.5s, color 0.5s;
+    font-family: 'Rubik', 'Poppins', sans-serif;
+}
+
+/* Temporarily disable hover effects */
+button:hover, nav a:hover {
+    /* transform: translateY(-3px) rotate(1deg) scale(1.05); */
+    /* box-shadow: 0 4px 16px rgba(255, 49, 49, 0.3); */
+}
+
+.cyber-effect {
+    position: relative;
+    isolation: isolate;
+}
+
+.cyber-effect::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(255,65,65,0.1) 45%,
+        rgba(255,65,65,0.2) 50%,
+        rgba(255,65,65,0.1) 55%,
+        transparent 60%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.8s;
+    z-index: -1;
+}
+
+.cyber-effect:hover::before {
+    transform: translateX(100%);
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 15px rgba(255,65,65,0.2); }
+    50% { box-shadow: 0 0 25px rgba(255,65,65,0.4); }
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    left: 0;
+    width: 100%;
+}

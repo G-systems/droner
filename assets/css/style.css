@@ -1,0 +1,381 @@
+/* Root Variables */
+:root {
+  --color-black: #0b0c10;
+  --color-yellow: #ffeb3b;
+  --color-gray: #B0B0B0;
+  --color-light-gray: #F3F3F3;
+  --color-white: #ffffff;
+  --font-main: 'Rubik', sans-serif;
+  --radius: 8px;
+  --transition: 0.3s ease;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+}
+
+/* Global Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  background: var(--color-light-gray);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+  color: var(--color-black);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+p, li {
+  color: var(--color-black);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-black);
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: var(--color-black);
+  transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-yellow);
+  background-color: rgba(255, 214, 0, 0.10);
+  border-radius: var(--radius);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  min-width: unset !important;
+  width: max-content !important;
+  max-width: 240px;
+  font-size: 0.95rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  text-align: left;
+  padding: 0.25rem 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 1050;
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  white-space: nowrap;
+  color: var(--color-black);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+/* Dropdown Submenu */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > a {
+  padding-right: 1.5rem;
+  padding-left: 0.75rem;
+}
+
+.dropdown-submenu > a::after {
+  content: "▶";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--color-yellow);
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  border-radius: var(--radius);
+  z-index: 1050;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Language Toggle Button */
+.lang-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#translateToggle, .translate-btn {
+  font-size: 0.9rem;
+  padding: 5px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+#translateToggle:hover, .translate-btn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border-color: var(--color-yellow);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--color-white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section .video-container,
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section .video-container {
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-section video {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+  background: #000;
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: none;
+}
+
+/* Hero Text */
+.hero-section h1,
+.hero-section .display-4 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-yellow);
+  text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  letter-spacing: 1px;
+}
+
+.hero-section p,
+.hero-section .lead {
+  font-size: 1.35rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+  text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+}
+
+.hero-section .btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--color-yellow);
+  color: var(--color-black);
+  border: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.hero-section .btn:hover {
+  background: var(--color-black);
+  color: var(--color-yellow);
+}
+
+/* Responsive hero section padding for smaller screens */
+@media (max-width: 767px) {
+  .hero-section .hero-content {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  .hero-section {
+    min-height: 340px;
+  }
+  .hero-section h1,
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+  .hero-section p,
+  .hero-section .lead {
+    font-size: 1.05rem;
+  }
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Section backgrounds */
+.bg-dark,
+section.bg-dark {
+  background: var(--color-black) !important;
+  color: var(--color-yellow) !important;
+}
+
+.bg-dark *,
+section.bg-dark * {
+  color: var(--color-yellow) !important;
+  border-color: var(--color-yellow) !important;
+}
+
+.bg-dark .btn,
+section.bg-dark .btn {
+  color: var(--color-black) !important;
+  background: var(--color-yellow) !important;
+  border-color: var(--color-yellow) !important;
+}
+
+.bg-dark .btn:hover,
+section.bg-dark .btn:hover {
+  background: var(--color-white) !important;
+  color: var(--color-black) !important;
+  border-color: var(--color-white) !important;
+}
+
+.bg-light,
+section.bg-light {
+  background: var(--color-white) !important;
+  color: var(--color-black) !important;
+}
+
+/* Cards & Features */
+.card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-gray);
+  background: var(--color-white);
+}
+
+.card-header, .card-footer {
+  background: var(--color-light-gray);
+  color: var(--color-black);
+}
+
+/* Buttons */
+.btn-yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn-yellow:hover {
+  background-color: var(--color-black);
+  color: var(--color-yellow);
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+  background: var(--color-white);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-yellow);
+  color: var(--color-black);
+  border-color: var(--color-yellow);
+}
+
+/* List Groups */
+.list-group-item {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: none;
+}
+
+.bg-dark .list-group-item,
+section.bg-dark .list-group-item {
+  background: transparent;
+  color: var(--color-yellow) !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-black);
+  color: var(--color-yellow);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--color-yellow);
+}
+
+footer a:hover {
+  color: var(--color-black);
+}
+
+/* Utility: Add top padding for hero on non-index pages */
+.hero-section-padding {
+  padding-top: 90px !important;
+}

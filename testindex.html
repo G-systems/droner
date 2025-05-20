@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemples de Contenus Stratégiques pour l'Influence en France</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #e9f0ff, #fdfdff);
+      color: #222;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #18345d;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+    .intro {
+      text-align: center;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .filters button {
+      background: #18345d;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .filters button:hover {
+      background: #28588a;
+    }
+    .filters button.active {
+      background: #f59e0b;
+      color: #fff;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .lang-fr, .lang-en, .lang-he {
+      margin-bottom: 0.7rem;
+    }
+    .lang-fr::before {
+      content: "🇫🇷 ";
+    }
+    .lang-en::before {
+      content: "🇬🇧 ";
+    }
+    .lang-he::before {
+      content: "🇮🇱 ";
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .download-pdf-btn {
+      background: #18345d;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: block;
+      margin: 0.5rem auto 2rem auto;
+      width: max-content;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      text-align: center;
+    }
+    .download-pdf-btn:hover {
+      background: #28588a;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Exemples de Contenus Stratégiques pour l'Influence en France</h1>
+    <p class="intro">Ce document présente un ensemble d'exemples de posts, résultats de recherche et commentaires simulés, en français, anglais et hébreu, destinés à illustrer des tactiques narratives contre l'antisémitisme, l'islamisme radical et l'influence de la gauche radicale importée.</p>
+
+    <div class="filters">
+      <button data-filter="all" class="active">Tout</button>
+      <button data-filter="fr">Français</button>
+      <button data-filter="en">English</button>
+      <button data-filter="he">עברית</button>
+    </div>
+
+    <section>
+      <h2>Posts simulés (réseaux sociaux)</h2>
+      <div class="card">
+        <p class="lang-fr"><strong>La mémoire de la Shoah nous oblige :</strong> ne laissons pas l'antisémitisme se cacher derrière un discours "antisioniste" prétendument progressiste. #PlusJamaisCa #Antisemitisme #StopLaHaine</p>
+        <p class="lang-en"><strong>The memory of the Holocaust compels us:</strong> let’s not allow anti-Semitism to hide behind a supposedly progressive "anti-Zionist" discourse. #NeverAgain #Antisemitism #StopHate</p>
+        <p class="lang-he"><strong>זיכרון השואה מחייב אותנו:</strong> אל לנו לאפשר לאנטישמיות להתחבא מאחורי שיח "אנטי-ציוני" לכאורה פרוגרסיבי. #לעולםלאעוד #אנטישמיות #דילשנאה</p>
+      </div>
+
+      <div class="card">
+        <p class="lang-fr"><strong>Des ONG "progressistes" en France</strong> critiquent Israël sans relâche au nom des droits humains, mais acceptent discrètement des financements venus de monarchies du Golfe. Hypocrisie totale. #DeuxPoidsDeuxMesures #ONG</p>
+        <p class="lang-en"><strong>Some "progressive" NGOs in France</strong> criticize Israel constantly in the name of human rights, yet quietly accept funds from Gulf monarchies. Total hypocrisy. #DoubleStandards #NGO</p>
+        <p class="lang-he"><strong>ארגונים "פרוגרסיביים" בצרפת</strong> תוקפים את ישראל בשם זכויות האדם, אך מקבלים כסף ממדינות המפרץ. צביעות מוחלטת. #סטנדרטים_כפולים #NGO</p>
+      </div>
+
+      <!-- More cards can follow -->
+      <button class="download-pdf-btn" onclick="downloadSectionAsPDF(0)">📄 Télécharger cette section en PDF</button>
+    </section>
+
+    <section>
+      <h2>Extraits simulés (résultats Google)</h2>
+      <div class="card">
+        <p class="lang-fr"><em>L'antisionisme est-il une forme d'antisémitisme ? – Analyse</em><br>Analyse des racines idéologiques de l'antisionisme et sa relation étroite avec l'antisémitisme moderne en France.</p>
+        <p class="lang-en"><em>Is anti-Zionism a form of anti-Semitism? – Analysis</em><br>Analyzing the ideological roots of anti-Zionism and how it blends with modern anti-Semitism in France.</p>
+        <p class="lang-he"><em>האם האנטי-ציונות היא אנטישמיות במסווה? – ניתוח</em><br>ניתוח של השורשים האידיאולוגיים של אנטי-ציונות והקשרים הישירים לאנטישמיות המודרנית בצרפת.</p>
+      </div>
+      <button class="download-pdf-btn" onclick="downloadSectionAsPDF(1)">📄 Télécharger cette section en PDF</button>
+    </section>
+
+    <section>
+      <h2>Commentaires simulés (forums / médias)</h2>
+      <div class="card">
+        <p class="lang-fr"><strong>Ma grand-mère a survécu à Auschwitz.</strong> Aujourd'hui, voir des croix gammées et entendre "Mort aux Juifs" dans des manifs "antisionistes" me donne envie de vomir. C’est inacceptable.</p>
+        <p class="lang-en"><strong>My grandmother survived Auschwitz.</strong> Today, hearing "Death to Jews" at anti-Zionist rallies makes me sick. This is unacceptable.</p>
+        <p class="lang-he"><strong>סבתא שלי שרדה את אושוויץ.</strong> לראות היום הפגנות שקוראות "מוות ליהודים" בשם אנטי-ציונות גורם לי בחילה. זה בלתי נסבל.</p>
+      </div>
+      <button class="download-pdf-btn" onclick="downloadSectionAsPDF(2)">📄 Télécharger cette section en PDF</button>
+    </section>
+
+    <footer>
+      <p>⚠️ Tous les textes sont fictifs, créés à des fins d'analyse et de simulation stratégique.</p>
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.filters button');
+    const frEls = document.querySelectorAll('.lang-fr');
+    const enEls = document.querySelectorAll('.lang-en');
+    const heEls = document.querySelectorAll('.lang-he');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.dataset.filter;
+        const showAll = lang === 'all';
+        frEls.forEach(e => e.style.display = showAll || lang === 'fr' ? 'block' : 'none');
+        enEls.forEach(e => e.style.display = showAll || lang === 'en' ? 'block' : 'none');
+        heEls.forEach(e => e.style.display = showAll || lang === 'he' ? 'block' : 'none');
+      });
+    });
+
+    async function downloadSectionAsPDF(sectionIndex) {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      const section = document.querySelectorAll('section')[sectionIndex];
+      if (!section) return;
+      // Extract text content from the section, preserving line breaks
+      let text = '';
+      // Get the section heading
+      const heading = section.querySelector('h2');
+      if (heading) {
+        text += heading.textContent + '\n\n';
+      }
+      // Get all paragraphs inside cards and concatenate their text content
+      const cards = section.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.querySelectorAll('p').forEach(p => {
+          text += p.textContent + '\n\n';
+        });
+      });
+
+      // Split text into lines that fit the page width
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const margin = 10;
+      const maxLineWidth = pageWidth - margin * 2;
+      const lines = doc.splitTextToSize(text, maxLineWidth);
+
+      let cursorY = margin;
+      const lineHeight = 10;
+      for (let i = 0; i < lines.length; i++) {
+        if (cursorY > doc.internal.pageSize.getHeight() - margin) {
+          doc.addPage();
+          cursorY = margin;
+        }
+        doc.text(lines[i], margin, cursorY);
+        cursorY += lineHeight;
+      }
+
+      doc.save(`section_${sectionIndex + 1}.pdf`);
+    }
+  </script>
+</body>
+</html>
+<!-- This HTML document is a simulation of strategic content examples for influence in France, focusing on anti-Semitism, radical Islamism, and radical leftist influence. The content is fictional and created for analysis and strategic simulation purposes. -->
+<!-- The document includes sections for simulated posts, search results, and comments, with a filter system to view content in different languages (French, English, Hebrew). The design is clean and modern, with a focus on readability and user engagement. -->
+<!-- The footer includes a disclaimer about the fictional nature of the content. -->
+<!-- The JavaScript at the end handles the filter functionality, allowing users to toggle between different language views. -->
+<!-- The CSS styles are embedded within the document for simplicity, ensuring a cohesive look and feel across all sections. -->
+<!-- The document is structured with semantic HTML5 elements, ensuring good accessibility and SEO practices. -->
+<!-- The use of flexbox for layout and responsive design ensures that the content is easily viewable on various screen sizes. -->

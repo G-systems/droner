@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>אודות DRONER – מערכות אבטחה אוויריות</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: 'Rubik', sans-serif; background: #f8f9fa; }
+    .about-hero {
+      position: relative;
+      background: linear-gradient(120deg, #0b0c10 65%, #ffeb3b 100%);
+      color: #fff;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .about-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .about-hero h1 {
+      color: #ffeb3b;
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 2px;
+      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .about-hero p {
+      font-size: 1.3rem;
+      color: #fff;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .about-section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+      padding: 2.7rem 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-section h2 {
+      color: #0b0c10;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: right;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .about-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      z-index: 1;
+      position: relative;
+    }
+    .about-section ul li {
+      position: relative;
+      padding-right: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+      border-radius: 8px;
+    }
+    .about-section ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #ffeb3b;
+      position: absolute;
+      right: 0;
+      top: 0.1em;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    .about-section ul li:hover {
+      background: #fffde7;
+    }
+    .about-section ul li:hover::before {
+      color: #0b0c10;
+    }
+    .about-img,
+    .about-video {
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      margin-bottom: 1.5rem;
+      width: 100%;
+      object-fit: cover;
+    }
+    .about-video {
+      background: #000;
+      min-height: 220px;
+    }
+    .about-collab-logos {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0 1rem 0;
+    }
+    .about-collab-logos img {
+      height: 48px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.5rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin-bottom: 0.5rem;
+      transition: transform 0.2s;
+    }
+    .about-collab-logos img:hover {
+      transform: scale(1.07) rotate(-2deg);
+    }
+    .about-gallery-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .about-gallery-row img,
+    .about-gallery-row video {
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      width: 320px;
+      height: 180px;
+      object-fit: cover;
+      background: #000;
+    }
+    .about-cta {
+      background: linear-gradient(90deg, #0b0c10 80%, #ffeb3b 120%);
+      color: #ffeb3b;
+      border-radius: 18px;
+      padding: 2.7rem 2rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-cta h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffeb3b;
+      letter-spacing: 1px;
+      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .about-cta p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .about-cta .btn-cta {
+      font-size: 1.1rem;
+      padding: 0.75rem 2.5rem;
+      background: #ffeb3b;
+      color: #0b0c10;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255,235,59,0.13);
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+    .about-cta .btn-cta:hover {
+      background: #fffde7;
+      color: #0b0c10;
+      transform: translateY(-2px) scale(1.04);
+    }
+    @media (max-width: 768px) {
+      .about-hero h1 { font-size: 1.5rem; }
+      .about-section, .about-cta { padding: 1.5rem 1rem; }
+      .about-collab-logos { gap: 1rem; }
+      .about-gallery-row { gap: 0.7rem; }
+      .about-gallery-row img, .about-gallery-row video { width: 100%; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top text-dark shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
+        <img src="../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="40" />
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">English</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">בית</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">אודות</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              המוצרים שלנו
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="products/g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="products/g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="media.html">מדיה</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">קריירה בדרונר</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">תמיכה מרחוק</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> כניסה
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section -->
+  <section class="about-hero" style="background: url('../assets/images/about-hero-bg.jpg') center center/cover no-repeat; min-height: 340px; display: flex; align-items: center; justify-content: center; position: relative;">
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 340px; padding-top: 80px;">
+      <div class="text-center" data-aos="fade-up">
+        <h1 style="color: #fff; font-size: 2.7rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 0 4px 24px rgba(0,0,0,0.45); letter-spacing: 2px; display: flex; flex-direction: row; align-items: center; gap: 0.7rem; justify-content: center; text-align: center;">
+          אודות
+            <img src="../assets/images/logo-droneryellow-dark.png" alt="DRONER לוגו" style="height: 68px; border-radius: 12px; padding: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); background: none;">
+        </h1>
+        <p style="color: #fff; font-size: 3.2rem; margin-bottom: 0.5rem; text-shadow: 0 1px 12px rgba(0,0,0,0.18); font-weight: 600;"></p>
+          פתרונות רחפנים אוטונומיים מתקדמים לאבטחה ובקרה
+        </p>
+        <div class="about-collab-logos mt-4" style="gap: 2rem;">
+          <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="background: none; padding: 0; height: 48px; filter: drop-shadow(0 0 8px #2196f3);">
+          <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" style="background: none; padding: 0; height: 48px;">
+            <img src="../assets/images/logo-gsystem.png" alt="G-System" title="G-System" style="background: none; padding: 0; height: 120px; max-width: 300px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="margin-top: 2.5rem;">
+    <!-- מי אנחנו -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="../assets/images/about-droner-team.jpg" alt="צוות דרונר" class="about-img w-100">
+        </div>
+        <div class="col-md-6">
+          <h2><i class="fa fa-users ms-2" style="color:#ffeb3b"></i>מי אנחנו</h2>
+          <p>
+            חברת דרונר הוקמה מאיחוד בין שתי חברות מובילות:
+          </p>
+          <div class="d-flex flex-column gap-3 mb-3">
+            <div class="d-flex align-items-center bg-light border rounded-4 shadow-sm px-3 py-2">
+              <img src="../assets/images/logo-gsystem.png" alt="G-System" style="height: 36px; margin-left: 1rem;">
+              <div>
+                <div class="fw-bold fs-5 text-dark">G-System</div>
+                <div class="text-secondary small">מומחית באבטחה אווירית ורחפנים מאז 2017</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center bg-light border rounded-4 shadow-sm px-3 py-2">
+              <img src="../assets/images/logo-tcm.png" alt="טיסיאם טכנולוגיות" style="height: 36px; margin-left: 1rem;">
+              <div>
+                <div class="fw-bold fs-5 text-dark">טיסיאם טכנולוגיות</div>
+                <div class="text-secondary small">התמחות בהפעלה מבצעית והנדסה אינטגרטיבית של מערכות רחפן</div>
+              </div>
+            </div>
+          </div>
+          <p class="mb-0">
+            האיחוד יצר מערך מקצועי מתקדם, המתמחה בפריסת מערכות רחפנים אוטונומיים ומערכות שליטה מרחוק באתרי לקוח, בדגש על אבטחה, ניטור ובקרה מתקדמת.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- מה אנחנו עושים -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="../assets/images/about-video-poster.jpg" alt="הדגמת דרונר" class="about-img w-100">
+      </div>
+      <div class="col-lg-6">
+        <h2><i class="fa fa-cogs ms-2" style="color:#ffeb3b"></i>מה אנחנו עושים</h2>
+        <p>
+        דרונר מתכננת, מתקינה ומפעילה פתרונות אבטחה אווירית אוטונומיים הכוללים רחפנים מתקדמים, תחנות עגינה חכמות, מערכות שליטה וניהול מרחוק, ומוקד שליטה מאויש 24/7. החברה עובדת בשיתוף פעולה טכנולוגי אסטרטגי עם חברות בינלאומיות מובילות, ביניהן:
+        </p>
+        <ul>
+        <li>
+          <b>HEISHA</b> – יצרנית תחנות עגינה אוטונומיות, הנחשבת לאחת המובילות בעולם בתחום פתרונות טעינה ואחסון רחפנים אוטומטיים. תחנות העגינה של HEISHA מספקות אוטונומיה מלאה לרחפנים, מאפשרות פריסת משימות מתקדמות לאורך זמן, ומותאמות במיוחד לסביבה מבצעית מורכבת.
+        </li>
+        <li>
+          <b>FlightOps</b> – חברת טכנולוגיה מתקדמת המספקת פלטפורמה ייחודית לניהול ושליטה מרחוק של מערכי רחפנים גדולים ואוטונומיים. הטכנולוגיה של FlightOps מאפשרת תפעול ושליטה מרחוק ללא מגבלת טווח, תוך אינטגרציה מלאה למערכות התפעול והשליטה של דרונר.
+        </li>
+        </ul>
+        <p>
+        שיתופי פעולה אלה מעניקים ללקוחות דרונר פתרונות משולבים ואיכותיים, המדגישים חדשנות, אמינות ודיוק מבצעי.
+        </p>
+      </div>
+      </div>
+    </section>
+
+    <!-- למה דרונר -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-5 mb-4 mb-md-0">
+          <img src="../assets/images/about-why-droner.jpg" alt="למה דרונר" class="about-img w-100">
+        </div>
+        <div class="col-md-7">
+          <h2><i class="fa fa-star ms-2" style="color:#ffeb3b"></i>למה דרונר?</h2>
+          <ul>
+            <li><b>טכנולוגיה פורצת דרך</b> – שילוב מערכות מתקדמות מבית HEISHA ו־FlightOps לפתרונות אבטחה וניטור אוטונומיים.</li>
+            <li><b>אמינות מבצעית מוכחת</b> – יציבות, עמידות וזמינות גבוהה של מערכות בכל מזג אוויר ותנאי שטח.</li>
+            <li><b>חיסכון ויעילות תפעולית</b> – צמצום עלויות כוח אדם, עלויות ביטוח וסיכון מבצעי.</li>
+            <li><b>ניסיון והיכרות מעמיקה</b> – צוות מקצועי, מבצעי והנדסי בעל רקע וניסיון עשיר במערכות רחפנים ומערכות שליטה מתקדמות.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- הצוות שלנו -->
+    <section class="about-section" data-aos="fade-up">
+      <h2><i class="fa fa-user-tie ms-2" style="color:#ffeb3b"></i>הצוות שלנו</h2>
+      <p>
+        הצוות המקצועי שלנו מורכב ממומחים בתחומים מגוונים – החל מהטסת רחפנים, דרך תכנון ואינטגרציה של מערכות אוטונומיות, וכלה בניהול טכנולוגי ותפעולי. הצוות עובד בסטנדרטים גבוהים של איכות, בטיחות ואמינות, כדי לספק ללקוחותינו פתרונות מושלמים ומותאמים אישית.
+      </p>
+    </section>
+
+    <!-- החזון שלנו -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="../assets/images/about-vision.jpg" alt="החזון של דרונר" class="about-img w-100">
+        </div>
+        <div class="col-md-6">
+          <h2><i class="fa fa-lightbulb ms-2" style="color:#ffeb3b"></i>החזון שלנו</h2>
+          <p>
+            החזון של דרונר הוא להוביל את תחום הרחפנים האוטונומיים בישראל ולהעניק ללקוחותינו יתרון טכנולוגי משמעותי, שליטה מלאה בשטח, ויכולת להגיב במהירות וביעילות לכל אתגר – ביטחוני, תפעולי או מבצעי.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- הלקוחות שלנו -->
+    <section class="about-section" data-aos="fade-up">
+      <h2><i class="fa fa-building ms-2" style="color:#ffeb3b"></i>הלקוחות שלנו</h2>
+      <div class="about-collab-logos mb-3">
+        <img src="../assets/images/client1.png" alt="לקוח 1">
+        <img src="../assets/images/client2.png" alt="לקוח 2">
+        <img src="../assets/images/client3.png" alt="לקוח 3">
+        <img src="../assets/images/client4.png" alt="לקוח 4">
+      </div>
+      <p>
+        אנו גאים לספק שירותים מתקדמים למגוון רחב של לקוחות, ביניהם חברות מובילות במשק, מתקני תשתית חיונית, אזורי תעשייה גדולים, רשויות מקומיות, מועצות אזוריות, גופים ביטחוניים, חברות אבטחה, וכן גופים פרטיים. שיתוף הפעולה הטכנולוגי שלנו עם HEISHA ו־FlightOps מאפשר לנו להציע ללקוחותינו פתרונות מוכחים ואמינים, עם יכולות מבצעיות מהמתקדמות בעולם.
+      </p>
+    </section>
+
+    <!-- ההתחייבות שלנו -->
+    <section class="about-section" data-aos="fade-up">
+      <h2><i class="fa fa-handshake ms-2" style="color:#ffeb3b"></i>ההתחייבות שלנו</h2>
+      <ul>
+        <li>לספק פתרונות מותאמים אישית, איכותיים ומקצועיים.</li>
+        <li>להבטיח שירות ותמיכה טכנית בפריסה ארצית, כולל שירות טכנאי בשטח ומוקד שליטה מאויש 24/7.</li>
+        <li>להקפיד על רמות הבטיחות, אבטחת המידע ועמידה בכל דרישות הרגולציה הרלוונטית.</li>
+      </ul>
+    </section>
+
+    <!-- CTA (white background like index-cta) -->
+    <section class="about-cta about-cta-white" data-aos="fade-up">
+      <h3><i class="fa fa-paper-plane ms-2"></i>מוכנים לעתיד בטוח יותר?</h3>
+      <p>צוות דרונר ישמח לעמוד לשירותכם, לייעץ, ולהתאים את הפתרון האופטימלי עבור הארגון שלכם.</p>
+      <a href="contact.html" class="btn btn-cta btn-lg px-5 py-3">צור קשר</a>
+    </section>
+    <style>
+      .about-cta.about-cta-white {
+        background: #fff !important;
+        color: #222 !important;
+        border-radius: 18px;
+        padding: 2.7rem 2rem;
+        text-align: center;
+        margin: 3rem auto 2.5rem auto;
+        max-width: 900px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+        position: relative;
+        overflow: hidden;
+      }
+      .about-cta.about-cta-white h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #222 !important;
+        letter-spacing: 1px;
+        animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
+      }
+      .about-cta.about-cta-white p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        color: #444 !important;
+        animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+      }
+      .about-cta.about-cta-white .btn-cta {
+        font-size: 1.1rem;
+        padding: 0.75rem 2.5rem;
+        background: #ffeb3b;
+        color: #0b0c10;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(255,235,59,0.13);
+        transition: background 0.3s, color 0.3s, transform 0.2s;
+      }
+      .about-cta.about-cta-white .btn-cta:hover {
+        background: #fffde7;
+        color: #0b0c10;
+        transform: translateY(-2px) scale(1.04);
+      }
+      @media (max-width: 768px) {
+        .about-cta.about-cta-white { padding: 1.5rem 1rem; }
+        .about-cta.about-cta-white h3 { font-size: 1.3rem; }
+      }
+    </style>
+  </main>
+
+  <!-- Footer for pages folder -->
+<footer class="main-footer-modern py-5">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+        <img src="../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+      </div>
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+          <a href="../index.html" class="footer-link">בית</a>
+          <a href="about.html" class="footer-link">אודות</a>
+          <a href="products/g-smart.html" class="footer-link">G-SMART</a>
+          <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
+          <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
+          <a href="contact.html" class="footer-link">צור קשר</a>
+        </nav>
+      </div>
+      <div class="col-md-4 text-center text-md-start">
+        <div class="footer-contact mb-2">
+          <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+            <i class="fa fa-phone ms-2"></i>052-387-6112
+          </a>
+        </div>
+        <div class="footer-contact mb-2">
+          <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+            <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+          </a>
+        </div>
+        <div class="footer-social">
+          <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider my-4">
+    <div class="text-center small footer-copyright">
+      &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
+    </div>
+  </div>
+  <style>
+    .main-footer-modern {
+      background: linear-gradient(120deg, #0b0c10 70%, #ffeb3b 120%);
+      color: #fff;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
+      margin-top: 0;
+      font-family: 'Rubik', sans-serif;
+    }
+    .main-footer-modern .footer-logo {
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.5rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .main-footer-modern .footer-links {
+      gap: 1.2rem !important;
+    }
+    .main-footer-modern .footer-link {
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .main-footer-modern .footer-link:hover,
+    .main-footer-modern .footer-link:focus {
+      color: #ffeb3b;
+      text-decoration: underline;
+    }
+    .main-footer-modern .footer-contact {
+      color: #fffde7;
+      font-size: 1rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .main-footer-modern .footer-contact i {
+      color: #ffeb3b;
+      font-size: 1.1em;
+      vertical-align: middle;
+    }
+    .main-footer-modern .footer-social {
+      margin-top: 0.5rem;
+    }
+    .main-footer-modern .footer-social-link {
+      color: #fff;
+      margin-left: 0.7rem;
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .main-footer-modern .footer-social-link:hover {
+      color: #ffeb3b;
+      transform: scale(1.15);
+    }
+    .main-footer-modern .footer-divider {
+      border-color: #ffeb3b;
+      opacity: 0.7;
+    }
+    @media (max-width: 768px) {
+      .main-footer-modern {
+        border-radius: 0;
+        padding: 2rem 0.5rem;
+      }
+      .main-footer-modern .footer-links {
+        gap: 0.7rem !important;
+      }
+      .main-footer-modern .footer-link {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">כניסת לקוחות</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">אימייל</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">סיסמה</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">התחבר</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+
+      let lang = localStorage.getItem('siteLang') || 'he';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>

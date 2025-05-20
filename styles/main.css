@@ -1,0 +1,85 @@
+/* General styles for navigation links */
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    font-family: 'Rubik', 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Styles for the active navigation link */
+nav a.active {
+    font-weight: bold;
+    color: var(--color-secondary);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    text-decoration: underline;
+    background: rgba(255,49,49,0.08);
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #FF3131;
+    background: rgba(255,49,49,0.05);
+}
+
+/* Styles for section headings */
+h2 {
+    color: var(--color-text) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 5px var(--color-secondary);
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Rubik', 'Poppins', Arial, sans-serif;
+    letter-spacing: 0.03em;
+    transition: color 0.5s, text-shadow 0.5s;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 20px;
+    height: 2px;
+    background: var(--color-secondary);
+    transform-origin: right;
+    /* animation: pulse-width 2s infinite; */
+}
+
+@keyframes pulse-width {
+    0%, 100% { width: 20px; opacity: 0.5; }
+    50% { width: 30px; opacity: 1; }
+}
+
+.table {
+    position: relative;
+    overflow: hidden;
+}
+
+.table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,65,65,0.05),
+        transparent
+    );
+    transform: translateX(-100%);
+    /* animation: table-shine 3s infinite; */
+}
+
+@keyframes table-shine {
+    100% { transform: translateX(100%); }
+}
