@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRONER Health Check</title>
+  <meta name="description" content="Status page to verify DRONER static asset health." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Minimal layout styles for health check page */
+    body { font-family: 'Rubik', sans-serif; padding: 1rem; background: #f8f9fa; }
+    .container { max-width: 600px; margin: auto; text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.5rem; }
+    .status-icon { display: inline-block; width: 1rem; height: 1rem; border-radius: 50%; }
+    .ok { background: #0AD100; }
+    .fail { background: #dc3545; }
+    #siteStatus { margin-top: 1rem; font-weight: 700; }
+    .text-success { color: #0AD100; }
+    .text-danger { color: #dc3545; }
+    button.lang-btn { position: fixed; top: 20px; right: 20px; z-index: 100; background-color: #0AD100; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <button id="langToggle" class="lang-btn">עברית</button>
+  <div class="container">
+    <h1>DRONER Site Health Check</h1>
+    <p>Last deploy: 2025-05-20 21:05 UTC</p>
+    <table aria-label="Asset status table">
+      <thead>
+        <tr><th>Asset</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Main CSS</td><td><span id="cssStatus" class="status-icon" aria-label="waiting"></span></td></tr>
+        <tr><td>Main JavaScript</td><td><span id="jsStatus" class="status-icon" aria-label="waiting"></span></td></tr>
+        <tr><td>RTL/LTR Support</td><td><span id="rtlStatus" class="status-icon" aria-label="waiting"></span></td></tr>
+        <tr><td>Logo Image</td><td><span id="logoStatus" class="status-icon" aria-label="waiting"></span></td></tr>
+        <tr><td>Hero Image</td><td><span id="heroStatus" class="status-icon" aria-label="waiting"></span></td></tr>
+        <tr><td>Background Video</td><td><span id="videoStatus" class="status-icon" aria-label="waiting"></span></td></tr>
+      </tbody>
+    </table>
+    <h2 id="siteStatus">Checking...</h2>
+    <p class="small">For troubleshooting see the <a href="README.md">README</a>.</p>
+  </div>
+
+  <script>
+    // Asset paths to verify
+    const assets = [
+      { id: 'css', url: 'assets/css/style.css' },
+      { id: 'js', url: 'assets/js/script.js' },
+      { id: 'rtl', url: 'lang.js' },
+      { id: 'logo', url: 'assets/images/logo-droner-dark.png' },
+      { id: 'hero', url: 'assets/images/droner_home_hero.png' },
+      { id: 'video', url: 'assets/videos/bg-video.webm' }
+    ];
+
+    let allOk = true;
+    let completed = 0;
+
+    // Fetch each asset using HEAD to minimize bandwidth
+    assets.forEach(asset => {
+      fetch(asset.url, { method: 'HEAD' })
+        .then(res => updateStatus(asset.id, res.ok))
+        .catch(() => updateStatus(asset.id, false));
+    });
+
+    function updateStatus(id, ok) {
+      const el = document.getElementById(id + 'Status');
+      if (el) el.className = 'status-icon ' + (ok ? 'ok' : 'fail');
+      if (!ok) allOk = false;
+      completed++;
+      if (completed === assets.length) showFinalStatus();
+    }
+
+    function showFinalStatus() {
+      const st = document.getElementById('siteStatus');
+      st.textContent = allOk ? 'Site is OK' : 'Site has issues';
+      st.className = allOk ? 'text-success' : 'text-danger';
+    }
+
+    // Language toggle for RTL/LTR view
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('langToggle');
+      if (!btn) return;
+      let lang = localStorage.getItem('siteLang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      btn.textContent = lang === 'he' ? 'English' : 'עברית';
+      btn.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        btn.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>
