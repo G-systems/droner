@@ -9,6 +9,8 @@ This repository contains the source for the **DRONER** marketing site. The site 
 - `styles/` – Stand‑alone CSS used across the site
 - `js/`, `scripts/`, `src/` – Development scripts and experimental code
 - `index.html` – Main landing page
+- `privacy-policy.html`, `terms-of-service.html` – Legal documents
+- `data-deletion.html`, `data-deletion` – Data deletion request page
 
 ## Development
 
