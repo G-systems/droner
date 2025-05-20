@@ -145,49 +145,10 @@
       object-fit: cover;
       background: #000;
     }
-    .about-cta {
-      background: linear-gradient(90deg, #0b0c10 80%, #ffeb3b 120%);
-      color: #ffeb3b;
-      border-radius: 18px;
-      padding: 2.7rem 2rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .about-cta h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #ffeb3b;
-      letter-spacing: 1px;
-      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
-    }
-    .about-cta p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #fff;
-      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
-    }
-    .about-cta .btn-cta {
-      font-size: 1.1rem;
-      padding: 0.75rem 2.5rem;
-      background: #ffeb3b;
-      color: #0b0c10;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(255,235,59,0.13);
-      transition: background 0.3s, color 0.3s, transform 0.2s;
-    }
-    .about-cta .btn-cta:hover {
-      background: #fffde7;
-      color: #0b0c10;
-      transform: translateY(-2px) scale(1.04);
-    }
+
     @media (max-width: 768px) {
       .about-hero h1 { font-size: 1.5rem; }
-      .about-section, .about-cta { padding: 1.5rem 1rem; }
+      .about-section { padding: 1.5rem 1rem; }
       .about-collab-logos { gap: 1rem; }
       .about-gallery-row { gap: 0.7rem; }
       .about-gallery-row img, .about-gallery-row video { width: 100%; height: 120px; }
@@ -250,7 +211,7 @@
           אודות
             <img src="../assets/images/logo-droneryellow-dark.png" alt="DRONER לוגו" style="height: 68px; border-radius: 12px; padding: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); background: none;">
         </h1>
-        <p style="color: #fff; font-size: 3.2rem; margin-bottom: 0.5rem; text-shadow: 0 1px 12px rgba(0,0,0,0.18); font-weight: 600;"></p>
+        <p style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem; text-shadow: 0 1px 12px rgba(0,0,0,0.18); font-weight: 600;"></p>
           פתרונות רחפנים אוטונומיים מתקדמים לאבטחה ובקרה
         </p>
         <div class="about-collab-logos mt-4" style="gap: 2rem;">
@@ -388,60 +349,13 @@
       </ul>
     </section>
 
-    <!-- CTA (white background like index-cta) -->
-    <section class="about-cta about-cta-white" data-aos="fade-up">
-      <h3><i class="fa fa-paper-plane ms-2"></i>מוכנים לעתיד בטוח יותר?</h3>
-      <p>צוות דרונר ישמח לעמוד לשירותכם, לייעץ, ולהתאים את הפתרון האופטימלי עבור הארגון שלכם.</p>
+    <!-- CTA section uses the shared cta-card styles -->
+    <section class="cta-card" data-aos="fade-up">
+      <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>מוכנים לעתיד בטוח יותר?</h3>
+      <p class="cta-desc">צוות דרונר ישמח לעמוד לשירותכם, לייעץ, ולהתאים את הפתרון האופטימלי עבור הארגון שלכם.</p>
       <a href="contact.html" class="btn btn-cta btn-lg px-5 py-3">צור קשר</a>
     </section>
-    <style>
-      .about-cta.about-cta-white {
-        background: #fff !important;
-        color: #222 !important;
-        border-radius: 18px;
-        padding: 2.7rem 2rem;
-        text-align: center;
-        margin: 3rem auto 2.5rem auto;
-        max-width: 900px;
-        box-shadow: 0 5px 25px rgba(0,0,0,0.10);
-        position: relative;
-        overflow: hidden;
-      }
-      .about-cta.about-cta-white h3 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: #222 !important;
-        letter-spacing: 1px;
-        animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
-      }
-      .about-cta.about-cta-white p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: #444 !important;
-        animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
-      }
-      .about-cta.about-cta-white .btn-cta {
-        font-size: 1.1rem;
-        padding: 0.75rem 2.5rem;
-        background: #ffeb3b;
-        color: #0b0c10;
-        border: none;
-        border-radius: 30px;
-        font-weight: 600;
-        box-shadow: 0 4px 15px rgba(255,235,59,0.13);
-        transition: background 0.3s, color 0.3s, transform 0.2s;
-      }
-      .about-cta.about-cta-white .btn-cta:hover {
-        background: #fffde7;
-        color: #0b0c10;
-        transform: translateY(-2px) scale(1.04);
-      }
-      @media (max-width: 768px) {
-        .about-cta.about-cta-white { padding: 1.5rem 1rem; }
-        .about-cta.about-cta-white h3 { font-size: 1.3rem; }
-      }
-    </style>
+    
   </main>
 
   <!-- Footer for pages folder -->
