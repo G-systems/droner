@@ -10,21 +10,42 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     body { font-family: 'Rubik', sans-serif; background: #f8f9fa; }
+    /* Header uses an image background instead of gradient */
     .privacy-header {
-      background: linear-gradient(90deg, #ffeb3b 0%, #fffde7 100%);
+      position: relative;
       padding: 3.5rem 0 2.2rem 0;
       text-align: center;
       border-radius: 0 0 28px 28px;
       box-shadow: 0 5px 25px rgba(0,0,0,0.07);
       margin-bottom: 2.5rem;
-      position: relative;
+      overflow: hidden;
+    }
+    .privacy-header .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .privacy-header .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55);
     }
     .privacy-header .section-title {
       font-size: 2.4rem;
       font-weight: 700;
-      color: #222;
+      color: #ffeb3b;
       margin-bottom: 0.5rem;
       letter-spacing: 0.5px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+    }
+    .privacy-header .container {
+      position: relative;
+      z-index: 2;
+      color: #fff;
     }
     .privacy-header .section-line {
       display: block;
@@ -117,10 +138,14 @@
 
   <!-- Header -->
   <header class="privacy-header mt-5">
+    <!-- Background image -->
+    <div class="image-container">
+      <img src="../assets/images/hero-bg.jpg" alt="רקע מדיניות פרטיות" />
+    </div>
     <div class="container">
       <h1 class="section-title">מדיניות פרטיות</h1>
       <span class="section-line"></span>
-      <p class="lead mt-4" style="color:#222; font-size:1.18rem; font-weight:500;">
+      <p class="lead mt-4" style="color:#222; font-size:1.18rem; font-weight:500;"></p>
         פרטיותך חשובה לנו. בעמוד זה תוכל לקרוא כיצד אנו שומרים על המידע שלך באתר DRONER.
       </p>
     </div>
@@ -128,7 +153,7 @@
 
   <!-- Privacy Policy Content -->
   <section class="privacy-section">
-    <h2>איזה מידע אנו אוספים?</h2>
+    <h2>איזה מידע אנו אוספים?</h2></small>
     <ul>
       <li>מידע שמסרתם לנו ישירות (למשל, בעת יצירת קשר דרך האתר או הרשמה לשירותים).</li>
       <li>מידע טכני הנאסף אוטומטית (כגון כתובת IP, סוג דפדפן, מערכת הפעלה, זמני גישה ודפים שנצפו).</li>
