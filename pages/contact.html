@@ -10,16 +10,31 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
+    /* Hero section with full image background similar to index page */
     .contact-hero {
-      background: linear-gradient(120deg, #0b0c10 65%, #ffeb3b 100%), url('../assets/images/contact-hero.jpg') center/cover no-repeat;
+      position: relative;
       color: #fff;
       min-height: 340px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      position: relative;
+      justify-content: center;      
       overflow: hidden;
       z-index: 1;
+    }
+      /* Background image container */
+    .contact-hero .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .contact-hero .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55); /* darken for text readability */
     }
     .contact-hero .container {
       position: relative;
@@ -170,6 +185,10 @@
 
   <!-- Hero Section -->
   <header class="contact-hero hero-section-padding">
+    <!-- Background image -->
+    <div class="image-container">
+      <img src="../assets/images/contact-hero.jpg" alt="רקע צור קשר" />
+    </div>
     <div class="container text-center" data-aos="fade-up">
       <h1>צור קשר</h1>
       <p>נשמח לשוחח, לייעץ ולהתאים פתרון אבטחה מתקדם לארגון שלך</p>
@@ -230,11 +249,11 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="py-5 text-white text-center" style="background-color: #0b0c10;">
-    <div class="container" data-aos="fade-up">
-      <h3 class="mb-3 display-6" style="color: #ffeb3b;">רוצים לשמוע עוד?</h3>
-      <p class="mb-4 fs-5">נשמח לעמוד לרשותכם ולספק את הפתרון האופטימלי עבור הארגון שלכם.</p>
-      <a href="faq.html" class="btn btn-yellow px-4 py-2">שאלות נפוצות</a>
+  <section class="cta-card" data-aos="fade-up"><!-- uses global cta-card style -->
+    <div class="container text-center">
+      <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לשמוע עוד?</h3>
+      <p class="cta-desc">נשמח לעמוד לרשותכם ולספק את הפתרון האופטימלי עבור הארגון שלכם.</p>
+      <a href="faq.html" class="btn btn-cta btn-lg px-5 py-3">שאלות נפוצות</a>
     </div>
   </section>
 
