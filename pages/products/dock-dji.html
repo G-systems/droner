@@ -23,12 +23,31 @@
     .djidock-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,0.16);
     }
+     /* Hero style with background image */
     .djidock-card-header {
-      background: linear-gradient(90deg, #0b0c10 80%, #ffeb3b 120%);
-      color: #ffeb3b;
+      position: relative;
+      color: #fff;
       padding: 2.5rem 2rem 1.5rem 2rem;
       text-align: center;
+      overflow: hidden;
+    }
+    .djidock-card-header .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .djidock-card-header .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55);
+    }
+    .djidock-card-header .header-content {
       position: relative;
+      z-index: 2;
     }
     .djidock-card-header h1, .djidock-card-header h2 {
       font-weight: 700;
@@ -117,48 +136,10 @@
       object-fit: cover;
       background: #000;
     }
-    .djidock-cta-card {
-      background: linear-gradient(90deg, #0b0c10 80%, #ffeb3b 120%);
-      color: #ffeb3b;
-      border-radius: 18px;
-      padding: 2.7rem 2rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .djidock-cta-card h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #ffeb3b;
-      letter-spacing: 1px;
-    }
-    .djidock-cta-card p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-    .djidock-cta-card .btn-cta {
-      font-size: 1.1rem;
-      padding: 0.75rem 2.5rem;
-      background: #ffeb3b;
-      color: #0b0c10;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(255,235,59,0.13);
-      transition: background 0.3s, color 0.3s, transform 0.2s;
-    }
-    .djidock-cta-card .btn-cta:hover {
-      background: #fffde7;
-      color: #0b0c10;
-      transform: translateY(-2px) scale(1.04);
-    }
     @media (max-width: 768px) {
       .djidock-card-header h1 { font-size: 1.5rem; }
       .djidock-card-header h2 { font-size: 1.2rem; }
-      .djidock-card-content, .djidock-card-header, .djidock-cta-card { padding: 1.2rem 0.7rem; }
+      .djidock-card-content, .djidock-card-header { padding: 1.2rem 0.7rem; }
       .djidock-feature-list { gap: 0.7rem; }
       .djidock-gallery { gap: 0.7rem; }
       .djidock-gallery img { width: 100%; height: 120px; }
@@ -215,13 +196,15 @@
 
   <!-- Hero Card -->
   <div class="djidock-card mt-5" data-aos="fade-up">
-    <div class="djidock-card-header" style="background: linear-gradient(120deg, #0b0c10 65%, #ffeb3b 100%); color: #ffeb3b; padding: 2.7rem 2rem 1.5rem 2rem;">
-      <h1 style="color: #ffeb3b; font-size: 2.7rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 0 4px 24px rgba(0,0,0,0.45); letter-spacing: 2px;">
-        DJI Dock 2 & DJI Dock 3
-      </h1>
-      <p style="font-size: 1.3rem; color: #fff; max-width: 600px; margin: 0 auto; text-shadow: 0 2px 8px rgba(255,214,0,0.15);">
-        תחנות עגינה אוטונומיות מבית DJI בשירות דרונר – אינטגרציה מלאה , אמינות גבוהה, שליטה קלה
-      </p>
+    <div class="djidock-card-header">
+      <!-- Background image for hero card -->
+      <div class="image-container">
+        <img src="../../assets/images/hero-bg.jpg" alt="רקע DJI Dock" />
+      </div>
+      <div class="header-content">
+        <h1>DJI Dock 2 & DJI Dock 3</h1>
+        <p>תחנות עגינה אוטונומיות מבית DJI בשירות דרונר – אינטגרציה מלאה , אמינות גבוהה, שליטה קלה</p>
+      </div>
     </div>
   </div>
 
@@ -333,9 +316,9 @@
   </div>
 
   <!-- CTA Card -->
-  <div class="djidock-cta-card container" data-aos="fade-up">
-    <h3><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את DJI Dock בפעולה?</h3>
-    <p>צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
+  <div class="cta-card container" data-aos="fade-up"><!-- shared CTA design -->
+    <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את DJI Dock בפעולה?</h3>
+    <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
     <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
   </div>
 
