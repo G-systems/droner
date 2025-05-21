@@ -10,9 +10,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
-    body { background: #f7f7f7; }
+      :root {
+      --color-dark: #0b0c10;
+      --color-bronze: #b08d57;
+      --color-brand: #0AD100;
+      --color-light: #f4f4f4;
+    }
+    body { background: var(--color-dark); color: var(--color-light); }
     .gsmart-card {
-      background: #fff;
+      background: #141414;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
@@ -23,47 +29,8 @@
     .gsmart-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,0.16);
     }
-    /* Hero style with background image */
-    .gsmart-card-header {
-      position: relative;
-      color: #fff;
-      padding: 2.5rem 2rem 1.5rem 2rem;
-      text-align: center;
-      overflow: hidden;
-    }
-    .gsmart-card-header .image-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-    .gsmart-card-header .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.55);
-    }
-    .gsmart-card-header .header-content {
-      position: relative;
-      z-index: 2;
-    }
-    .gsmart-card-header h1, .gsmart-card-header h2 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-      color: #ffeb3b;
-      text-shadow: 0 2px 8px #0b0c10;
-    }
-    .gsmart-card-header h1 { font-size: 2.5rem; }
-    .gsmart-card-header h2 { font-size: 2rem; }
-    .gsmart-card-header p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 0;
-      text-shadow: 0 2px 8px #0b0c10;
-    }
+ /* Hero style uses shared design */
+
     .gsmart-card-img {
       width: 100%;
       object-fit: cover;
@@ -74,7 +41,7 @@
     .gsmart-card-content {
       padding: 2rem 2rem 1.5rem 2rem;
       font-size: 1.15rem;
-      color: #222;
+       color: var(--color-light);
     }
     .gsmart-feature-list {
       display: flex;
@@ -84,7 +51,7 @@
       margin: 2rem 0 0 0;
     }
     .gsmart-feature-item {
-      background: #fffde7;
+      background: rgba(176,141,87,0.1); color: var(--color-light);
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(255,235,59,0.08);
       padding: 1.5rem 1.2rem;
@@ -95,17 +62,17 @@
       transition: background 0.2s, transform 0.2s;
     }
     .gsmart-feature-item:hover {
-      background: #ffeb3b;
+       background: var(--color-bronze); color: var(--color-dark);
       transform: translateY(-4px) scale(1.04);
     }
     .gsmart-feature-icon {
       font-size: 2.2rem;
-      color: #ffeb3b;
+      color: var(--color-bronze);
       margin-bottom: 0.7rem;
       display: block;
     }
     .gsmart-advantage-card {
-      background: linear-gradient(120deg, #ffeb3b 60%, #fff 100%);
+      background: linear-gradient(120deg, var(--color-bronze) 60%, var(--color-dark) 100%);
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       padding: 2rem 1.5rem;
@@ -117,11 +84,11 @@
     }
     .gsmart-advantage-card .fa {
       font-size: 2.5rem;
-      color: #0b0c10;
+      color: var(--color-brand);
       min-width: 48px;
     }
     .gsmart-usecase-card {
-      background: #fff;
+      background: #141414;
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       padding: 2rem 1.2rem;
@@ -130,22 +97,22 @@
       transition: background 0.2s, color 0.2s, transform 0.2s;
     }
     .gsmart-usecase-card:hover {
-      background: #ffeb3b;
-      color: #000;
+      background: var(--color-bronze);
+      color: var(--color-dark);
       transform: translateY(-4px) scale(1.03);
     }
     .gsmart-usecase-icon {
       font-size: 2.2rem;
-      color: #ffeb3b;
+      color: var(--color-bronze);
       margin-bottom: 0.7rem;
       transition: color 0.2s;
     }
     .gsmart-usecase-card:hover .gsmart-usecase-icon {
-      color: #0b0c10;
+      color: var(--color-dark);
     }
     .gsmart-tech-card {
-      background: #0b0c10;
-      color: #ffeb3b;
+      background: var(--color-dark);
+      color: var(--color-bronze);
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.10);
       padding: 2rem 1.5rem;
@@ -168,8 +135,8 @@
       flex-wrap: wrap;
     }
     .gsmart-tech-brand {
-      background: #ffeb3b;
-      color: #0b0c10;
+       background: var(--color-bronze);
+      color: var(--color-dark);
       font-weight: 600;
       border-radius: 30px;
       padding: 0.5rem 1.25rem;
@@ -178,7 +145,7 @@
       display: inline-block;
     }
     .gsmart-support-card {
-      background: #fff;
+     background: #141414;
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       padding: 2rem 1.5rem;
@@ -194,9 +161,7 @@
       width: 100%;
       box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     }
-     @media (max-width: 768px) {
-      .gsmart-card-header h1 { font-size: 1.5rem; }
-      .gsmart-card-header h2 { font-size: 1.2rem; }
+       @media (max-width: 768px) {
       .gsmart-card-content, .gsmart-card-header { padding: 1.2rem 0.7rem; }
       .gsmart-tech-card, .gsmart-support-card { flex-direction: column; gap: 1rem; }
       .gsmart-feature-list { gap: 0.7rem; }
@@ -205,10 +170,9 @@
 </head>
 <body>
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top text-dark shadow-sm">
-    <div class="container justify-content-center d-flex">
+  <<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top text-light shadow-sm">
       <a class="navbar-brand d-flex align-items-center mx-auto" href="../../index.html">
-        <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="40" />
+        <img src="../../assets/images/logo-droneryellow-dark.png" alt="לוגו DRONER" height="40" />
       </a>
       <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
         <button id="translateToggle" class="btn btn-outline-dark">English</button>
@@ -252,16 +216,20 @@
   <!-- Navbar End -->
 
   <!-- Hero Card -->
-  <div class="gsmart-card mt-5" data-aos="fade-up">
-    <div class="gsmart-card-header">
+  <div class="gsmart-card mt-5 position-relative overflow-hidden" data-aos="fade-up" style="padding:0; border-radius:0;">
+    <div class="gsmart-card-header page-hero position-relative" style="padding:0; border-radius:0;">
       <!-- Background image for hero card -->
-      <div class="image-container">
-        <img src="../../assets/images/hero-bg.jpg" alt="רקע G-SMART" />
+      <img src="../../assets/images/hero-bg.jpg" alt="רקע G-SMART" style="width:100%; height:340px; object-fit:cover; display:block; border-radius:0;">
+      <!-- Dark overlay -->
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(11,12,16,0.45);z-index:1; border-radius:0;"></div>
+       <div class="header-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="z-index:2; color:#fff; text-shadow:0 2px 16px var(--color-dark),0 1px 4px var(--color-dark);">
+        <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+           <span style="color:var(--color-bronze);">G-SMART</span>
+        </h1>
+        <p style="font-size:1.35rem; font-weight:500;">המערכת החכמה לשליטה ובקרה ברחפנים</p>
       </div>
-      <div class="header-content">
-        <h1>G-SMART</h1>
-        <p>המערכת החכמה לשליטה ובקרה ברחפנים</p>
-      </div>
+    </div>
+  </div>
     </div>
   </div>
 
@@ -277,32 +245,32 @@
     </div>
   </div>
 
-  <!-- Features Card (horizontal strip, right to left, color fixes) -->
+  <!-- Features Card (horizontal strip, centered, not a list) -->
   <div class="gsmart-card" data-aos="fade-up">
     <div class="gsmart-card-content">
       <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-      <div class="gsmart-feature-list" style="flex-wrap: nowrap; overflow: visible; justify-content: flex-end; direction: rtl;">
-        <div class="gsmart-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
+      <div class="d-flex justify-content-center flex-wrap gap-3" style="direction: rtl;">
+        <div class="gsmart-feature-item" style="background: rgba(176,141,87,0.1); color: var(--color-light);">
           <span class="gsmart-feature-icon"><i class="fas fa-satellite-dish"></i></span>
           <b>שליטה ללא מגבלת טווח (BVLOS)</b>
           <div>הפעלה ושליטה מרחוק באמצעות רשת סלולרית מאובטחת.</div>
         </div>
-        <div class="gsmart-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
+        <div class="gsmart-feature-item" style="background: rgba(176,141,87,0.1); color: var(--color-light);">
           <span class="gsmart-feature-icon"><i class="fas fa-video"></i></span>
           <b>וידאו חי באיכות גבוהה</b>
           <div>צפייה בזמן אמת מכל מכשיר ובכל מקום.</div>
         </div>
-        <div class="gsmart-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
+        <div class="gsmart-feature-item" style="background: rgba(176,141,87,0.1); color: var(--color-light);">
           <span class="gsmart-feature-icon"><i class="fas fa-brain"></i></span>
           <b>בינה מלאכותית מתקדמת</b>
           <div>זיהוי אוטומטי של אובייקטים, איתור תנועות חריגות והפקת התראות בזמן אמת.</div>
         </div>
-        <div class="gsmart-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
+        <div class="gsmart-feature-item" style="background: rgba(176,141,87,0.1); color: var(--color-light);">
           <span class="gsmart-feature-icon"><i class="fas fa-cloud-upload-alt"></i></span>
           <b>תיעוד מלא ואיכותי</b>
           <div>אחסון אוטומטי של כל המשימות והאירועים בענן, כולל סימון נקודות ציון על גבי מפות.</div>
         </div>
-        <div class="gsmart-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
+        <div class="gsmart-feature-item" style="background: rgba(176,141,87,0.1); color: var(--color-light);">
           <span class="gsmart-feature-icon"><i class="fas fa-shield-alt"></i></span>
           <b>אבטחת מידע ותקשורת</b>
           <div>הצפנה מתקדמת והגנה על נתונים בהתאם לסטנדרטים המחמירים ביותר.</div>
@@ -372,7 +340,7 @@
   <div class="container">
     <div class="row align-items-center gy-4">
       <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
-        <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+         <img src="../../assets/images/logo-droneryellow-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
       </div>
       <div class="col-md-4 text-center mb-3 mb-md-0">
         <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
@@ -409,7 +377,7 @@
   </div>
   <style>
     .main-footer-modern {
-      background: linear-gradient(120deg, #0b0c10 70%, #ffeb3b 120%);
+      background: linear-gradient(120deg, var(--color-dark) 70%, var(--color-bronze) 120%);
       color: #fff;
       border-radius: 0 0 18px 18px;
       box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
@@ -436,7 +404,7 @@
     }
     .main-footer-modern .footer-link:hover,
     .main-footer-modern .footer-link:focus {
-      color: #ffeb3b;
+      color: var(--color-bronze);
       text-decoration: underline;
     }
     .main-footer-modern .footer-contact {
@@ -448,7 +416,7 @@
       gap: 0.5rem;
     }
     .main-footer-modern .footer-contact i {
-      color: #ffeb3b;
+      color: var(--color-bronze);
       font-size: 1.1em;
       vertical-align: middle;
     }
@@ -464,11 +432,11 @@
       vertical-align: middle;
     }
     .main-footer-modern .footer-social-link:hover {
-      color: #ffeb3b;
+      color: var(--color-bronze);
       transform: scale(1.15);
     }
     .main-footer-modern .footer-divider {
-      border-color: #ffeb3b;
+      border-color: var(--color-bronze);
       opacity: 0.7;
     }
     @media (max-width: 768px) {
