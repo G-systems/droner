@@ -23,47 +23,7 @@
     .djidock-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,0.16);
     }
-     /* Hero style with background image */
-    .djidock-card-header {
-      position: relative;
-      color: #fff;
-      padding: 2.5rem 2rem 1.5rem 2rem;
-      text-align: center;
-      overflow: hidden;
-    }
-    .djidock-card-header .image-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-    .djidock-card-header .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.55);
-    }
-    .djidock-card-header .header-content {
-      position: relative;
-      z-index: 2;
-    }
-    .djidock-card-header h1, .djidock-card-header h2 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-      color: #ffeb3b;
-      text-shadow: 0 2px 8px #0b0c10;
-    }
-    .djidock-card-header h1 { font-size: 2.5rem; }
-    .djidock-card-header h2 { font-size: 2rem; }
-    .djidock-card-header p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 0;
-      text-shadow: 0 2px 8px #0b0c10;
-    }
+     /* Hero style uses shared design */
     .djidock-card-img {
       width: 100%;
       object-fit: cover;
@@ -137,8 +97,6 @@
       background: #000;
     }
     @media (max-width: 768px) {
-      .djidock-card-header h1 { font-size: 1.5rem; }
-      .djidock-card-header h2 { font-size: 1.2rem; }
       .djidock-card-content, .djidock-card-header { padding: 1.2rem 0.7rem; }
       .djidock-feature-list { gap: 0.7rem; }
       .djidock-gallery { gap: 0.7rem; }
@@ -196,7 +154,7 @@
 
   <!-- Hero Card -->
   <div class="djidock-card mt-5" data-aos="fade-up">
-    <div class="djidock-card-header">
+    <div class="djidock-card-header page-hero">
       <!-- Background image for hero card -->
       <div class="image-container">
         <img src="../../assets/images/hero-bg.jpg" alt="רקע DJI Dock" />

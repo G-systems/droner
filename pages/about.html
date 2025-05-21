@@ -11,38 +11,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     body { font-family: 'Rubik', sans-serif; background: #f8f9fa; }
-    .about-hero {
-      position: relative;
-      background: linear-gradient(120deg, #0b0c10 65%, #ffeb3b 100%);
-      color: #fff;
-      min-height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      z-index: 1;
-    }
-    .about-hero .container {
-      position: relative;
-      z-index: 2;
-    }
-    .about-hero h1 {
-      color: #ffeb3b;
-      font-size: 2.7rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
-      letter-spacing: 2px;
-      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
-    }
-    .about-hero p {
-      font-size: 1.3rem;
-      color: #fff;
-      max-width: 600px;
-      margin: 0 auto;
-      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
-      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
-    }
+    /* About page hero uses shared design */
     .about-section {
       background: #fff;
       border-radius: 18px;
@@ -147,7 +116,6 @@
     }
 
     @media (max-width: 768px) {
-      .about-hero h1 { font-size: 1.5rem; }
       .about-section { padding: 1.5rem 1rem; }
       .about-collab-logos { gap: 1rem; }
       .about-gallery-row { gap: 0.7rem; }
@@ -204,17 +172,17 @@
   <!-- Navbar End -->
 
   <!-- Hero Section -->
-  <section class="about-hero" style="background: url('../assets/images/about-hero-bg.jpg') center center/cover no-repeat; min-height: 340px; display: flex; align-items: center; justify-content: center; position: relative;">
-    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 340px; padding-top: 80px;">
-      <div class="text-center" data-aos="fade-up">
-        <h1 style="color: #fff; font-size: 2.7rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 0 4px 24px rgba(0,0,0,0.45); letter-spacing: 2px; display: flex; flex-direction: row; align-items: center; gap: 0.7rem; justify-content: center; text-align: center;">
-          אודות
-            <img src="../assets/images/logo-droneryellow-dark.png" alt="DRONER לוגו" style="height: 68px; border-radius: 12px; padding: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); background: none;">
-        </h1>
-        <p style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem; text-shadow: 0 1px 12px rgba(0,0,0,0.18); font-weight: 600;"></p>
-          פתרונות רחפנים אוטונומיים מתקדמים לאבטחה ובקרה
-        </p>
-        <div class="about-collab-logos mt-4" style="gap: 2rem;">
+  <section class="page-hero hero-section-padding">
+    <div class="image-container">
+      <img src="../assets/images/about-hero-bg.jpg" alt="רקע אודות" />
+    </div>
+    <div class="container text-center" data-aos="fade-up">
+      <h1 class="d-flex flex-row align-items-center justify-content-center gap-2">
+        אודות
+        <img src="../assets/images/logo-droneryellow-dark.png" alt="DRONER לוגו" style="height:68px;border-radius:12px;padding:0;box-shadow:0 2px 12px rgba(0,0,0,0.07);background:none;">
+      </h1>
+      <p class="fw-semibold" style="font-size:1.5rem;">פתרונות רחפנים אוטונומיים מתקדמים לאבטחה ובקרה</p>
+      <div class="about-collab-logos mt-4" style="gap: 2rem;">
           <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="background: none; padding: 0; height: 48px; filter: drop-shadow(0 0 8px #2196f3);">
           <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" style="background: none; padding: 0; height: 48px;">
             <img src="../assets/images/logo-gsystem.png" alt="G-System" title="G-System" style="background: none; padding: 0; height: 120px; max-width: 300px;">
