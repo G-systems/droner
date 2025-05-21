@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"name": "$web",
+			"uri": "azurestorageblob:/$web?storageAccountId=/subscriptions/f216d57a-6767-475a-bf4b-ebcccc2972af/resourceGroups/g-system-rg/providers/Microsoft.Storage/storageAccounts/gsystemstatic"
+		}
+	],
+	"settings": {}
+}
