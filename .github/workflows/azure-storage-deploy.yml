@@ -1,0 +1,25 @@
+name: Deploy to Azure Storage Static Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: true  # למשוך קבצי LFS
+
+      - name: Upload to Azure Storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch \
+              --source ./ \
+              --destination '$web' \
+              --account-name gsystemstatic \
+              --auth-mode key \
+              --account-key "${{ secrets.AZURE_STORAGE_KEY }}"
