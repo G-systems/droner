@@ -13,4 +13,4 @@ Use bold, modern fonts.
 ## Icons and Accents
 Minimalistic icons in gold or turquoise tones.
 
-These guidelines supersede any previous instructions referencing the green color `#0AD100`.
+Any previous references to the green color `#0AD100` are obsolete.
