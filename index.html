@@ -646,5 +646,33 @@
       }
     });
   </script>
+  <!-- טעינת קובץ JS של תרגום -->
+<script src="assets/js/translate.js"></script>
+
+<!-- הפעלת תרגום לפי כפתור -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('translateToggle');
+    let lang = localStorage.getItem('siteLang') || 'he';
+
+    toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+
+    toggleButton.addEventListener('click', async () => {
+      if (lang === 'he') {
+        toggleButton.textContent = '...Translating';
+        await translatePageToEnglish();
+        lang = 'en';
+        toggleButton.textContent = 'עברית';
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+      } else {
+        location.reload();
+      }
+
+      localStorage.setItem('siteLang', lang);
+    });
+  });
+</script>
+</body>
 </body>
 </html>
