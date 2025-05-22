@@ -1,0 +1,28 @@
+:root {
+  --primary-black: #000000;
+  --accent-gold: #FFD700;
+  --accent-turquoise: #008B8B;
+  --background-dark: #000000;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--accent-gold);
+  font-family: 'Arial', sans-serif;
+}
+
+a {
+  color: var(--accent-turquoise);
+}
+
+.btn-primary {
+  background-color: var(--accent-turquoise);
+  color: var(--primary-black);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.header {
+  background-color: var(--primary-black);
+  color: var(--accent-gold);
+}
