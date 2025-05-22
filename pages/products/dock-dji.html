@@ -10,32 +10,50 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
-    body { background: var(--color-dark-bg); color: var(--color-light); }
-    .djidock-card {
-      background: #141414;
+    :root {
+      --color-dark: #0b0c10;
+      --color-bronze: #b08d57;
+      --color-brand: #0AD100;
+      --color-light: #f4f4f4;
+    }
+    body { background: var(--color-dark); color: var(--color-light); }
+    .gdock-card {
+      background: #141414 !important;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
       overflow: hidden;
       position: relative;
       transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
     }
-    .djidock-card:hover {
-      box-shadow: 0 12px 40px rgba(0,0,0,0.16);
-    }
-    .djidock-card-content {
-      padding: 2rem 2rem 1.5rem 2rem;
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
       font-size: 1.15rem;
-      color: var(--color-light);
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
     }
-    .djidock-feature-list {
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1.2rem;
       justify-content: center;
       margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      position: relative;
     }
-    .djidock-feature-item {
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
       background: rgba(176,141,87,0.1);
       color: var(--color-light);
       border-radius: 16px;
@@ -45,20 +63,18 @@
       max-width: 320px;
       flex: 1 1 220px;
       text-align: center;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: none;
     }
-    .djidock-feature-item:hover {
-      background: var(--color-gold);
-      color: var(--color-dark);
-      transform: translateY(-4px) scale(1.04);
-    }
-    .djidock-feature-icon {
+    .gdock-feature-icon {
       font-size: 2.2rem;
       color: var(--color-gold);
       margin-bottom: 0.7rem;
       display: block;
+      transition: none;
     }
-    .djidock-advantage-card {
+    .gdock-advantage-card {
       background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%);
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -67,37 +83,38 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      color: var(--color-dark);
-      font-weight: 500;
       transition: box-shadow 0.2s;
+      color: #fff !important;
     }
-    .djidock-advantage-card .fa {
+    .gdock-advantage-card .fa {
       font-size: 2.5rem;
       color: var(--color-brand);
       min-width: 48px;
     }
-    .djidock-gallery {
+    .gdock-support-card {
+      background: #141414;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
       display: flex;
-      gap: 1.5rem;
+      align-items: center;
+      gap: 2rem;
       flex-wrap: wrap;
-      justify-content: center;
       margin-bottom: 2rem;
     }
-    .djidock-gallery img {
+    .gdock-support-card img {
       border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      width: 320px;
-      height: 180px;
-      object-fit: cover;
-      background: #000;
+      max-width: 200px;
+      width: 100%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     }
     @media (max-width: 768px) {
-      .djidock-card-content { padding: 1.2rem 0.7rem; }
-      .djidock-feature-list { gap: 0.7rem; }
-      .djidock-gallery { gap: 0.7rem; }
-      .djidock-gallery img { width: 100%; height: 120px; }
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
     }
   </style>
+  
 </head>
 <body>
   <!-- Navbar Start -->
@@ -148,22 +165,21 @@
   <!-- Navbar End -->
 
   <!-- Hero Card -->
-  <div class="djidock-card mt-5" data-aos="fade-up" style="padding:0;">
-    <div class="djidock-card-header page-hero" style="position:relative; padding:0;">
-      <img src="../../assets/images/hero-bg.jpg" alt="רקע DJI Dock" style="width:100%; height:340px; object-fit:cover; border-radius:0;">
+  <div class="gdock-card mt-5 position-relative overflow-hidden" data-aos="fade-up" style="padding:0; border-radius:0;">
+    <div class="gdock-card-header page-hero position-relative" style="padding:0; border-radius:0;">
+      <img src="../../assets/images/hero-bg.jpg" alt="רקע DJI Dock" style="width:100%; height:340px; object-fit:cover; display:block; border-radius:0;">
       <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(11,12,16,0.45);z-index:1; border-radius:0;"></div>
       <div class="header-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="z-index:2; color:#fff; text-shadow:0 2px 16px var(--color-dark),0 1px 4px var(--color-dark);">
-        <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem; color:var(--color-gold);">DJI Dock 2 & DJI Dock 3</h1>
-        <p style="font-size:1.25rem; font-weight:400; margin-bottom:0;">
-          תחנות עגינה אוטונומיות מבית DJI בשירות דרונר – אינטגרציה מלאה, אמינות גבוהה, שליטה קלה
-        </p>
+        <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+          <span style="color:var(--color-gold);">DJI Dock 2 & DJI Dock 3</span>
+        </h1>
+        <p style="font-size:1.35rem; font-weight:500;">תחנות עגינה אוטונומיות מבית DJI בשירות דרונר – אינטגרציה מלאה, אמינות גבוהה, שליטה קלה</p>
       </div>
     </div>
   </div>
-
   <!-- Intro Card -->
-  <div class="djidock-card" data-aos="fade-up">
-    <div class="djidock-card-content">
+  <div class="gdock-card" data-aos="fade-up">
+    <div class="gdock-card-content">
       <h2 class="mb-3">הפתרון הרשמי של DJI לעבודה אוטונומית</h2>
       <p>
         תחנות <b>DJI Dock 2</b> ו־<b>DJI Dock 3</b> הן תחנות עגינה אוטונומיות מתקדמות, המיועדות לארגונים הדורשים אמינות, אינטגרציה מלאה עם רחפני DJI ותפעול פשוט. התחנות מאפשרות שליטה מרחוק, טעינה אוטומטית, הפעלה מתוזמנת, וממשק ניהול ידידותי – הכל תחת אחריות ושירות יבואן רשמי.
@@ -176,66 +192,64 @@
       </ul>
     </div>
   </div>
-
   <!-- Features Card -->
-  <div class="djidock-card" data-aos="fade-up">
-    <div class="djidock-card-content">
+  <div class="gdock-card" data-aos="fade-up">
+    <div class="gdock-card-content">
       <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-      <div class="djidock-feature-list" style="direction: rtl;">
-        <div class="djidock-feature-item">
-          <span class="djidock-feature-icon"><i class="fas fa-cubes"></i></span>
+      <div class="gdock-feature-list" style="direction: rtl;">
+        <div class="gdock-feature-item">
+          <span class="gdock-feature-icon"><i class="fas fa-cubes"></i></span>
           <b>תאימות מושלמת</b>
           <div>עובד ישירות עם רחפני DJI, ללא צורך במתאמים או פתרונות צד ג'.</div>
         </div>
-        <div class="djidock-feature-item">
-          <span class="djidock-feature-icon"><i class="fas fa-plug"></i></span>
+        <div class="gdock-feature-item">
+          <span class="gdock-feature-icon"><i class="fas fa-plug"></i></span>
           <b>הפעלה פשוטה</b>
           <div>התקנה מהירה, ממשק משתמש אינטואיטיבי ותפעול קל.</div>
         </div>
-        <div class="djidock-feature-item">
-          <span class="djidock-feature-icon"><i class="fas fa-shield-alt"></i></span>
+        <div class="gdock-feature-item">
+          <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
           <b>אמינות גבוהה</b>
           <div>תחנות עמידות, עם שירות ותמיכה של יבואן רשמי.</div>
         </div>
-        <div class="djidock-feature-item">
-          <span class="djidock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
+        <div class="gdock-feature-item">
+          <span class="gdock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
           <b>תקשורת RF</b>
           <div>שליטה בטווח מוגבל, ללא תלות בתקשורת סלולרית.</div>
         </div>
-        <div class="djidock-feature-item">
-          <span class="djidock-feature-icon"><i class="fas fa-sync-alt"></i></span>
+        <div class="gdock-feature-item">
+          <span class="gdock-feature-icon"><i class="fas fa-sync-alt"></i></span>
           <b>טעינה אוטומטית</b>
           <div>הרחפן נטען אוטומטית לאחר כל משימה – מוכן תמיד לפעולה.</div>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Advantages Cards -->
   <div class="container" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
-    <div class="djidock-advantage-card">
+    <div class="gdock-advantage-card">
       <i class="fas fa-check-circle"></i>
       <div>
         <b>פתרון מקורי ומוכר</b><br>
         תחנות עגינה רשמיות של DJI, עם אחריות ותמיכה מלאה.
       </div>
     </div>
-    <div class="djidock-advantage-card">
+    <div class="gdock-advantage-card">
       <i class="fas fa-bolt"></i>
       <div>
         <b>הפעלה מהירה וידידותית</b><br>
         התקנה פשוטה, ממשק ניהול נוח ותפעול קל לכל משתמש.
       </div>
     </div>
-    <div class="djidock-advantage-card">
+    <div class="gdock-advantage-card">
       <i class="fas fa-shield-alt"></i>
       <div>
         <b>אמינות ושירות</b><br>
         שירות יבואן רשמי בישראל, תחזוקה מינימלית ואמינות גבוהה לאורך זמן.
       </div>
     </div>
-    <div class="djidock-advantage-card">
+    <div class="gdock-advantage-card">
       <i class="fas fa-sync-alt"></i>
       <div>
         <b>תפעול אוטומטי מלא</b><br>
@@ -243,10 +257,9 @@
       </div>
     </div>
   </div>
-
   <!-- Video Card -->
-  <div class="djidock-card" data-aos="fade-up">
-    <div class="djidock-card-content text-center">
+  <div class="gdock-card" data-aos="fade-up">
+    <div class="gdock-card-content text-center">
       <h2 class="mb-4"><i class="fas fa-video ms-2"></i>הכירו את תחנות DJI Dock בפעולה</h2>
       <video controls class="w-100 rounded shadow" style="max-width: 700px;">
         <source src="../../assets/videos/dji-dock-demo.mp4" type="video/mp4">
@@ -254,27 +267,22 @@
       </video>
     </div>
   </div>
-
   <!-- Support Card -->
-  <div class="djidock-card container" data-aos="fade-up">
-    <div class="djidock-card-content d-flex flex-wrap align-items-center gap-4">
-      <div>
-        <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
-        <p>
-          צוות התמיכה של דרונר ודיגיטל אקספרס זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
-        </p>
-      </div>
-      <img src="../../assets/images/dji-dock-support.jpg" alt="תמיכה טכנית DJI Dock" style="border-radius:14px;max-width:200px;width:100%;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+  <div class="gdock-support-card container" data-aos="fade-up">
+    <div>
+      <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
+      <p>
+        צוות התמיכה של דרונר ודיגיטל אקספרס זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
+      </p>
     </div>
+    <img src="../../assets/images/dji-dock-support.jpg" alt="תמיכה טכנית DJI Dock">
   </div>
-
   <!-- CTA Card -->
   <div class="cta-card container" data-aos="fade-up">
     <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את DJI Dock בפעולה?</h3>
     <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
     <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
   </div>
-
   <!-- Footer for pages/products folder -->
   <footer class="main-footer-modern py-5">
     <div class="container">

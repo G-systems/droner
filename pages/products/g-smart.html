@@ -41,17 +41,27 @@
     .gsmart-card-content {
       padding: 2rem 2rem 1.5rem 2rem;
       font-size: 1.15rem;
-       color: var(--color-light);
+      color: var(--color-light);
     }
+    /* --- Features section: dock-d135 style (copied from g-control) --- */
     .gsmart-feature-list {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1.2rem;
       justify-content: center;
       margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      position: relative;
+    }
+    .gsmart-feature-list::-webkit-scrollbar {
+      display: none;
     }
     .gsmart-feature-item {
-      background: rgba(176,141,87,0.1); color: var(--color-light);
+      background: rgba(176,141,87,0.1);
+      color: var(--color-light);
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(255,235,59,0.08);
       padding: 1.5rem 1.2rem;
@@ -59,18 +69,18 @@
       max-width: 320px;
       flex: 1 1 220px;
       text-align: center;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .gsmart-feature-item:hover {
-      background: var(--color-gold); color: var(--color-dark);
-      transform: translateY(-4px) scale(1.04);
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: none;
     }
     .gsmart-feature-icon {
       font-size: 2.2rem;
       color: var(--color-gold);
       margin-bottom: 0.7rem;
       display: block;
+      transition: none;
     }
+    /* --- End features section --- */
     .gsmart-advantage-card {
       background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%);
       border-radius: 18px;
@@ -84,8 +94,6 @@
     }
     .gsmart-advantage-card .fa {
       font-size: 2.5rem;
-      color: var(--color-brand);
-      min-width: 48px;
     }
     .gsmart-usecase-card {
       background: #141414;

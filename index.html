@@ -13,7 +13,7 @@
     body {
       font-family: 'Rubik', sans-serif;
       background: var(--color-dark-bg);
-      color: var(--color-white);
+      color: var(--color-light);
     }
     .section-title {
       color: var(--color-gold) !important;
@@ -26,7 +26,7 @@
     .main-footer-modern,
     .modal-content {
       background: var(--color-dark-bg) !important;
-      color: var(--color-white) !important;
+      color: var(--color-light) !important;
     }
     .solution-title,
     .advantage-title,
@@ -38,10 +38,10 @@
     .bg-white,
     .bg-light {
       background: var(--color-dark-bg) !important;
-      color: var(--color-white) !important;
+      color: var(--color-light) !important;
     }
     .footer-link {
-      color: var(--color-white) !important;
+      color: var(--color-light) !important;
     }
     .footer-link:hover {
       color: var(--color-gold) !important;
@@ -60,7 +60,7 @@
     /* Remove white backgrounds from Bootstrap */
     .card, .modal-content, .navbar, .dropdown-menu {
       background: var(--color-dark-bg) !important;
-      color: var(--color-white) !important;
+      color: var(--color-light) !important;
     }
     /* Section line accent */
     .section-line {
@@ -73,12 +73,12 @@
     /* Fix for modal */
     .modal-content {
       background: var(--color-dark-bg) !important;
-      color: var(--color-white) !important;
+      color: var(--color-light) !important;
     }
     /* Fix for input fields in modal */
     .form-control {
       background: var(--color-dark-bg) !important;
-      color: var(--color-white) !important;
+      color: var(--color-light) !important;
       border-color: var(--color-gold) !important;
     }
     .form-label {
@@ -89,6 +89,10 @@
       .solution-image-wrapper { height: 250px; }
       .solution-card { padding: 2rem; }
       .section-title { font-size: 1.75rem; }
+    }
+    /* Make use-case icons gold */
+    .use-case-icon i {
+      color: var(--color-gold) !important;
     }
   </style>
 </head>
@@ -159,7 +163,7 @@
       </div>
     </div>
   </header>
-
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
   <!-- About Us Section -->
   <section id="about-us" class="py-5 bg-dark">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
@@ -646,32 +650,43 @@
       }
     });
   </script>
-  <!-- טעינת קובץ JS של תרגום -->
-<script src="assets/js/translate.js"></script>
-
-<!-- הפעלת תרגום לפי כפתור -->
+  <script src="assets/js/translate.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('translateToggle');
-    let lang = localStorage.getItem('siteLang') || 'he';
+  document.addEventListener('DOMContentLoaded', async () => {
+  const toggleButton = document.getElementById('translateToggle');
+  let lang = localStorage.getItem('siteLang');
 
-    toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+  if (!lang || lang === 'he') {
+    // ברירת מחדל = עברית
+    lang = 'he';
+    document.documentElement.lang = 'he';
+    document.documentElement.dir = 'rtl';
+    toggleButton.textContent = 'English';
+  } else {
+    // משתמש שכבר בחר אנגלית בעבר
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+    toggleButton.textContent = 'עברית';
+    await translatePageToEnglish();
+  }
 
-    toggleButton.addEventListener('click', async () => {
-      if (lang === 'he') {
-        toggleButton.textContent = '...Translating';
-        await translatePageToEnglish();
-        lang = 'en';
-        toggleButton.textContent = 'עברית';
-        document.documentElement.lang = 'en';
-        document.documentElement.dir = 'ltr';
-      } else {
-        location.reload();
-      }
+  toggleButton.addEventListener('click', async () => {
+    if (lang === 'he') {
+      toggleButton.textContent = '...Translating';
+      await translatePageToEnglish();
+      lang = 'en';
+      toggleButton.textContent = 'עברית';
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    } else {
+      lang = 'he';
+      location.reload(); // חזרה לעברית מהתחלה
+    }
 
-      localStorage.setItem('siteLang', lang);
-    });
+    localStorage.setItem('siteLang', lang);
   });
+});
+
 </script>
 </body>
 </body>

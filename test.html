@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>בדיקת תרגום</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #translateToggle {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #0AD100;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .translate-section {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="translate-section">ברוך הבא לאתר הבדיקה</h1>
+  <p class="translate-section">זוהי פסקת תיאור ראשונית לצורך בדיקה של תרגום בזמן אמת באמצעות OpenAI.</p>
+
+  <button id="translateToggle">English</button>
+
+  <script src="assets/js/translate.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('translateToggle');
+      let lang = localStorage.getItem('siteLang') || 'he';
+
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+
+      toggleButton.addEventListener('click', async () => {
+        if (lang === 'he') {
+          toggleButton.textContent = '...Translating';
+          await translatePageToEnglish();
+          lang = 'en';
+          toggleButton.textContent = 'עברית';
+          document.documentElement.lang = 'en';
+          document.documentElement.dir = 'ltr';
+        } else {
+          location.reload();
+        }
+
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+
+</body>
+</html>

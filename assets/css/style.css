@@ -532,3 +532,46 @@ section.bg-dark video,
   mix-blend-mode: normal !important;
   opacity: 1 !important;
 }
+
+/* === Centering content in cta-card === */
+.cta-card {
+  text-align: center !important;
+  padding-top: 2.7rem !important;
+  padding-bottom: 2.7rem !important;
+}
+.cta-card .cta-title,
+.cta-card .cta-desc,
+.cta-card .btn,
+.cta-card a.btn,
+.cta-card > * {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.cta-card .btn,
+.cta-card a.btn {
+  font-size: 1rem !important;
+  padding: 0.35rem 2.2rem !important;
+  border-radius: 30px !important;
+  max-width: 260px;
+  width: 100%;
+  min-width: 120px;
+}
+
+/* Product advantages card consistency */
+/* Only force white text for gcontrol/gdock, not gsmart */
+.gcontrol-advantage-card,
+.gcontrol-advantage-card * {
+  color: #fff !important;
+}
+.gdock-advantage-card,
+.gdock-advantage-card * {
+  color: #fff !important;
+}
+/* Always force gold icon for all product advantage cards */
+.gsmart-advantage-card .fa,
+.gcontrol-advantage-card .fa,
+.gdock-advantage-card .fa {
+  color: var(--color-gold) !important;
+}
