@@ -22,4 +22,5 @@ jobs:
               --destination '$web' \
               --account-name gsystemstatic \
               --auth-mode key \
-              --account-key "${{ secrets.AZURE_STORAGE_KEY }}"
+              --account-key "${{ secrets.AZURE_STORAGE_KEY }}" \
+              --overwrite
