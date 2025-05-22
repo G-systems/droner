@@ -3,16 +3,23 @@
   --accent-gold: #FFD700;
   --accent-turquoise: #008B8B;
   --background-dark: #000000;
+  --background-gradient: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
 }
 
 body {
-  background-color: var(--background-dark);
+  background: var(--background-gradient);
   color: var(--accent-gold);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', 'Arial', sans-serif;
+  font-weight: 500;
 }
 
 a {
   color: var(--accent-turquoise);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-gold);
 }
 
 .btn-primary {
@@ -20,6 +27,16 @@ a {
   color: var(--primary-black);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.icon {
+  color: var(--accent-gold);
+  fill: currentColor;
 }
 
 .header {
