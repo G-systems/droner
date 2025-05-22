@@ -140,7 +140,13 @@ a:hover {
   margin-left: auto;
 }
 
-#translateToggle, .translate-btn {
+/* Hide Google top banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body { top: 0 !important; }
+
+#translateToggle, .translate-btn, #google_translate_element select {
   font-size: 0.9rem;
   padding: 5px 14px;
   border-radius: var(--radius);
@@ -150,7 +156,7 @@ a:hover {
   transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
-#translateToggle:hover, .translate-btn:hover {
+#translateToggle:hover, .translate-btn:hover, #google_translate_element select:hover {
   background-color: var(--color-yellow);
   color: var(--color-black);
   border-color: var(--color-yellow);
