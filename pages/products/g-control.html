@@ -10,9 +10,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
-    body { background: #f7f7f7; }
+    body { background: var(--color-dark-bg); color: var(--color-light); }
     .gcontrol-card {
-      background: #fff;
+      background: #141414;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
@@ -23,7 +23,6 @@
     .gcontrol-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,0.16);
     }
-     /* Hero style uses shared design */
     .gcontrol-card-img {
       width: 100%;
       object-fit: cover;
@@ -34,7 +33,7 @@
     .gcontrol-card-content {
       padding: 2rem 2rem 1.5rem 2rem;
       font-size: 1.15rem;
-      color: #222;
+      color: var(--color-light);
     }
     .gcontrol-feature-list {
       display: flex;
@@ -44,7 +43,8 @@
       margin: 2rem 0 0 0;
     }
     .gcontrol-feature-item {
-      background: #fffde7;
+      background: rgba(176,141,87,0.1);
+      color: var(--color-light);
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(255,235,59,0.08);
       padding: 1.5rem 1.2rem;
@@ -52,21 +52,21 @@
       max-width: 320px;
       flex: 1 1 220px;
       text-align: center;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
     }
     .gcontrol-feature-item:hover {
-      background: #ffeb3b;
-      color: #000;
+      background: var(--color-gold);
+      color: var(--color-dark);
       transform: translateY(-4px) scale(1.04);
     }
     .gcontrol-feature-icon {
       font-size: 2.2rem;
-      color: #ffeb3b;
+      color: var(--color-gold);
       margin-bottom: 0.7rem;
       display: block;
     }
     .gcontrol-advantage-card {
-      background: linear-gradient(120deg, #ffeb3b 60%, #fff 100%);
+      background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%);
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       padding: 2rem 1.5rem;
@@ -74,80 +74,42 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      color: var(--color-dark);
+      font-weight: 500;
       transition: box-shadow 0.2s;
     }
     .gcontrol-advantage-card .fa {
       font-size: 2.5rem;
-      color: #0b0c10;
+      color: var(--color-brand);
       min-width: 48px;
     }
-    .gcontrol-usecase-card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 2rem 1.2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-    }
-    .gcontrol-usecase-card:hover {
-      background: #ffeb3b;
-      color: #000;
-      transform: translateY(-4px) scale(1.03);
-    }
-    .gcontrol-usecase-icon {
-      font-size: 2.2rem;
-      color: #ffeb3b;
-      margin-bottom: 0.7rem;
-      transition: color 0.2s;
-    }
-    .gcontrol-usecase-card:hover .gcontrol-usecase-icon {
-      color: #0b0c10;
-    }
-    .gcontrol-tech-card {
-      background: #0b0c10;
-      color: #ffeb3b;
+    .gcontrol-support-card {
+      background: #141414;
       border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       padding: 2rem 1.5rem;
-      margin-bottom: 2rem;
       display: flex;
       align-items: center;
       gap: 2rem;
       flex-wrap: wrap;
+      margin-bottom: 2rem;
     }
-    .gcontrol-tech-card img {
+    .gcontrol-support-card img {
       border-radius: 14px;
-      max-width: 260px;
+      max-width: 200px;
       width: 100%;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     }
-    .gcontrol-tech-brands {
-      margin-top: 1.2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .gcontrol-tech-brand {
-      background: #ffeb3b;
-      color: #0b0c10;
-      font-weight: 600;
-      border-radius: 30px;
-      padding: 0.5rem 1.25rem;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-    }
-      @media (max-width: 768px) {
-      .gcontrol-card-content, .gcontrol-card-header { padding: 1.2rem 0.7rem; }
+    @media (max-width: 768px) {
+      .gcontrol-card-content { padding: 1.2rem 0.7rem; }
       .gcontrol-feature-list { gap: 0.7rem; }
-      .gcontrol-tech-card { flex-direction: column; gap: 1rem; }
+      .gcontrol-support-card { flex-direction: column; gap: 1rem; }
     }
   </style>
 </head>
 <body>
   <!-- Navbar Start -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container justify-content-center d-flex">
       <a class="navbar-brand d-flex align-items-center mx-auto" href="../../index.html">
         <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="40" />
@@ -193,22 +155,19 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- g-control.html -->
-<!-- Hero Card -->
-<div class="gcontrol-card mt-5" data-aos="fade-up" style="padding:0;">
-  <div class="gcontrol-card-header page-hero" style="position:relative; padding:0;">
-    <div class="image-container" style="position:relative; width:100%; height:320px; overflow:hidden; border-radius:0 0 22px 22px;">
-      <img src="../../assets/images/hero-bg.jpg" alt="רקע מוקד שליטה" style="width:100%; height:100%; object-fit:cover; display:block;">
-      <div class="image-overlay" style="position:absolute; inset:0; background:rgba(11,12,16,0.45);"></div>
-      <div class="header-content" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-align:center; z-index:2;">
-        <h1 style="font-size:2.7rem; font-weight:700; letter-spacing:1px;">
-          <span style="color:#ffeb3b;">G-CONTROL</span>
+  <!-- Hero Card -->
+  <div class="gcontrol-card mt-5 position-relative overflow-hidden" data-aos="fade-up" style="padding:0; border-radius:0;">
+    <div class="gcontrol-card-header page-hero position-relative" style="padding:0; border-radius:0;">
+      <img src="../../assets/images/hero-bg.jpg" alt="רקע מוקד שליטה" style="width:100%; height:340px; object-fit:cover; display:block; border-radius:0;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(11,12,16,0.45);z-index:1; border-radius:0;"></div>
+      <div class="header-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="z-index:2; color:#fff; text-shadow:0 2px 16px var(--color-dark),0 1px 4px var(--color-dark);">
+        <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+          <span style="color:var(--color-gold);">G-CONTROL</span>
         </h1>
-        <p style="font-size:1.35rem; font-weight:400;">מוקד שליטה מרחוק 24/7</p>
+        <p style="font-size:1.35rem; font-weight:500;">מוקד שליטה מרחוק 24/7</p>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Intro Card -->
   <div class="gcontrol-card" data-aos="fade-up">
@@ -227,38 +186,38 @@
   </div>
 
   <!-- Features Card -->
-<div class="gcontrol-card" data-aos="fade-up">
-  <div class="gcontrol-card-content">
-    <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-    <div class="gcontrol-feature-list" style="flex-wrap: nowrap; overflow: visible; justify-content: flex-end; direction: rtl;">
-      <div class="gcontrol-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="gcontrol-feature-icon"><i class="fas fa-user-tie"></i></span>
-        <b>מוקד מאויש ומקצועי</b>
-        <div>שליטה מרחוק על מערכות הרחפנים והמצלמות בזמן אמת, כולל תפעול מלא של תחנות עגינה.</div>
-      </div>
-      <div class="gcontrol-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="gcontrol-feature-icon"><i class="fas fa-tasks"></i></span>
-        <b>ניהול משימות מבצעיות</b>
-        <div>סיורים יזומים, תגובה לאירועים, תחקור ותיעוד מלא של כל פעילות.</div>
-      </div>
-      <div class="gcontrol-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="gcontrol-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
-        <b>שידור וידאו חי</b>
-        <div>צפייה בזמן אמת מכל מקום, כולל שיתוף עם גורמי שטח.</div>
-      </div>
-      <div class="gcontrol-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="gcontrol-feature-icon"><i class="fas fa-file-alt"></i></span>
-        <b>תיעוד ואבטחת מידע</b>
-        <div>שמירת כל המשימות והאירועים בענן, כולל הפקת דוחות אוטומטיים.</div>
-      </div>
-      <div class="gcontrol-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="gcontrol-feature-icon"><i class="fas fa-plug"></i></span>
-        <b>אינטגרציה מלאה</b>
-        <div>עבודה בשיתוף מערכות G-DOCK, G-SMART ו־FlightOps.</div>
+  <div class="gcontrol-card" data-aos="fade-up">
+    <div class="gcontrol-card-content">
+      <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
+      <div class="gcontrol-feature-list" style="direction: rtl;">
+        <div class="gcontrol-feature-item">
+          <span class="gcontrol-feature-icon"><i class="fas fa-user-tie"></i></span>
+          <b>מוקד מאויש ומקצועי</b>
+          <div>שליטה מרחוק על מערכות הרחפנים והמצלמות בזמן אמת, כולל תפעול מלא של תחנות עגינה.</div>
+        </div>
+        <div class="gcontrol-feature-item">
+          <span class="gcontrol-feature-icon"><i class="fas fa-tasks"></i></span>
+          <b>ניהול משימות מבצעיות</b>
+          <div>סיורים יזומים, תגובה לאירועים, תחקור ותיעוד מלא של כל פעילות.</div>
+        </div>
+        <div class="gcontrol-feature-item">
+          <span class="gcontrol-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
+          <b>שידור וידאו חי</b>
+          <div>צפייה בזמן אמת מכל מקום, כולל שיתוף עם גורמי שטח.</div>
+        </div>
+        <div class="gcontrol-feature-item">
+          <span class="gcontrol-feature-icon"><i class="fas fa-file-alt"></i></span>
+          <b>תיעוד ואבטחת מידע</b>
+          <div>שמירת כל המשימות והאירועים בענן, כולל הפקת דוחות אוטומטיים.</div>
+        </div>
+        <div class="gcontrol-feature-item">
+          <span class="gcontrol-feature-icon"><i class="fas fa-plug"></i></span>
+          <b>אינטגרציה מלאה</b>
+          <div>עבודה בשיתוף מערכות G-DOCK, G-SMART ו־FlightOps.</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Advantages Cards -->
   <div class="container" data-aos="fade-up">
@@ -292,150 +251,74 @@
       </div>
     </div>
   </div>
+
   <!-- Video Section -->
   <div class="container my-5" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>הכירו את G-CONTROL בפעולה</h2>
     <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
-      <iframe src="https://www.youtube.com/embed/your_video_id_here" title="הכירו את G-SMART בפעולה" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-    </div>
-  </div>
-  <!-- Support Card -->
-  <div class="gcontrol-card container" data-aos="fade-up">
-    <div class="gcontrol-card-content d-flex flex-wrap align-items-center gap-4">
-      <div>
-        <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
-        <p>
-          צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
-        </p>
-      </div>
-      <img src="../../assets/images/gcontrol-support.jpg" alt="תמיכה טכנית G-CONTROL" style="border-radius:14px;max-width:200px;width:100%;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+      <iframe src="https://www.youtube.com/embed/your_video_id_here" title="הכירו את G-CONTROL בפעולה" allowfullscreen allow="autoplay; encrypted-media"></iframe>
     </div>
   </div>
 
+  <!-- Support Card -->
+  <div class="gcontrol-support-card container" data-aos="fade-up">
+    <div>
+      <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
+      <p>
+        צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
+      </p>
+    </div>
+    <img src="../../assets/images/gcontrol-support.jpg" alt="תמיכה טכנית G-CONTROL">
+  </div>
+
   <!-- CTA Card -->
-  <div class="cta-card container" data-aos="fade-up"><!-- shared CTA design -->
+  <div class="cta-card container" data-aos="fade-up">
     <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-CONTROL בפעולה?</h3>
     <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את המוקד והמערכת אצלך באתר.</p>
     <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
   </div>
-<!-- Footer for pages/products folder -->
-<footer class="main-footer-modern py-5">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
-        <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+
+  <!-- Footer for pages/products folder -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../../index.html" class="footer-link">בית</a>
+            <a href="../about.html" class="footer-link">אודות</a>
+            <a href="g-smart.html" class="footer-link">G-SMART</a>
+            <a href="dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="../contact.html" class="footer-link">צור קשר</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
-          <a href="../../index.html" class="footer-link">בית</a>
-          <a href="../about.html" class="footer-link">אודות</a>
-          <a href="g-smart.html" class="footer-link">G-SMART</a>
-          <a href="dock-d135.html" class="footer-link">G-DOCK</a>
-          <a href="g-control.html" class="footer-link">G-CONTROL</a>
-          <a href="../contact.html" class="footer-link">צור קשר</a>
-        </nav>
-      </div>
-      <div class="col-md-4 text-center text-md-start">
-        <div class="footer-contact mb-2">
-          <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
-            <i class="fa fa-phone ms-2"></i>052-387-6112
-          </a>
-        </div>
-        <div class="footer-contact mb-2">
-          <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
-            <i class="fa fa-envelope ms-2"></i>info@droner.co.il
-          </a>
-        </div>
-        <div class="footer-social">
-          <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
       </div>
     </div>
-    <hr class="footer-divider my-4">
-    <div class="text-center small footer-copyright">
-      &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
-    </div>
-  </div>
-  <style>
-    .main-footer-modern {
-      background: linear-gradient(120deg, #0b0c10 70%, #ffeb3b 120%);
-      color: #fff;
-      border-radius: 0 0 18px 18px;
-      box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
-      margin-top: 0;
-      font-family: 'Rubik', sans-serif;
-    }
-    .main-footer-modern .footer-logo {
-      background: #fff;
-      border-radius: 12px;
-      padding: 0.5rem 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    }
-    .main-footer-modern .footer-links {
-      gap: 1.2rem !important;
-    }
-    .main-footer-modern .footer-link {
-      color: #fff;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 1.08rem;
-      transition: color 0.2s;
-      position: relative;
-      padding-bottom: 2px;
-    }
-    .main-footer-modern .footer-link:hover,
-    .main-footer-modern .footer-link:focus {
-      color: #ffeb3b;
-      text-decoration: underline;
-    }
-    .main-footer-modern .footer-contact {
-      color: #fffde7;
-      font-size: 1rem;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .main-footer-modern .footer-contact i {
-      color: #ffeb3b;
-      font-size: 1.1em;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social {
-      margin-top: 0.5rem;
-    }
-    .main-footer-modern .footer-social-link {
-      color: #fff;
-      margin-left: 0.7rem;
-      font-size: 1.35rem;
-      transition: color 0.2s, transform 0.2s;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social-link:hover {
-      color: #ffeb3b;
-      transform: scale(1.15);
-    }
-    .main-footer-modern .footer-divider {
-      border-color: #ffeb3b;
-      opacity: 0.7;
-    }
-    @media (max-width: 768px) {
-      .main-footer-modern {
-        border-radius: 0;
-        padding: 2rem 0.5rem;
-      }
-      .main-footer-modern .footer-links {
-        gap: 0.7rem !important;
-      }
-      .main-footer-modern .footer-link {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</footer>
+  </footer>
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -469,12 +352,6 @@
   <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
     <img src="../../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60">
   </a>
-
-  <footer class="footer-section bg-dark text-white text-center py-3">
-    <div class="container">
-      &copy; 2025 DRONER. כל הזכויות שמורות.
-    </div>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

@@ -10,9 +10,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
-    body { background: #f7f7f7; }
+    body { background: var(--color-dark-bg); color: var(--color-light); }
     .djidock-card {
-      background: #fff;
+      background: #141414;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
@@ -23,18 +23,10 @@
     .djidock-card:hover {
       box-shadow: 0 12px 40px rgba(0,0,0,0.16);
     }
-     /* Hero style uses shared design */
-    .djidock-card-img {
-      width: 100%;
-      object-fit: cover;
-      max-height: 340px;
-      border-radius: 0 0 22px 22px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    }
     .djidock-card-content {
       padding: 2rem 2rem 1.5rem 2rem;
       font-size: 1.15rem;
-      color: #222;
+      color: var(--color-light);
     }
     .djidock-feature-list {
       display: flex;
@@ -44,7 +36,8 @@
       margin: 2rem 0 0 0;
     }
     .djidock-feature-item {
-      background: #fffde7;
+      background: rgba(176,141,87,0.1);
+      color: var(--color-light);
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(255,235,59,0.08);
       padding: 1.5rem 1.2rem;
@@ -52,21 +45,21 @@
       max-width: 320px;
       flex: 1 1 220px;
       text-align: center;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
     }
     .djidock-feature-item:hover {
-      background: #ffeb3b;
-      color: #000;
+      background: var(--color-gold);
+      color: var(--color-dark);
       transform: translateY(-4px) scale(1.04);
     }
     .djidock-feature-icon {
       font-size: 2.2rem;
-      color: #ffeb3b;
+      color: var(--color-gold);
       margin-bottom: 0.7rem;
       display: block;
     }
     .djidock-advantage-card {
-      background: linear-gradient(120deg, #ffeb3b 60%, #fff 100%);
+      background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%);
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       padding: 2rem 1.5rem;
@@ -74,11 +67,13 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      color: var(--color-dark);
+      font-weight: 500;
       transition: box-shadow 0.2s;
     }
     .djidock-advantage-card .fa {
       font-size: 2.5rem;
-      color: #0b0c10;
+      color: var(--color-brand);
       min-width: 48px;
     }
     .djidock-gallery {
@@ -97,17 +92,16 @@
       background: #000;
     }
     @media (max-width: 768px) {
-      .djidock-card-content, .djidock-card-header { padding: 1.2rem 0.7rem; }
+      .djidock-card-content { padding: 1.2rem 0.7rem; }
       .djidock-feature-list { gap: 0.7rem; }
       .djidock-gallery { gap: 0.7rem; }
       .djidock-gallery img { width: 100%; height: 120px; }
     }
-
   </style>
 </head>
 <body>
   <!-- Navbar Start -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container justify-content-center d-flex">
       <a class="navbar-brand d-flex align-items-center mx-auto" href="../../index.html">
         <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="40" />
@@ -156,24 +150,13 @@
   <!-- Hero Card -->
   <div class="djidock-card mt-5" data-aos="fade-up" style="padding:0;">
     <div class="djidock-card-header page-hero" style="position:relative; padding:0;">
-      <!-- Background image for hero card -->
-      <div class="image-container" style="position:relative;">
-        <img src="../../assets/images/hero-bg.jpg" alt="רקע DJI Dock" style="width:100%; height:340px; object-fit:cover; border-radius:0 0 22px 22px;">
-        <div class="header-content" style="
-          position:absolute;
-          top:0; left:0; width:100%; height:100%;
-          display:flex; flex-direction:column; justify-content:center; align-items:center;
-          background:rgba(0,0,0,0.38);
-          color:#fff;
-          text-align:center;
-          padding:2rem 1rem;
-          border-radius:0 0 22px 22px;
-        ">
-          <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem; color:#ffeb3b;">DJI Dock 2 & DJI Dock 3</h1>
-          <p style="font-size:1.25rem; font-weight:400; margin-bottom:0;">
-            תחנות עגינה אוטונומיות מבית DJI בשירות דרונר – אינטגרציה מלאה , אמינות גבוהה, שליטה קלה
-          </p>
-        </div>
+      <img src="../../assets/images/hero-bg.jpg" alt="רקע DJI Dock" style="width:100%; height:340px; object-fit:cover; border-radius:0;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(11,12,16,0.45);z-index:1; border-radius:0;"></div>
+      <div class="header-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="z-index:2; color:#fff; text-shadow:0 2px 16px var(--color-dark),0 1px 4px var(--color-dark);">
+        <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem; color:var(--color-gold);">DJI Dock 2 & DJI Dock 3</h1>
+        <p style="font-size:1.25rem; font-weight:400; margin-bottom:0;">
+          תחנות עגינה אוטונומיות מבית DJI בשירות דרונר – אינטגרציה מלאה, אמינות גבוהה, שליטה קלה
+        </p>
       </div>
     </div>
   </div>
@@ -195,38 +178,38 @@
   </div>
 
   <!-- Features Card -->
-<div class="djidock-card" data-aos="fade-up">
-  <div class="djidock-card-content">
-    <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-    <div class="djidock-feature-list" style="flex-wrap: nowrap; overflow: visible; justify-content: flex-end; direction: rtl;">
-      <div class="djidock-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="djidock-feature-icon"><i class="fas fa-cubes"></i></span>
-        <b>תאימות מושלמת</b>
-        <div>עובד ישירות עם רחפני DJI, ללא צורך במתאמים או פתרונות צד ג'.</div>
-      </div>
-      <div class="djidock-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="djidock-feature-icon"><i class="fas fa-plug"></i></span>
-        <b>הפעלה פשוטה</b>
-        <div>התקנה מהירה, ממשק משתמש אינטואיטיבי ותפעול קל.</div>
-      </div>
-      <div class="djidock-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="djidock-feature-icon"><i class="fas fa-shield-alt"></i></span>
-        <b>אמינות גבוהה</b>
-        <div>תחנות עמידות, עם שירות ותמיכה של יבואן רשמי.</div>
-      </div>
-      <div class="djidock-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="djidock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
-        <b>תקשורת RF</b>
-        <div>שליטה בטווח מוגבל, ללא תלות בתקשורת סלולרית.</div>
-      </div>
-      <div class="djidock-feature-item" style="direction: rtl; background: #fffbe7; color: #222;">
-        <span class="djidock-feature-icon"><i class="fas fa-sync-alt"></i></span>
-        <b>טעינה אוטומטית</b>
-        <div>הרחפן נטען אוטומטית לאחר כל משימה – מוכן תמיד לפעולה.</div>
+  <div class="djidock-card" data-aos="fade-up">
+    <div class="djidock-card-content">
+      <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
+      <div class="djidock-feature-list" style="direction: rtl;">
+        <div class="djidock-feature-item">
+          <span class="djidock-feature-icon"><i class="fas fa-cubes"></i></span>
+          <b>תאימות מושלמת</b>
+          <div>עובד ישירות עם רחפני DJI, ללא צורך במתאמים או פתרונות צד ג'.</div>
+        </div>
+        <div class="djidock-feature-item">
+          <span class="djidock-feature-icon"><i class="fas fa-plug"></i></span>
+          <b>הפעלה פשוטה</b>
+          <div>התקנה מהירה, ממשק משתמש אינטואיטיבי ותפעול קל.</div>
+        </div>
+        <div class="djidock-feature-item">
+          <span class="djidock-feature-icon"><i class="fas fa-shield-alt"></i></span>
+          <b>אמינות גבוהה</b>
+          <div>תחנות עמידות, עם שירות ותמיכה של יבואן רשמי.</div>
+        </div>
+        <div class="djidock-feature-item">
+          <span class="djidock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
+          <b>תקשורת RF</b>
+          <div>שליטה בטווח מוגבל, ללא תלות בתקשורת סלולרית.</div>
+        </div>
+        <div class="djidock-feature-item">
+          <span class="djidock-feature-icon"><i class="fas fa-sync-alt"></i></span>
+          <b>טעינה אוטומטית</b>
+          <div>הרחפן נטען אוטומטית לאחר כל משימה – מוכן תמיד לפעולה.</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Advantages Cards -->
   <div class="container" data-aos="fade-up">
@@ -286,130 +269,87 @@
   </div>
 
   <!-- CTA Card -->
-  <div class="cta-card container" data-aos="fade-up"><!-- shared CTA design -->
+  <div class="cta-card container" data-aos="fade-up">
     <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את DJI Dock בפעולה?</h3>
     <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
     <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
   </div>
 
   <!-- Footer for pages/products folder -->
-<footer class="main-footer-modern py-5">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
-        <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <img src="../../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../../index.html" class="footer-link">בית</a>
+            <a href="../about.html" class="footer-link">אודות</a>
+            <a href="g-smart.html" class="footer-link">G-SMART</a>
+            <a href="dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="../contact.html" class="footer-link">צור קשר</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
-          <a href="../../index.html" class="footer-link">בית</a>
-          <a href="../about.html" class="footer-link">אודות</a>
-          <a href="g-smart.html" class="footer-link">G-SMART</a>
-          <a href="dock-d135.html" class="footer-link">G-DOCK</a>
-          <a href="g-control.html" class="footer-link">G-CONTROL</a>
-          <a href="../contact.html" class="footer-link">צור קשר</a>
-        </nav>
-      </div>
-      <div class="col-md-4 text-center text-md-start">
-        <div class="footer-contact mb-2">
-          <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
-            <i class="fa fa-phone ms-2"></i>052-387-6112
-          </a>
-        </div>
-        <div class="footer-contact mb-2">
-          <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
-            <i class="fa fa-envelope ms-2"></i>info@droner.co.il
-          </a>
-        </div>
-        <div class="footer-social">
-          <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
       </div>
     </div>
-    <hr class="footer-divider my-4">
-    <div class="text-center small footer-copyright">
-      &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
+  </footer>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">כניסת לקוחות</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">אימייל</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">סיסמה</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">התחבר</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
+        </div>
+      </div>
     </div>
   </div>
-  <style>
-    .main-footer-modern {
-      background: linear-gradient(120deg, #0b0c10 70%, #ffeb3b 120%);
-      color: #fff;
-      border-radius: 0 0 18px 18px;
-      box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
-      margin-top: 0;
-      font-family: 'Rubik', sans-serif;
-    }
-    .main-footer-modern .footer-logo {
-      background: #fff;
-      border-radius: 12px;
-      padding: 0.5rem 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    }
-    .main-footer-modern .footer-links {
-      gap: 1.2rem !important;
-    }
-    .main-footer-modern .footer-link {
-      color: #fff;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 1.08rem;
-      transition: color 0.2s;
-      position: relative;
-      padding-bottom: 2px;
-    }
-    .main-footer-modern .footer-link:hover,
-    .main-footer-modern .footer-link:focus {
-      color: #ffeb3b;
-      text-decoration: underline;
-    }
-    .main-footer-modern .footer-contact {
-      color: #fffde7;
-      font-size: 1rem;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .main-footer-modern .footer-contact i {
-      color: #ffeb3b;
-      font-size: 1.1em;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social {
-      margin-top: 0.5rem;
-    }
-    .main-footer-modern .footer-social-link {
-      color: #fff;
-      margin-left: 0.7rem;
-      font-size: 1.35rem;
-      transition: color 0.2s, transform 0.2s;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social-link:hover {
-      color: #ffeb3b;
-      transform: scale(1.15);
-    }
-    .main-footer-modern .footer-divider {
-      border-color: #ffeb3b;
-      opacity: 0.7;
-    }
-    @media (max-width: 768px) {
-      .main-footer-modern {
-        border-radius: 0;
-        padding: 2rem 0.5rem;
-      }
-      .main-footer-modern .footer-links {
-        gap: 0.7rem !important;
-      }
-      .main-footer-modern .footer-link {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</footer>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60">
+  </a>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>

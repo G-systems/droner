@@ -10,30 +10,22 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
-    /* Hero section now uses an image background */
     .media-hero {
       position: relative;
-      color: #fff;
       min-height: 340px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      background: var(--color-dark-bg);
       z-index: 1;
     }
     .media-hero .image-container {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+      top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
     }
     .media-hero .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.55);
+      width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);
     }
     .media-hero .container {
       position: relative;
@@ -50,23 +42,25 @@
     }
     .media-hero p {
       font-size: 1.3rem;
-      color: #fff;
+      color: var(--color-light);
       max-width: 600px;
       margin: 0 auto;
       text-shadow: 0 2px 8px rgba(255,214,0,0.15);
       animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
     }
     .media-section {
-      background: #fff;
+      background: #141414;
       border-radius: 18px;
       box-shadow: 0 5px 25px rgba(0,0,0,0.10);
       padding: 2.7rem 2rem;
       margin-bottom: 2.5rem;
       position: relative;
       overflow: hidden;
+      color: var(--color-light);
+      border: 1px solid var(--color-gold);
     }
     .media-section h2 {
-      color: #0b0c10;
+      color: var(--color-gold);
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
@@ -92,6 +86,7 @@
       font-size: 1.1rem;
       transition: background 0.2s;
       border-radius: 8px;
+      color: var(--color-light);
     }
     .media-section ul li::before {
       content: "\f058";
@@ -105,10 +100,10 @@
       transition: color 0.2s;
     }
     .media-section ul li:hover {
-      background: var(--color-light);
+      background: rgba(176,141,87,0.08);
     }
     .media-section ul li:hover::before {
-      color: #0b0c10;
+      color: var(--color-brand);
     }
     .media-gallery-row {
       display: flex;
@@ -125,6 +120,7 @@
       height: 180px;
       object-fit: cover;
       background: #000;
+      border: 2px solid var(--color-gold);
     }
     @media (max-width: 768px) {
       .media-hero h1 { font-size: 1.5rem; }
@@ -183,7 +179,6 @@
 
   <!-- Hero Section -->
   <section class="media-hero hero-section-padding">
-    <!-- Background image -->
     <div class="image-container">
       <img src="../assets/images/hero-bg.jpg" alt="רקע מדיה" />
     </div>
@@ -200,7 +195,7 @@
         <img src="../assets/images/blogs.jpg" alt="בלוג מקצועי" class="about-img w-100">
       </div>
       <div class="col-md-6">
-        <h2><i class="fa fa-blog ms-2" style="color:var(--color-gold)"></i>בלוג מקצועי</h2>
+        <h2><i class="fa fa-blog ms-2"></i>בלוג מקצועי</h2>
         <ul>
           <li>מאמרים ועדכונים טכנולוגיים</li>
           <li>מדריכי הטסה וניהול מערכות</li>
@@ -218,7 +213,7 @@
         <img src="../assets/images/case-studies.jpg" alt="סיפורי הצלחה" class="about-img w-100">
       </div>
       <div class="col-md-6">
-        <h2><i class="fa fa-trophy ms-2" style="color:var(--color-gold)"></i>סיפורי הצלחה</h2>
+        <h2><i class="fa fa-trophy ms-2"></i>סיפורי הצלחה</h2>
         <ul>
           <li>Case Studies ממבצעים אמיתיים</li>
           <li>ראיונות עם לקוחות</li>
@@ -235,7 +230,7 @@
         <img src="../assets/images/events.jpg" alt="אירועים וכנסים" class="about-img w-100">
       </div>
       <div class="col-md-6">
-        <h2><i class="fa fa-calendar-alt ms-2" style="color:var(--color-gold)"></i>אירועים וכנסים</h2>
+        <h2><i class="fa fa-calendar-alt ms-2"></i>אירועים וכנסים</h2>
         <ul>
           <li>כנסים מקצועיים והדרכות</li>
           <li>סדנאות והשתלמויות</li>
@@ -248,7 +243,7 @@
 
   <!-- גלריה -->
   <section class="media-section" data-aos="fade-up">
-    <h2><i class="fa fa-images ms-2" style="color:var(--color-gold)"></i>גלריית מדיה</h2>
+    <h2><i class="fa fa-images ms-2"></i>גלריית מדיה</h2>
     <div class="media-gallery-row">
       <img src="../assets/images/media-gallery-1.jpg" alt="גלריה 1">
       <img src="../assets/images/media-gallery-2.jpg" alt="גלריה 2">
@@ -261,7 +256,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-card" data-aos="fade-up"><!-- shared CTA design -->
+  <section class="cta-card" data-aos="fade-up">
     <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים להישאר מעודכנים?</h3>
     <p class="cta-desc">הרשמו עכשיו לקבלת תכנים מקצועיים ועדכונים ישירות למייל או לוואטסאפ.</p>
     <a href="#" class="btn btn-cta btn-lg px-5 py-3">להרשמה לניוזלטר</a>
@@ -279,11 +274,11 @@
           <form>
             <div class="mb-3">
               <label for="loginEmail" class="form-label">אימייל</label>
-              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+              <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
             </div>
             <div class="mb-3">
               <label for="loginPassword" class="form-label">סיסמה</label>
-              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+              <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
             </div>
             <div class="d-grid">
               <button type="submit" class="btn btn-warning">התחבר</button>
@@ -301,124 +296,47 @@
     <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60">
   </a>
 
- <!-- Footer for pages folder -->
-<footer class="main-footer-modern py-5">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
-        <img src="../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+  <!-- Footer for pages folder -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <img src="../assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../index.html" class="footer-link">בית</a>
+            <a href="about.html" class="footer-link">אודות</a>
+            <a href="products/g-smart.html" class="footer-link">G-SMART</a>
+            <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="contact.html" class="footer-link">צור קשר</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
-          <a href="../index.html" class="footer-link">בית</a>
-          <a href="about.html" class="footer-link">אודות</a>
-          <a href="products/g-smart.html" class="footer-link">G-SMART</a>
-          <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
-          <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
-          <a href="contact.html" class="footer-link">צור קשר</a>
-        </nav>
-      </div>
-      <div class="col-md-4 text-center text-md-start">
-        <div class="footer-contact mb-2">
-          <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
-            <i class="fa fa-phone ms-2"></i>052-387-6112
-          </a>
-        </div>
-        <div class="footer-contact mb-2">
-          <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
-            <i class="fa fa-envelope ms-2"></i>info@droner.co.il
-          </a>
-        </div>
-        <div class="footer-social">
-          <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
       </div>
     </div>
-    <hr class="footer-divider my-4">
-    <div class="text-center small footer-copyright">
-      &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
-    </div>
-  </div>
-  <style>
-    .main-footer-modern {
-      background: linear-gradient(120deg, #0b0c10 70%, var(--color-gold) 120%);
-      color: #fff;
-      border-radius: 0 0 18px 18px;
-      box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
-      margin-top: 0;
-      font-family: 'Rubik', sans-serif;
-    }
-    .main-footer-modern .footer-logo {
-      background: #fff;
-      border-radius: 12px;
-      padding: 0.5rem 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    }
-    .main-footer-modern .footer-links {
-      gap: 1.2rem !important;
-    }
-    .main-footer-modern .footer-link {
-      color: #fff;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: 1.08rem;
-      transition: color 0.2s;
-      position: relative;
-      padding-bottom: 2px;
-    }
-    .main-footer-modern .footer-link:hover,
-    .main-footer-modern .footer-link:focus {
-      color: var(--color-gold);
-      text-decoration: underline;
-    }
-    .main-footer-modern .footer-contact {
-      color: var(--color-light);
-      font-size: 1rem;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .main-footer-modern .footer-contact i {
-      color: var(--color-gold);
-      font-size: 1.1em;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social {
-      margin-top: 0.5rem;
-    }
-    .main-footer-modern .footer-social-link {
-      color: #fff;
-      margin-left: 0.7rem;
-      font-size: 1.35rem;
-      transition: color 0.2s, transform 0.2s;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .main-footer-modern .footer-social-link:hover {
-      color: var(--color-gold);
-      transform: scale(1.15);
-    }
-    .main-footer-modern .footer-divider {
-      border-color: var(--color-gold);
-      opacity: 0.7;
-    }
-    @media (max-width: 768px) {
-      .main-footer-modern {
-        border-radius: 0;
-        padding: 2rem 0.5rem;
-      }
-      .main-footer-modern .footer-links {
-        gap: 0.7rem !important;
-      }
-      .main-footer-modern .footer-link {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</footer>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
@@ -432,12 +350,10 @@
       // Language Toggle
       const toggleButton = document.getElementById('translateToggle');
       if (!toggleButton) return;
-
       let lang = localStorage.getItem('siteLang') || 'he';
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
       toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-
       toggleButton.addEventListener('click', () => {
         lang = lang === 'he' ? 'en' : 'he';
         document.documentElement.lang = lang;
