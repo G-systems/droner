@@ -1,13 +1,13 @@
 /* === Unified Color Variables (from g-smart.html) === */
 :root {
-  --color-dark: #0b0c10;
-  --color-dark-bg: #0b0c10;
+  --color-dark:  #121212;
+  --color-dark-bg: #121212;
   --color-black: #0b0c10;
-  --color-gold: #b08d57;
-  --color-brand: #0AD100;
+  --color-gold: #FFC65C;
+  --color-brand: #FFC65C;
   --color-light: #f4f4f4;
   --color-white: #fff;
-  --color-bronze: #b08d57;
+  --color-bronze: #FFC65C;
   --radius: 18px;
   --transition: 0.2s;
   --shadow: 0 8px 32px rgba(0,0,0,0.10);
