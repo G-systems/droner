@@ -599,3 +599,83 @@ button.btn-warning .fa-user {
 .gdock-support-card img {
   display: none;
 } */
+
+/* === Card Roll (Horizontal Scroll) for Features & Advantages === */
+.gdock-feature-list,
+.gsmart-feature-list,
+.features-section,
+.advantages-section,
+.gdock-advantage-list,
+.gsmart-advantage-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  margin: 2rem 0 0 0;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
+.gdock-feature-list::-webkit-scrollbar,
+.gsmart-feature-list::-webkit-scrollbar,
+.features-section::-webkit-scrollbar,
+.advantages-section::-webkit-scrollbar,
+.gdock-advantage-list::-webkit-scrollbar,
+.gsmart-advantage-list::-webkit-scrollbar {
+  display: none;
+}
+.gdock-feature-item,
+.gsmart-feature-item,
+.feature-card,
+.advantage-card,
+.gdock-advantage-card,
+.gsmart-advantage-card {
+  min-width: 240px;
+  max-width: 340px;
+  flex: 0 0 260px;
+  margin-bottom: 0;
+  /* For smooth horizontal scroll */
+  scroll-snap-align: start;
+}
+.gdock-feature-list,
+.gsmart-feature-list,
+.features-section,
+.advantages-section,
+.gdock-advantage-list,
+.gsmart-advantage-list {
+  scroll-snap-type: x mandatory;
+}
+@media (max-width: 1200px) {
+  .gdock-feature-item,
+  .gsmart-feature-item,
+  .feature-card,
+  .advantage-card,
+  .gdock-advantage-card,
+  .gsmart-advantage-card {
+    min-width: 200px;
+    max-width: 90vw;
+    flex: 0 0 220px;
+  }
+}
+@media (max-width: 768px) {
+  .gdock-feature-list,
+  .gsmart-feature-list,
+  .features-section,
+  .advantages-section,
+  .gdock-advantage-list,
+  .gsmart-advantage-list {
+    gap: 0.7rem;
+  }
+  .gdock-feature-item,
+  .gsmart-feature-item,
+  .feature-card,
+  .advantage-card,
+  .gdock-advantage-card,
+  .gsmart-advantage-card {
+    min-width: 75vw;
+    max-width: 95vw;
+    flex: 0 0 80vw;
+  }
+}

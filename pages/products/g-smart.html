@@ -251,11 +251,12 @@
     </div>
   </div>
 
-  <!-- Features Card (horizontal strip, centered, not a list) -->
+  <!-- Features Section (roll of cards) -->
   <div class="gsmart-card" data-aos="fade-up">
     <div class="gsmart-card-content">
       <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-      <div class="d-flex justify-content-center flex-wrap gap-3" style="direction: rtl;">
+      <div class="gsmart-feature-list" style="direction: rtl;">
+        <!-- Each .gsmart-feature-item is a card in the roll -->
         <div class="gsmart-feature-item" style="background: rgba(176,141,87,0.1); color: var(--color-light);">
           <span class="gsmart-feature-icon"><i class="fas fa-satellite-dish"></i></span>
           <b>שליטה ללא מגבלת טווח (BVLOS)</b>
@@ -285,35 +286,37 @@
     </div>
   </div>
 
-  <!-- Advantages Cards (vertical stack) -->
+  <!-- Advantages Section (roll of cards) -->
   <div class="container" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
-    <div class="gsmart-advantage-card">
-      <i class="fas fa-user-minus"></i>
-      <div>
-        <b>חיסכון משמעותי בכוח אדם</b><br>
-        הפחתת הצורך במטיסים בשטח בזכות יכולות הטסה אוטונומיות מלאות.
+    <div class="gsmart-advantage-list" style="display:flex;flex-wrap:nowrap;overflow-x:auto;gap:1.2rem;scroll-snap-type:x mandatory;">
+      <div class="gsmart-advantage-card">
+        <i class="fas fa-clock"></i>
+        <div>
+          <b>זמינות מלאה 24/7</b><br>
+          מענה מיידי לכל אירוע, בכל שעה, עם צוות מקצועי ומנוסה.
+        </div>
       </div>
-    </div>
-    <div class="gsmart-advantage-card">
-      <i class="fas fa-bolt"></i>
-      <div>
-        <b>שיפור זמני תגובה</b><br>
-        זיהוי והתרעה מיידית על אירועים חריגים בשטח.
+      <div class="gsmart-advantage-card">
+        <i class="fas fa-user-shield"></i>
+        <div>
+          <b>הפחתת סיכונים ועלויות</b><br>
+          אין צורך בכוח אדם יקר בשטח – שליטה מרחוק חוסכת משאבים ומפחיתה סיכונים.
+        </div>
       </div>
-    </div>
-    <div class="gsmart-advantage-card">
-      <i class="fas fa-file-alt"></i>
-      <div>
-        <b>תיעוד ואבטחת מידע</b><br>
-        קבלת נתונים מלאים לשימוש מבצעי וביטוחי, עם יכולת שחזור מדויק של אירועים.
+      <div class="gsmart-advantage-card">
+        <i class="fas fa-bolt"></i>
+        <div>
+          <b>תגובה מהירה ומדויקת</b><br>
+          זיהוי, תחקור ותגובה לאירועים בזמן אמת, כולל תיעוד מלא.
+        </div>
       </div>
-    </div>
-    <div class="gsmart-advantage-card">
-      <i class="fas fa-mouse-pointer"></i>
-      <div>
-        <b>פתרון גמיש וקל לשימוש</b><br>
-        תפעול פשוט דרך ממשק אינטואיטיבי בדפדפן או אפליקציה, ללא צורך בידע טכני מקדים.
+      <div class="gsmart-advantage-card">
+        <i class="fas fa-chart-line"></i>
+        <div>
+          <b>שיפור תהליכים מבצעיים</b><br>
+          הפקת דוחות, ניתוח נתונים ושיפור מתמיד של מערך האבטחה.
+        </div>
       </div>
     </div>
   </div>

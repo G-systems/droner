@@ -165,7 +165,7 @@
   </header>
   <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
   <!-- About Us Section -->
-  <section id="about-us" class="py-5 bg-dark">
+  <section id="about-us" class="py-5 bg-dark" dir="rtl">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <div class="row justify-content-center align-items-center flex-lg-row flex-column-reverse">
         <div class="col-lg-6 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
@@ -180,39 +180,37 @@
           ></video>
         </div>
         <div class="col-lg-6 d-flex align-items-center">
-          <div class="about-content w-100" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;">
-            <h2 class="mb-4 text-end position-relative section-title">
+          <div class="about-content w-100" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;" dir="rtl" lang="he">
+            <h2 class="mb-3 text-center position-relative section-title" style="font-size:2.2rem;" dir="rtl">
               <span>מי אנחנו</span>
               <span class="section-line"></span>
             </h2>
-            <div class="about-text text-end" style="font-size:1.22rem; font-weight:500; line-height:2.15;">
+            <div class="about-text text-center" style="font-size:1.22rem; font-weight:500; line-height:2.15;" dir="rtl">
               דרונר גי סיסטם בע״מ היא חברה ישראלית מתקדמת המפתחת ומפעילה מערכות אוויריות אוטונומיות לתחומי האבטחה, התחזוקה והבקרה.
             </div>
-            <div class="text-end mt-4">
-              <a href="pages/about.html" class="btn btn-cta btn-lg px-5 py-3">קרא עלינו עוד</a>
+            <div class="text-center mt-4" dir="rtl">
+              <a href="pages/about.html" class="btn btn-cta btn-lg px-5 py-3 mx-auto d-inline-block">קרא עלינו עוד</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Solutions Section Header -->
-  <section id="solutions" class="py-5 bg-dark">
+  <section id="solutions" class="py-4 bg-dark" style="margin-bottom: 0;">
     <div class="container">
-      <h2 class="text-center mb-5 position-relative section-title">
+      <h2 class="text-center mb-4 position-relative section-title">
         <span>הפתרונות שלנו</span>
         <span class="section-line"></span>
       </h2>
     </div>
   </section>
-
   <!-- G-SMART Section -->
-  <section class="solution-section py-5 bg-dark">
+  <section class="solution-section py-4 bg-dark" style="margin-top: -1rem;">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
-            <div class="solution-card h-100">
+          <div class="solution-card h-100">
             <h3 class="solution-title">G-SMART – קיט שליטה חכם לרחפן</h3>
             <p class="solution-text">
               מאפשר טיסה אוטונומית מבוססת תקשורת סלולרית מאובטחת (BVLOS), ללא מגבלת טווח. תכנון משימות אוטומטי, זיהוי אובייקטים מבוסס בינה מלאכותית, תיעוד בזמן אמת ושיתוף מיידי.
@@ -222,7 +220,12 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="solution-image-wrapper">
-            <img src="assets/images/solution-gsmart.jpg" alt="G-SMART Image" class="solution-image">
+            <img 
+              src="assets/images/solution-gsmart.jpg" 
+              alt="G-SMART Image" 
+              class="solution-image"
+              style="width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--color-black);"
+            />
           </div>
         </div>
       </div>
@@ -234,6 +237,15 @@
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
+          <div class="solution-card h-100">
+            <h3 class="solution-title">G-DOCK – תחנות עגינה אוטונומיות</h3>
+            <p class="solution-text">
+              עגינה והפעלה אוטונומית של רחפנים למשימות תצפית יומיות ומתקדמות. תפעול אוטומטי בכל תנאי מזג האוויר והסביבה, עם טעינה, הגנה ומערכות ניטור עצמי מובנות.
+            </p>
+            <a href="pages/products/dock-d135.html" class="btn btn-outline-dark mt-3">למידע נוסף <i class="fa fa-arrow-left ms-2"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
           <div class="solution-image-wrapper">
             <img 
               src="assets/images/solution-gdock.jpg" 
@@ -241,15 +253,6 @@
               class="solution-image"
               style="width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--color-black);"
             />
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-           <div class="solution-card h-100">
-            <h3 class="solution-title">G-DOCK – תחנות עגינה אוטונומיות</h3>
-            <p class="solution-text">
-              עגינה והפעלה אוטונומית של רחפנים למשימות תצפית יומיות ומתקדמות. תפעול אוטומטי בכל תנאי מזג האוויר והסביבה, עם טעינה, הגנה ומערכות ניטור עצמי מובנות.
-            </p>
-            <a href="pages/products/dock-d135.html" class="btn btn-outline-dark mt-3">למידע נוסף <i class="fa fa-arrow-left ms-2"></i></a>
           </div>
         </div>
       </div>
@@ -271,7 +274,7 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="solution-image-wrapper">
-            <img src="assets/images/solution-gcontrol.jpg" alt="G-CONTROL Image" class="solution-image">
+            <img src="assets/images/soluti11on-gcontrol.jpg" alt="G-CONTROL Image" class="solution-image">
           </div>
         </div>
       </div>
