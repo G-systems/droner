@@ -584,3 +584,18 @@ button.btn-yellow .fa-user,
 button.btn-warning .fa-user {
   color: #000 !important;
 }
+
+/* === Support Cards === */
+.gsmart-support-card,
+.gdock-support-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Remove image styling as images are removed */
+/* .gsmart-support-card img,
+.gdock-support-card img {
+  display: none;
+} */

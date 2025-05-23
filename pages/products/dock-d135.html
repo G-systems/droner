@@ -182,15 +182,9 @@
       }
     }
     @media (max-width: 768px) {
-      .gdock-feature-list {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .gdock-feature-item {
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
-      }
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
     }
     .product-hero {
       position: relative;
@@ -353,15 +347,9 @@
       }
     }
     @media (max-width: 768px) {
-      .gdock-feature-list {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .gdock-feature-item {
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
-      }
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
     }
     .gdock-advantage-card {
       background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%) !important;
@@ -393,6 +381,20 @@
       background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%) !important;
       color: #fff !important;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .gdock-support-card {
+      background: #141414;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      /* Center text and content */
+      justify-content: center;
+      text-align: center;
     }
   </style>
 </head>
@@ -627,7 +629,6 @@
           צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
         </p>
       </div>
-      <img src="../../assets/images/gsmart-support.jpg" alt="תמיכה טכנית G-DOCK" style="border-radius:14px;max-width:200px;width:100%;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
     </div>
   </div>
 
