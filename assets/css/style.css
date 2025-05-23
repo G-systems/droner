@@ -7,7 +7,7 @@
   --color-brand: #FFC65C;
   --color-light: #f4f4f4;
   --color-white: #fff;
-  --color-bronze: #FFC65C;
+  --color-bronze: #FFC65C; /* changed from #b08d57 */
   --radius: 18px;
   --transition: 0.2s;
   --shadow: 0 8px 32px rgba(0,0,0,0.10);
@@ -322,7 +322,7 @@ a:hover {
 }
 .form-control:focus, textarea:focus {
   border-color: var(--color-brand) !important;
-  box-shadow: 0 0 0 2px rgba(176,141,87,0.15);
+  box-shadow: 0 0 0 2px rgba(255,198,92,0.15);
 }
 .form-label {
   color: var(--color-gold) !important;
@@ -416,10 +416,10 @@ a:hover {
   color: var(--color-black);
   font-weight: 600;
   border: none;
-  box-shadow: 0 4px 15px rgba(10,209,0,0.3);
+  box-shadow: 0 4px 15px rgba(255,198,92,0.3);
   transition: all 0.3s ease;
 }
-.btn-cta:hover { background: linear-gradient(90deg, #fffde7 0%, var(--color-brand) 100%); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(10,209,0,0.4); }
+.btn-cta:hover { background: linear-gradient(90deg, #fffde7 0%, var(--color-brand) 100%); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,198,92,0.4); }
 
 .advantage-card {
   background: var(--color-black);
@@ -508,7 +508,7 @@ a:hover {
 }
 .contact-section .form-control:focus, .contact-section textarea:focus {
   border-color: var(--color-brand);
-  box-shadow: 0 0 0 2px rgba(10,209,0,0.2);
+  box-shadow: 0 0 0 2px rgba(255,198,92,0.2);
 }
 @media (max-width: 768px) {
   .contact-section { padding: 1.5rem 1rem; }
@@ -574,4 +574,13 @@ section.bg-dark video,
 .gcontrol-advantage-card .fa,
 .gdock-advantage-card .fa {
   color: var(--color-gold) !important;
+}
+
+/* === Login Icon Color Override === */
+.btn[data-bs-target="#loginModal"] .fa-user,
+.btn[data-bs-toggle="modal"] .fa-user,
+button.btn-outline-dark .fa-user,
+button.btn-yellow .fa-user,
+button.btn-warning .fa-user {
+  color: #000 !important;
 }

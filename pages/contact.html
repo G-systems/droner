@@ -10,6 +10,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
+    :root {
+      --color-dark-bg: #121212;
+      --color-gold: #FFC65C; /* changed from #b08d57 */
+      --color-brand: #FFC65C; /* was #b08d57 */
+      --color-light: #f4f4f4;
+    }
     .contact-hero {
       color: #fff;
       background: var(--color-dark-bg);
@@ -108,7 +114,7 @@
     }
     .contact-section .form-control:focus, .contact-section textarea:focus {
       border-color: var(--color-brand);
-      box-shadow: 0 0 0 2px rgba(10,209,0,0.2);
+      box-shadow: 0 0 0 2px rgba(255,198,92,0.2); /* changed from rgba(10,209,0,0.2) */
     }
     .btn-yellow {
       background-color: var(--color-gold);
@@ -117,12 +123,16 @@
       border-radius: 30px;
       font-weight: 600;
       transition: background 0.3s, color 0.3s, transform 0.2s;
-      box-shadow: 0 4px 15px rgba(255,235,59,0.13);
+      box-shadow: 0 4px 15px rgba(255,198,92,0.13); /* replaced green/bronze with gold */
     }
     .btn-yellow:hover {
-      background: var(--color-brand);
+      background: var(--color-gold);
       color: var(--color-black);
       transform: translateY(-2px) scale(1.04);
+    }
+    /* Force all .small text to white */
+    .small, small {
+      color: #fff !important;
     }
     @media (max-width: 768px) {
       .contact-hero h1 { font-size: 1.5rem; }

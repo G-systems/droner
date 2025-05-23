@@ -89,7 +89,7 @@
       font-size: 1.1rem;
       transition: background 0.2s, color 0.2s;
       border-radius: 8px;
-      background: rgba(176,141,87,0.08);
+      background: rgba(255,198,92,0.08);
       color: var(--color-light);
       box-shadow: 0 2px 8px rgba(255,235,59,0.06);
     }
@@ -97,7 +97,7 @@
       content: "\f0b1";
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
-      color: var(--color-gold);
+      color: var(--color-gold); /* icons in list: gold */
       position: absolute;
       right: 0.7rem;
       top: 0.9rem;
@@ -127,16 +127,11 @@
       flex: 1 1 220px;
       text-align: center;
       transition: background 0.2s, transform 0.2s;
-      color: var(--color-dark);
+      color: #fff;
       font-weight: 500;
       border-radius: 14px;
     }
-    .careers-benefit-icon {
-      font-size: 2.2rem;
-      color: var(--color-dark);
-      margin-bottom: 0.7rem;
-      display: block;
-    }
+    
     @media (max-width: 768px) {
       .careers-hero h1 { font-size: 1.5rem; }
       .careers-section { padding: 1.5rem 1rem; }
@@ -207,10 +202,11 @@
   <!-- Open Positions -->
   <section class="careers-section" data-aos="fade-up">
     <div class="row align-items-center flex-md-row-reverse">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="../assets/images/careers-team.jpg" alt="הצוות שלנו" class="about-img w-100 rounded-4 shadow">
+      <div class="col-md-5 col-lg-4 mb-4 mb-md-0 d-flex justify-content-center">
+        <img src="../assets/images/careers-team.jpg" alt="הצוות שלנו" class="about-img rounded-4 shadow"
+          style="width:100%;max-width:560px;max-height:420px;object-fit:cover;display:block;">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-7 col-lg-8">
         <h2><i class="fa fa-briefcase ms-2"></i>משרות פתוחות</h2>
         <ul class="careers-list">
           <li>
@@ -239,22 +235,22 @@
     <h2><i class="fa fa-star ms-2"></i>למה לעבוד אצלנו?</h2>
     <div class="careers-benefits">
       <div class="careers-benefit-card">
-        <span class="careers-benefit-icon"><i class="fas fa-rocket"></i></span>
+        <span class="careers-benefit-icon"><i class="fas fa-rocket" style="color:#000;"></i></span>
         <b>חדשנות טכנולוגית</b>
         <div>עבודה עם מערכות מתקדמות, רחפנים, AI ו-IoT.</div>
       </div>
       <div class="careers-benefit-card">
-        <span class="careers-benefit-icon"><i class="fas fa-users"></i></span>
+        <span class="careers-benefit-icon"><i class="fas fa-users" style="color:#000;"></i></span>
         <b>צוות משפחתי</b>
         <div>אווירה נעימה, שיתוף פעולה ותמיכה הדדית.</div>
       </div>
       <div class="careers-benefit-card">
-        <span class="careers-benefit-icon"><i class="fas fa-graduation-cap"></i></span>
+        <span class="careers-benefit-icon"><i class="fas fa-graduation-cap" style="color:#000;"></i></span>
         <b>התפתחות מקצועית</b>
         <div>הכשרות, קורסים והזדמנויות קידום אמיתיות.</div>
       </div>
       <div class="careers-benefit-card">
-        <span class="careers-benefit-icon"><i class="fas fa-hand-holding-usd"></i></span>
+        <span class="careers-benefit-icon"><i class="fas fa-hand-holding-usd" style="color:#000;"></i></span>
         <b>תנאים מעולים</b>
         <div>שכר תחרותי, רכב/החזרי נסיעות, הטבות נוספות.</div>
       </div>
