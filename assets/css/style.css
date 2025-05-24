@@ -796,31 +796,3 @@ button.btn-warning .fa-user {
 .gdock-advantage-list .gdock-advantage-card {
   /* JS will add transform on scroll */
 }
-
-/* Scroll arrow for mobile */
-.scroll-arrow {
-  display: none;
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  font-size: 2.2rem;
-  color: var(--color-gold);
-  background: rgba(20,20,20,0.7);
-  border-radius: 50%;
-  padding: 0.2em 0.35em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-.scroll-arrow:hover {
-  background: var(--color-gold);
-  color: var(--color-dark);
-  transform: translateY(-50%) scale(1.08);
-}
-@media (max-width: 900px) {
-  .scroll-arrow {
-    display: block;
-  }
-}

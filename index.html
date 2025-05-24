@@ -637,14 +637,6 @@
         toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
         localStorage.setItem('siteLang', lang);
       });
-      // Scroll Arrow
-      const arrow = document.getElementById('scrollArrow');
-      if (arrow) {
-        arrow.addEventListener('click', function(e) {
-          e.preventDefault();
-          document.getElementById('solutions').scrollIntoView({behavior: 'smooth'});
-        });
-      }
     });
   </script>
   <script src="assets/js/translate.js"></script>
