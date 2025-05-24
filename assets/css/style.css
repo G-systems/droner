@@ -617,6 +617,9 @@ button.btn-warning .fa-user {
   scrollbar-width: none;
   -ms-overflow-style: none;
   position: relative;
+  /* Ensure first card is visible on mobile */
+  padding-right: 1rem;
+  scroll-padding-right: 1rem;
 }
 .gdock-feature-list::-webkit-scrollbar,
 .gsmart-feature-list::-webkit-scrollbar,
@@ -667,6 +670,9 @@ button.btn-warning .fa-user {
   .gdock-advantage-list,
   .gsmart-advantage-list {
     gap: 0.7rem;
+    /* Add more padding on mobile for first card visibility */
+    padding-right: 1.2rem;
+    scroll-padding-right: 1.2rem;
   }
   .gdock-feature-item,
   .gsmart-feature-item,
