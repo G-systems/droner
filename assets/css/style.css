@@ -453,9 +453,6 @@ a:hover {
 
 .tech-brand-item { display:inline-block; padding:0.5rem 1.25rem; background: var(--color-brand); color: var(--color-black); font-weight:600; border-radius:30px; }
 
-.scroll-arrow { font-size:2rem; color: var(--color-brand); opacity:0.8; transition:all 0.3s ease; }
-.scroll-arrow:hover { opacity:1; transform: translateY(5px); color: var(--color-brand); }
-
 @media (max-width: 768px) {
   .solution-image-wrapper { height: 250px; }
   .solution-card { padding: 2rem; }

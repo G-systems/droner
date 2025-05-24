@@ -406,27 +406,6 @@
       transition: transform 0.3s;
       transform-style: preserve-3d;
     }
-    /* Scroll arrow style */
-    .scroll-arrow {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.7);
-      color: #fff;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 2;
-      transition: background 0.3s;
-    }
-    .scroll-arrow:hover {
-      background: rgba(255,255,255,0.2);
-    }
   </style>
 </head>
 <body>
@@ -518,42 +497,43 @@
           <p>
             תחנת <b>D135</b> היא תחנת עגינה מקצועית ואוטונומית, המותאמת במיוחד לדגמי Matrice 300 RTK ו-Matrice 350 RTK של DJI. התחנה כוללת מערכות טעינה אוטומטית, בקרת טמפרטורה חכמה, חיישנים מטאורולוגיים מובנים, אנטנת RTK, וניטור בזמן אמת של סטטוס התחנה.
           </p>
-          <div class="gsmart-feature-list" style="direction: rtl;">
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-ruler-combined"></i></span>
+          <!-- FIX: Use gdock-feature-list and gdock-feature-item for horizontal scrollable cards -->
+          <div class="gdock-feature-list" style="direction: rtl;">
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
               <b>מידות</b>
               <div>1645×1290×1575 מ"מ (סגור), 1645×1290×962 מ"מ (פתוח)</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-weight-hanging"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-weight-hanging"></i></span>
               <b>משקל</b>
               <div>275 ק"ג</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon">
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon">
                 <i class="fas fa-location-slash"></i>
                 <i class="fas fa-signal ms-2"></i>
               </span>
               <b>טיסה ללא GPS</b>
               <div>יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-shield-alt"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
               <b>תקן עמידות</b>
               <div>IP54 – עמידות גבוהה לתנאי סביבה קשים</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-thermometer-half"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-thermometer-half"></i></span>
               <b>בקרת טמפרטורה</b>
               <div>חכמה ואוטומטית</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-bolt"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
               <b>טעינה אוטומטית</b>
               <div>הטענה מהירה של הרחפן</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-satellite-dish"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-satellite-dish"></i></span>
               <b>ניטור בזמן אמת</b>
               <div>סטטוס התחנה, חיישנים מטאורולוגיים, אנטנת RTK</div>
             </div>
@@ -582,42 +562,43 @@
           <p>
             תחנת <b>D100</b> קומפקטית, מיועדת לעבודה עם רחפן DJI Matrice 30 למשימות ניטור מהירות ויעילות. כוללת תפעול אוטונומי מלא, טעינה אוטומטית, עמידות גבוהה (IP55), ומערכות ניטור עצמי והתראות אוטומטיות.
           </p>
-          <div class="gsmart-feature-list" style="direction: rtl;">
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-ruler-combined"></i></span>
+          <!-- FIX: Use gdock-feature-list and gdock-feature-item for horizontal scrollable cards -->
+          <div class="gdock-feature-list" style="direction: rtl;">
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
               <b>מידות</b>
               <div>1160×900×900 מ"מ (סגור), 1160×900×600 מ"מ (פתוח)</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-weight-hanging"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-weight-hanging"></i></span>
               <b>משקל</b>
               <div>120 ק"ג</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon">
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon">
                 <i class="fas fa-location-slash"></i>
                 <i class="fas fa-signal ms-2"></i>
               </span>
               <b>טיסה ללא GPS</b>
               <div>יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-shield-alt"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
               <b>תקן עמידות</b>
               <div>IP55 – עמידות גבוהה בתנאי סביבה מגוונים</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-thermometer-half"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-thermometer-half"></i></span>
               <b>בקרת טמפרטורה</b>
               <div>חכמה ואוטומטית</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-bolt"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
               <b>טעינה אוטומטית</b>
               <div>מערכת טעינה מהירה ואוטונומית</div>
             </div>
-            <div class="gsmart-feature-item">
-              <span class="gsmart-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
+            <div class="gdock-feature-item">
+              <span class="gdock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
               <b>ניטור והתראות</b>
               <div>מערכות ניטור עצמי והתראות אוטומטיות</div>
             </div>

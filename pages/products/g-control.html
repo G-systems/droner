@@ -203,7 +203,6 @@
     <div class="gsmart-card-content">
       <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
       <div class="gdock-feature-list position-relative" style="direction: rtl;">
-        <span class="scroll-arrow" id="gcontrolFeatureArrow" title="גלול ימינה"><i class="fas fa-chevron-right"></i></span>
         <div class="gdock-feature-item">
           <span class="gdock-feature-icon"><i class="fas fa-user-tie"></i></span>
           <b>מוקד מאויש ומקצועי</b>
@@ -413,14 +412,6 @@
         });
       });
       featureList && featureList.dispatchEvent(new Event('scroll'));
-
-      // Scroll arrow for mobile
-      const arrow = document.getElementById('gcontrolFeatureArrow');
-      if (arrow && featureList) {
-        arrow.addEventListener('click', () => {
-          featureList.scrollBy({ left: featureList.offsetWidth * 0.7, behavior: 'smooth' });
-        });
-      }
     });
   </script>
 </body>

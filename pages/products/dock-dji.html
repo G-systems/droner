@@ -199,7 +199,6 @@
     <div class="gdock-card-content">
       <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
       <div class="gdock-feature-list position-relative" style="direction: rtl;">
-        <span class="scroll-arrow" id="djiFeatureArrow" title="גלול ימינה"><i class="fas fa-chevron-right"></i></span>
         <div class="gdock-feature-item">
           <span class="gdock-feature-icon"><i class="fas fa-cubes"></i></span>
           <b>תאימות מושלמת</b>
@@ -392,13 +391,6 @@
         });
       });
       featureList && featureList.dispatchEvent(new Event('scroll'));
-      // Arrow
-      const arrow = document.getElementById('djiFeatureArrow');
-      if (arrow && featureList) {
-        arrow.addEventListener('click', () => {
-          featureList.scrollBy({ left: featureList.offsetWidth * 0.7, behavior: 'smooth' });
-        });
-      }
     });
 
     document.addEventListener('DOMContentLoaded', () => {
