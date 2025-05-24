@@ -166,6 +166,16 @@
       justify-content: center;
       text-align: center;
     }
+    .gdock-advantage-card .fa,
+    .gdock-advantage-card i,
+    .gsmart-advantage-card .fa,
+    .gsmart-advantage-card i {
+      color: #FFC65C !important;
+      filter: none !important;
+      -webkit-text-fill-color: #FFC65C !important;
+      -webkit-text-stroke: 0 !important;
+      text-shadow: none !important;
+    }
     @media (max-width: 768px) {
       .gsmart-card-content, .gsmart-card-header { padding: 1.2rem 0.7rem; }
       .gsmart-tech-card, .gsmart-support-card { flex-direction: column; gap: 1rem; }
@@ -296,29 +306,29 @@
   <!-- Advantages Section (roll of cards) -->
   <div class="container" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
-    <div class="gsmart-advantage-list" style="display:flex;flex-wrap:nowrap;overflow-x:auto;gap:1.2rem;scroll-snap-type:x mandatory;">
-      <div class="gsmart-advantage-card">
+    <div class="gdock-advantage-list" style="display:flex;flex-wrap:nowrap;overflow-x:auto;gap:1.2rem;scroll-snap-type:x mandatory;">
+      <div class="gdock-advantage-card">
         <i class="fas fa-clock"></i>
         <div>
           <b>זמינות מלאה 24/7</b><br>
           מענה מיידי לכל אירוע, בכל שעה, עם צוות מקצועי ומנוסה.
         </div>
       </div>
-      <div class="gsmart-advantage-card">
+      <div class="gdock-advantage-card">
         <i class="fas fa-user-shield"></i>
         <div>
           <b>הפחתת סיכונים ועלויות</b><br>
           אין צורך בכוח אדם יקר בשטח – שליטה מרחוק חוסכת משאבים ומפחיתה סיכונים.
         </div>
       </div>
-      <div class="gsmart-advantage-card">
+      <div class="gdock-advantage-card">
         <i class="fas fa-bolt"></i>
         <div>
           <b>תגובה מהירה ומדויקת</b><br>
           זיהוי, תחקור ותגובה לאירועים בזמן אמת, כולל תיעוד מלא.
         </div>
       </div>
-      <div class="gsmart-advantage-card">
+      <div class="gdock-advantage-card">
         <i class="fas fa-chart-line"></i>
         <div>
           <b>שיפור תהליכים מבצעיים</b><br>
@@ -343,13 +353,11 @@
     <img src="../../assets/images/gsmart-section3.jpg" alt="G-SMART תפעול ותמיכה" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
   </div>
   <!-- Support Card -->
-  <div class="gsmart-support-card container" data-aos="fade-up">
-    <div>
-      <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>תפעול ותמיכה</h2>
-      <p>
-        צוות הטכנאים והתמיכה של דרונר זמין עבורכם 24/7, ומספק שירותי התקנה, הדרכה ותמיכה שוטפת, כולל SLA המותאם בדיוק לצרכים המבצעיים של הארגון שלכם.
-      </p>
-    </div>
+  <div class="gsmart-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
+    <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>תפעול ותמיכה</h2>
+    <p>
+      צוות הטכנאים והתמיכה של דרונר זמין עבורכם 24/7, ומספק שירותי התקנה, הדרכה ותמיכה שוטפת, כולל SLA המותאם בדיוק לצרכים המבצעיים של הארגון שלכם.
+    </p>
   </div>
 
   <!-- CTA Card -->

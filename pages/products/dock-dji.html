@@ -85,8 +85,12 @@
     }
     .gdock-advantage-card .fa {
       font-size: 2.5rem;
-      color: var(--color-brand);
+      color: var(--color-gold) !important;
       min-width: 48px;
+    }
+    /* Force gold icons in advantages section */
+    .gdock-advantage-card i {
+      color: var(--color-gold) !important;
     }
     .gdock-support-card {
       background: #141414;
@@ -277,13 +281,11 @@
     <img src="../../assets/images/dji-section3.jpg" alt="DJI Dock שירות ותמיכה" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
   </div>
   <!-- Support Card -->
-  <div class="gdock-support-card container" data-aos="fade-up">
-    <div>
-      <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
-      <p>
-        צוות התמיכה של דרונר ודיגיטל אקספרס זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
-      </p>
-    </div>
+  <div class="gdock-card gdock-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
+    <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
+    <p>
+      צוות התמיכה של דרונר ודיגיטל אקספרס זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
+    </p>
   </div>
   <!-- CTA Card -->
   <div class="cta-card container" data-aos="fade-up">

@@ -631,17 +631,18 @@ button.btn-warning .fa-user {
 .gsmart-advantage-list::-webkit-scrollbar {
   display: none;
 }
+
+/* --- FIXED CARD SIZES AND TYPOGRAPHY --- */
 .gdock-feature-item,
 .gsmart-feature-item,
 .feature-card,
 .advantage-card,
 .gdock-advantage-card,
 .gsmart-advantage-card {
-  min-width: 240px;
-  max-width: 340px;
-  flex: 0 0 260px;
+  min-width: 270px;
+  max-width: 320px;
+  flex: 0 0 290px;
   margin-bottom: 0;
-  /* For smooth horizontal scroll */
   scroll-snap-align: start;
   transition: transform 0.3s cubic-bezier(.77,0,.18,1), box-shadow 0.2s;
   will-change: transform;
@@ -649,15 +650,69 @@ button.btn-warning .fa-user {
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   border-radius: 18px;
   border: 1px solid var(--color-gold);
+  padding: 1.7rem 1.2rem 1.3rem 1.2rem;
+  font-size: 1.09rem;
+  text-align: center;
 }
-.gdock-feature-item:active,
-.gsmart-feature-item:active,
-.feature-card:active,
-.advantage-card:active,
-.gdock-advantage-card:active,
-.gsmart-advantage-card:active {
-  transform: scale(0.97);
+.gdock-feature-item b,
+.gsmart-feature-item b,
+.feature-card b,
+.advantage-card b,
+.gdock-advantage-card b,
+.gsmart-advantage-card b {
+  font-size: 1.13rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.3rem;
 }
+.gdock-feature-item div,
+.gsmart-feature-item div,
+.feature-card div,
+.advantage-card div,
+.gdock-advantage-card div,
+.gsmart-advantage-card div {
+  font-size: 1.01rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* --- ICON SIZE FIX --- */
+.gdock-feature-icon,
+.gsmart-feature-icon,
+.gdock-advantage-card .fa,
+.gsmart-advantage-card .fa {
+  font-size: 2.4rem !important;
+  margin-bottom: 0.7rem;
+  display: block;
+  color: var(--color-gold) !important;
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  line-height: 2.4rem;
+}
+
+/* --- ADVANTAGE CARD LAYOUT --- */
+.gdock-advantage-card,
+.gsmart-advantage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  padding: 1.7rem 1.2rem 1.3rem 1.2rem;
+  min-width: 270px;
+  max-width: 320px;
+  flex: 0 0 290px;
+  font-size: 1.09rem;
+  text-align: center;
+}
+.gdock-advantage-card i,
+.gsmart-advantage-card i,
+.gdock-advantage-card .fa,
+.gsmart-advantage-card .fa {
+  margin-bottom: 0.7rem;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 1200px) {
   .gdock-feature-item,
   .gsmart-feature-item,
@@ -665,9 +720,28 @@ button.btn-warning .fa-user {
   .advantage-card,
   .gdock-advantage-card,
   .gsmart-advantage-card {
-    min-width: 200px;
+    min-width: 210px;
     max-width: 90vw;
     flex: 0 0 220px;
+    font-size: 0.98rem;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .gdock-advantage-card,
+  .gsmart-advantage-card {
+    min-width: 210px;
+    max-width: 90vw;
+    flex: 0 0 220px;
+    font-size: 0.98rem;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .gdock-feature-icon,
+  .gsmart-feature-icon,
+  .gdock-advantage-card .fa,
+  .gsmart-advantage-card .fa {
+    font-size: 2rem !important;
+    min-width: 2rem;
+    min-height: 2rem;
+    line-height: 2rem;
   }
 }
 @media (max-width: 768px) {
@@ -678,7 +752,6 @@ button.btn-warning .fa-user {
   .gdock-advantage-list,
   .gsmart-advantage-list {
     gap: 0.7rem;
-    /* Add more padding on mobile for first card visibility */
     padding-right: 1.2rem;
     scroll-padding-right: 1.2rem;
   }
@@ -688,9 +761,28 @@ button.btn-warning .fa-user {
   .advantage-card,
   .gdock-advantage-card,
   .gsmart-advantage-card {
-    min-width: 75vw;
+    min-width: 85vw;
     max-width: 95vw;
-    flex: 0 0 80vw;
+    flex: 0 0 90vw;
+    font-size: 0.97rem;
+    padding: 1.1rem 0.5rem 0.9rem 0.5rem;
+  }
+  .gdock-advantage-card,
+  .gsmart-advantage-card {
+    min-width: 85vw;
+    max-width: 95vw;
+    flex: 0 0 90vw;
+    font-size: 0.97rem;
+    padding: 1.1rem 0.5rem 0.9rem 0.5rem;
+  }
+  .gdock-feature-icon,
+  .gsmart-feature-icon,
+  .gdock-advantage-card .fa,
+  .gsmart-advantage-card .fa {
+    font-size: 1.7rem !important;
+    min-width: 1.7rem;
+    min-height: 1.7rem;
+    line-height: 1.7rem;
   }
 }
 
