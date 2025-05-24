@@ -396,6 +396,37 @@
       justify-content: center;
       text-align: center;
     }
+    /* Rolling effect for feature lists */
+    .gdock-feature-list {
+      perspective: 1000px;
+      position: relative;
+      overflow: hidden;
+    }
+    .gdock-feature-item {
+      transition: transform 0.3s;
+      transform-style: preserve-3d;
+    }
+    /* Scroll arrow style */
+    .scroll-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.3s;
+    }
+    .scroll-arrow:hover {
+      background: rgba(255,255,255,0.2);
+    }
   </style>
 </head>
 <body>
@@ -487,7 +518,8 @@
           <p>
             תחנת <b>D135</b> היא תחנת עגינה מקצועית ואוטונומית, המותאמת במיוחד לדגמי Matrice 300 RTK ו-Matrice 350 RTK של DJI. התחנה כוללת מערכות טעינה אוטומטית, בקרת טמפרטורה חכמה, חיישנים מטאורולוגיים מובנים, אנטנת RTK, וניטור בזמן אמת של סטטוס התחנה.
           </p>
-          <div class="gdock-feature-list" style="direction: rtl;">
+          <div class="gdock-feature-list position-relative" style="direction: rtl;">
+            <span class="scroll-arrow" id="d135FeatureArrow" title="גלול ימינה"><i class="fas fa-chevron-right"></i></span>
             <div class="gdock-feature-item">
               <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
               <b>מידות</b>
@@ -551,7 +583,8 @@
           <p>
             תחנת <b>D100</b> קומפקטית, מיועדת לעבודה עם רחפן DJI Matrice 30 למשימות ניטור מהירות ויעילות. כוללת תפעול אוטונומי מלא, טעינה אוטומטית, עמידות גבוהה (IP55), ומערכות ניטור עצמי והתראות אוטומטיות.
           </p>
-          <div class="gdock-feature-list" style="direction: rtl;">
+          <div class="gdock-feature-list position-relative" style="direction: rtl;">
+            <span class="scroll-arrow" id="d100FeatureArrow" title="גלול ימינה"><i class="fas fa-chevron-right"></i></span>
             <div class="gdock-feature-item">
               <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
               <b>מידות</b>
@@ -775,6 +808,50 @@
         toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
         localStorage.setItem('siteLang', lang);
       });
+
+      // Rolling effect for D135 features
+      const d135List = document.querySelector('#d135FeatureArrow')?.parentElement;
+      const d135Cards = d135List ? d135List.querySelectorAll('.gdock-feature-item') : [];
+      d135List && d135List.addEventListener('scroll', () => {
+        const listRect = d135List.getBoundingClientRect();
+        d135Cards.forEach(card => {
+          const cardRect = card.getBoundingClientRect();
+          const cardCenter = cardRect.left + cardRect.width / 2;
+          const listCenter = listRect.left + listRect.width / 2;
+          const offset = (cardCenter - listCenter) / listRect.width;
+          card.style.transform = `rotateY(${offset * 18}deg) scale(${1 - Math.abs(offset) * 0.08})`;
+        });
+      });
+      d135List && d135List.dispatchEvent(new Event('scroll'));
+      // Arrow
+      const d135Arrow = document.getElementById('d135FeatureArrow');
+      if (d135Arrow && d135List) {
+        d135Arrow.addEventListener('click', () => {
+          d135List.scrollBy({ left: d135List.offsetWidth * 0.7, behavior: 'smooth' });
+        });
+      }
+
+      // Rolling effect for D100 features
+      const d100List = document.querySelector('#d100FeatureArrow')?.parentElement;
+      const d100Cards = d100List ? d100List.querySelectorAll('.gdock-feature-item') : [];
+      d100List && d100List.addEventListener('scroll', () => {
+        const listRect = d100List.getBoundingClientRect();
+        d100Cards.forEach(card => {
+          const cardRect = card.getBoundingClientRect();
+          const cardCenter = cardRect.left + cardRect.width / 2;
+          const listCenter = listRect.left + listRect.width / 2;
+          const offset = (cardCenter - listCenter) / listRect.width;
+          card.style.transform = `rotateY(${offset * 18}deg) scale(${1 - Math.abs(offset) * 0.08})`;
+        });
+      });
+      d100List && d100List.dispatchEvent(new Event('scroll'));
+      // Arrow
+      const d100Arrow = document.getElementById('d100FeatureArrow');
+      if (d100Arrow && d100List) {
+        d100Arrow.addEventListener('click', () => {
+          d100List.scrollBy({ left: d100List.offsetWidth * 0.7, behavior: 'smooth' });
+        });
+      }
     });
   </script>
 </body>

@@ -198,7 +198,8 @@
   <div class="gsmart-card" data-aos="fade-up">
     <div class="gsmart-card-content">
       <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-      <div class="gdock-feature-list" style="direction: rtl;">
+      <div class="gdock-feature-list position-relative" style="direction: rtl;">
+        <span class="scroll-arrow" id="gcontrolFeatureArrow" title="גלול ימינה"><i class="fas fa-chevron-right"></i></span>
         <div class="gdock-feature-item">
           <span class="gdock-feature-icon"><i class="fas fa-user-tie"></i></span>
           <b>מוקד מאויש ומקצועי</b>
@@ -394,6 +395,31 @@
         toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
         localStorage.setItem('siteLang', lang);
       });
+
+      // Rolling effect for features
+      const featureList = document.querySelector('.gdock-feature-list');
+      const featureCards = featureList ? featureList.querySelectorAll('.gdock-feature-item') : [];
+      featureList && featureList.addEventListener('scroll', () => {
+        const scrollLeft = featureList.scrollLeft;
+        const width = featureList.offsetWidth;
+        featureCards.forEach((card, idx) => {
+          const cardRect = card.getBoundingClientRect();
+          const listRect = featureList.getBoundingClientRect();
+          const cardCenter = cardRect.left + cardRect.width / 2;
+          const listCenter = listRect.left + listRect.width / 2;
+          const offset = (cardCenter - listCenter) / listRect.width;
+          card.style.transform = `rotateY(${offset * 18}deg) scale(${1 - Math.abs(offset) * 0.08})`;
+        });
+      });
+      featureList && featureList.dispatchEvent(new Event('scroll'));
+
+      // Scroll arrow for mobile
+      const arrow = document.getElementById('gcontrolFeatureArrow');
+      if (arrow && featureList) {
+        arrow.addEventListener('click', () => {
+          featureList.scrollBy({ left: featureList.offsetWidth * 0.7, behavior: 'smooth' });
+        });
+      }
     });
   </script>
 </body>

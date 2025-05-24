@@ -620,6 +620,8 @@ button.btn-warning .fa-user {
   /* Ensure first card is visible on mobile */
   padding-right: 1rem;
   scroll-padding-right: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 .gdock-feature-list::-webkit-scrollbar,
 .gsmart-feature-list::-webkit-scrollbar,
@@ -641,14 +643,20 @@ button.btn-warning .fa-user {
   margin-bottom: 0;
   /* For smooth horizontal scroll */
   scroll-snap-align: start;
+  transition: transform 0.3s cubic-bezier(.77,0,.18,1), box-shadow 0.2s;
+  will-change: transform;
+  background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border-radius: 18px;
+  border: 1px solid var(--color-gold);
 }
-.gdock-feature-list,
-.gsmart-feature-list,
-.features-section,
-.advantages-section,
-.gdock-advantage-list,
-.gsmart-advantage-list {
-  scroll-snap-type: x mandatory;
+.gdock-feature-item:active,
+.gsmart-feature-item:active,
+.feature-card:active,
+.advantage-card:active,
+.gdock-advantage-card:active,
+.gsmart-advantage-card:active {
+  transform: scale(0.97);
 }
 @media (max-width: 1200px) {
   .gdock-feature-item,
@@ -683,5 +691,47 @@ button.btn-warning .fa-user {
     min-width: 75vw;
     max-width: 95vw;
     flex: 0 0 80vw;
+  }
+}
+
+/* Rolling effect on scroll (3D tilt) */
+.gsmart-feature-list,
+.gdock-feature-list,
+.gsmart-advantage-list,
+.gdock-advantage-list {
+  perspective: 1200px;
+}
+.gsmart-feature-list .gsmart-feature-item,
+.gdock-feature-list .gdock-feature-item,
+.gsmart-advantage-list .gsmart-advantage-card,
+.gdock-advantage-list .gdock-advantage-card {
+  /* JS will add transform on scroll */
+}
+
+/* Scroll arrow for mobile */
+.scroll-arrow {
+  display: none;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 2.2rem;
+  color: var(--color-gold);
+  background: rgba(20,20,20,0.7);
+  border-radius: 50%;
+  padding: 0.2em 0.35em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.scroll-arrow:hover {
+  background: var(--color-gold);
+  color: var(--color-dark);
+  transform: translateY(-50%) scale(1.08);
+}
+@media (max-width: 900px) {
+  .scroll-arrow {
+    display: block;
   }
 }
