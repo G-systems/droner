@@ -351,6 +351,1491 @@
       .gdock-support-card { flex-direction: column; gap: 1rem; }
       .gdock-feature-list { gap: 0.7rem; }
     }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
+    .product-hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: var(--color-dark-bg);
+      overflow: hidden;
+      z-index: 1;
+    }
+    .product-hero .image-container,
+    .product-hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .product-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: none;
+    }
+    .product-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--color-gold);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 1px;
+    }
+    .product-hero p {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-light);
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .product-section {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-gold);
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    /* Card style for all main sections */
+    .product-card,
+    .product-section,
+    .gdock-card,
+    .gdock-card-content,
+    .gdock-feature-item,
+    .gdock-advantage-card {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 2rem;
+      transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+      font-size: 1.13rem;
+    }
+    .product-card {
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    /* Features section style (copied from g-control) */
+    .gdock-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+      padding-bottom: 0.5rem;
+      position: relative;
+      /* Remove horizontal scroll */
+      overflow-x: unset;
+      scrollbar-width: unset;
+      -ms-overflow-style: unset;
+    }
+    .gdock-feature-list::-webkit-scrollbar {
+      display: none;
+    }
+    .gdock-feature-item {
+      background: linear-gradient(120deg, rgba(255,198,92,0.13) 60%, #141414 100%); /* was rgba(176,141,87,0.13) */
+      color: var(--color-light);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 300px;
+      flex: 1 1 260px;
+      text-align: center;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+      transition: box-shadow 0.2s, background 0.2s;
+      border: 1px solid var(--color-gold);
+      margin-top: 0.5rem;
+    }
+    .gdock-feature-icon {
+      font-size: 2.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.7rem;
+      display: block;
+      transition: none;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 1200px) {
+      .gdock-feature-list {
+        gap: 0.7rem;
+      }
+      .gdock-feature-item {
+        min-width: 180px;
+        max-width: 100%;
+        flex: 1 1 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
+      .gdock-support-card { flex-direction: column; gap: 1rem; }
+      .gdock-feature-list { gap: 0.7rem; }
+    }
     .gdock-advantage-card {
       background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%) !important;
       color: #fff !important;
@@ -405,6 +1890,605 @@
     .gdock-feature-item {
       transition: transform 0.3s;
       transform-style: preserve-3d;
+    }
+
+    /* Timeline styles */
+    .gdock-timeline {
+      position: relative;
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 2rem 0;
+    }
+    .gdock-timeline-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      position: relative;
+      animation: fadeInUp 1s both;
+    }
+    .gdock-timeline-dot {
+      width: 22px;
+      height: 22px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      box-shadow: 0 0 0 6px rgba(255,198,92,0.15);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      animation: pulseDot 1.5s infinite alternate;
+    }
+    @keyframes pulseDot {
+      0% { box-shadow: 0 0 0 6px rgba(255,198,92,0.15);}
+      100% { box-shadow: 0 0 0 16px rgba(255,198,92,0.07);}
+    }
+    .gdock-timeline-content {
+      background: #181818;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
+      flex: 1;
+      position: relative;
+      animation: slideInRight 1s both;
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(60px);}
+      to { opacity: 1; transform: none;}
+    }
+    .gdock-feature-timeline {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    .gdock-feature-timeline li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.1rem;
+      font-size: 1.08rem;
+      background: rgba(255,198,92,0.07);
+      border-radius: 10px;
+      padding: 0.7rem 1rem;
+      transition: background 0.2s;
+      cursor: pointer;
+      animation: fadeInFeature 0.7s both;
+    }
+    .gdock-feature-timeline li:hover {
+      background: rgba(255,198,92,0.18);
+    }
+    @keyframes fadeInFeature {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: none;}
+    }
+    .gdock-feature-icon {
+      font-size: 1.5rem;
+      color: var(--color-gold);
+      margin-left: 1rem;
+      min-width: 32px;
+      text-align: center;
+    }
+    .gdock-timeline-imgs {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    .gdock-timeline-imgs img {
+      max-width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .gdock-timeline-imgs img:hover {
+      transform: scale(1.07) rotate(-2deg);
+    }
+    @media (max-width: 768px) {
+      .gdock-timeline-item { flex-direction: column; align-items: stretch; }
+      .gdock-timeline-dot { margin: 0 auto 1rem auto; }
+      .gdock-timeline-content { padding: 1.2rem 0.7rem; }
+      .gdock-timeline-imgs { flex-direction: column; gap: 0.7rem; }
+    }
+
+    /* Flip card styles for advantages */
+    .gsmart-advantage-flip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+    }
+    .gsmart-advantage-flip-card {
+      background: none;
+      width: 220px;
+      height: 180px;
+      perspective: 900px;
+      margin-bottom: 1.5rem;
+    }
+    .gsmart-advantage-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .gsmart-advantage-flip-card:hover .gsmart-advantage-flip-inner,
+    .gsmart-advantage-flip-card:focus .gsmart-advantage-flip-inner {
+      transform: rotateY(180deg);
+    }
+    .gsmart-advantage-flip-front,
+    .gsmart-advantage-flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.13rem;
+      font-weight: 500;
+      background: linear-gradient(120deg, var(--color-gold) 60%, #181818 100%);
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .gsmart-advantage-flip-front i {
+      font-size: 2.5rem;
+      margin-bottom: 0.7rem;
+      color: #fff;
+      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+    }
+    .gsmart-advantage-flip-back {
+      background: #181818;
+      color: var(--color-gold);
+      transform: rotateY(180deg);
+      font-size: 1.08rem;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+    }
+    @media (max-width: 768px) {
+      .gsmart-advantage-flip-list { gap: 0.7rem; }
+      .gsmart-advantage-flip-card { width: 100%; height: 140px; }
+    }
+
+    /* New styles for improved timeline */
+    .gdock-timeline-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: flex-start;
+    }
+    .gdock-timeline-badge {
+      background: var(--color-gold);
+      color: #181818;
+      border-radius: 18px;
+      padding: 0.2em 1em;
+      font-size: 1.1em;
+      font-weight: 800;
+      margin-left: 0.5em;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(255,198,92,0.13);
+    }
+    .gdock-timeline-dot {
+      width: 44px;
+      height: 44px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      box-shadow: 0 0 0 6px rgba(255,198,92,0.15);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #181818;
+      animation: pulseDot 1.5s infinite alternate;
+    }
+    .gdock-timeline-item {
+      border-right: 4px solid var(--color-gold);
+      padding-right: 1.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      background: none;
+    }
+    .gdock-timeline-item:last-child {
+      border-right: none;
+    }
+    .gdock-timeline-d135 .gdock-timeline-dot { background: linear-gradient(120deg, #FFC65C 60%, #FFD700 100%); }
+    .gdock-timeline-d100 .gdock-timeline-dot { background: linear-gradient(120deg, #FFC65C 60%, #FFA500 100%); }
+    .gdock-timeline-content {
+      background: #181818;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
+      flex: 1;
+      position: relative;
+      animation: slideInRight 1s both;
+    }
+    .gdock-feature-timeline {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+      counter-reset: feature-step;
+    }
+    .gdock-feature-timeline li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.1rem;
+      font-size: 1.08rem;
+      background: rgba(255,198,92,0.07);
+      border-radius: 10px;
+      padding: 0.7rem 1rem;
+      transition: background 0.2s;
+      cursor: pointer;
+      animation: fadeInFeature 0.7s both;
+      position: relative;
+      counter-increment: feature-step;
+    }
+    .gdock-feature-timeline li::before {
+      content: counter(feature-step) ".";
+      color: var(--color-gold);
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-left: 0.7em;
+      margin-right: 0.2em;
+    }
+    .gdock-feature-timeline li:hover {
+      background: rgba(255,198,92,0.18);
+    }
+    /* Stepper styles */
+    .gdock-stepper-card {
+      background: #181818;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      padding: 2.2rem 1.5rem 2.2rem 1.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: visible;
+    }
+    .gdock-stepper-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.2rem;
+    }
+    .gdock-stepper-badge {
+      background: var(--color-gold);
+      color: #181818;
+      border-radius: 18px;
+      padding: 0.3em 1.2em;
+      font-size: 1.2em;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 8px rgba(255,198,92,0.13);
+    }
+    .gdock-stepper-title {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--color-gold);
+      letter-spacing: 1px;
+    }
+    .gdock-stepper {
+      position: relative;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
+    .gdock-stepper::before {
+      content: "";
+      position: absolute;
+      right: 28px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--color-gold) 0%, #fff0 100%);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .gdock-step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2.2rem;
+      position: relative;
+      z-index: 1;
+      min-height: 64px;
+      animation: fadeInUp 0.7s both;
+    }
+    .gdock-step:last-child { margin-bottom: 0; }
+    .gdock-step-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(120deg, var(--color-gold) 60%, #FFD700 100%);
+      color: #181818;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-left: 1.2rem;
+      box-shadow: 0 0 0 6px rgba(255,198,92,0.10);
+      position: relative;
+      z-index: 2;
+      transition: transform 0.2s;
+    }
+    .gdock-step-icon i + i { margin-right: 0.3em; }
+    .gdock-step-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .gdock-step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 0.2rem;
+    }
+    .gdock-step-desc {
+      font-size: 1.05rem;
+      color: #fff;
+      opacity: 0.92;
+    }
+    .gdock-step:hover .gdock-step-icon {
+      transform: scale(1.08) rotate(-4deg);
+      background: linear-gradient(120deg, #FFD700 60%, var(--color-gold) 100%);
+    }
+    @media (max-width: 991px) {
+      .gdock-stepper-card { margin-bottom: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .gdock-stepper-header { flex-direction: column; gap: 0.5rem; }
+      .gdock-stepper { margin: 0 0.5rem; }
+      .gdock-step { margin-bottom: 1.2rem; }
+    }
+    .gdock-images-pair {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .gdock-image-flip {
+      width: 220px;
+      height: 220px;
+      perspective: 900px;
+      position: relative;
+      flex: 1 1 220px;
+      min-width: 180px;
+      max-width: 260px;
+    }
+    .gdock-image-flip-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+      transform-style: preserve-3d;
+      position: relative;
+      cursor: pointer;
+    }
+    .gdock-image-flip:hover .gdock-image-flip-inner,
+    .gdock-image-flip:focus .gdock-image-flip-inner {
+      transform: rotateY(180deg);
+    }
+    .gdock-image-flip-front,
+    .gdock-image-flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #181818;
+      overflow: hidden;
+    }
+    .gdock-image-flip-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      transition: transform 0.2s;
+    }
+    .gdock-image-flip:hover .gdock-image-flip-front img {
+      transform: scale(1.07) rotate(-2deg);
+    }
+    .gdock-image-flip-back {
+      background: linear-gradient(120deg, var(--color-gold) 60%, #181818 100%);
+      color: #fff;
+      transform: rotateY(180deg);
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 991px) {
+      .gdock-images-pair { gap: 1.2rem; }
+    }
+    @media (max-width: 768px) {
+      .gdock-images-pair { flex-direction: column; gap: 1rem; }
+      .gdock-image-flip { width: 100%; height: 160px; }
+    }
+
+    /* D135 Timeline Section */
+    .d135-timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    .d135-timeline-item {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+    .d135-timeline-dot {
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(120deg, #FFC65C 60%, #FFD700 100%);
+      color: #181818;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-left: 1.2rem;
+      box-shadow: 0 0 0 6px rgba(255,198,92,0.10);
+      position: relative;
+      z-index: 2;
+    }
+    .d135-timeline-card {
+      background: linear-gradient(120deg, #181818 60%, #FFC65C 100%);
+      color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.09);
+      padding: 1.2rem 1.5rem;
+      min-width: 220px;
+      margin-bottom: 0.5rem;
+      font-size: 1.08rem;
+      font-weight: 500;
+      position: relative;
+    }
+    .d135-timeline-title {
+      color: var(--color-gold);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .d135-timeline-desc {
+      color: #fff;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .d135-timeline::before {
+      content: "";
+      position: absolute;
+      right: 26px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--color-gold) 0%, #fff0 100%);
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    /* D135 Floating Images */
+    .d135-images-float {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .d135-image-float {
+      position: relative;
+      background: none;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+      overflow: visible;
+      margin-bottom: 0.5rem;
+    }
+    .d135-image-float-main {
+      z-index: 2;
+      transform: translateY(0) scale(1.08) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+    }
+    .d135-image-float-side {
+      position: absolute;
+      left: 40%;
+      top: 60%;
+      z-index: 1;
+      transform: scale(0.92) rotate(6deg);
+      opacity: 0.93;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.09);
+    }
+    .d135-image-caption {
+      display: block;
+      background: var(--color-gold);
+      color: #181818;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 0.3em 1em;
+      margin-top: 0.7em;
+      box-shadow: 0 2px 8px rgba(255,198,92,0.13);
+      text-align: center;
+    }
+    @media (max-width: 991px) {
+      .d135-images-float { gap: 1.2rem; }
+      .d135-image-float-side { left: 30%; top: 55%; }
+    }
+    @media (max-width: 768px) {
+      .d135-images-float { gap: 0.7rem; min-height: 180px; }
+      .d135-image-float-main, .d135-image-float-side { position: static; transform: none; }
+      .d135-image-float-side { margin-top: -1.5rem; }
+    }
+
+    /* D100 Images Overlay */
+    .d100-images-overlay {
+      position: relative;
+      width: 100%;
+      min-height: 240px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .d100-img-main {
+      width: 80%;
+      max-width: 320px;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+      z-index: 2;
+      position: relative;
+    }
+    .d100-img-overlay {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+      width: 60%;
+      max-width: 180px;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.09);
+      z-index: 1;
+      transform: scale(0.92) rotate(8deg);
+      opacity: 0.93;
+    }
+    .d100-image-captions {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 0.7rem;
+      justify-content: center;
+    }
+    @media (max-width: 991px) {
+      .d100-feature-carousel { gap: 0.7rem; }
+      .d100-images-overlay { min-height: 160px; }
+      .d100-img-main { width: 100%; }
+      .d100-img-overlay { left: 55%; width: 70%; }
+    }
+    @media (max-width: 768px) {
+      .d100-feature-carousel { flex-direction: column; align-items: stretch; }
+      .d100-images-overlay { min-height: 120px; }
+      .d100-img-main, .d100-img-overlay { width: 100%; max-width: 100%; position: static; transform: none; }
+      .d100-image-captions { flex-direction: column; gap: 0.3rem; }
     }
   </style>
 </head>
@@ -487,201 +2571,260 @@
   <div class="section-line"></div>
   <div class="section-line-thin"></div>
 
-  <!-- D135 & D100 Cards Section (now compact side-by-side cards) -->
-  <section class="section-wrap my-5 position-relative" data-aos="fade-up" style="overflow:visible;">
-    <div class="gdock-product-row" id="gdockProductRow">
-      <!-- D135 Card -->
-      <div class="gsmart-card text-center">
-        <div class="gsmart-card-content text-center">
-          <h2><i class="fas fa-cube ms-2"></i>תחנת D135 – Matrice 300/350</h2>
-          <p>
-            תחנת <b>D135</b> היא תחנת עגינה מקצועית ואוטונומית, המותאמת במיוחד לדגמי Matrice 300 RTK ו-Matrice 350 RTK של DJI. התחנה כוללת מערכות טעינה אוטומטית, בקרת טמפרטורה חכמה, חיישנים מטאורולוגיים מובנים, אנטנת RTK, וניטור בזמן אמת של סטטוס התחנה.
-          </p>
-          <!-- FIX: Use gdock-feature-list and gdock-feature-item for horizontal scrollable cards -->
-          <div class="gdock-feature-list" style="direction: rtl;">
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
-              <b>מידות</b>
-              <div>1645×1290×1575 מ"מ (סגור), 1645×1290×962 מ"מ (פתוח)</div>
+  <!-- D135 Section (vertical timeline with floating image and highlight cards) -->
+<section class="section-wrap my-5" data-aos="fade-up">
+  <div class="container">
+    <!-- Creative Headline Start -->
+    <div class="text-center mb-5" style="position:relative;">
+      <span style="display:inline-block; background:linear-gradient(90deg,rgba(255,198,92,0.13) 0%,rgba(255,198,92,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(255,198,92,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
+        <i class="fas fa-crown ms-2"></i>
+        D135 – תחנת הדגל של דרונר
+        <i class="fas fa-rocket me-2"></i>
+      </span>
+      <div style="font-size:1.1rem; color:#fff; opacity:0.7; margin-top:0.5rem;">
+        עוצמה, אמינות וטכנולוגיה פורצת דרך – הבחירה של מקצועני הרחפנים
+      </div>
+    </div>
+    <!-- Creative Headline End -->
+    <div class="row justify-content-center align-items-center flex-lg-row-reverse">
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <div class="d135-timeline">
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="100">
+            <div class="d135-timeline-dot"><i class="fas fa-ruler-combined"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">מידות</div>
+              <div class="d135-timeline-desc">1645×1290×1575 מ"מ (סגור), 1645×1290×962 מ"מ (פתוח)</div>
             </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-weight-hanging"></i></span>
-              <b>משקל</b>
-              <div>275 ק"ג</div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="d135-timeline-dot"><i class="fas fa-weight-hanging"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">משקל</div>
+              <div class="d135-timeline-desc">275 ק"ג</div>
             </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon">
-                <i class="fas fa-location-slash"></i>
-                <i class="fas fa-signal ms-2"></i>
-              </span>
-              <b>טיסה ללא GPS</b>
-              <div>יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="300">
+            <div class="d135-timeline-dot"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">טיסה ללא GPS</div>
+              <div class="d135-timeline-desc">יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
             </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
-              <b>תקן עמידות</b>
-              <div>IP54 – עמידות גבוהה לתנאי סביבה קשים</div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="400">
+            <div class="d135-timeline-dot"><i class="fas fa-shield-alt"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">תקן עמידות</div>
+              <div class="d135-timeline-desc">IP54 – עמידות גבוהה לתנאי סביבה קשים</div>
             </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-thermometer-half"></i></span>
-              <b>בקרת טמפרטורה</b>
-              <div>חכמה ואוטומטית</div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="500">
+            <div class="d135-timeline-dot"><i class="fas fa-thermometer-half"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">בקרת טמפרטורה</div>
+              <div class="d135-timeline-desc">חכמה ואוטומטית</div>
             </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
-              <b>טעינה אוטומטית</b>
-              <div>הטענה מהירה של הרחפן</div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="600">
+            <div class="d135-timeline-dot"><i class="fas fa-bolt"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">טעינה אוטומטית</div>
+              <div class="d135-timeline-desc">הטענה מהירה של הרחפן</div>
             </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-satellite-dish"></i></span>
-              <b>ניטור בזמן אמת</b>
-              <div>סטטוס התחנה, חיישנים מטאורולוגיים, אנטנת RTK</div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="700">
+            <div class="d135-timeline-dot"><i class="fas fa-satellite-dish"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">ניטור בזמן אמת</div>
+              <div class="d135-timeline-desc">סטטוס התחנה, חיישנים מטאורולוגיים, אנטנת RTK</div>
             </div>
           </div>
         </div>
       </div>
-      <!-- 2 images after D135 card -->
-      <div class="row justify-content-center align-items-center my-4 w-100 mx-0">
-        <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
-          <img src="../../assets/images/dock-d135-img1.jpg" alt="D135 תחנה תמונה 1" class="img-fluid rounded-4 shadow" style="max-width: 420px;">
-        </div>
-        <div class="col-md-6 d-flex justify-content-center">
-          <img src="../../assets/images/dock-d135-img2.jpg" alt="D135 תחנה תמונה 2" class="img-fluid rounded-4 shadow" style="max-width: 420px;">
-        </div>
-      </div>
-      <!-- Image between D135 and D100 cards -->
-      <div class="row justify-content-center align-items-center my-4 w-100 mx-0">
-        <div class="col-12 d-flex justify-content-center">
-          <img src="../../assets/images/gdock-section1.jpg" alt="G-DOCK תחנה D135" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
-        </div>
-      </div>
-      <!-- D100 Card -->
-      <div class="gsmart-card text-center">
-        <div class="gsmart-card-content text-center">
-          <h2><i class="fas fa-cube ms-2"></i>תחנת D100 – Matrice 30</h2>
-          <p>
-            תחנת <b>D100</b> קומפקטית, מיועדת לעבודה עם רחפן DJI Matrice 30 למשימות ניטור מהירות ויעילות. כוללת תפעול אוטונומי מלא, טעינה אוטומטית, עמידות גבוהה (IP55), ומערכות ניטור עצמי והתראות אוטומטיות.
-          </p>
-          <!-- FIX: Use gdock-feature-list and gdock-feature-item for horizontal scrollable cards -->
-          <div class="gdock-feature-list" style="direction: rtl;">
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-ruler-combined"></i></span>
-              <b>מידות</b>
-              <div>1160×900×900 מ"מ (סגור), 1160×900×600 מ"מ (פתוח)</div>
-            </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-weight-hanging"></i></span>
-              <b>משקל</b>
-              <div>120 ק"ג</div>
-            </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon">
-                <i class="fas fa-location-slash"></i>
-                <i class="fas fa-signal ms-2"></i>
-              </span>
-              <b>טיסה ללא GPS</b>
-              <div>יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
-            </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-shield-alt"></i></span>
-              <b>תקן עמידות</b>
-              <div>IP55 – עמידות גבוהה בתנאי סביבה מגוונים</div>
-            </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-thermometer-half"></i></span>
-              <b>בקרת טמפרטורה</b>
-              <div>חכמה ואוטומטית</div>
-            </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-bolt"></i></span>
-              <b>טעינה אוטומטית</b>
-              <div>מערכת טעינה מהירה ואוטונומית</div>
-            </div>
-            <div class="gdock-feature-item">
-              <span class="gdock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
-              <b>ניטור והתראות</b>
-              <div>מערכות ניטור עצמי והתראות אוטומטיות</div>
-            </div>
+      <!-- D135 Floating Image (only one image) -->
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <div class="d135-images-float">
+          <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+            <img src="../../assets/images/dock-d135-img1.jpg" alt="D135 תחנה תמונה 1" class="img-fluid rounded-4 shadow">
+            <span class="d135-image-caption">D135 – מבט חיצוני</span>
           </div>
-        </div>
-      </div>
-      <!-- 2 images after D100 card -->
-      <div class="row justify-content-center align-items-center my-4 w-100 mx-0">
-        <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center">
-          <img src="../../assets/images/dock-d100-img1.jpg" alt="D100 תחנה תמונה 1" class="img-fluid rounded-4 shadow" style="max-width: 420px;">
-        </div>
-        <div class="col-md-6 d-flex justify-content-center">
-          <img src="../../assets/images/dock-d100-img2.jpg" alt="D100 תחנה תמונה 2" class="img-fluid rounded-4 shadow" style="max-width: 420px;">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- יתרונות ללקוח (roll of cards) -->
-  <section class="section-wrap" data-aos="fade-up">
-    <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
-    <div class="gsmart-advantage-list justify-content-center text-center" style="display:flex;flex-wrap:nowrap;overflow-x:auto;gap:1.2rem;scroll-snap-type:x mandatory;">
-      <div class="gsmart-advantage-card text-center">
-        <i class="fas fa-user-cog"></i>
-        <div>
-          <b>פתרון מקצועי ומותאם</b><br>
+<!-- Creative Divider between D135 and D100 -->
+<div class="creative-divider my-5" style="position:relative;z-index:2;">
+  <div style="width:100%;display:flex;align-items:center;justify-content:center;position:relative;">
+    <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
+    <span style="background:var(--color-dark-bg);padding:0 2.5rem;border-radius:2rem;box-shadow:0 2px 12px rgba(255,198,92,0.13);font-size:1.4rem;font-weight:700;color:var(--color-gold);display:flex;align-items:center;gap:0.7rem;">
+      <i class="fas fa-exchange-alt fa-rotate-90"></i>
+      מעבר ל-D100
+      <i class="fas fa-arrow-down"></i>
+    </span>
+    <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
+  </div>
+  <div style="width:100%;text-align:center;margin-top:0.5rem;">
+    <span style="color:#fff;opacity:0.7;font-size:1rem;letter-spacing:1px;">הכירו גם את תחנת D100 – פתרון קומפקטי, עמיד וחדשני</span>
+  </div>
+</div>
+
+<!-- D100 Section (vertical timeline with floating image and highlight cards, like D135) -->
+<section class="section-wrap my-5" data-aos="fade-up">
+  <div class="container">
+    <div class="row justify-content-center align-items-center flex-lg-row-reverse">
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <div class="d135-timeline">
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="100">
+            <div class="d135-timeline-dot"><i class="fas fa-ruler-combined"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">מידות</div>
+              <div class="d135-timeline-desc">1160×900×900 מ"מ (סגור), 1160×900×600 מ"מ (פתוח)</div>
+            </div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="d135-timeline-dot"><i class="fas fa-weight-hanging"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">משקל</div>
+              <div class="d135-timeline-desc">120 ק"ג</div>
+            </div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="300">
+            <div class="d135-timeline-dot"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">טיסה ללא GPS</div>
+              <div class="d135-timeline-desc">יכולת טיסה אוטונומית גם באזורים ללא קליטת GPS</div>
+            </div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="400">
+            <div class="d135-timeline-dot"><i class="fas fa-shield-alt"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">תקן עמידות</div>
+              <div class="d135-timeline-desc">IP55 – עמידות גבוהה בתנאי סביבה מגוונים</div>
+            </div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="500">
+            <div class="d135-timeline-dot"><i class="fas fa-thermometer-half"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">בקרת טמפרטורה</div>
+              <div class="d135-timeline-desc">חכמה ואוטומטית</div>
+            </div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="600">
+            <div class="d135-timeline-dot"><i class="fas fa-bolt"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">טעינה אוטומטית</div>
+              <div class="d135-timeline-desc">מערכת טעינה מהירה ואוטונומית</div>
+            </div>
+          </div>
+          <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="700">
+            <div class="d135-timeline-dot"><i class="fas fa-broadcast-tower"></i></div>
+            <div class="d135-timeline-card">
+              <div class="d135-timeline-title">ניטור והתראות</div>
+              <div class="d135-timeline-desc">מערכות ניטור עצמי והתראות אוטומטיות</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- D100 Floating Image (only one image) -->
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <div class="d135-images-float">
+          <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+            <img src="../../assets/images/dock-d100-img1.jpg" alt="D100 תחנה תמונה 1" class="img-fluid rounded-4 shadow">
+            <span class="d135-image-caption">D100 – מבט חיצוני</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Shared Image -->
+<section class="section-wrap text-center my-4" data-aos="fade-up">
+  <img src="../../assets/images/gdock-section1.jpg" alt="G-DOCK תחנה D135" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
+</section>
+
+<!-- יתרונות ללקוח (flip cards) -->
+<section class="section-wrap" data-aos="fade-up">
+  <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
+  <div class="gsmart-advantage-flip-list justify-content-center text-center">
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-user-cog"></i>
+          <div><b>פתרון מקצועי ומותאם</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back">
           תחנות עגינה ייעודיות לדגמי Matrice, עם אינטגרציה מלאה למערכות שליטה.
         </div>
       </div>
-      <div class="gsmart-advantage-card text-center">
-        <i class="fas fa-bolt"></i>
-        <div>
-          <b>הפעלה אוטונומית מלאה</b><br>
+    </div>
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-bolt"></i>
+          <div><b>הפעלה אוטונומית מלאה</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back">
           טעינה, ניטור, תיעוד ותפעול – הכל אוטומטי וללא התערבות ידנית.
         </div>
       </div>
-      <div class="gsmart-advantage-card text-center">
-        <i class="fas fa-shield-alt"></i>
-        <div>
-          <b>אמינות ושירות</b><br>
+    </div>
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-shield-alt"></i>
+          <div><b>אמינות ושירות</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back">
           שירות ותמיכה של צוות מקצועי, תחזוקה מינימלית ואמינות גבוהה לאורך זמן.
         </div>
       </div>
-      <div class="gsmart-advantage-card text-center">
-        <i class="fas fa-sync-alt"></i>
-        <div>
-          <b>התאמה לסביבה</b><br>
+    </div>
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-sync-alt"></i>
+          <div><b>התאמה לסביבה</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back">
           עמידות גבוהה, בקרת טמפרטורה, חיישנים מתקדמים וממשק ניהול נוח.
         </div>
       </div>
     </div>
-  </section>
-  <!-- Image between Advantages and Video -->
-  <section class="section-wrap text-center my-4" data-aos="fade-up">
-    <img src="../../assets/images/gdock-section2.jpg" alt="G-DOCK יתרונות" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
-  </section>
-  <!-- Video Section -->
-  <section class="section-wrap my-5" data-aos="fade-up">
-    <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>הכירו את תחנות D135 ו-D100 בפעולה</h2>
-    <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
-      <video controls class="w-100 h-100" poster="../../assets/images/dock-d135-thumb.jpg">
-        <source src="../../assets/videos/dock-d135-demo.mp4" type="video/mp4">
-        הדפדפן שלך אינו תומך בניגון וידאו.
-      </video>
-    </div>
-  </section>
-  <!-- Image between Video and Support -->
-  <section class="section-wrap text-center my-4" data-aos="fade-up">
-    <img src="../../assets/images/gdock-section3.jpg" alt="G-DOCK שירות ותמיכה" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
-  </section>
-  <!-- Support Card -->
-  <div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
-    <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
-    <p>
-      צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
-    </p>
   </div>
-  <!-- CTA Card -->
-  <section class="cta-card section-wrap text-center" data-aos="fade-up">
-    <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-DOCK בפעולה?</h3>
-    <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
-    <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
-  </section>
+</section>
+<!-- Image between Advantages and Video -->
+<section class="section-wrap text-center my-4" data-aos="fade-up">
+  <img src="../../assets/images/gdock-section2.jpg" alt="G-DOCK יתרונות" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
+</section>
+<!-- Video Section -->
+<section class="section-wrap my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>הכירו את תחנות D135 ו-D100 בפעולה</h2>
+  <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
+    <video controls class="w-100 h-100" poster="../../assets/images/dock-d135-thumb.jpg">
+      <source src="../../assets/videos/dock-d135-demo.mp4" type="video/mp4">
+      הדפדפן שלך אינו תומך בניגון וידאו.
+    </video>
+  </div>
+</section>
+<!-- Image between Video and Support -->
+<section class="section-wrap text-center my-4" data-aos="fade-up">
+  <img src="../../assets/images/gdock-section3.jpg" alt="G-DOCK שירות ותמיכה" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
+</section>
+<!-- Support Card -->
+<div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
+  <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
+  <p>
+    צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
+  </p>
+</div>
+<!-- CTA Card -->
+<section class="cta-card section-wrap text-center" data-aos="fade-up">
+  <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-DOCK בפעולה?</h3>
+  <p class="cta-desc">צור קשר עם צוות דרונר ונשמח להדגים את התחנה אצלך באתר.</p>
+  <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">לתיאום הדגמה</a>
+</section>
 <!-- Footer for pages/products folder -->
 <footer class="main-footer-modern py-5">
     <div class="container">

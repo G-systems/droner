@@ -11,109 +11,201 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
     :root {
-      --color-dark: #0b0c10;
-      --color-bronze: #FFC65C; /* changed from #b08d57 */
-      --color-brand: #FFC65C; /* was #0AD100, changed from #b08d57 */
+      --color-dark-bg: #121212;
+      --color-gold: #FFC65C;
+      --color-brand: #FFC65C;
       --color-light: #f4f4f4;
     }
-    body { background: var(--color-dark); color: var(--color-light); }
-    .gsmart-card {
-      background: #141414;
+    body {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      font-family: 'Rubik', sans-serif;
+    }
+    .gdock-card, .gsmart-card {
+      background: #141414 !important;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
       overflow: hidden;
       position: relative;
       transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
     }
-    .gsmart-card:hover {
-      box-shadow: 0 12px 40px rgba(0,0,0,0.16);
-    }
-    .gsmart-card-content {
-      padding: 2rem 2rem 1.5rem 2rem;
+    .gdock-card-content, .gsmart-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
       font-size: 1.15rem;
-      color: var(--color-light);
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
     }
-    /* --- Features section: dock-d135 style --- */
-    .gdock-feature-list {
+    /* Timeline styles (copied from dock-d135) */
+    .d135-timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 1.5rem 0;
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 1.2rem;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    .d135-timeline-item {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+    .d135-timeline-dot {
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(120deg, #FFC65C 60%, #FFD700 100%);
+      color: #181818;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      margin: 2rem 0 0 0;
-      padding-bottom: 0.5rem;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      font-size: 2rem;
+      margin-left: 1.2rem;
+      box-shadow: 0 0 0 6px rgba(255,198,92,0.10);
+      position: relative;
+      z-index: 2;
+    }
+    .d135-timeline-card {
+      background: linear-gradient(120deg, #181818 60%, #FFC65C 100%);
+      color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.09);
+      padding: 1.2rem 1.5rem;
+      min-width: 220px;
+      margin-bottom: 0.5rem;
+      font-size: 1.08rem;
+      font-weight: 500;
       position: relative;
     }
-    .gdock-feature-list::-webkit-scrollbar {
-      display: none;
-    }
-    .gdock-feature-item {
-      background: rgba(255,198,92,0.1); /* changed from rgba(176,141,87,0.1) */
-      color: var(--color-light);
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
-      padding: 1.5rem 1.2rem;
-      min-width: 220px;
-      max-width: 320px;
-      flex: 1 1 220px;
-      text-align: center;
-      font-size: 1.13rem;
-      margin-bottom: 0;
-      transition: none;
-    }
-    .gdock-feature-icon {
-      font-size: 2.2rem;
+    .d135-timeline-title {
       color: var(--color-gold);
-      margin-bottom: 0.7rem;
-      display: block;
-      transition: none;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
     }
-    /* --- End features section --- */
-    .gsmart-advantage-card {
-      background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%);
+    .d135-timeline-desc {
+      color: #fff;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .d135-timeline::before {
+      content: "";
+      position: absolute;
+      right: 26px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--color-gold) 0%, #fff0 100%);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    /* Floating Images */
+    .d135-images-float {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .d135-image-float {
+      position: relative;
+      background: none;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+      overflow: visible;
+      margin-bottom: 0.5rem;
+    }
+    .d135-image-float-main {
+      z-index: 2;
+      transform: translateY(0) scale(1.08) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+    }
+    .d135-image-caption {
+      display: block;
+      background: var(--color-gold);
+      color: #181818;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 0.3em 1em;
+      margin-top: 0.7em;
+      box-shadow: 0 2px 8px rgba(255,198,92,0.13);
+      text-align: center;
+    }
+    /* Flip card styles for advantages */
+    .gsmart-advantage-flip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+    }
+    .gsmart-advantage-flip-card {
+      background: none;
+      width: 220px;
+      height: 180px;
+      perspective: 900px;
+      margin-bottom: 1.5rem;
+    }
+    .gsmart-advantage-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .gsmart-advantage-flip-card:hover .gsmart-advantage-flip-inner,
+    .gsmart-advantage-flip-card:focus .gsmart-advantage-flip-inner {
+      transform: rotateY(180deg);
+    }
+    .gsmart-advantage-flip-front,
+    .gsmart-advantage-flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      padding: 2rem 1.5rem;
-      margin-bottom: 1.5rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
-      transition: box-shadow 0.2s;
-      color: #fff !important;
+      justify-content: center;
+      font-size: 1.13rem;
+      font-weight: 500;
+      background: linear-gradient(120deg, var(--color-gold) 60%, #181818 100%);
+      color: #fff;
+      transition: background 0.2s;
     }
-    .gsmart-advantage-card .fa {
+    .gsmart-advantage-flip-front i {
       font-size: 2.5rem;
-      color: var(--color-gold) !important;
-      min-width: 48px;
+      margin-bottom: 0.7rem;
+      color: #fff;
+      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
     }
-    .gsmart-support-card {
-      background: #141414;
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 2rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-    .gsmart-support-card img {
-      border-radius: 14px;
-      max-width: 200px;
-      width: 100%;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    }
-    /* Force gold icons in advantages section */
-    .gdock-advantage-card i {
-      color: var(--color-gold) !important;
+    .gsmart-advantage-flip-back {
+      background: #181818;
+      color: var(--color-gold);
+      transform: rotateY(180deg);
+      font-size: 1.08rem;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
     }
     @media (max-width: 768px) {
-      .gsmart-card-content, .gsmart-card-header { padding: 1.2rem 0.7rem; }
-      .gsmart-support-card { flex-direction: column; gap: 1rem; }
-      .gdock-feature-list { gap: 0.7rem; }
+      .gsmart-advantage-flip-list { gap: 0.7rem; }
+      .gsmart-advantage-flip-card { width: 100%; height: 140px; }
+      .d135-images-float { gap: 0.7rem; min-height: 180px; }
+      .d135-image-float-main { position: static; transform: none; }
     }
   </style>
 </head>
@@ -165,23 +257,36 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- Hero Card -->
-  <div class="gsmart-card mt-5 position-relative overflow-hidden" data-aos="fade-up" style="padding:0; border-radius:0;">
-    <div class="gsmart-card-header page-hero position-relative" style="padding:0; border-radius:0;">
-      <img src="../../assets/images/herocontrol.jpg" alt="רקע מוקד שליטה" style="width:100%; height:340px; object-fit:cover; display:block; border-radius:0;">
-      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(11,12,16,0.45);z-index:1; border-radius:0;"></div>
-      <div class="header-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="z-index:2; color:#fff; text-shadow:0 2px 16px var(--color-dark),0 1px 4px var(--color-dark);">
-        <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
-          <span style="color:var(--color-gold);">G-CONTROL</span>
-        </h1>
-        <p style="font-size:1.35rem; font-weight:500;">מוקד שליטה מרחוק 24/7</p>
+  <!-- HERO -->
+  <div class="gdock-card mt-5 text-center" data-aos="fade-up">
+    <div class="gdock-card-header page-hero text-center" style="position: relative; padding: 0; overflow: hidden;">
+      <div class="image-container" style="position: relative;">
+        <img src="../../assets/images/herocontrol.jpg" alt="רקע מוקד שליטה" style="width: 100%; height: 340px; object-fit: cover; display: block;">
+        <div class="header-content text-center" style="
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          text-shadow: 0 2px 16px rgba(0,0,0,0.45);
+          background: linear-gradient(120deg, rgba(11,12,16,0.55) 60%, rgba(255,198,92,0.18) 100%);
+          padding: 2.5rem 1rem;
+        ">
+          <h1 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">
+            <span style="color: var(--color-gold);">G-CONTROL</span>
+          </h1>
+          <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">
+            מוקד שליטה מרחוק 24/7 – שליטה מלאה, ניטור ותגובה
+          </p>
+        </div>
       </div>
     </div>
   </div>
-
   <!-- Intro Card -->
-  <div class="gsmart-card" data-aos="fade-up">
-    <div class="gsmart-card-content">
+  <div class="gdock-card" data-aos="fade-up">
+    <div class="gdock-card-content">
       <h2 class="mb-3">מוקד שליטה מתקדם – שליטה מלאה, ניטור ותגובה</h2>
       <p>
         <b>G-CONTROL</b> הוא מוקד שליטה מרחוק מבית דרונר, המאפשר שליטה, בקרה וניהול מבצעי של מערכות רחפנים ותחנות עגינה מכל מקום ובכל זמן. צוות מטיסים מקצועי ומנוסה זמין 24/7, מבצע סיורים יזומים, תגובות לאירועים, תיעוד מלא של כל פעילות, ומספק מענה מיידי לכל תרחיש.
@@ -194,73 +299,117 @@
       </ul>
     </div>
   </div>
-  <!-- Image between Intro and Features -->
-  <section class="section-wrap text-center my-4" data-aos="fade-up">
-    <img src="../../assets/images/gcontrol-section1.jpg" alt="G-CONTROL מוקד שליטה" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
-  </section>
-  <!-- Features Card (roll of cards) -->
-  <div class="gsmart-card" data-aos="fade-up">
-    <div class="gsmart-card-content">
-      <h2 class="mb-4 text-center"><i class="fas fa-bolt ms-2"></i>יכולות מרכזיות</h2>
-      <div class="gdock-feature-list position-relative" style="direction: rtl;">
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-user-tie"></i></span>
-          <b>מוקד מאויש ומקצועי</b>
-          <div>שליטה מרחוק על מערכות הרחפנים והמצלמות בזמן אמת, כולל תפעול מלא של תחנות עגינה.</div>
+  <!-- Timeline Section -->
+  <section class="section-wrap my-5" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5" style="position:relative;">
+        <span style="display:inline-block; background:linear-gradient(90deg,rgba(255,198,92,0.13) 0%,rgba(255,198,92,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(255,198,92,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
+          <i class="fas fa-bolt ms-2"></i>
+          יכולות מרכזיות – G-CONTROL
+          <i class="fas fa-eye me-2"></i>
+        </span>
+        <div style="font-size:1.1rem; color:#fff; opacity:0.7; margin-top:0.5rem;">
+          שליטה מרחוק, ניהול משימות, שידור חי ודוחות אוטומטיים
         </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-tasks"></i></span>
-          <b>ניהול משימות מבצעיות</b>
-          <div>סיורים יזומים, תגובה לאירועים, תחקור ותיעוד מלא של כל פעילות.</div>
+      </div>
+      <div class="row justify-content-center align-items-center flex-lg-row-reverse">
+        <div class="col-lg-6 d-flex flex-column align-items-center">
+          <div class="d135-timeline">
+            <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="100">
+              <div class="d135-timeline-dot"><i class="fas fa-user-tie"></i></div>
+              <div class="d135-timeline-card">
+                <div class="d135-timeline-title">מוקד מאויש ומקצועי</div>
+                <div class="d135-timeline-desc">שליטה מרחוק על מערכות הרחפנים והמצלמות בזמן אמת, כולל תפעול מלא של תחנות עגינה.</div>
+              </div>
+            </div>
+            <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="200">
+              <div class="d135-timeline-dot"><i class="fas fa-tasks"></i></div>
+              <div class="d135-timeline-card">
+                <div class="d135-timeline-title">ניהול משימות מבצעיות</div>
+                <div class="d135-timeline-desc">סיורים יזומים, תגובה לאירועים, תחקור ותיעוד מלא של כל פעילות.</div>
+              </div>
+            </div>
+            <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="300">
+              <div class="d135-timeline-dot"><i class="fas fa-broadcast-tower"></i></div>
+              <div class="d135-timeline-card">
+                <div class="d135-timeline-title">שידור וידאו חי</div>
+                <div class="d135-timeline-desc">צפייה בזמן אמת מכל מקום, כולל שיתוף עם גורמי שטח.</div>
+              </div>
+            </div>
+            <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="400">
+              <div class="d135-timeline-dot"><i class="fas fa-file-alt"></i></div>
+              <div class="d135-timeline-card">
+                <div class="d135-timeline-title">תיעוד ואבטחת מידע</div>
+                <div class="d135-timeline-desc">שמירת כל המשימות והאירועים בענן, כולל הפקת דוחות אוטומטיים.</div>
+              </div>
+            </div>
+            <div class="d135-timeline-item" data-aos="fade-left" data-aos-delay="500">
+              <div class="d135-timeline-dot"><i class="fas fa-plug"></i></div>
+              <div class="d135-timeline-card">
+                <div class="d135-timeline-title">אינטגרציה מלאה</div>
+                <div class="d135-timeline-desc">עבודה בשיתוף מערכות G-DOCK, G-SMART ו־FlightOps.</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-broadcast-tower"></i></span>
-          <b>שידור וידאו חי</b>
-          <div>צפייה בזמן אמת מכל מקום, כולל שיתוף עם גורמי שטח.</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-file-alt"></i></span>
-          <b>תיעוד ואבטחת מידע</b>
-          <div>שמירת כל המשימות והאירועים בענן, כולל הפקת דוחות אוטומטיים.</div>
-        </div>
-        <div class="gdock-feature-item">
-          <span class="gdock-feature-icon"><i class="fas fa-plug"></i></span>
-          <b>אינטגרציה מלאה</b>
-          <div>עבודה בשיתוף מערכות G-DOCK, G-SMART ו־FlightOps.</div>
+        <!-- Floating Image -->
+        <div class="col-lg-6 d-flex flex-column align-items-center">
+          <div class="d135-images-float">
+            <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+              <img src="../../assets/images/gcontrol-section1.jpg" alt="G-CONTROL מוקד שליטה" class="img-fluid rounded-4 shadow">
+              <span class="d135-image-caption">G-CONTROL – מוקד שליטה מרחוק</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Advantages Cards (roll of cards) -->
+  </section>
+  <!-- Advantages Section (flip cards style) -->
   <section class="section-wrap" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>יתרונות ללקוח</h2>
-    <div class="gdock-advantage-list justify-content-center text-center" style="display:flex;flex-wrap:nowrap;overflow-x:auto;gap:1.2rem;scroll-snap-type:x mandatory;">
-      <div class="gdock-advantage-card text-center">
-        <i class="fas fa-clock"></i>
-        <div>
-          <b>זמינות מלאה 24/7</b><br>
-          מענה מיידי לכל אירוע, בכל שעה, עם צוות מקצועי ומנוסה.
+    <div class="gsmart-advantage-flip-list justify-content-center text-center">
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-clock"></i>
+            <div><b>זמינות מלאה 24/7</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back">
+            מענה מיידי לכל אירוע, בכל שעה, עם צוות מקצועי ומנוסה.
+          </div>
         </div>
       </div>
-      <div class="gdock-advantage-card text-center">
-        <i class="fas fa-user-shield"></i>
-        <div>
-          <b>הפחתת סיכונים ועלויות</b><br>
-          אין צורך בכוח אדם יקר בשטח – שליטה מרחוק חוסכת משאבים ומפחיתה סיכונים.
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-user-shield"></i>
+            <div><b>הפחתת סיכונים ועלויות</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back">
+            אין צורך בכוח אדם יקר בשטח – שליטה מרחוק חוסכת משאבים ומפחיתה סיכונים.
+          </div>
         </div>
       </div>
-      <div class="gdock-advantage-card text-center">
-        <i class="fas fa-bolt"></i>
-        <div>
-          <b>תגובה מהירה ומדויקת</b><br>
-          זיהוי, תחקור ותגובה לאירועים בזמן אמת, כולל תיעוד מלא.
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-bolt"></i>
+            <div><b>תגובה מהירה ומדויקת</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back">
+            זיהוי, תחקור ותגובה לאירועים בזמן אמת, כולל תיעוד מלא.
+          </div>
         </div>
       </div>
-      <div class="gdock-advantage-card text-center">
-        <i class="fas fa-chart-line"></i>
-        <div>
-          <b>שיפור תהליכים מבצעיים</b><br>
-          הפקת דוחות, ניתוח נתונים ושיפור מתמיד של מערך האבטחה.
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-chart-line"></i>
+            <div><b>שיפור תהליכים מבצעיים</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back">
+            הפקת דוחות, ניתוח נתונים ושיפור מתמיד של מערך האבטחה.
+          </div>
         </div>
       </div>
     </div>
@@ -281,13 +430,12 @@
     <img src="../../assets/images/gcontrol-section3.jpg" alt="G-CONTROL שירות ותמיכה" class="img-fluid rounded-4 shadow" style="max-width: 700px;">
   </section>
   <!-- Support Card -->
-  <div class="gsmart-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
+  <div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
     <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>שירות ותמיכה</h2>
     <p>
       צוות התמיכה של דרונר זמין עבורכם 24/7, מספק שירותי התקנה, הדרכה, תפעול שוטף, ומענה מהיר לכל תקלה או שאלה. SLA מותאם אישית לכל לקוח, כולל שירותי מוקד טלפוני, שליטה מרחוק, והגעה לאתר הלקוח במידת הצורך.
     </p>
   </div>
-
   <!-- CTA Card -->
   <section class="cta-card section-wrap" data-aos="fade-up">
     <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>רוצים לראות את G-CONTROL בפעולה?</h3>
