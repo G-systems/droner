@@ -93,6 +93,361 @@
     .use-case-icon i {
       color: var(--color-gold) !important;
     }
+    /* Timeline styles for advantages section */
+    .advantages-timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .advantage-timeline-item {
+      position: relative;
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background: var(--color-dark-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .advantage-timeline-item.left {
+      margin-left: 2rem;
+    }
+    .advantage-timeline-item.right {
+      margin-right: 2rem;
+    }
+    .advantage-timeline-content {
+      display: flex;
+      align-items: center;
+    }
+    .advantage-timeline-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: -28px;
+      margin-right: 1rem;
+      background: var(--color-gold);
+      color: #000;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    .advantage-timeline-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--color-gold);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    /* Responsive adjustments for timeline */
+    @media (max-width: 768px) {
+      .advantage-timeline-item {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+      }
+      .advantage-timeline-icon {
+        width: 48px;
+        height: 48px;
+        margin-left: -24px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    /* Cube Animation for Advantages Section */
+    .advantages-cube-wrapper {
+      perspective: 1000px;
+      margin-top: 2rem;
+    }
+    .advantages-cube {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform 0.8s;
+    }
+    .cube-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .cube-face-front  { background: rgba(255, 255, 255, 0.1); }
+    .cube-face-back   { background: rgba(255, 255, 255, 0.1); transform: rotateY(180deg); }
+    .cube-face-right  { background: rgba(255, 255, 255, 0.1); transform: rotateY(90deg); }
+    .cube-face-left   { background: rgba(255, 255, 255, 0.1); transform: rotateY(-90deg); }
+
+    .cube-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+    /* Rotate cube on hover */
+    .advantages-cube:hover {
+      transform: rotateY(180deg);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .advantages-cube {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    /* Radial Burst Animation for Advantages Section */
+    .advantages-radial-burst {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .burst-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-gold);
+      color: #000;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(255, 198, 92, 0.18);
+      z-index: 2;
+    }
+    .burst-item {
+      position: relative;
+      width: 200px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .burst-item-1 { transform: rotate(0deg) translateY(-10px); }
+    .burst-item-2 { transform: rotate(90deg) translateY(-10px); }
+    .burst-item-3 { transform: rotate(180deg) translateY(-10px); }
+    .burst-item-4 { transform: rotate(270deg) translateY(-10px); }
+    .advantages-radial-burst:hover .burst-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .advantages-radial-burst {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .burst-item {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+
+    /* Floating Glass Cards for Advantages Section */
+    .advantages-glass-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s;
+    }
+    .glass-card:hover {
+      transform: translateY(-8px);
+    }
+    .glass-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .glass-card {
+        padding: 1.5rem;
+      }
+      .glass-icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    /* Hologram Stack for Advantages Section */
+    .holo-stack {
+      perspective: 1000px;
+      margin-top: 2rem;
+    }
+    .holo-card {
+      position: relative;
+      margin: 1rem 0;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.6s, box-shadow 0.6s;
+    }
+    .holo-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Hologram stack parallax effect (2025/2026 style) */
+    #holoStack {
+      position: relative;
+      overflow: hidden;
+    }
+    #holoStack .holo-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 2rem;
+      opacity: 0.9;
+      transition: transform 0.6s, opacity 0.6s;
+    }
+    #holoStack .holo-card-1 { background: rgba(255, 198, 92, 0.1); }
+    #holoStack .holo-card-2 { background: rgba(92, 198, 255, 0.1); }
+    #holoStack .holo-card-3 { background: rgba(92, 255, 92, 0.1); }
+    #holoStack .holo-card-4 { background: rgba(255, 92, 92, 0.1); }
+    #holoStack:hover .holo-card {
+      transform: translateY(-8px);
+    }
+
+    /* Neon Orbit Carousel for Advantages Section */
+    .orbit-carousel {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin-top: 2rem;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .orbit-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .orbit-card {
+      position: absolute;
+      width: 280px;
+      padding: 2rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.6s;
+    }
+    .orbit-card:hover {
+      transform: scale(1.05);
+    }
+    .orbit-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .orbit-carousel {
+        height: 300px;
+      }
+      .orbit-card {
+        width: 200px;
+        padding: 1.5rem;
+      }
+    }
+
+    /* Futuristic Advantages Grid */
+    .futuristic-adv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .futuristic-adv-card {
+      background: var(--color-dark-bg);
+      border-radius: 18px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s;
+    }
+    .futuristic-adv-card:hover {
+      transform: translateY(-8px);
+    }
+    .futuristic-adv-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .futuristic-adv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -288,46 +643,52 @@
          <span>יתרונות מרכזיים</span>
         <span class="section-line"></span>
       </h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-            <div class="advantage-card">
-            <div class="advantage-icon" style="background: var(--color-gold); color: #000;">
-              <i class="fas fa-globe"></i>
-            </div>
-            <h4 class="advantage-title">שליטה מלאה מכל מקום</h4>
-            <p class="advantage-text">שידור וידאו חי, שליטה ובקרה מרחוק, תקשורת סלולרית מוצפנת – ללא מגבלת טווח.</p>
-          </div>
+      <div class="futuristic-adv-grid">
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-globe"></i></div>
+          <h4 class="advantage-title">שליטה מלאה מכל מקום</h4>
+          <p class="advantage-text">שידור וידאו חי, שליטה ובקרה מרחוק, תקשורת סלולרית מוצפנת – ללא מגבלת טווח.</p>
         </div>
-        <div class="col-md-6 col-lg-3">
-           <div class="advantage-card">
-            <div class="advantage-icon" style="background: var(--color-gold); color: #0b0c10;">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <h4 class="advantage-title">תגובה מיידית לאירועים</h4>
-            <p class="advantage-text">הרחפן ממריא אוטונומית תוך פחות מ־3 דקות, מתעד ומספק מידע בזמן אמת.</p>
-          </div>
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-bolt"></i></div>
+          <h4 class="advantage-title">תגובה מיידית לאירועים</h4>
+          <p class="advantage-text">הרחפן ממריא אוטונומית תוך פחות מ־3 דקות, מתעד ומספק מידע בזמן אמת.</p>
         </div>
-        <div class="col-md-6 col-lg-3">
-           <div class="advantage-card">
-            <div class="advantage-icon" style="background: var(--color-gold); color: #0b0c10;">
-              <i class="fas fa-headset"></i>
-            </div>
-            <h4 class="advantage-title">שירות אנושי בפריסה ארצית</h4>
-            <p class="advantage-text">מוקד תפעול מקצועי, צוות מטיסים וטכנאים, תמיכה 24/7 ו־SLA מחייב.</p>
-          </div>
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-headset"></i></div>
+          <h4 class="advantage-title">שירות אנושי בפריסה ארצית</h4>
+          <p class="advantage-text">מוקד תפעול מקצועי, צוות מטיסים וטכנאים, תמיכה 24/7 ו־SLA מחייב.</p>
         </div>
-        <div class="col-md-6 col-lg-3">
-           <div class="advantage-card">
-            <div class="advantage-icon" style="background: var(--color-gold); color: #0b0c10;">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h4 class="advantage-title">יתרון מבצעי וכלכלי מוכח</h4>
-            <p class="advantage-text">מערכת יעילה שמפחיתה עומס על כוח אדם, משפרת תגובה, וחוסכת בעלויות בטווח קצר וארוך.</p>
-          </div>
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-chart-line"></i></div>
+          <h4 class="advantage-title">יתרון מבצעי וכלכלי מוכח</h4>
+          <p class="advantage-text">מערכת יעילה שמפחיתה עומס על כוח אדם, משפרת תגובה, וחוסכת בעלויות בטווח קצר וארוך.</p>
         </div>
       </div>
     </div>
   </section>
+  <script>
+    // filepath: c:\Users\ארי מילר\Sites\g-system\web\index.html
+    // Neon orbit carousel animation (2026 style)
+    document.addEventListener('DOMContentLoaded', function() {
+      const orbit = document.querySelector('.orbit-carousel');
+      if (!orbit) return;
+      let angle = 0;
+      function animateOrbit() {
+        angle += 0.3;
+        const cards = orbit.querySelectorAll('.orbit-card');
+        const r = window.innerWidth < 600 ? 90 : 160;
+        cards.forEach((card, i) => {
+          const theta = angle + (i * Math.PI * 2 / cards.length);
+          const x = Math.cos(theta) * r;
+          const y = Math.sin(theta) * r;
+          card.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+        });
+        requestAnimationFrame(animateOrbit);
+      }
+      animateOrbit();
+    });
+  </script>
 
   <!-- Use Cases Section -->
   <section class="py-5 bg-dark text-white" id="scenarios">
