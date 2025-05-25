@@ -1281,7 +1281,6 @@ button.btn-warning .fa-user {
   margin-bottom: 0;
   margin-top: 0;
   font-weight: 400;
-  text-shadow: 0 1px 8px rgba(255,255,255,0.08);
 }
 @media (max-width: 900px) {
   .advantages-glass-grid {
@@ -1931,6 +1930,53 @@ button.btn-warning .fa-user {
     max-height: 64px !important;
     max-width: 90vw !important;
     margin-bottom: 0.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+}
+
+/* === Index Page: Center "מי אנחנו" Section === */
+.index-who-we-are {
+  text-align: center !important;
+}
+.index-who-we-are .row {
+  justify-content: center !important;
+  text-align: center !important;
+}
+.index-who-we-are .about-content,
+.index-who-we-are h2,
+.index-who-we-are .about-text,
+.index-who-we-are .section-line {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+}
+.index-who-we-are .section-line {
+  float: none !important;
+}
+
+/* === Make Index Page Header Logo Bigger === */
+.index-header-logo,
+.header-logo.index-header-logo,
+.hero-section .index-header-logo {
+  height: 160px !important;
+  max-height: 160px !important;
+  max-width: 98vw !important;
+  width: auto !important;
+  display: block;
+  margin: 0 auto 1rem auto !important;
+  border-radius:  16px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  background: none;
+}
+
+@media (max-width: 767px) {
+  .index-header-logo,
+  .header-logo.index-header-logo,
+  .hero-section .index-header-logo {
+    height: 100px !important;
+    max-height: 100px !important;
+    margin-bottom: 0.7rem !important;
     margin-top: 0.5rem !important;
   }
 }
