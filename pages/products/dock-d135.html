@@ -1738,6 +1738,10 @@
       text-align: center;
       letter-spacing: 1px;
     }
+    /* Make all icons gold by default */
+    i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
+      color: var(--color-gold) !important;
+    }
     /* Card style for all main sections */
     .product-card,
     .product-section,
@@ -1820,175 +1824,6 @@
       display: block;
       transition: none;
     }
-    /* Responsive: stack on mobile */
-    @media (max-width: 1200px) {
-      .gdock-feature-list {
-        gap: 0.7rem;
-      }
-      .gdock-feature-item {
-        min-width: 180px;
-        max-width: 100%;
-        flex: 1 1 220px;
-      }
-    }
-    @media (max-width: 768px) {
-      .gdock-card-content, .gdock-card-header { padding: 1.2rem 0.7rem !important; }
-      .gdock-support-card { flex-direction: column; gap: 1rem; }
-      .gdock-feature-list { gap: 0.7rem; }
-    }
-    .gdock-advantage-card {
-      background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%) !important;
-      color: #fff !important;
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      padding: 2rem 1.5rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      font-weight: 500;
-      transition: box-shadow 0.2s;
-      border: none;
-      font-size: 1.13rem;
-    }
-    .gdock-advantage-card * {
-      color: #fff !important;
-    }
-    .gdock-advantage-card .fa,
-    .gdock-advantage-card i {
-      color: var(--color-gold) !important;
-      font-size: 2.5rem;
-      min-width: 48px;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-    }
-    .gdock-advantage-card:hover {
-      background: linear-gradient(120deg, var(--color-gold) 60%, var(--color-dark) 100%) !important;
-      color: #fff !important;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    }
-    .gdock-support-card {
-      background: #141414;
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 2rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-      /* Center text and content */
-      justify-content: center;
-      text-align: center;
-    }
-    /* Rolling effect for feature lists */
-    .gdock-feature-list {
-      perspective: 1000px;
-      position: relative;
-      overflow: hidden;
-    }
-    .gdock-feature-item {
-      transition: transform 0.3s;
-      transform-style: preserve-3d;
-    }
-
-    /* Timeline styles */
-    .gdock-timeline {
-      position: relative;
-      margin: 0 auto;
-      max-width: 900px;
-      padding: 2rem 0;
-    }
-    .gdock-timeline-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 3rem;
-      position: relative;
-      animation: fadeInUp 1s both;
-    }
-    .gdock-timeline-dot {
-      width: 22px;
-      height: 22px;
-      background: var(--color-gold);
-      border-radius: 50%;
-      margin-left: 1.5rem;
-      margin-right: 1.5rem;
-      box-shadow: 0 0 0 6px rgba(255,198,92,0.15);
-      flex-shrink: 0;
-      position: relative;
-      z-index: 2;
-      animation: pulseDot 1.5s infinite alternate;
-    }
-    @keyframes pulseDot {
-      0% { box-shadow: 0 0 0 6px rgba(255,198,92,0.15);}
-      100% { box-shadow: 0 0 0 16px rgba(255,198,92,0.07);}
-    }
-    .gdock-timeline-content {
-      background: #181818;
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 2rem 1.5rem;
-      flex: 1;
-      position: relative;
-      animation: slideInRight 1s both;
-    }
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(60px);}
-      to { opacity: 1; transform: none;}
-    }
-    .gdock-feature-timeline {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0;
-    }
-    .gdock-feature-timeline li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.1rem;
-      font-size: 1.08rem;
-      background: rgba(255,198,92,0.07);
-      border-radius: 10px;
-      padding: 0.7rem 1rem;
-      transition: background 0.2s;
-      cursor: pointer;
-      animation: fadeInFeature 0.7s both;
-    }
-    .gdock-feature-timeline li:hover {
-      background: rgba(255,198,92,0.18);
-    }
-    @keyframes fadeInFeature {
-      from { opacity: 0; transform: translateY(20px);}
-      to { opacity: 1; transform: none;}
-    }
-    .gdock-feature-icon {
-      font-size: 1.5rem;
-      color: var(--color-gold);
-      margin-left: 1rem;
-      min-width: 32px;
-      text-align: center;
-    }
-    .gdock-timeline-imgs {
-      display: flex;
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-      justify-content: center;
-    }
-    .gdock-timeline-imgs img {
-      max-width: 180px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
-    }
-    .gdock-timeline-imgs img:hover {
-      transform: scale(1.07) rotate(-2deg);
-    }
-    @media (max-width: 768px) {
-      .gdock-timeline-item { flex-direction: column; align-items: stretch; }
-      .gdock-timeline-dot { margin: 0 auto 1rem auto; }
-      .gdock-timeline-content { padding: 1.2rem 0.7rem; }
-      .gdock-timeline-imgs { flex-direction: column; gap: 0.7rem; }
-    }
-
     /* Flip card styles for advantages */
     .gsmart-advantage-flip-list {
       display: flex;
@@ -2030,15 +1865,11 @@
       justify-content: center;
       font-size: 1.13rem;
       font-weight: 500;
-      background: linear-gradient(120deg, var(--color-gold) 60%, #181818 100%);
-      color: #fff;
-      transition: background 0.2s;
+      /* Update background for front side to black-gold gradient */
     }
-    .gsmart-advantage-flip-front i {
-      font-size: 2.5rem;
-      margin-bottom: 0.7rem;
+    .gsmart-advantage-flip-front {
+      background: linear-gradient(120deg, #181818 60%, var(--color-gold) 100%) !important;
       color: #fff;
-      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
     }
     .gsmart-advantage-flip-back {
       background: #181818;
@@ -2754,8 +2585,9 @@
           <i class="fas fa-user-cog"></i>
           <div><b>פתרון מקצועי ומותאם</b></div>
         </div>
-        <div class="gsmart-advantage-flip-back">
-          תחנות עגינה ייעודיות לדגמי Matrice, עם אינטגרציה מלאה למערכות שליטה.
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-user-cog" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">תחנות עגינה ייעודיות לדגמי Matrice, עם אינטגרציה מלאה למערכות שליטה.</span>
         </div>
       </div>
     </div>
@@ -2765,8 +2597,9 @@
           <i class="fas fa-bolt"></i>
           <div><b>הפעלה אוטונומית מלאה</b></div>
         </div>
-        <div class="gsmart-advantage-flip-back">
-          טעינה, ניטור, תיעוד ותפעול – הכל אוטומטי וללא התערבות ידנית.
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-bolt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">טעינה, ניטור, תיעוד ותפעול – הכל אוטומטי וללא התערבות ידנית.</span>
         </div>
       </div>
     </div>
@@ -2776,8 +2609,9 @@
           <i class="fas fa-shield-alt"></i>
           <div><b>אמינות ושירות</b></div>
         </div>
-        <div class="gsmart-advantage-flip-back">
-          שירות ותמיכה של צוות מקצועי, תחזוקה מינימלית ואמינות גבוהה לאורך זמן.
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-shield-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">שירות ותמיכה של צוות מקצועי, תחזוקה מינימלית ואמינות גבוהה לאורך זמן.</span>
         </div>
       </div>
     </div>
@@ -2787,8 +2621,9 @@
           <i class="fas fa-sync-alt"></i>
           <div><b>התאמה לסביבה</b></div>
         </div>
-        <div class="gsmart-advantage-flip-back">
-          עמידות גבוהה, בקרת טמפרטורה, חיישנים מתקדמים וממשק ניהול נוח.
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-sync-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">עמידות גבוהה, בקרת טמפרטורה, חיישנים מתקדמים וממשק ניהול נוח.</span>
         </div>
       </div>
     </div>

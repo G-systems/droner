@@ -182,14 +182,15 @@
       justify-content: center;
       font-size: 1.13rem;
       font-weight: 500;
-      background: linear-gradient(120deg, var(--color-gold) 60%, #181818 100%);
+      /* Update background for front side to black-gold gradient */
+      background: linear-gradient(120deg, #181818 60%, var(--color-gold) 100%) !important;
       color: #fff;
       transition: background 0.2s;
     }
     .gsmart-advantage-flip-front i {
       font-size: 2.5rem;
       margin-bottom: 0.7rem;
-      color: #fff;
+      /* color: #fff; -- remove forced white */
       filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
     }
     .gsmart-advantage-flip-back {
@@ -200,6 +201,10 @@
       padding: 1.2rem;
       text-align: center;
       box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+    }
+    /* Make all icons gold by default */
+    i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
+      color: var(--color-gold) !important;
     }
     @media (max-width: 768px) {
       .gsmart-advantage-flip-list { gap: 0.7rem; }
@@ -376,6 +381,7 @@
             <div><b>פתרון מקורי ומוכר</b></div>
           </div>
           <div class="gsmart-advantage-flip-back">
+            <i class="fas fa-check-circle mb-2"></i>
             תחנות עגינה רשמיות של DJI, עם אחריות ותמיכה מלאה.
           </div>
         </div>
@@ -387,6 +393,7 @@
             <div><b>הפעלה מהירה וידידותית</b></div>
           </div>
           <div class="gsmart-advantage-flip-back">
+            <i class="fas fa-bolt mb-2"></i>
             התקנה פשוטה, ממשק ניהול נוח ותפעול קל לכל משתמש.
           </div>
         </div>
@@ -398,6 +405,7 @@
             <div><b>אמינות ושירות</b></div>
           </div>
           <div class="gsmart-advantage-flip-back">
+            <i class="fas fa-shield-alt mb-2"></i>
             שירות יבואן רשמי בישראל, תחזוקה מינימלית ואמינות גבוהה לאורך זמן.
           </div>
         </div>
@@ -409,6 +417,7 @@
             <div><b>תפעול אוטומטי מלא</b></div>
           </div>
           <div class="gsmart-advantage-flip-back">
+            <i class="fas fa-sync-alt mb-2"></i>
             טעינה, הפעלה, תזמון משימות – הכל אוטומטי וללא התערבות ידנית.
           </div>
         </div>

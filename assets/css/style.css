@@ -288,6 +288,11 @@ a:hover {
   color: var(--color-gold) !important;
 }
 
+/* Make all icons gold by default */
+i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
+  color: var(--color-gold) !important;
+}
+
 /* === Buttons === */
 .btn, .btn-cta, .btn-yellow, .btn-outline-dark {
   border-radius: 30px;
@@ -689,7 +694,9 @@ button.btn-warning .fa-user {
 
 /* --- ADVANTAGE CARD LAYOUT --- */
 .gdock-advantage-card,
-.gsmart-advantage-card {
+.gsmart-advantage-card,
+.gsmart-advantage-flip-card,
+.gdock-advantage-flip-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -702,37 +709,57 @@ button.btn-warning .fa-user {
   font-size: 1.09rem;
   text-align: center;
 }
+
+/* --- ADVANTAGE FLIP CARD TEXT COLOR --- */
+.gsmart-advantage-flip-front,
+.gsmart-advantage-flip-back,
+.gdock-advantage-flip-front,
+.gdock-advantage-flip-back,
+.gsmart-advantage-flip-card *,
+.gdock-advantage-flip-card * {
+  color: #fff !important;
+}
+
+/* --- ADVANTAGE FLIP CARD ICON COLOR & SIZE --- */
+.gsmart-advantage-flip-front i,
+.gsmart-advantage-flip-back i,
+.gdock-advantage-flip-front i,
+.gdock-advantage-flip-back i,
+.gsmart-advantage-flip-card .fa,
+.gdock-advantage-flip-card .fa {
+  color: var(--color-gold) !important;
+  font-size: 2.4rem !important;
+  margin-bottom: 0.7rem;
+  display: block;
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  line-height: 2.4rem;
+}
+
+/* --- ADVANTAGE CARD ICON SIZE (STATIC CARDS) --- */
 .gdock-advantage-card i,
 .gsmart-advantage-card i,
 .gdock-advantage-card .fa,
 .gsmart-advantage-card .fa {
+  color: var(--color-gold) !important;
+  font-size: 2.4rem !important;
   margin-bottom: 0.7rem;
+  display: block;
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  line-height: 2.4rem;
 }
 
-/* --- RESPONSIVE --- */
+/* Responsive: match icon size on mobile */
 @media (max-width: 1200px) {
-  .gdock-feature-item,
-  .gsmart-feature-item,
-  .feature-card,
-  .advantage-card,
-  .gdock-advantage-card,
-  .gsmart-advantage-card {
-    min-width: 210px;
-    max-width: 90vw;
-    flex: 0 0 220px;
-    font-size: 0.98rem;
-    padding: 1.2rem 0.7rem 1rem 0.7rem;
-  }
-  .gdock-advantage-card,
-  .gsmart-advantage-card {
-    min-width: 210px;
-    max-width: 90vw;
-    flex: 0 0 220px;
-    font-size: 0.98rem;
-    padding: 1.2rem 0.7rem 1rem 0.7rem;
-  }
-  .gdock-feature-icon,
-  .gsmart-feature-icon,
+  .gsmart-advantage-flip-front i,
+  .gsmart-advantage-flip-back i,
+  .gdock-advantage-flip-front i,
+  .gdock-advantage-flip-back i,
+  .gsmart-advantage-flip-card .fa,
+  .gdock-advantage-flip-card .fa,
+  .gdock-advantage-card i,
+  .gsmart-advantage-card i,
   .gdock-advantage-card .fa,
   .gsmart-advantage-card .fa {
     font-size: 2rem !important;
@@ -742,38 +769,14 @@ button.btn-warning .fa-user {
   }
 }
 @media (max-width: 768px) {
-  .gdock-feature-list,
-  .gsmart-feature-list,
-  .features-section,
-  .advantages-section,
-  .gdock-advantage-list,
-  .gsmart-advantage-list {
-    gap: 0.7rem;
-    padding-right: 1.2rem;
-    scroll-padding-right: 1.2rem;
-  }
-  .gdock-feature-item,
-  .gsmart-feature-item,
-  .feature-card,
-  .advantage-card,
-  .gdock-advantage-card,
-  .gsmart-advantage-card {
-    min-width: 85vw;
-    max-width: 95vw;
-    flex: 0 0 90vw;
-    font-size: 0.97rem;
-    padding: 1.1rem 0.5rem 0.9rem 0.5rem;
-  }
-  .gdock-advantage-card,
-  .gsmart-advantage-card {
-    min-width: 85vw;
-    max-width: 95vw;
-    flex: 0 0 90vw;
-    font-size: 0.97rem;
-    padding: 1.1rem 0.5rem 0.9rem 0.5rem;
-  }
-  .gdock-feature-icon,
-  .gsmart-feature-icon,
+  .gsmart-advantage-flip-front i,
+  .gsmart-advantage-flip-back i,
+  .gdock-advantage-flip-front i,
+  .gdock-advantage-flip-back i,
+  .gsmart-advantage-flip-card .fa,
+  .gdock-advantage-flip-card .fa,
+  .gdock-advantage-card i,
+  .gsmart-advantage-card i,
   .gdock-advantage-card .fa,
   .gsmart-advantage-card .fa {
     font-size: 1.7rem !important;
