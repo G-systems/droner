@@ -1877,3 +1877,33 @@ button.btn-warning .fa-user {
     overflow-x: hidden !important;
   }
 }
+
+/* Logo in headers utility */
+.header-logo,
+.hero-section .hero-logo,
+.hero-section .logo-hero,
+.hero-section img.hero-logo {
+  height: 110px;
+  max-width: 90vw;
+  width: auto;
+  max-height: 110px;
+  display: block;
+  margin: 0 auto 0.7rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  background: none;
+}
+
+/* Responsive fix: ensure logo is always fully visible on mobile */
+@media (max-width: 767px) {
+  .header-logo,
+  .hero-section .hero-logo,
+  .hero-section .logo-hero,
+  .hero-section img.hero-logo {
+    height: 64px !important;
+    max-height: 64px !important;
+    max-width: 90vw !important;
+    margin-bottom: 0.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+}
