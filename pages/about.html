@@ -26,13 +26,11 @@
       z-index: 2;
     }
     .about-hero h1 {
+      /* Remove font-size, font-family, letter-spacing, etc. to use global style */
       color: var(--color-gold);
-      font-size: 2.3rem; /* Match home page */
-      font-family: 'Rubik', sans-serif; /* Match home page */
       font-weight: 700;
       margin-bottom: 1rem;
       text-shadow: 0 4px 24px rgba(0,0,0,0.45);
-      letter-spacing: 0; /* Match home page */
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -152,7 +150,7 @@
       background: var(--color-black);
     }
     @media (max-width: 768px) {
-      .about-hero h1 { font-size: 1.5rem; }
+      .about-hero h1 { font-size: 1.5rem !important; }
       .about-hero p { font-size: 1.05rem; }
       .about-section { padding: 1.5rem 1rem; }
       .about-collab-logos { gap: 1rem; }

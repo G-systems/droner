@@ -25,28 +25,58 @@ body, html {
 }
 
 /* === Typography === */
-h1, h2, h3, h4, h5, .section-title, .solution-title, .advantage-title, .use-case-title, .cta-title, .modal-title {
+h1, .section-title {
   color: var(--color-gold) !important;
+  font-family: var(--font-main);
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 2.3rem; /* Match index.html header */
+  text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
 }
 
-p, li, .lead, .advantage-text, .use-case-text, .cta-desc, .footer-contact, .footer-link, .footer-social-link {
-  color: var(--color-light) !important;
-  font-size: 1rem;
-  line-height: 1.6;
+h2 {
+  color: var(--color-gold) !important;
+  font-family: var(--font-main);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: right;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-a {
-  color: var(--color-gold);
-  text-decoration: none;
-  transition: color var(--transition);
+h3, h4, h5 {
+  color: var(--color-gold) !important;
+  font-family: var(--font-main);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: right;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
-a:hover {
-  color: var(--color-brand);
+
+@media (max-width: 768px) {
+  h1, .section-title {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  h3, h4, h5 {
+    font-size: 1rem !important;
+  }
 }
+
+/* Remove/override page-specific header font-size if needed */
 
 /* === Navbar === */
 .navbar {
