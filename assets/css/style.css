@@ -511,7 +511,7 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
   color: var(--color-light);
   padding: 2rem 1.5rem;
   border-radius: 10px;
-  text-align: center;
+  text-align: center !important;
   height: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -531,7 +531,16 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
   font-size: 1.75rem;
 }
 
-.use-case-card { background: var(--color-black); color: var(--color-light); padding:2rem; border-radius:10px; text-align:center; height:100%; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+.use-case-card { 
+  background: var(--color-black); 
+  color: var(--color-light); 
+  padding:2rem; 
+  border-radius:10px; 
+  text-align: center !important; 
+  height:100%; 
+  box-shadow:0 5px 15px rgba(0,0,0,0.05); 
+  transition: all 0.3s ease; 
+}
 .use-case-card:hover { background: var(--color-gold); color: var(--color-black); transform: translateY(-5px); }
 .use-case-icon { font-size:2rem; margin-bottom:1rem; color: var(--color-gold); transition: all 0.3s ease; }
 .use-case-card:hover .use-case-icon { color: var(--color-black); }
@@ -2012,4 +2021,20 @@ button.btn-warning .fa-user {
 .section-wrap .cta-title,
 .section-wrap .cta-desc {
   text-align: center !important;
+}
+
+/* Ensure all text inside .advantage-card, .futuristic-adv-card, .use-case-card, and their headings and paragraphs are centered. Add explicit centering for inner elements */
+.advantage-card,
+.futuristic-adv-card,
+.use-case-card {
+  text-align: center !important;
+}
+
+.advantage-card *,
+.futuristic-adv-card *,
+.use-case-card * {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
 }
