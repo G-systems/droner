@@ -1529,3 +1529,314 @@ button.btn-warning .fa-user {
     margin-bottom: 0.7rem;
   }
 }
+
+/* --- MOBILE RESPONSIVENESS IMPROVEMENTS --- */
+
+/* Navbar: stack and collapse properly */
+@media (max-width: 991px) {
+  .navbar .container {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .navbar-brand {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .navbar-collapse {
+    background: var(--color-dark-bg);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    margin-top: 0.5rem;
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+    width: 100%;
+  }
+  .nav-item {
+    width: 100%;
+  }
+  .nav-link {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    text-align: right;
+  }
+  .dropdown-menu {
+    position: static !important;
+    float: none;
+    box-shadow: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0;
+  }
+  .dropdown-submenu > .dropdown-menu {
+    left: 0 !important;
+    top: 100% !important;
+    margin-left: 0 !important;
+    border-radius: 0;
+  }
+  .lang-toggle-wrapper {
+    position: static !important;
+    margin-left: 0 !important;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Hero Section: shrink padding and font size */
+@media (max-width: 991px) {
+  .hero-section .hero-content,
+  .product-hero .hero-content,
+  .gdock-card-header .header-content {
+    padding: 2.5rem 0.7rem !important;
+  }
+  .hero-section h1,
+  .product-hero h1,
+  .gdock-card-header .header-content h1 {
+    font-size: 2rem !important;
+  }
+  .hero-section p,
+  .product-hero p,
+  .gdock-card-header .header-content p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Card & Section Padding */
+@media (max-width: 991px) {
+  .product-section,
+  .product-card,
+  .gdock-card,
+  .gdock-card-content,
+  .solution-card,
+  .advantage-card,
+  .cta-card,
+  .contact-section {
+    padding: 1.2rem 0.7rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+/* Card Grids: stack vertically */
+@media (max-width: 991px) {
+  .advantages-glass-grid,
+  .futuristic-adv-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem 0 !important;
+    max-width: 98vw !important;
+  }
+  .glass-card,
+  .futuristic-adv-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 1.1rem 0.5rem 0.7rem 0.5rem !important;
+  }
+}
+
+/* Flip Cards: stack and shrink */
+@media (max-width: 991px) {
+  .gsmart-advantage-flip-list,
+  .gdock-advantage-flip-list {
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    align-items: stretch !important;
+  }
+  .gsmart-advantage-flip-card,
+  .gdock-advantage-flip-card {
+    width: 100% !important;
+    height: 140px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Timeline: stack and shrink */
+@media (max-width: 991px) {
+  .d135-timeline,
+  .gdock-timeline,
+  .gdock-stepper {
+    gap: 1.2rem !important;
+    padding: 0.7rem 0 !important;
+  }
+  .d135-timeline-dot,
+  .gdock-timeline-dot,
+  .gdock-step-icon {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.2rem !important;
+    margin-left: 0.7rem !important;
+  }
+  .d135-timeline-card,
+  .gdock-timeline-card,
+  .gdock-step-content {
+    padding: 0.7rem 0.5rem !important;
+    font-size: 0.97rem !important;
+  }
+}
+
+/* Images: shrink and center */
+@media (max-width: 991px) {
+  .d135-images-float,
+  .d100-images-overlay,
+  .section-wrap img,
+  .gdock-image-flip,
+  .orbit-carousel,
+  .advantages-cube,
+  .holo-stack {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+  .d135-image-float-main,
+  .d135-image-float-side,
+  .d100-img-main,
+  .d100-img-overlay {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* WhatsApp Button: move up and shrink */
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 12px !important;
+    right: 12px !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 7px !important;
+  }
+  .whatsapp-float img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+/* Footer: stack columns */
+@media (max-width: 991px) {
+  .main-footer-modern .row {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+  }
+  .main-footer-modern .col-md-4 {
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* CTA Card: shrink and center */
+@media (max-width: 600px) {
+  .cta-card {
+    padding: 1.2rem 0.5rem !important;
+  }
+  .cta-card .btn,
+  .cta-card a.btn {
+    font-size: 0.95rem !important;
+    padding: 0.25rem 1.2rem !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Inputs: larger touch area */
+@media (max-width: 600px) {
+  .form-control,
+  .form-label,
+  input,
+  textarea {
+    font-size: 1rem !important;
+    padding: 0.7rem 0.7rem !important;
+  }
+}
+
+/* Section Titles: shrink */
+@media (max-width: 600px) {
+  .section-title,
+  h1, h2, h3, h4, h5 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+}
+
+/* Timeline and Stepper: remove side borders, stack items */
+@media (max-width: 600px) {
+  .gdock-timeline-item,
+  .gdock-step {
+    border-right: none !important;
+    padding-right: 0 !important;
+    margin-bottom: 1rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .gdock-timeline-dot,
+  .gdock-step-icon {
+    margin-left: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Card lists: horizontal scroll on mobile */
+@media (max-width: 991px) {
+  .gdock-feature-list,
+  .gsmart-feature-list,
+  .gsmart-advantage-flip-list,
+  .gdock-advantage-flip-list,
+  .advantages-section,
+  .features-section {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+    scroll-snap-type: x mandatory !important;
+  }
+  .gdock-feature-item,
+  .gsmart-feature-item,
+  .gsmart-advantage-flip-card,
+  .gdock-advantage-flip-card,
+  .advantage-card,
+  .feature-card {
+    min-width: 220px !important;
+    max-width: 260px !important;
+    flex: 0 0 220px !important;
+    scroll-snap-align: start !important;
+  }
+}
+
+/* Hide scrollbars for horizontal lists */
+.gdock-feature-list::-webkit-scrollbar,
+.gsmart-feature-list::-webkit-scrollbar,
+.gsmart-advantage-flip-list::-webkit-scrollbar,
+.gdock-advantage-flip-list::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Modal: full width on mobile */
+@media (max-width: 600px) {
+  .modal-dialog {
+    max-width: 98vw !important;
+    margin: 0.5rem auto !important;
+  }
+  .modal-content {
+    border-radius: 12px !important;
+    padding: 0.7rem !important;
+  }
+}
+
+/* Fix for overflow issues in containers */
+@media (max-width: 991px) {
+  .container,
+  .section-wrap,
+  .product-section,
+  .gdock-card,
+  .gdock-card-content {
+    max-width: 100vw !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    overflow-x: hidden !important;
+  }
+}
