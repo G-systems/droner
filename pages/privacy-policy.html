@@ -11,37 +11,57 @@
   <style>
     :root {
       --color-dark-bg: #121212;
-      --color-gold: #b08d57;
-      --color-brand: #b08d57; /* was #0AD100 or green */
+      --color-gold: #ffd700;
+      --color-brand: #ffd700;
       --color-light: #f4f4f4;
     }
     body { font-family: 'Rubik', sans-serif; background: var(--color-dark-bg); }
-    /* Header uses an image background instead of gradient */
-    .privacy-header {
-      min-height: 340px;
+    .hero-section {
       position: relative;
-      padding: 3.5rem 0 2.2rem 0;
-      text-align: center;
+      width: 100%;
+      min-height: 340px;
+      height: auto;
       border-radius: 0 0 28px 28px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-      margin-bottom: 2.5rem;
       overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+      /* Remove margin-bottom, divider will be inside */
     }
-    .privacy-header .image-container {
+    .hero-section .image-container {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 0;
+      pointer-events: none;
     }
-    .privacy-header .image-container img {
+    .hero-section .image-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       filter: brightness(0.55);
+      display: block;
     }
-    .privacy-header .section-title {
+    .hero-section .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      text-align: center;
+      background: none;
+    }
+    .hero-section .section-title {
       color: var(--color-gold);
       font-size: 2.7rem;
       font-weight: 700;
@@ -49,18 +69,24 @@
       letter-spacing: 0.5px;
       text-shadow: 0 4px 24px rgba(0,0,0,0.45);
     }
-    .privacy-header .container {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-    }
-    .privacy-header .section-line {
+    .hero-section .section-line {
       background: var(--color-gold);
       display: block;
       width: 80px;
       height: 4px;
       margin: 0 auto 0;
       border-radius: 4px;
+    }
+    .hero-section .gold-divider {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-gold);
+      box-shadow: 0 2px 16px 0 rgba(255,215,0,0.18);
+      border-radius: 0 0 18px 18px;
+      z-index: 2;
     }
     .privacy-section {
       background: #fff;
@@ -69,7 +95,7 @@
       color: #222;
       padding: 3rem 2rem;
       max-width: 900px;
-      margin: 0 auto 2.5rem auto;
+      margin: 2.5rem auto 2.5rem auto;
     }
     .privacy-section h2 {
       color: #222;
@@ -89,8 +115,9 @@
       padding-right: 1.5rem;
     }
     @media (max-width: 768px) {
-      .privacy-header { padding: 2rem 0 1.2rem 0; min-height: 340px; }
-      .privacy-header .section-title { font-size: 1.4rem; }
+      .hero-section { padding: 2rem 0 1.2rem 0; min-height: 340px; }
+      .hero-section .hero-content { padding: 2rem 0.7rem 1.2rem 0.7rem; }
+      .hero-section .section-title { font-size: 1.4rem; }
       .privacy-section { padding: 1.5rem 0.7rem; }
     }
   </style>
@@ -143,19 +170,21 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- Header -->
-  <header class="privacy-header mt-5">
-    <!-- Background image -->
+  <!-- Header (replace .privacy-header with .hero-section like g-smart) -->
+  <section class="hero-section" style="background: none;">
     <div class="image-container">
       <img src="../assets/images/hero-bg.jpg" alt="רקע מדיניות פרטיות" />
     </div>
-    <div class="container">
+    <div class="hero-content">
       <h1 class="section-title">מדיניות פרטיות</h1>
       <span class="section-line"></span>
-       <p class="lead mt-4" style="color:#fff; font-size:1.3rem; font-weight:500;">פרטיותך חשובה לנו. בעמוד זה תוכל לקרוא כיצד אנו שומרים על המידע שלך באתר DRONER.</p>
+      <p class="lead mt-4" style="color:#fff; font-size:1.3rem; font-weight:500;">
+        פרטיותך חשובה לנו. בעמוד זה תוכל לקרוא כיצד אנו שומרים על המידע שלך באתר DRONER.
+      </p>
     </div>
-  </header>
-  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+    <div class="gold-divider"></div>
+  </section>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(255,215,0,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 
   <!-- Privacy Policy Content -->
   <section class="privacy-section">
