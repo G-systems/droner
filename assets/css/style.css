@@ -34,11 +34,8 @@ h1, .section-title {
   margin-bottom: 1rem;
   font-size: 2.3rem; /* Match index.html header */
   text-shadow: 0 4px 24px rgba(0,0,0,0.45);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.7rem;
-  justify-content: center;
+  display: block !important;
+  width: 100%;
 }
 
 h2 {
@@ -345,8 +342,9 @@ h3, h4, h5 {
   width: 80px;
   height: 4px;
   background: var(--color-gold) !important;
-  margin: 15px auto 0;
+  margin: 0 auto 18px auto;
   border-radius: 4px;
+  float: none !important;
 }
 
 /* Center advantage cards in their row */
@@ -457,13 +455,21 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
 
 /* === Section Titles === */
 .section-title { position: relative; font-weight: 700; font-size: 2.25rem; }
+.section-title {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: block !important;
+  width: 100%;
+}
 .section-line {
   display: block;
   width: 80px;
   height: 4px;
-  background: var(--color-gold);
-  margin: 15px auto 0;
+  background: var(--color-gold) !important;
+  margin: 0 auto 18px auto;
   border-radius: 4px;
+  float: none !important;
 }
 
 /* === Solution & Feature Cards === */
@@ -1981,4 +1987,29 @@ button.btn-warning .fa-user {
     margin-bottom: 0.7rem !important;
     margin-top: 0.5rem !important;
   }
+}
+
+/* === Center headlines in advantages and video sections on product pages === */
+.section-wrap h2,
+.section-wrap > h2,
+.section-wrap .text-center > h2,
+.section-wrap > .text-center > h2 {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.section-wrap h2 .fa,
+.section-wrap h2 i {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.section-wrap .cta-title,
+.section-wrap .cta-desc {
+  text-align: center !important;
 }
