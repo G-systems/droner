@@ -283,6 +283,14 @@ a:hover {
   border-radius: 4px;
 }
 
+/* Center advantage cards in their row */
+#advantages .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
 /* === Icon Colors === */
 .fa, .fas, .far, .fab, .gsmart-feature-icon, .gsmart-advantage-card .fa, .gsmart-usecase-icon, .advantage-icon, .use-case-icon {
   color: var(--color-gold) !important;
