@@ -704,6 +704,20 @@ button.btn-warning .fa-user {
   text-align: center;
 }
 
+/* Center headlines in support cards */
+.gsmart-support-card h2,
+.gsmart-support-card h3,
+.gdock-support-card h2,
+.gdock-support-card h3 {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* Remove image styling as images are removed */
 /* .gsmart-support-card img,
 .gdock-support-card img {
