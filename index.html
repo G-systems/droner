@@ -448,6 +448,67 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Video Gallery Section Styles */
+    .video-gallery-section {
+      background: rgba(255, 198, 92, 0.05);
+    }
+    .video-gallery-grid .video-card {
+      cursor: pointer;
+      background: #181818;
+      min-height: 220px;
+      transition: transform 0.18s, box-shadow 0.18s;
+      border: 2px solid var(--color-gold);
+      box-shadow: 0 4px 18px rgba(255, 198, 92, 0.10);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .video-gallery-grid .video-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(255, 198, 92, 0.18);
+      z-index: 2;
+    }
+    .video-thumb {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: brightness(0.92) grayscale(0.08);
+      transition: filter 0.2s;
+    }
+    .video-card:hover .video-thumb {
+      filter: brightness(1.05) grayscale(0);
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(120deg,rgba(0,0,0,0.18) 60%,rgba(255,198,92,0.13) 100%);
+      opacity: 0.85;
+      transition: background 0.2s, opacity 0.2s;
+      pointer-events: none;
+    }
+    .video-card:hover .video-overlay {
+      background: linear-gradient(120deg,rgba(0,0,0,0.08) 60%,rgba(255,198,92,0.18) 100%);
+      opacity: 1;
+    }
+    .video-overlay i {
+      font-size: 3.5rem;
+      color: var(--color-gold);
+      filter: drop-shadow(0 2px 8px rgba(255, 198, 92, 0.18));
+      pointer-events: none;
+    }
+    @media (max-width: 991px) {
+      .video-thumb { height: 140px; }
+      .video-card { min-height: 140px; }
+    }
+    @media (max-width: 600px) {
+      .video-thumb { height: 90px; }
+      .video-card { min-height: 90px; }
+      .video-overlay i { font-size: 2rem; }
+    }
+
   </style>
 </head>
 <body>
@@ -487,9 +548,9 @@
               <li><a class="dropdown-item" href="pages/products/g-control.html">G-CONTROL</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="pages/media.html">מדיה</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/workingonit.html">מדיה</a></li>
           <li class="nav-item"><a class="nav-link" href="pages/careers.html">קריירה בדרונר</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/support.html">תמיכה מרחוק</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/workingonit.html">תמיכה מרחוק</a></li>
           <li class="nav-item"><a class="nav-link" href="pages/contact.html">צור קשר</a></li>
           <li class="nav-item">
             <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -568,7 +629,7 @@
           <div class="solution-card h-100">
             <h3 class="solution-title">G-SMART – קיט שליטה חכם לרחפן</h3>
             <p class="solution-text">
-              מאפשר טיסה אוטונומית מבוססת תקשורת סלולרית מאובטחת (BVLOS), ללא מגבלת טווח. תכנון משימות אוטומטי, זיהוי אובייקטים מבוסס בינה מלאכותית, תיעוד בזמן אמת ושיתוף מיידי.
+              מאפשר טיסה אוטונומית מבוססת תקשורת סלולרית מאובטחת (BVLOS), ללא מגבלת טווח. תכנון משימות אוטומטית, זיהוי אובייקטים מבוסס בינה מלאכותית, תיעוד בזמן אמת ושיתוף מיידי.
             </p>
             <a href="pages/products/g-smart.html" class="btn btn-outline-dark mt-3">למידע נוסף <i class="fa fa-arrow-left ms-2"></i></a>
           </div>
@@ -780,88 +841,142 @@
     </div>
   </section>
 
-  <!-- Video Gallery Section -->
-  <section class="py-5 bg-dark" id="video-gallery">
-    <div class="container" data-aos="fade-up" data-aos-duration="800">
-      <h2 class="text-center mb-5 position-relative section-title">
-        <span>גלריית וידאו</span>
-        <span class="section-line"></span>
-      </h2>
-      <div class="video-gallery-wrapper mx-auto" style="max-width: 900px;">
-        <div class="big-video mb-4 rounded-4 overflow-hidden shadow" style="background:var(--color-black);">
-          <div class="ratio ratio-16x9">
-            <video id="mainVideo" src="assets/videos/1.mp4" controls poster="assets/videos/thumb1.jpg" autoplay muted playsinline style="width:100%;height:100%;background:var(--color-black);border-radius:18px;"></video>
+  <!-- === Video Gallery Section Start === -->
+<section class="section-wrap video-gallery-section py-5" style="background:rgba(255,198,92,0.05);">
+  <div class="container">
+    <h2 class="section-title mb-4"><i class="fas fa-play-circle ms-2"></i>גלריית וידאו – דרונר בפעולה</h2>
+    <div class="video-gallery-center-wrap d-flex flex-column align-items-center justify-content-center">
+      <!-- Main Video -->
+      <div class="main-video-wrapper mb-4">
+        <video id="mainVideo" class="main-video rounded-4 shadow-lg" src="assets/videos/1.mp4" controls style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;" preload="metadata"></video>
+      </div>
+      <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
+      <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
+        <div class="video-thumb-window" data-video="assets/videos/video2.mp4">
+          <video src="assets/videos/video2.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
         </div>
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            const mainVideo = document.getElementById('mainVideo');
-            // Always set volume and play immediately
-            mainVideo.volume = 0.15;
-            mainVideo.play().catch(() => {}); // try to play, ignore errors if any
-          });
-        </script>
-        <div class="row g-3 justify-content-center">
-          <div class="col-4 col-md-2">
-            <div class="video-thumb rounded-3 overflow-hidden border border-warning active"
-              data-src="assets/videos/2.mp4" data-poster="assets/videos/thumb1.jpg">
-              <img src="assets/videos/soon1.png" alt="וידאו 1" class="w-100" style="aspect-ratio:16/9;">
-            </div>
-          </div>
-          <div class="col-4 col-md-2">
-            <div class="video-thumb rounded-3 overflow-hidden"
-              data-src="assets/videos/video2.mp4" data-poster="assets/videos/thumb2.jpg">
-              <img src="assets/videos/soon1.png" alt="וידאו 2" class="w-100" style="aspect-ratio:16/9;">
-            </div>
-          </div>
-          <div class="col-4 col-md-2">
-            <div class="video-thumb rounded-3 overflow-hidden"
-              data-src="assets/videos/video3.mp4" data-poster="assets/videos/thumb3.jpg">
-              <img src="assets/videos/soon1.png" alt="וידאו 3" class="w-100" style="aspect-ratio:16/9;">
-            </div>
-          </div>
-          <div class="col-4 col-md-2">
-            <div class="video-thumb rounded-3 overflow-hidden"
-              data-src="assets/videos/video4.mp4" data-poster="assets/videos/thumb4.jpg">
-              <img src="assets/videos/soon1.png" alt="וידאו 4" class="w-100" style="aspect-ratio:16/9;">
-            </div>
-          </div>
-          <div class="col-4 col-md-2">
-            <div class="video-thumb rounded-3 overflow-hidden"
-              data-src="assets/videos/video5.mp4" data-poster="assets/videos/thumb5.jpg">
-              <img src="assets/videos/soon1.png" alt="וידאו 5" class="w-100" style="aspect-ratio:16/9;">
-            </div>
-          </div>
-          <div class="col-4 col-md-2">
-            <div class="video-thumb rounded-3 overflow-hidden"
-              data-src="assets/videos/video6.mp4" data-poster="assets/videos/thumb6.jpg">
-              <img src="assets/videos/soon1.png" alt="וידאו 6" class="w-100" style="aspect-ratio:16/9;">
-            </div>
-          </div>
+        <div class="video-thumb-window" data-video="assets/videos/video3.mp4">
+          <video src="assets/videos/video3.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video4.mp4">
+          <video src="assets/videos/video4.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video5.mp4">
+          <video src="assets/videos/video5.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video6.mp4">
+          <video src="assets/videos/video1.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video7.mp4">
+          <video src="assets/videos/video7.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video8.mp4">
+          <video src="assets/videos/video8.mp4" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
         </div>
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const mainVideo = document.getElementById('mainVideo');
-        const thumbs = document.querySelectorAll('#video-gallery .video-thumb');
-        thumbs.forEach((thumb, idx) => {
-          thumb.addEventListener('click', function() {
-            thumbs.forEach(t => t.classList.remove('active'));
-            thumb.classList.add('active');
-            const src = thumb.getAttribute('data-src');
-            const poster = thumb.getAttribute('data-poster');
-            mainVideo.pause();
-            mainVideo.src = src;
-            mainVideo.poster = poster;
-            mainVideo.currentTime = 0;
-            mainVideo.load();
-            mainVideo.play();
-          });
-          if (idx === 0) thumb.classList.add('active');
-        });
+  </div>
+</section>
+<!-- Video Gallery CSS -->
+<style>
+  .video-gallery-section {
+    background: rgba(255,198,92,0.05);
+  }
+  .main-video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .main-video {
+    width: min(95vw, 700px);
+    max-width: 700px;
+    aspect-ratio: 16/9;
+    background: #000;
+    border: 3px solid var(--color-gold);
+    box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .main-video:focus {
+    outline: 2px solid var(--color-gold);
+  }
+  .video-thumbnails-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .video-thumb-window {
+    cursor: pointer;
+    border: 2px solid var(--color-gold);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255,198,92,0.10);
+    overflow: hidden;
+    background: #000;
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    position: relative;
+  }
+  .video-thumb-window:hover, .video-thumb-window.active {
+    transform: scale(1.07) translateY(-4px);
+    box-shadow: 0 8px 32px rgba(255,198,92,0.18);
+    border-color: #fffde7;
+    z-index: 2;
+  }
+  .thumb-video {
+    width: 140px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: #000;
+    pointer-events: none;
+    transition: filter 0.2s;
+    filter: brightness(0.92) grayscale(0.08);
+  }
+  .video-thumb-window:hover .thumb-video, .video-thumb-window.active .thumb-video {
+    filter: brightness(1.05) grayscale(0);
+  }
+  @media (max-width: 991px) {
+    .main-video { max-width: 98vw; }
+    .thumb-video { width: 90px; }
+  }
+  @media (max-width: 600px) {
+    .main-video { max-width: 100vw; }
+    .thumb-video { width: 60px; }
+    .video-thumbnails-wrap { gap: 0.5rem; }
+  }
+</style>
+<!-- Video Gallery JS -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainVideo = document.getElementById('mainVideo');
+    const thumbWindows = document.querySelectorAll('.video-thumb-window');
+    // Set the first thumb as active if matches main video
+    function setActiveThumb(src) {
+      thumbWindows.forEach(win => {
+        if (win.getAttribute('data-video') === src) {
+          win.classList.add('active');
+        } else {
+          win.classList.remove('active');
+        }
       });
-    </script>
-  </section>
+    }
+    setActiveThumb(mainVideo.getAttribute('src'));
+    thumbWindows.forEach(win => {
+      win.addEventListener('click', function() {
+        const videoSrc = win.getAttribute('data-video');
+        const poster = win.getAttribute('data-poster');
+        mainVideo.pause();
+        mainVideo.setAttribute('src', videoSrc);
+        if (poster) mainVideo.setAttribute('poster', poster);
+        mainVideo.load();
+        mainVideo.play();
+        setActiveThumb(videoSrc);
+      });
+    });
+  });
+</script>
+<!-- === Video Gallery Section End === -->
 
   <!-- CTA Section -->
   <section class="cta-card" data-aos="fade-up">
@@ -882,7 +997,7 @@
     <div class="container">
       <div class="row align-items-center gy-4">
         <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
-          <img src="assets/images/logo-droner-dark.png" alt="לוגו DRONER" height="48" class="footer-logo">
+          <!-- Logo removed -->
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
