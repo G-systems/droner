@@ -710,7 +710,7 @@ button.btn-warning .fa-user {
   display: none;
 } */
 
-/* === Card Roll (Horizontal Scroll) for Features & Advantages === */
+/* --- CARD ROLL (Horizontal Scroll) for Features & Advantages --- */
 .gdock-feature-list,
 .gsmart-feature-list,
 .features-section,
@@ -718,8 +718,7 @@ button.btn-warning .fa-user {
 .gdock-advantage-list,
 .gsmart-advantage-list {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  /* Remove flex-wrap: nowrap and overflow-x: auto for desktop */
   gap: 1.2rem;
   justify-content: flex-start;
   margin: 2rem 0 0 0;
@@ -727,19 +726,48 @@ button.btn-warning .fa-user {
   scrollbar-width: none;
   -ms-overflow-style: none;
   position: relative;
-  /* Ensure first card is visible on mobile */
-  padding-right: 1rem;
+  /* Remove horizontal scroll for desktop */
+  /* padding-right: 1rem;
   scroll-padding-right: 1rem;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; */
 }
+
+/* Only enable horizontal scroll on mobile */
+@media (max-width: 991px) {
+  .gdock-feature-list,
+  .gsmart-feature-list,
+  .gsmart-advantage-flip-list,
+  .gdock-advantage-flip-list,
+  .advantages-section,
+  .features-section {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-right: 1rem !important;
+    scroll-behavior: smooth !important;
+  }
+  .gdock-feature-item,
+  .gsmart-feature-item,
+  .gsmart-advantage-flip-card,
+  .gdock-advantage-flip-card,
+  .advantage-card,
+  .feature-card {
+    min-width: 220px !important;
+    max-width: 260px !important;
+    flex: 0 0 220px !important;
+    scroll-snap-align: start !important;
+  }
+}
+
+/* Hide scrollbars for horizontal lists */
 .gdock-feature-list::-webkit-scrollbar,
 .gsmart-feature-list::-webkit-scrollbar,
-.features-section::-webkit-scrollbar,
-.advantages-section::-webkit-scrollbar,
-.gdock-advantage-list::-webkit-scrollbar,
-.gsmart-advantage-list::-webkit-scrollbar {
-  display: none;
+.gsmart-advantage-flip-list::-webkit-scrollbar,
+.gdock-advantage-flip-list::-webkit-scrollbar {
+  display: none !important;
 }
 
 /* --- FIXED CARD SIZES AND TYPOGRAPHY --- */
