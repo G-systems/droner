@@ -586,6 +586,7 @@
       <div class="row justify-content-center align-items-center flex-lg-row flex-column-reverse text-center">
         <div class="col-lg-6 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
           <video 
+            id="aboutVideo"
             src="assets/videos/132061-752303219.mp4" 
             class="about-img shadow"
             style="width:100%; max-width:820px; min-height:340px; border-radius:28px; background:var(--color-dark-bg); object-fit:cover; aspect-ratio:16/8;"
@@ -594,6 +595,26 @@
             muted 
             playsinline
           ></video>
+<script>
+  // Pause about video when not visible in viewport
+  document.addEventListener('DOMContentLoaded', function() {
+    const aboutVideo = document.getElementById('aboutVideo');
+    if (!aboutVideo) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            aboutVideo.play();
+          } else {
+            aboutVideo.pause();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(aboutVideo);
+  });
+</script>
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
           <div class="about-content w-100 text-center" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;" dir="rtl" lang="he">
