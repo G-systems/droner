@@ -2099,3 +2099,7 @@ button.btn-warning .fa-user {
   margin-right: auto !important;
   display: block;
 }
+
+.hero-section + div[style*="background:var(--color-gold)"] {
+  margin-bottom: 0.7rem !important;
+}
