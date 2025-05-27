@@ -941,13 +941,7 @@ button.btn-warning .fa-user {
 .gdock-feature-list,
 .gsmart-advantage-list,
 .gdock-advantage-list {
-  perspective: 1200px;
-}
-.gsmart-feature-list .gsmart-feature-item,
-.gdock-feature-list .gdock-feature-item,
-.gsmart-advantage-list .gsmart-advantage-card,
-.gdock-advantage-list .gdock-advantage-card {
-  /* JS will add transform on scroll */
+  /* perspective: 1200px; */ /* Remove this line to prevent rolling effect */
 }
 
 /* === Creative Advantages Timeline Section === */
