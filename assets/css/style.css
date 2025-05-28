@@ -2113,3 +2113,13 @@ button.btn-warning .fa-user {
 .hero-section + div[style*="background:var(--color-gold)"] {
   margin-bottom: 0.7rem !important;
 }
+
+/* Prevent animation/hover effect for the costumers image in הלקוחות שלנו */
+.about-collab-logos img[src*="costumers.webp"] {
+  transition: none !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+.about-collab-logos img[src*="costumers.webp"]:hover {
+  transform: none !important;
+}
