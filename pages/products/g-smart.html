@@ -519,11 +519,27 @@
   <section class="section-wrap my-5" data-aos="fade-up">
     <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>הכירו את G-SMART בפעולה</h2>
     <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
-      <video controls poster="../../assets/images/gsmart-video-poster.webp" style="width:100%;height:100%;" preload="metadata">
-        <source src="../../assets/videos/gsmart-demo.mp4" type="video/mp4">
+      <video
+        autoplay
+        muted
+        loop
+        controls
+        poster="../../assets/images/gsmart-video-poster.webp"
+        style="width:100%;height:100%;"
+        preload="metadata"
+        id="gsmartVideo"
+      >
+        <source src="../../assets/videos/video1.webm" type="video/mp4">
         הדפדפן שלך אינו תומך בניגון וידאו.
       </video>
     </div>
+    <script>
+      // Set low volume on autoplay
+      document.addEventListener('DOMContentLoaded', function() {
+        var vid = document.getElementById('gsmartVideo');
+        if (vid) vid.volume = 0.15;
+      });
+    </script>
   </section>
   <!-- Support Card -->
   <div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
