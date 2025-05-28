@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRONER – Aerial Security Systems</title>
+  <meta name="description" content="DRONER – Combining technology, control, and operational experience. Autonomous drone systems for security and monitoring." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="DRONER G-System Ltd" />
+  <meta property="og:title" content="DRONER – מערכות אבטחה אוויריות" />
+  <meta property="og:description" content="דרונר מציגה פתרונות רחפניים מתקדמים לאבטחה, תחזוקה ובקרה – G-SMART, G-DOCK ו־G-CONTROL." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gsystemstatic.z39.web.core.windows.net/" />
+  <meta property="og:image" content="https://gsystemstatic.z39.web.core.windows.net/assets/images/og-droner.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DRONER – מערכות אבטחה אוויריות" />
+  <meta name="twitter:description" content="מערכת רחפנים אוטונומיים חכמים לאבטחה, ניטור ושליטה מרחוק." />
+  <meta name="twitter:image" content="https://gsystemstatic.z39.web.core.windows.net/assets/images/og-droner.jpg" />
+  <link rel="preload" as="image" href="assets/images/hero-bg_result.webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style-en.css">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+    }
+    .section-title {
+      color: var(--color-gold) !important;
+    }
+    .solution-card,
+    .advantage-card,
+    .use-case-card,
+    .gsmart-card,
+    .cta-card,
+    .modal-content {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+    }
+    .solution-title,
+    .advantage-title,
+    .use-case-title,
+    .cta-title,
+    .modal-title {
+      color: var(--color-gold) !important;
+    }
+    .bg-white,
+    .bg-light {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+    }
+    .footer-link {
+      color: var(--color-light) !important;
+    }
+    .footer-link:hover {
+      color: var(--color-gold) !important;
+    }
+    .whatsapp-float {
+      background-color: var(--color-gold) !important;
+      color: var(--color-black) !important;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    /* Ensure all cards and sections have gold headline and dark background */
+    h1, h2, h3, h4, h5 {
+      color: var(--color-gold) !important;
+    }
+    /* Remove white backgrounds from Bootstrap */
+    .card, .modal-content, .navbar, .dropdown-menu {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+    }
+    /* Section line accent */
+    .section-line {
+      background: var(--color-gold) !important;
+    }
+    /* Fix for video gallery */
+    #video-gallery .big-video .ratio {
+      background: var(--color-black) !important;
+    }
+    /* Fix for modal */
+    .modal-content {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+    }
+    /* Fix for input fields in modal */
+    .form-control {
+      background: var(--color-dark-bg) !important;
+      color: var(--color-light) !important;
+      border-color: var(--color-gold) !important;
+    }
+    .form-label {
+      color: var(--color-gold) !important;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .solution-image-wrapper { height: 250px; }
+      .solution-card { padding: 2rem; }
+      .section-title { font-size: 1.75rem; }
+    }
+    /* Make use-case icons gold */
+    .use-case-icon i {
+      color: var(--color-gold) !important;
+    }
+    /* Timeline styles for advantages section */
+    .advantages-timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .advantage-timeline-item {
+      position: relative;
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background: var(--color-dark-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .advantage-timeline-item.left {
+      margin-left: 2rem;
+    }
+    .advantage-timeline-item.right {
+      margin-right: 2rem;
+    }
+    .advantage-timeline-content {
+      display: flex;
+      align-items: center;
+    }
+    .advantage-timeline-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: -28px;
+      margin-right: 1rem;
+      background: var(--color-gold);
+      color: #000;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    .advantage-timeline-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--color-gold);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    /* Responsive adjustments for timeline */
+    @media (max-width: 768px) {
+      .advantage-timeline-item {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+      }
+      .advantage-timeline-icon {
+        width: 48px;
+        height: 48px;
+        margin-left: -24px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    /* Cube Animation for Advantages Section */
+    .advantages-cube-wrapper {
+      perspective: 1000px;
+      margin-top: 2rem;
+    }
+    .advantages-cube {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform 0.8s;
+    }
+    .cube-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .cube-face-front  { background: rgba(255, 255, 255, 0.1); }
+    .cube-face-back   { background: rgba(255, 255, 255, 0.1); transform: rotateY(180deg); }
+    .cube-face-right  { background: rgba(255, 255, 255, 0.1); transform: rotateY(90deg); }
+    .cube-face-left   { background: rgba(255, 255, 255, 0.1); transform: rotateY(-90deg); }
+
+    .cube-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+    /* Rotate cube on hover */
+    .advantages-cube:hover {
+      transform: rotateY(180deg);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .advantages-cube {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    /* Radial Burst Animation for Advantages Section */
+    .advantages-radial-burst {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .burst-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-gold);
+      color: #000;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(255, 198, 92, 0.18);
+      z-index: 2;
+    }
+    .burst-item {
+      position: relative;
+      width: 200px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .burst-item-1 { transform: rotate(0deg) translateY(-10px); }
+    .burst-item-2 { transform: rotate(90deg) translateY(-10px); }
+    .burst-item-3 { transform: rotate(180deg) translateY(-10px); }
+    .burst-item-4 { transform: rotate(270deg) translateY(-10px); }
+    .advantages-radial-burst:hover .burst-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .advantages-radial-burst {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .burst-item {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+
+    /* Floating Glass Cards for Advantages Section */
+    .advantages-glass-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s;
+    }
+    .glass-card:hover {
+      transform: translateY(-8px);
+    }
+    .glass-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .glass-card {
+        padding: 1.5rem;
+      }
+      .glass-icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    /* Hologram Stack for Advantages Section */
+    .holo-stack {
+      perspective: 1000px;
+      margin-top: 2rem;
+    }
+    .holo-card {
+      position: relative;
+      margin: 1rem 0;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.6s, box-shadow 0.6s;
+    }
+    .holo-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Hologram stack parallax effect (2025/2026 style) */
+    #holoStack {
+      position: relative;
+      overflow: hidden;
+    }
+    #holoStack .holo-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 2rem;
+      opacity: 0.9;
+      transition: transform 0.6s, opacity 0.6s;
+    }
+    #holoStack .holo-card-1 { background: rgba(255, 198, 92, 0.1); }
+    #holoStack .holo-card-2 { background: rgba(92, 198, 255, 0.1); }
+    #holoStack .holo-card-3 { background: rgba(92, 255, 92, 0.1); }
+    #holoStack .holo-card-4 { background: rgba(255, 92, 92, 0.1); }
+    #holoStack:hover .holo-card {
+      transform: translateY(-8px);
+    }
+
+    /* Neon Orbit Carousel for Advantages Section */
+    .orbit-carousel {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin-top: 2rem;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .orbit-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .orbit-card {
+      position: absolute;
+      width: 280px;
+      padding: 2rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.6s;
+    }
+    .orbit-card:hover {
+      transform: scale(1.05);
+    }
+    .orbit-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .orbit-carousel {
+        height: 300px;
+      }
+      .orbit-card {
+        width: 200px;
+        padding: 1.5rem;
+      }
+    }
+
+    /* Futuristic Advantages Grid */
+    .futuristic-adv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .futuristic-adv-card {
+      background: var(--color-dark-bg);
+      border-radius: 18px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s;
+    }
+    .futuristic-adv-card:hover {
+      transform: translateY(-8px);
+    }
+    .futuristic-adv-icon {
+      font-size: 2.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .futuristic-adv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Video Gallery Section Styles */
+    .video-gallery-section {
+      background: rgba(255, 198, 92, 0.05);
+    }
+    .video-gallery-grid .video-card {
+      cursor: pointer;
+      background: #181818;
+      min-height: 220px;
+      transition: transform 0.18s, box-shadow 0.18s;
+      border: 2px solid var(--color-gold);
+      box-shadow: 0 4px 18px rgba(255, 198, 92, 0.10);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .video-gallery-grid .video-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(255, 198, 92, 0.18);
+      z-index: 2;
+    }
+    .video-thumb {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: brightness(0.92) grayscale(0.08);
+      transition: filter 0.2s;
+    }
+    .video-card:hover .video-thumb {
+      filter: brightness(1.05) grayscale(0);
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(120deg,rgba(0,0,0,0.18) 60%,rgba(255,198,92,0.13) 100%);
+      opacity: 0.85;
+      transition: background 0.2s, opacity 0.2s;
+      pointer-events: none;
+    }
+    .video-card:hover .video-overlay {
+      background: linear-gradient(120deg,rgba(0,0,0,0.08) 60%,rgba(255,198,92,0.18) 100%);
+      opacity: 1;
+    }
+    .video-overlay i {
+      font-size: 3.5rem;
+      color: var(--color-gold);
+      filter: drop-shadow(0 2px 8px rgba(255, 198, 92, 0.18));
+      pointer-events: none;
+    }
+    @media (max-width: 991px) {
+      .video-thumb { height: 140px; }
+      .video-card { min-height: 140px; }
+    }
+    @media (max-width: 600px) {
+      .video-thumb { height: 90px; }
+      .video-card { min-height: 90px; }
+      .video-overlay i { font-size: 2rem; }
+    }
+
+  </style>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+</head>
+<body>
+  <div class="lang-toggle-wrapper">
+    <button id="translate-btn" class="translate-btn">עברית</button>
+  </div>
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="index.html">
+        <img src="assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" decoding="async" />
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="pages/products/g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="pages/products/dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="pages/products/dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="pages/products/g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pages/workingonit.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/careers.html">Careers at DRONER</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/workingonit.html">Remote Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section -->
+  <header class="hero-section position-relative d-flex align-items-center justify-content-center" style="min-height: 32vh; padding: 0;">
+    <div class="image-container position-absolute top-0 start-0 w-100 h-100" style="z-index:0;">
+      <img src="assets/images/hero-bg_result.webp" alt="Aerial Security Background" class="w-100 h-100 object-fit-cover" style="filter: brightness(0.45) contrast(1.1); object-fit: cover; object-position: center; width: 100%; height: 100%;" loading="lazy" decoding="async">
+    </div>
+    <div class="hero-content position-relative d-flex flex-column align-items-center justify-content-center text-center w-100" style="min-height: 32vh; z-index:1;">
+      <div class="container d-flex flex-column align-items-center justify-content-center">
+        <img src="assets/images/logo-droneryellow-dark_result.webp" alt="DRONER Logo" class="hero-logo" style="height:130px;max-width:100%;width:auto;" decoding="async">
+        <span class="d-block mt-2 fw-bold section-title" style="font-size:2.3rem; font-weight: 700; letter-spacing: 0;">Combining technology, control, and operational experience</span>
+        <p class="lead mb-0 mt-4" style="font-size:1.5rem; font-weight:500;">
+          Autonomous drone systems for on-site security and monitoring
+        </p>
+      </div>
+    </div>
+  </header>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:0.7rem;"></div>
+  <!-- About Us Section -->
+  <section id="about-us" class="py-5 bg-dark index-who-we-are" dir="ltr">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <div class="row justify-content-center align-items-center flex-lg-row flex-column-reverse text-center">
+        <div class="col-lg-6 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+          <video 
+            id="aboutVideo"
+            src="assets/videos/132061-752303219.webm"
+            class="about-img shadow"
+            style="width:100%; max-width:820px; min-height:340px; border-radius:28px; background:var(--color-dark-bg); object-fit:cover; aspect-ratio:16/8;"
+            autoplay 
+            loop 
+            muted 
+            playsinline
+          ></video>
+<script>
+  // Pause about video when not visible in viewport
+  document.addEventListener('DOMContentLoaded', function() {
+    const aboutVideo = document.getElementById('aboutVideo');
+    if (!aboutVideo) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            aboutVideo.play();
+          } else {
+            aboutVideo.pause();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(aboutVideo);
+  });
+</script>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="about-content w-100 text-center" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;" dir="ltr" lang="en">
+            <h2 class="mb-3 text-center position-relative section-title" style="font-size:2.2rem;" dir="ltr">
+              <span>Who We Are</span>
+            </h2>
+            <span class="section-line mx-auto"></span>
+            <div class="about-text text-center" style="font-size:1.22rem; font-weight:500; line-height:2.15;" dir="ltr">
+              DRONER G-System Ltd is an advanced Israeli company developing and operating autonomous aerial systems for security, maintenance, and monitoring.
+            </div>
+            <div class="text-center mt-4" dir="ltr">
+              <a href="pages/about.html" class="btn btn-cta btn-lg px-5 py-3 mx-auto d-inline-block">Read More About Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Solutions Section Header -->
+  <section id="solutions" class="py-4 bg-dark" style="margin-bottom: 0;">
+    <div class="container">
+      <h2 class="text-center mb-3 position-relative section-title">
+        <span>Our Solutions</span>
+      </h2>
+      <span class="section-line mx-auto"></span>
+    </div>
+  </section>
+  <!-- G-SMART Section -->
+  <section class="solution-section py-4 bg-dark" style="margin-top: -1rem;">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 order-lg-2">
+          <div class="solution-card h-100">
+            <h3 class="solution-title">G-SMART – Smart Drone Control Kit</h3>
+            <p class="solution-text">
+              Enables autonomous flight based on secure cellular communication (BVLOS), with no range limitation. Automatic mission planning, AI-based object detection, real-time documentation, and instant sharing.
+            </p>
+            <a href="pages/products/g-smart.html" class="btn btn-outline-dark mt-3">Learn More <i class="fa fa-arrow-left ms-2"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="solution-image-wrapper">
+            <img 
+              src="assets/images/solution-gsmart_result.webp" 
+              alt="G-SMART Image" 
+              class="solution-image"
+              style="width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--color-black);"
+              loading="lazy" decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- G-DOCK Section -->
+  <section class="solution-section py-5 bg-dark">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 order-lg-2">
+          <div class="solution-card h-100">
+            <h3 class="solution-title">G-DOCK – Autonomous Docking Stations</h3>
+            <p class="solution-text">
+              Autonomous docking and operation of drones for daily and advanced observation missions. Fully automatic operation in all weather and environments, with built-in charging, protection, and self-monitoring systems.
+            </p>
+            <a href="pages/products/dock-d135.html" class="btn btn-outline-dark mt-3">Learn More <i class="fa fa-arrow-left ms-2"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="solution-image-wrapper">
+            <img 
+              src="assets/images/solution-gdock_result.webp" 
+              alt="G-DOCK Image"
+              class="solution-image"
+              style="width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--color-black);"
+              loading="lazy" decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- G-CONTROL Section -->
+  <section class="solution-section py-5 bg-dark">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 order-lg-2">
+           <div class="solution-card h-100">
+            <h3 class="solution-title">G-CONTROL – 24/7 Remote Manned Control Center</h3>
+            <p class="solution-text">
+              Full professional operation, scenario management, and real-time response, including emergency reactions, routine patrols, and operational documentation.
+            </p>
+            <a href="pages/products/g-control.html" class="btn btn-outline-dark mt-3">Learn More <i class="fa fa-arrow-left ms-2"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="solution-image-wrapper">
+            <img src="assets/images/soluti1on-gcontrol_result.webp" alt="G-CONTROL Image" class="solution-image" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section class="py-5 bg-dark" id="advantages">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <h2 class="text-center mb-3 position-relative section-title">
+         <span>Key Advantages</span>
+      </h2>
+      <span class="section-line mx-auto"></span>
+      <div class="futuristic-adv-grid">
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-globe"></i></div>
+          <h4 class="advantage-title">Full Control from Anywhere</h4>
+          <p class="advantage-text">Live video streaming, remote control and monitoring, encrypted cellular communication – unlimited range.</p>
+        </div>
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-bolt"></i></div>
+          <h4 class="advantage-title">Immediate Event Response</h4>
+          <p class="advantage-text">The drone takes off autonomously in less than 3 minutes, documents, and provides real-time information.</p>
+        </div>
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-headset"></i></div>
+          <h4 class="advantage-title">Nationwide Human Service</h4>
+          <p class="advantage-text">Professional operations center, pilot and technician team, 24/7 support, and binding SLA.</p>
+        </div>
+        <div class="futuristic-adv-card">
+          <div class="futuristic-adv-icon"><i class="fas fa-chart-line"></i></div>
+          <h4 class="advantage-title">Proven Operational & Economic Benefit</h4>
+          <p class="advantage-text">An efficient system that reduces manpower load, improves response, and saves costs in the short and long term.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // filepath: c:\Users\ארי מילר\Sites\g-system\web\index.html
+    // Neon orbit carousel animation (2026 style)
+    document.addEventListener('DOMContentLoaded', function() {
+      const orbit = document.querySelector('.orbit-carousel');
+      if (!orbit) return;
+      let angle = 0;
+      function animateOrbit() {
+        angle += 0.3;
+        const cards = orbit.querySelectorAll('.orbit-card');
+        const r = window.innerWidth < 600 ? 90 : 160;
+        cards.forEach((card, i) => {
+          const theta = angle + (i * Math.PI * 2 / cards.length);
+          const x = Math.cos(theta) * r;
+          const y = Math.sin(theta) * r;
+          card.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+        });
+        requestAnimationFrame(animateOrbit);
+      }
+      animateOrbit();
+    });
+  </script>
+
+  <!-- Use Cases Section -->
+  <section class="py-5 bg-dark text-white" id="scenarios">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
+      <h2 class="text-center mb-3 position-relative section-title">
+        <span>תחומי שימוש</span>
+      </h2>
+      <span class="section-line mx-auto"></span>
+      <div class="text-center mb-4">
+        <h4 class="fw-bold mb-2 section-title">מערכת אחת. אינסוף יישומים.</h4>
+        <p class="lead mb-0">
+          DRONER פועלת בכל מזג אוויר ובכל תרחיש – ממענה חירום ועד תחזוקה שוטפת. הפלטפורמה גמישה, מותאמת אישית, ומבוססת על מערכות גי דוק, גי סמארט וגי קונטרול.
+        </p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="card h-100 p-4 border-0 shadow use-case-card" style="background: var(--color-black);">
+            <div class="mb-4">
+              <!-- All icons: gold color, solid background -->
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
+                  <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+              </span>
+              <h5 class="fw-bold use-case-title mb-2" dir="rtl">אבטחה חכמה</h5>
+              <p class="mb-3 small" dir="rtl">סיורים אוטונומיים, תגובה לאירועים, זיהוי תנועות חשודות ותיעוד מלא – 24/7, גם ללא כוח אדם בשטח.</p>
+            </div>
+            <div class="mb-4">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 3.25 2.5 6.5 6.5 11.54a1 1 0 0 0 1.5 0C16.5 15.5 19 12.25 19 9c0-3.87-3.13-7-7-7zm0 16.88C9.09 14.09 7 11.36 7 9a5 5 0 0 1 10 0c0 2.36-2.09 5.09-5 9.88zM12 11a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/>
+                </svg>
+              </span>
+              <h5 class="fw-bold use-case-title mb-2" dir="rtl">בטיחות אש וגילוי מוקדם</h5>
+              <p class="mb-3 small" dir="rtl">סיורים מתוכננים לגילוי עשן, מדידת חום חריג, התראה מוקדמת ומניעת אסונות בזמן אמת.</p>
+            </div>
+            <div>
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
+                  <path d="M17 10c0-2.76-2.24-5-5-5S7 7.24 7 10c0 2.08 1.28 3.84 3.09 4.58L12 21l1.91-6.42C15.72 13.84 17 12.08 17 10zm-5 3c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
+                </svg>
+              </span>
+              <h5 class="fw-bold use-case-title mb-2" dir="rtl">סדר ציבורי ומעקב תנועה</h5>
+              <p class="mb-0 small" dir="rtl">תצפית אווירית באירועים, מעקב אחר קהל ורכבים, הקלטה לתיעוד והכוונת כוחות בשטח.</p>
+            </div>
+            <div class="text-center mt-4">
+              <img src="assets/images/usecase-left_result.webp" alt="שימושים עיקריים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100 p-4 border-0 shadow use-case-card" style="background: var(--color-black);">
+            <div class="mb-4">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
+                  <path d="M21 7l-1.41-1.41L12 13.17l-4.59-4.58L6 7l6 6z"/></svg>
+              </span>
+              <h5 class="fw-bold use-case-title mb-2" dir="rtl">פיקוח ובקרה תפעולית</h5>
+              <p class="mb-3 small" dir="rtl">מעקב אחר אתרי בנייה, תשתיות, אזורי עבודה ומחסנים – לשיפור תהליכים ומניעת ליקויים.</p>
+            </div>
+            <div class="mb-4">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
+                  <path d="M20 8h-3V6a5 5 0 0 0-10 0v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-9 0V6a3 3 0 0 1 6 0v2h-6zm9 12H4V10h16z"/></svg>
+              </span>
+              <h5 class="fw-bold use-case-title mb-2" dir="rtl">משלוחים אוויריים</h5>
+              <p class="mb-3 small" dir="rtl">שילוח בין אתרים בטוחים (כגון ציוד רפואי או טכנולוגי), בהתאם לדרישות BVLOS ורישוי מתאים.</p>
+            </div>
+            <div>
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
+                  <path d="M3 13h2v-2H3v2zm2 0h2v-2H5v2zm2 0h2v-2H7v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2z"/></svg>
+              </span>
+              <h5 class="fw-bold use-case-title mb-2" dir="rtl">ניקוי רבי־קומות</h5>
+              <p class="mb-0 small" dir="rtl">רחפן אינטגרטיבי לניקוי חזיתות מבנים מגג הבניין – ללא מנופים, סנפלינג או כוח אדם תלוי־גובה.</p>
+            </div>
+            <div class="text-center mt-4">
+              <img src="assets/images/usecase-right_result.webp" alt="שימושים נוספים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Video Gallery Section Start === -->
+<section class="section-wrap video-gallery-section py-5" style="background:rgba(255,198,92,0.05);">
+  <div class="container">
+    <h2 class="section-title mb-4"><i class="fas fa-play-circle ms-2"></i>גלריית וידאו – דרונר בפעולה</h2>
+    <div class="video-gallery-center-wrap d-flex flex-column align-items-center justify-content-center">
+      <!-- Main Video -->
+      <div class="main-video-wrapper mb-4">
+        <video
+          id="mainVideo"
+          class="main-video rounded-4 shadow-lg"
+          src="assets/videos/1.webm"
+          controls
+          autoplay
+          muted
+          volume="0.15"
+          style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;"
+          preload="metadata"
+        ></video>
+      </div>
+      <script>
+        // Ensure main video plays at low volume (not muted, but low)
+        document.addEventListener('DOMContentLoaded', function() {
+          const mainVideo = document.getElementById('mainVideo');
+          if (mainVideo) {
+        mainVideo.volume = 0.15;
+        // If muted, unmute for low volume (if browser allows)
+        mainVideo.muted = false;
+        // Try to play (some browsers require user interaction)
+        mainVideo.play().catch(() => {});
+          }
+        });
+      </script>
+      <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
+      <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
+        <div class="video-thumb-window" data-video="assets/videos/video2.webm">
+          <video src="assets/videos/video2.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video3.webm">
+          <video src="assets/videos/video3.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video4.webm">
+          <video src="assets/videos/video4.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video5.webm">
+          <video src="assets/videos/video5.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video6.webm">
+          <video src="assets/videos/video6.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/video7.webm">
+          <video src="assets/videos/video7.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+        <div class="video-thumb-window" data-video="assets/videos/1.webm">
+          <video src="assets/videos/1.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Video Gallery CSS -->
+<style>
+  .video-gallery-section {
+    background: rgba(255,198,92,0.05);
+  }
+  .main-video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .main-video {
+    width: min(95vw, 700px);
+    max-width: 700px;
+    aspect-ratio: 16/9;
+    background: #000;
+    border: 3px solid var(--color-gold);
+    box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .main-video:focus {
+    outline: 2px solid var(--color-gold);
+  }
+  .video-thumbnails-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .video-thumb-window {
+    cursor: pointer;
+    border: 2px solid var(--color-gold);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255,198,92,0.10);
+    overflow: hidden;
+    background: #000;
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    position: relative;
+  }
+  .video-thumb-window:hover, .video-thumb-window.active {
+    transform: scale(1.07) translateY(-4px);
+    box-shadow: 0 8px 32px rgba(255,198,92,0.18);
+    border-color: #fffde7;
+    z-index: 2;
+  }
+  .thumb-video {
+    width: 140px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: #000;
+    pointer-events: none;
+    transition: filter 0.2s;
+    filter: brightness(0.92) grayscale(0.08);
+  }
+  .video-thumb-window:hover .thumb-video, .video-thumb-window.active .thumb-video {
+    filter: brightness(1.05) grayscale(0);
+  }
+  @media (max-width: 991px) {
+    .main-video { max-width: 98vw; }
+    .thumb-video { width: 90px; }
+  }
+  @media (max-width: 600px) {
+    .main-video { max-width: 100vw; }
+    .thumb-video { width: 60px; }
+    .video-thumbnails-wrap { gap: 0.5rem; }
+  }
+</style>
+<!-- Video Gallery JS -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainVideo = document.getElementById('mainVideo');
+    const thumbWindows = document.querySelectorAll('.video-thumb-window');
+    // Set the first thumb as active if matches main video
+    function setActiveThumb(src) {
+      thumbWindows.forEach(win => {
+        if (win.getAttribute('data-video') === src) {
+          win.classList.add('active');
+        } else {
+          win.classList.remove('active');
+        }
+      });
+    }
+    setActiveThumb(mainVideo.getAttribute('src'));
+    thumbWindows.forEach(win => {
+      win.addEventListener('click', function() {
+        const videoSrc = win.getAttribute('data-video');
+        const poster = win.getAttribute('data-poster');
+        mainVideo.pause();
+        mainVideo.setAttribute('src', videoSrc);
+        if (poster) mainVideo.setAttribute('poster', poster);
+        mainVideo.load();
+        mainVideo.play();
+        setActiveThumb(videoSrc);
+      });
+    });
+  });
+</script>
+<!-- === Video Gallery Section End === -->
+
+  <!-- CTA Section -->
+  <section class="cta-card" data-aos="fade-up">
+    <div class="container text-center">
+      <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>מוכן לשלב הבא?</h3>
+      <p class="cta-desc">צור איתנו קשר והצטרף למהפכת האבטחה האווירית.</p>
+      <a href="pages/contact.html" class="btn btn-cta btn-lg px-5 py-3">צור קשר</a>
+    </div>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async">
+  </a>
+
+  <!-- Footer for pages folder (copied from about.html/contact.html/etc.) -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <!-- Logo removed -->
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="index.html" class="footer-link">בית</a>
+            <a href="pages/about.html" class="footer-link">אודות</a>
+            <a href="pages/products/g-smart.html" class="footer-link">G-SMART</a>
+            <a href="pages/products/dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="pages/products/g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="pages/contact.html" class="footer-link">צור קשר</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title">כניסת לקוחות</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">אימייל</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">סיסמה</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">התחבר</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/hero-mobile-img.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+      let lang = localStorage.getItem('siteLang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+  <script src="assets/js/translate.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+  const toggleButton = document.getElementById('translateToggle');
+  let lang = localStorage.getItem('siteLang');
+
+  if (!lang || lang === 'he') {
+    // ברירת מחדל = עברית
+    lang = 'he';
+    document.documentElement.lang = 'he';
+    document.documentElement.dir = 'rtl';
+    toggleButton.textContent = 'English';
+  } else {
+    // משתמש שכבר בחר אנגלית בעבר
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+    toggleButton.textContent = 'עברית';
+    await translatePageToEnglish();
+  }
+
+  toggleButton.addEventListener('click', async () => {
+    if (lang === 'he') {
+      toggleButton.textContent = '...Translating';
+      await translatePageToEnglish();
+      lang = 'en';
+      toggleButton.textContent = 'עברית';
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    } else {
+      lang = 'he';
+      location.reload(); // חזרה לעברית מהתחלה
+    }
+
+    localStorage.setItem('siteLang', lang);
+  });
+});
+
+</script>
+</body>
+</html>

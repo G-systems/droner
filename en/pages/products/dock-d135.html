@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G-DOCK – D135 & D100 Stations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style-en.css">
+  <link rel="preload" as="image" href="../../assets/images/doc135hero_result.webp" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <style>
+    :root {
+      --color-dark-bg: #121212;
+      --color-gold: #FFC65C;
+      --color-brand: #FFC65C;
+      --color-light: #f4f4f4;
+    }
+    body {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      font-family: 'Rubik', sans-serif;
+    }
+    /* Only keep unique styles for this page, rely on main style.css for most */
+    .gdock-card {
+      background: #141414 !important;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s;
+      border: 1px solid var(--color-gold);
+      padding: 0;
+    }
+    .gdock-card-content {
+      padding: 2rem 2rem 1.5rem 2rem !important;
+      font-size: 1.15rem;
+      color: var(--color-light) !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      margin-bottom: 0 !important;
+    }
+    .d135-timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    .d135-timeline-item {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+    .d135-timeline-dot {
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(120deg, #FFC65C 60%, #FFD700 100%);
+      color: #181818;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-left: 1.2rem;
+      box-shadow: 0 0 0 6px rgba(255,198,92,0.10);
+      position: relative;
+      z-index: 2;
+    }
+    .d135-timeline-card {
+      background: linear-gradient(120deg, #181818 60%, #FFC65C 100%);
+      color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.09);
+      padding: 1.2rem 1.5rem;
+      min-width: 220px;
+      margin-bottom: 0.5rem;
+      font-size: 1.08rem;
+      font-weight: 500;
+      position: relative;
+    }
+    .d135-timeline-title {
+      color: var(--color-gold);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .d135-timeline-desc {
+      color: #fff;
+      opacity: 0.92;
+      font-size: 1.05rem;
+    }
+    .d135-timeline::before {
+      content: "";
+      position: absolute;
+      right: 26px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--color-gold) 0%, #fff0 100%);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .d135-images-float {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .d135-image-float {
+      position: relative;
+      background: none;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+      overflow: visible;
+      margin-bottom: 0.5rem;
+    }
+    .d135-image-float-main {
+      z-index: 2;
+      transform: translateY(0) scale(1.08) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+    }
+    .d135-image-caption {
+      display: block;
+      background: var(--color-gold);
+      color: #181818;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 0.3em 1em;
+      margin-top: 0.7em;
+      box-shadow: 0 2px 8px rgba(255,198,92,0.13);
+      text-align: center;
+    }
+    .gsmart-advantage-flip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+    }
+    .gsmart-advantage-flip-card {
+      background: none;
+      width: 220px;
+      height: 180px;
+      perspective: 900px;
+      margin-bottom: 1.5rem;
+    }
+    .gsmart-advantage-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .gsmart-advantage-flip-card:hover .gsmart-advantage-flip-inner,
+    .gsmart-advantage-flip-card:focus .gsmart-advantage-flip-inner {
+      transform: rotateY(180deg);
+    }
+    .gsmart-advantage-flip-front,
+    .gsmart-advantage-flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.13rem;
+      font-weight: 500;
+      background: linear-gradient(120deg, #181818 60%, var(--color-gold) 100%) !important;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .gsmart-advantage-flip-front i {
+      font-size: 2.5rem;
+      margin-bottom: 0.7rem;
+      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+    }
+    .gsmart-advantage-flip-back {
+      background: #181818;
+      color: var(--color-gold);
+      transform: rotateY(180deg);
+      font-size: 1.08rem;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+    }
+    i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
+      color: var(--color-gold) !important;
+    }
+    /* --- Responsive improvements --- */
+    @media (max-width: 991px) {
+      .gdock-card-content { padding: 1.2rem 0.7rem !important; }
+      .gsmart-advantage-flip-list { flex-direction: column !important; gap: 0.7rem !important; align-items: stretch !important; }
+      .gsmart-advantage-flip-card { width: 100% !important; height: 140px !important; min-width: 0 !important; max-width: 100% !important; }
+      .d135-images-float { gap: 0.7rem; min-height: 180px; }
+      .d135-image-float-main { position: static; transform: none; }
+    }
+    @media (max-width: 600px) {
+      .gdock-card { border-radius: 12px; }
+      .gdock-card-content { font-size: 1rem; }
+      .gsmart-advantage-flip-card { height: 110px !important; }
+      .gsmart-advantage-flip-front i { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="../../index.html">
+        <img src="../../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" decoding="async" width="120">
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../../index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../workingonit.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="../careers.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="../workingonit.html">Remote Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- HERO -->
+<section class="hero-section" style="background: url('../../assets/images/doc135hero_result.webp') center center/cover no-repeat;">
+  <div class="hero-content">
+    <h1>G-DOCK</h1>
+    <p class="lead">Autonomous docking stations for Matrice 300/350 and Matrice 30 drones – full integration, high reliability, easy control</p>
+  </div>
+</section>
+<div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+  <!-- Description Section Start -->
+  <section class="container my-4" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="p-4 rounded-4 shadow-sm" style="background:rgba(255,198,92,0.08); border:1px solid var(--color-gold);">
+          <h2 class="mb-3" style="color:var(--color-gold);font-size:1.5rem;"><i class="fas fa-info-circle ms-2"></i>About G-DOCK Stations</h2>
+          <p style="font-size:1.13rem; color:var(--color-light);">
+            The G-DOCK autonomous docking stations provide an advanced, reliable, and innovative solution for the operation, charging, and management of Matrice 300/350 and Matrice 30 drones. The stations integrate cutting-edge technology, high durability, remote control, and real-time monitoring – enabling full operation without manual intervention, in all terrains and weather conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Description Section End -->
+  <div class="product-divider"></div>
+  <div class="section-line"></div>
+  <div class="section-line-thin"></div>
+
+  <!-- D135 Section (vertical timeline with floating image and highlight cards) -->
+<section class="section-wrap my-5" data-aos="fade-up">
+  <div class="container">
+    <!-- Creative Headline Start -->
+    <div class="text-center mb-5" style="position:relative;">
+      <span style="display:inline-block; background:linear-gradient(90deg,rgba(255,198,92,0.13) 0%,rgba(255,198,92,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(255,198,92,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
+        <i class="fas fa-crown ms-2"></i>
+        D135 – Flagship Station of DRONER
+        <i class="fas fa-rocket me-2"></i>
+      </span>
+      <div style="font-size:1.1rem; color:#fff; opacity:0.7; margin-top:0.5rem;">
+        Power, reliability, and groundbreaking technology – the choice of drone professionals
+      </div>
+    </div>
+    <!-- NEW: Feature Grid for D135 -->
+    <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Dimensions</div>
+          <div class="feature-tile-desc small">1645×1290×1575 mm (Closed), 1645×1290×962 mm (Open)</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-weight-hanging"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Weight</div>
+          <div class="feature-tile-desc small">275 kg</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">GPS-Free Flight</div>
+          <div class="feature-tile-desc small">Autonomous flight capability even in areas without GPS reception</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-shield-alt"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Durability Standard</div>
+          <div class="feature-tile-desc small">IP54 – High resistance to harsh environmental conditions</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-thermometer-half"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Temperature Control</div>
+          <div class="feature-tile-desc small">Smart and automatic</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-bolt"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Automatic Charging</div>
+          <div class="feature-tile-desc small">Fast charging of the drone</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-satellite-dish"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Real-Time Monitoring</div>
+          <div class="feature-tile-desc small">Station status, meteorological sensors, RTK antenna</div>
+        </div>
+      </div>
+    </div>
+    <!-- END Feature Grid for D135 -->
+    <!-- D135 Floating Image (only one image) -->
+    <div class="row justify-content-center align-items-center flex-lg-row-reverse mt-5">
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <div class="d135-images-float">
+          <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+            <img src="../../assets/images/dock-d135-img1_result.webp" alt="D135 Station Image 1" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="600" height="400">
+            <span class="d135-image-caption">D135 – External View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\dock-d135.html (inline style for feature grid) */
+      .feature-tile {
+        background: linear-gradient(120deg, rgba(255,198,92,0.10) 60%, #181818 100%);
+        border: 2px solid var(--color-gold);
+        border-radius: 22px;
+        box-shadow: 0 4px 18px rgba(255,198,92,0.10);
+        color: var(--color-light);
+        transition: box-shadow 0.2s, transform 0.2s;
+        min-height: 180px;
+      }
+      .feature-tile:hover {
+        box-shadow: 0 8px 32px rgba(255,198,92,0.18);
+        transform: translateY(-4px) scale(1.03);
+      }
+      .feature-tile-icon {
+        font-size: 2.7rem;
+        color: var(--color-gold);
+        filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+      }
+      .feature-tile-title {
+        font-size: 1.18rem;
+        color: var(--color-gold);
+        font-weight: 700;
+      }
+      .feature-tile-desc {
+        color: var(--color-light);
+        font-size: 1.01rem;
+        font-weight: 400;
+      }
+      @media (max-width: 991px) {
+        .feature-tile { min-height: 120px; padding: 1.2rem 0.7rem; }
+        .feature-tile-icon { font-size: 2rem; }
+        .feature-tile-title { font-size: 1.05rem; }
+      }
+      @media (max-width: 600px) {
+        .feature-tile { min-height: 90px; padding: 0.7rem 0.5rem; }
+        .feature-tile-icon { font-size: 1.4rem; }
+      }
+    </style>
+  </div>
+</section>
+
+<!-- Creative Divider between D135 and D100 -->
+<div class="creative-divider my-5" style="position:relative;z-index:2;">
+  <div style="width:100%;display:flex;align-items:center;justify-content:center;position:relative;">
+    <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
+    <span style="background:var(--color-dark-bg);padding:0 2.5rem;border-radius:2rem;box-shadow:0 2px 12px rgba(255,198,92,0.13);font-size:1.4rem;font-weight:700;color:var(--color-gold);display:flex;align-items:center;gap:0.7rem;">
+      <i class="fas fa-exchange-alt fa-rotate-90"></i>
+      Switch to D100
+      <i class="fas fa-arrow-down"></i>
+    </span>
+    <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
+  </div>
+  <div style="width:100%;text-align:center;margin-top:0.5rem;">
+    <span style="color:#fff;opacity:0.7;font-size:1rem;letter-spacing:1px;">Also meet the D100 Station – a compact, durable, and innovative solution</span>
+  </div>
+</div>
+
+<!-- D100 Section (vertical timeline with floating image and highlight cards, like D135) -->
+<section class="section-wrap my-5" data-aos="fade-up">
+  <div class="container">
+    <!-- NEW: Feature Grid for D100 -->
+    <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Dimensions</div>
+            <div class="feature-tile-desc small">1370×1280×1300 mm (Closed), 1070×800×1020 mm (Open)</div>
+
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-weight-hanging"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Weight</div>
+          <div class="feature-tile-desc small">120 kg</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">GPS-Free Flight</div>
+          <div class="feature-tile-desc small">Autonomous flight capability even in areas without GPS reception</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-shield-alt"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Durability Standard</div>
+          <div class="feature-tile-desc small">IP55 – High resistance to diverse environmental conditions</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-thermometer-half"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Temperature Control</div>
+          <div class="feature-tile-desc small">Smart and automatic</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-bolt"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Automatic Charging</div>
+          <div class="feature-tile-desc small">Fast and autonomous charging system</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+          <div class="feature-tile-icon mb-3"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="feature-tile-title fw-bold mb-2">Monitoring and Alerts</div>
+          <div class="feature-tile-desc small">Self-monitoring systems and automatic alerts</div>
+        </div>
+      </div>
+    </div>
+    <!-- END Feature Grid for D100 -->
+    <!-- D100 Floating Image (only one image) -->
+    <div class="row justify-content-center align-items-center flex-lg-row-reverse mt-5">
+      <div class="col-lg-6 d-flex flex-column align-items-center">
+        <div class="d135-images-float">
+          <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+            <img src="../../assets/images/dock-d100-img1_result.webp" alt="D100 Station Image 1" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="600" height="400">
+            <span class="d135-image-caption">D100 – מבט חיצוני</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\dock-d135.html (inline style for feature grid) */
+      .feature-tile {
+        background: linear-gradient(120deg, rgba(255,198,92,0.10) 60%, #181818 100%);
+        border: 2px solid var(--color-gold);
+        border-radius: 22px;
+        box-shadow: 0 4px 18px rgba(255,198,92,0.10);
+        color: var(--color-light);
+        transition: box-shadow 0.2s, transform 0.2s;
+        min-height: 180px;
+      }
+      .feature-tile:hover {
+        box-shadow: 0 8px 32px rgba(255,198,92,0.18);
+        transform: translateY(-4px) scale(1.03);
+      }
+      .feature-tile-icon {
+        font-size: 2.7rem;
+        color: var(--color-gold);
+        filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+      }
+      .feature-tile-title {
+        font-size: 1.18rem;
+        color: var(--color-gold);
+        font-weight: 700;
+      }
+      .feature-tile-desc {
+        color: var(--color-light);
+        font-size: 1.01rem;
+        font-weight: 400;
+      }
+      @media (max-width: 991px) {
+        .feature-tile { min-height: 120px; padding: 1.2rem 0.7rem; }
+        .feature-tile-icon { font-size: 2rem; }
+        .feature-tile-title { font-size: 1.05rem; }
+      }
+      @media (max-width: 600px) {
+        .feature-tile { min-height: 90px; padding: 0.7rem 0.5rem; }
+        .feature-tile-icon { font-size: 1.4rem; }
+      }
+    </style>
+  </div>
+</section>
+<!-- יתרונות ללקוח (flip cards) -->
+<section class="section-wrap" data-aos="fade-up">
+  <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Advantages</h2>
+  <div class="gsmart-advantage-flip-list justify-content-center text-center">
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-user-cog"></i>
+          <div><b>Professional and Customized Solution</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-user-cog" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">Dedicated docking stations for Matrice models, with full integration into control systems.</span>
+        </div>
+      </div>
+    </div>
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-bolt"></i>
+          <div><b>Full Autonomous Operation</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-bolt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">Charging, monitoring, documentation, and operation – all automatic and without manual intervention.</span>
+        </div>
+      </div>
+    </div>
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-shield-alt"></i>
+          <div><b>Reliability and Service</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-shield-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">Service and support from a professional team, minimal maintenance, and high reliability over time.</span>
+        </div>
+      </div>
+    </div>
+    <div class="gsmart-advantage-flip-card">
+      <div class="gsmart-advantage-flip-inner">
+        <div class="gsmart-advantage-flip-front">
+          <i class="fas fa-sync-alt"></i>
+          <div><b>Environmental Adaptability</b></div>
+        </div>
+        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <i class="fas fa-sync-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+          <span style="display:block;">High durability, temperature control, advanced sensors, and user-friendly management interface.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Video Section -->
+<section class="section-wrap my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>See the D135 and D100 Stations in Action</h2>
+  <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
+    <iframe
+      src="https://www.youtube.com/embed/vObzXoIOyNA"
+      title="See the D135 and D100 Stations in Action"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      class="w-100 h-100"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+<!-- Support Card -->
+<div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
+  <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>Service and Support</h2>
+  <p>
+    The DRONER support team is available for you 24/7, providing installation, training, ongoing operation, and quick response to any malfunction or question. Customized SLA for each client, including telephone support, remote control, and on-site visit if necessary.
+  </p>
+</div>
+<!-- CTA Card -->
+<section class="cta-card section-wrap text-center" data-aos="fade-up">
+  <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Want to See G-DOCK in Action?</h3>
+  <p class="cta-desc">Contact the DRONER team and we will be happy to demonstrate the station at your site.</p>
+  <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">Schedule a Demo</a>
+</section>
+<!-- Footer for pages/products folder -->
+<footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <!-- Logo removed -->
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../../index.html" class="footer-link">Home</a>
+            <a href="../about.html" class="footer-link">About</a>
+            <a href="g-smart.html" class="footer-link">G-SMART</a>
+            <a href="dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="../contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i> 052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i> info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. All rights reserved. | Design: DRONER Team
+      </div>
+    </div>
+  </footer>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">Customer Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">Forgot password? Contact us for support</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="../../js/hero-mobile-img.js"></script>
+  <script>
+    // AOS.init({
+    //   duration: 800,
+    //   once: true,
+    //   offset: 100
+    // });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+      let lang = localStorage.getItem('siteLang') || 'he';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+   <html lang="en" dir="ltr">
+   <head>
+       <title>DRONER – Aerial Security Systems</title>
+       <meta name="description" content="DRONER – Combining technology, control, and operational experience. An autonomous drone system for security and monitoring." />

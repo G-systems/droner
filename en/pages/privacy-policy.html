@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | DRONER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+  <link rel="stylesheet" href="../assets/css/style-en.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <style>
+    :root {
+      --color-dark-bg: #121212;
+      --color-gold: #ffd700;
+      --color-brand: #ffd700;
+      --color-light: #f4f4f4;
+    }
+    body { font-family: 'Rubik', sans-serif; background: var(--color-dark-bg); }
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      height: auto;
+      border-radius: 0 0 28px 28px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    }
+    .hero-section .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-section .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.55);
+      display: block;
+    }
+    .hero-section .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 220px;
+      text-align: center;
+      background: none;
+    }
+    .hero-section .section-title {
+      color: var(--color-gold);
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+    }
+    .hero-section .section-line {
+      background: var(--color-gold);
+      display: block;
+      width: 80px;
+      height: 4px;
+      margin: 0 auto 0;
+      border-radius: 4px;
+    }
+    .hero-section .gold-divider {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-gold);
+      box-shadow: 0 2px 16px 0 rgba(255,215,0,0.18);
+      border-radius: 0 0 18px 18px;
+      z-index: 2;
+    }
+    .privacy-section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+      color: #222;
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 2.5rem auto 2.5rem auto;
+    }
+    .privacy-section h2 {
+      color: #222;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: right;
+    }
+    .privacy-section p, .privacy-section ul {
+      color: #222;
+      font-size: 1.08rem;
+      line-height: 2;
+      text-align: right;
+    }
+    .privacy-section ul {
+      padding-right: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .hero-section { padding: 2rem 0 1.2rem 0; min-height: 340px; }
+      .hero-section .hero-content { padding: 2rem 0.7rem 1.2rem 0.7rem; }
+      .hero-section .section-title { font-size: 1.4rem; }
+      .privacy-section { padding: 1.5rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
+        <img src="../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" decoding="async" />
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="products/g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="products/g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers at DRONER</a></li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Remote Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Header (replace .privacy-header with .hero-section like g-smart) -->
+  <section class="hero-section" style="background: url('../assets/images/hero-bg_result.webp') center center/cover no-repeat; position: relative; min-height: 340px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden;">
+    <div class="hero-content" style="position: relative; z-index: 2; width: 100%; max-width: 900px; margin: 0 auto; padding: 5rem 2rem 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 220px; text-align: center; background: none;">
+      <h1 style="color: var(--color-gold); font-size: 2.7rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 0 4px 24px rgba(0,0,0,0.45); letter-spacing: 2px;">
+        Privacy Policy
+      </h1>
+      <p class="lead" style="font-size: 1.3rem; color: var(--color-light); max-width: 600px; margin: 0 auto; text-shadow: 0 2px 8px rgba(255,214,0,0.15);">
+        Here you will find all information about privacy and data protection on the DRONER website
+      </p>
+    </div>
+    <!-- Optional: overlay for better text contrast -->
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:1;"></div>
+  </section>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(255,215,0,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+
+  <!-- Privacy Policy Content -->
+  <section class="privacy-section">
+    <h2>What information do we collect?</h2>
+    <ul>
+      <li>Information you provide directly (e.g., when contacting us through the website or registering for services).</li>
+      <li>Technical information collected automatically (such as IP address, browser type, operating system, access times, and pages viewed).</li>
+      <li>Information collected via cookies and analytics tools.</li>
+    </ul>
+
+    <h2>How do we use the information?</h2>
+    <ul>
+      <li>To improve the user experience on the site.</li>
+      <li>To provide services, respond to inquiries, and offer technical support.</li>
+      <li>To send updates, offers, and marketing information – only if you have given explicit consent.</li>
+      <li>For statistical analysis and to improve our services.</li>
+    </ul>
+
+    <h2>Data Retention and Security</h2>
+    <p>
+      We take reasonable and accepted security measures to protect your personal information. However, we cannot guarantee absolute protection.
+    </p>
+
+    <h2>Sharing Information with Third Parties</h2>
+    <p>
+      We do not share personal information with third parties, except in the following cases:
+    </p>
+    <ul>
+      <li>To comply with legal requirements or a court order.</li>
+      <li>In the event of a legal dispute between you and the website.</li>
+      <li>To service providers who assist us in operating the website (subject to confidentiality obligations).</li>
+    </ul>
+
+    <h2>Cookies and Third-Party Tools</h2>
+    <p>
+      The site uses cookies and analytics tools (such as Google Analytics) for operation, security, and service improvement. You can change your browser settings to block cookies, but some functions may not work properly.
+    </p>
+
+    <h2>Links to External Sites</h2>
+    <p>
+      The site may contain links to external websites. We have no control over the privacy policies of these sites, and we recommend reviewing their policies separately.
+    </p>
+
+    <h2>Contact Us</h2>
+    <p>
+      For any questions or requests regarding this privacy policy, you can contact us by email: <a href="mailto:info@droner.co.il">info@droner.co.il</a>
+    </p>
+
+    <h2>Changes to the Privacy Policy</h2>
+    <p>
+      We may update this policy from time to time. Last updated: May 2025.
+    </p>
+  </section>
+
+ <!-- Footer for pages folder -->
+<footer class="main-footer-modern py-5">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+          <a href="../index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="products/g-smart.html" class="footer-link">G-SMART</a>
+          <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
+          <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
+      </div>
+      <div class="col-md-4 text-center text-md-start">
+        <div class="footer-contact mb-2">
+          <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+            <i class="fa fa-phone ms-2"></i>052-387-6112
+          </a>
+        </div>
+        <div class="footer-contact mb-2">
+          <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+            <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+          </a>
+        </div>
+        <div class="footer-social">
+          <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider my-4">
+    <div class="text-center small footer-copyright">
+      &copy; 2025 DRONER. All rights reserved. | Design: DRONER Team
+    </div>
+  </div>
+  <style>
+    .main-footer-modern {
+      background: linear-gradient(120deg, var(--color-dark) 70%, var(--color-gold) 120%);
+      color: #fff;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
+      margin-top: 0;
+      font-family: 'Rubik', sans-serif;
+    }
+    .main-footer-modern .footer-logo {
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.5rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .main-footer-modern .footer-links {
+      gap: 1.2rem !important;
+    }
+    .main-footer-modern .footer-link {
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .main-footer-modern .footer-link:hover,
+    .main-footer-modern .footer-link:focus {
+      color: var(--color-gold);
+      text-decoration: underline;
+    }
+    .main-footer-modern .footer-contact {
+      color: #fffde7;
+      font-size: 1rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .main-footer-modern .footer-contact i {
+      color: var(--color-gold);
+      font-size: 1.1em;
+      vertical-align: middle;
+    }
+    .main-footer-modern .footer-social {
+      margin-top: 0.5rem;
+    }
+    .main-footer-modern .footer-social-link {
+      color: #fff;
+      margin-left: 0.7rem;
+      font-size: 1.35rem;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .main-footer-modern .footer-social-link:hover {
+      color: var(--color-gold);
+      transform: scale(1.15);
+    }
+    .main-footer-modern .footer-divider {
+      border-color: var(--color-gold);
+      opacity: 0.7;
+    }
+    @media (max-width: 768px) {
+      .main-footer-modern {
+        border-radius: 0;
+        padding: 2rem 0.5rem;
+      }
+      .main-footer-modern .footer-links {
+        gap: 0.7rem !important;
+      }
+      .main-footer-modern .footer-link {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</footer>
+
+  <!-- Login Modal (copied for consistency) -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">Client Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">Forgot your password? Contact us for support</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" decoding="async">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/hero-mobile-img.js"></script>
+  <script>
+    // Language Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+      let lang = localStorage.getItem('siteLang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>

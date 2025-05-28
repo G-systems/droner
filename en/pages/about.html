@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About DRONER – Aerial Security Systems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style-en.css">
+  <link rel="preload" as="image" href="../assets/images/hero-bg_result.webp" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <style>
+    body { background: var(--color-dark-bg); color: var(--color-light); font-family: 'Rubik', sans-serif; }
+    .about-hero {
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+      background: var(--color-dark-bg);
+    }
+    .about-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .about-hero h1 {
+      /* Remove font-size, font-family, letter-spacing, etc. to use global style */
+      color: var(--color-gold);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.7rem;
+      justify-content: center;
+      text-align: center;
+    }
+    .about-hero p {
+      color: var(--color-light);
+      font-size: 1.5rem; /* Match home page */
+      font-family: 'Rubik', sans-serif; /* Match home page */
+      font-weight: 500; /* Match home page */
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+    }
+    .about-collab-logos {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0 1rem 0;
+    }
+    .about-collab-logos img {
+      height: 48px;
+      background: none;
+      border-radius: 12px;
+      padding: 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin-bottom: 0.5rem;
+      transition: transform 0.2s;
+    }
+    .about-collab-logos img:hover {
+      transform: scale(1.07) rotate(-2deg);
+    }
+    .about-section {
+      background: #141414;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      color: var(--color-light);
+      padding: 2.7rem 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: right;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .about-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      z-index: 1;
+      position: relative;
+    }
+    .about-section ul li {
+      position: relative;
+      padding-right: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+      border-radius: 8px;
+      color: var(--color-light);
+    }
+    .about-section ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--color-gold);
+      position: absolute;
+      right: 0;
+      top: 0.1em;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    .about-section ul li:hover {
+      background: rgba(255,198,92,0.08);
+    }
+    .about-section ul li:hover::before {
+      color: var(--color-brand);
+    }
+    .about-img,
+    .about-video {
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      margin-bottom: 1.5rem;
+      width: 100%;
+      object-fit: cover;
+      background: var(--color-black);
+    }
+    .about-gallery-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .about-gallery-row img,
+    .about-gallery-row video {
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      width: 320px;
+      height: 180px;
+      object-fit: cover;
+      background: var(--color-black);
+    }
+    @media (max-width: 768px) {
+      .about-hero h1 { font-size: 1.5rem !important; }
+      .about-hero p { font-size: 1.05rem; }
+      .about-section { padding: 1.5rem 1rem; }
+      .about-collab-logos { gap: 1rem; }
+      .about-gallery-row { gap: 0.7rem; }
+      .about-gallery-row img, .about-gallery-row video { width: 100%; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
+        <img src="../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" />
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="products/g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="products/g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers at DRONER</a></li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Remote Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section -->
+  <section class="about-hero" style="background: url('../assets/images/hero-bg_result.webp') center center/cover no-repeat;">
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 340px; padding-top: 80px;">
+      <div class="text-center" data-aos="fade-up">
+        <h1 style="flex-direction: column; align-items: center; gap: 0; text-align: center;">
+          About
+          <br>
+          <img src="../assets/images/logo-droneryellow-dark_result.webp" alt="DRONER Logo" style="height: 110px; border-radius: 12px; padding: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); background: none; margin-top: 0.5rem;" decoding="async">
+        </h1>
+        <p>Advanced Autonomous Drone Solutions for Security and Monitoring</p>
+        <div class="about-collab-logos mt-4">
+          <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="filter: drop-shadow(0 0 8px #2196f3);" loading="lazy" decoding="async" height="48">
+          <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" loading="lazy" decoding="async" height="48">
+          <img src="../assets/images/logo-gsystem.png" alt="G-System" title="G-System" style="height: 120px; max-width: 300px;" loading="lazy" decoding="async" height="120">
+        </div>
+      </div>
+    </div>
+  </section>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+
+  <main class="container" style="margin-top: 2.5rem;">
+    <!-- Who We Are -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="../assets/images/about-droner-team.jpg" alt="DRONER Team" class="about-img w-100" loading="lazy" decoding="async" width="600" height="400">
+        </div>
+        <div class="col-md-6">
+          <h2><i class="fa fa-users ms-2"></i>Who We Are</h2>
+          <p>
+            DRONER was founded from the merger of two leading companies:
+          </p>
+          <div class="d-flex flex-column gap-3 mb-3">
+            <div class="d-flex align-items-center bg-light border rounded-4 shadow-sm px-3 py-2">
+              <img src="../assets/images/logo-gsystem.png" alt="G-System" style="height: 36px; margin-left: 1rem;" loading="lazy" decoding="async" height="36">
+              <div>
+                <div class="fw-bold fs-5 text-dark">G-System</div>
+                <div class="text-secondary small">Experts in aerial security and drones since 2019</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center bg-light border rounded-4 shadow-sm px-3 py-2">
+              <img src="../assets/images/logo-tcm.png" alt="TCM Technologies" style="height: 36px; margin-left: 1rem;" loading="lazy" decoding="async" height="36">
+              <div>
+                <div class="fw-bold fs-5 text-dark">TCM Technologies</div>
+                <div class="text-secondary small">Specializing in operational deployment and integrative engineering of drone systems</div>
+              </div>
+            </div>
+          </div>
+          <p class="mb-0">
+            The merger created an advanced professional array specializing in the deployment of autonomous drone systems and remote control systems at client sites, with an emphasis on security, monitoring, and advanced control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="../assets/images/about-video-poster_result.webp" alt="DRONER Demo" class="about-img w-100" loading="lazy" decoding="async" width="600" height="400">
+        </div>
+        <div class="col-lg-6">
+          <h2><i class="fa fa-cogs ms-2"></i>What We Do</h2>
+          <p>
+            DRONER designs, installs, and operates autonomous aerial security solutions including advanced drones, smart docking stations, remote management and control systems, and a 24/7 manned control center. The company works in strategic technological collaboration with leading international companies, including:
+          </p>
+          <ul>
+            <li>
+              <b>HEISHA</b> – A leading manufacturer of autonomous docking stations, considered one of the world's top providers of automated drone charging and storage solutions. HEISHA's docking stations provide full autonomy for drones, enabling advanced mission deployment over time, and are especially suited for complex operational environments.
+            </li>
+            <li>
+              <b>FlightOps</b> – An advanced technology company providing a unique platform for remote management and control of large, autonomous drone fleets. FlightOps' technology enables remote operation and control without range limitations, fully integrating with DRONER's operational and control systems.
+            </li>
+          </ul>
+          <p>
+            These collaborations provide DRONER's clients with integrated, high-quality solutions that emphasize innovation, reliability, and operational precision.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why DRONER -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-5 mb-4 mb-md-0">
+          <img src="../assets/images/about-why-droner_result.webp" alt="Why DRONER" class="about-img w-100" loading="lazy" decoding="async" width="600" height="400">
+        </div>
+        <div class="col-md-7">
+          <h2><i class="fa fa-star ms-2"></i>Why DRONER?</h2>
+          <ul>
+            <li><b>Cutting-edge Technology</b> – Integrating advanced systems from HEISHA and FlightOps for autonomous security and monitoring solutions.</li>
+            <li><b>Proven Operational Reliability</b> – Stable, durable, and highly available systems for all weather and terrain conditions.</li>
+            <li><b>Cost Savings & Operational Efficiency</b> – Reducing manpower, insurance costs, and operational risk.</li>
+            <li><b>Experience & Deep Expertise</b> – A professional, operational, and engineering team with extensive background and experience in drone and advanced control systems.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="about-section" data-aos="fade-up">
+      <h2><i class="fa fa-user-tie ms-2"></i>Our Team</h2>
+      <p>
+        Our professional team consists of experts in diverse fields – from drone piloting, through planning and integration of autonomous systems, to technological and operational management. The team works to the highest standards of quality, safety, and reliability to provide our clients with perfect, tailor-made solutions.
+      </p>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="../assets/images/about-vision_result.webp" alt="DRONER Vision" class="about-img w-100" loading="lazy" decoding="async" width="600" height="400">
+        </div>
+        <div class="col-md-6">
+          <h2><i class="fa fa-lightbulb ms-2"></i>Our Vision</h2>
+          <p>
+            DRONER's vision is to lead the field of autonomous drones in Israel and provide our clients with a significant technological advantage, full field control, and the ability to respond quickly and efficiently to any challenge – security, operational, or mission-related.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Clients -->
+    <section class="about-section" data-aos="fade-up">
+      <h2><i class="fa fa-building ms-2"></i>Our Clients</h2>
+      <div class="about-collab-logos mb-3">
+        <img src="../assets/images/costumers.webp" alt="DRONER Clients" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
+      </div>
+      <p>
+        We are proud to provide advanced services to a wide range of clients, including leading companies, critical infrastructure facilities, large industrial zones, municipalities, regional councils, security organizations, security companies, and private entities. Our technological collaboration with HEISHA and FlightOps enables us to offer our clients proven and reliable solutions with some of the world's most advanced operational capabilities.
+      </p>
+    </section>
+
+    <!-- Our Commitment -->
+    <section class="about-section" data-aos="fade-up">
+      <h2><i class="fa fa-handshake ms-2"></i>Our Commitment</h2>
+      <ul>
+        <li>To provide customized, high-quality, and professional solutions.</li>
+        <li>To ensure nationwide service and technical support, including on-site technician service and a 24/7 manned control center.</li>
+        <li>To maintain the highest levels of safety, information security, and compliance with all relevant regulations.</li>
+      </ul>
+    </section>
+
+    <!-- CTA section uses the shared cta-card styles -->
+    <section class="cta-card" data-aos="fade-up">
+      <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Ready for a safer future?</h3>
+      <p class="cta-desc">The DRONER team is happy to assist, advise, and tailor the optimal solution for your organization.</p>
+      <a href="contact.html" class="btn btn-cta btn-lg px-5 py-3">Contact Us</a>
+    </section>
+  </main>
+
+  <!-- Footer for pages folder -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="products/g-smart.html" class="footer-link">G-SMART</a>
+            <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i> 052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i> info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. All rights reserved. | Design: DRONER Team
+      </div>
+    </div>
+  </footer>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">Client Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">Forgot your password? Contact us for support</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60">
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/hero-mobile-img.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+      let lang = localStorage.getItem('siteLang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>

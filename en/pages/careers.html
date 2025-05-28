@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at DRONER – Join the Aerial Security Revolution</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style-en.css">
+  <link rel="preload" as="image" href="../assets/images/hero-bg_result.webp" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <style>
+    body { background: var(--color-dark-bg); }
+    .careers-hero {
+      color: var(--color-light);
+      background: var(--color-dark-bg);
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .careers-hero .image-container {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+    }
+    .careers-hero .image-container img {
+      width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);
+    }
+    .careers-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 220px;
+      text-align: center;
+      background: none;
+    }
+    .careers-hero h1 {
+      color: var(--color-gold);
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 2px;
+      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .careers-hero p {
+      color: var(--color-light);
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .careers-section {
+      background: #141414;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      color: var(--color-light);
+      padding: 2.7rem 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .careers-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: right;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .careers-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      z-index: 1;
+      position: relative;
+    }
+    .careers-list li {
+      position: relative;
+      padding-right: 2rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      transition: background 0.2s, color 0.2s;
+      border-radius: 8px;
+      background: rgba(255,198,92,0.08);
+      color: var(--color-light);
+      box-shadow: 0 2px 8px rgba(255,235,59,0.06);
+    }
+    .careers-list li::before {
+      content: "\f0b1";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--color-gold); /* icons in list: gold */
+      position: absolute;
+      right: 0.7rem;
+      top: 0.9rem;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    .careers-list li:hover {
+      background: var(--color-gold);
+      color: var(--color-dark);
+    }
+    .careers-list li:hover::before {
+      color: var(--color-dark);
+    }
+    .careers-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0 0 0;
+    }
+    .careers-benefit-card {
+      background: linear-gradient(120deg, var(--color-gold) 60%, #141414 100%);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 1.5rem 1.2rem;
+      min-width: 220px;
+      max-width: 320px;
+      flex: 1 1 220px;
+      text-align: center;
+      transition: background 0.2s, transform 0.2s;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .careers-hero .hero-content { padding: 2rem 0.7rem 1.2rem 0.7rem; }
+      .careers-hero h1 { font-size: 1.5rem; }
+      .careers-section { padding: 1.5rem 1rem; }
+      .careers-benefits { gap: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
+        <img src="../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" />
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="products/g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="products/g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link active" href="careers.html">Careers at DRONER</a></li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Remote Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section -->
+  <section class="careers-hero hero-section-padding">
+    <div class="image-container">
+      <img src="../assets/images/hero-bg_result.webp" alt="Careers Background" decoding="async" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+    </div>
+    <div class="hero-content">
+      <h1>Careers at DRONER</h1>
+      <p class="lead">Join us and be part of a pioneering team in aerial security and autonomous drones</p>
+    </div>
+  </section>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+
+  <!-- Open Positions -->
+  <section class="careers-section" data-aos="fade-up">
+    <div class="row align-items-center flex-md-row-reverse">
+      <div class="col-md-5 col-lg-4 mb-4 mb-md-0 d-flex justify-content-center">
+        <img src="../assets/images/careers-team_result.webp" alt="Our Team" class="about-img rounded-4 shadow"
+          style="width:100%;max-width:560px;max-height:420px;object-fit:cover;display:block;" loading="lazy" decoding="async" width="560" height="420">
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h2><i class="fa fa-briefcase ms-2"></i>Open Positions</h2>
+        <ul class="careers-list">
+          <li>
+            <b>Installation & Support Technician</b><br>
+            Installing drone systems and docking stations, providing service and support to clients.
+          </li>
+          <li>
+            <b>Full Stack Software Developer</b><br>
+            Developing control, monitoring, and AI systems, working with advanced technologies.
+          </li>
+          <li>
+            <b>Operational Drone Pilot</b><br>
+            Performing field missions, operating autonomous systems, documentation, and training.
+          </li>
+          <li>
+            <b>Technology Project Manager</b><br>
+            Managing and leading projects with business and government clients.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="careers-section" data-aos="fade-up">
+    <h2><i class="fa fa-star ms-2"></i>Why Work With Us?</h2>
+    <div class="careers-benefits">
+      <div class="careers-benefit-card">
+        <span class="careers-benefit-icon"><i class="fas fa-rocket"></i></span>
+        <b>Technological Innovation</b>
+        <div>Work with advanced systems, drones, AI, and IoT.</div>
+      </div>
+      <div class="careers-benefit-card">
+        <span class="careers-benefit-icon"><i class="fas fa-users"></i></span>
+        <b>Family Team</b>
+        <div>Pleasant atmosphere, collaboration, and mutual support.</div>
+      </div>
+      <div class="careers-benefit-card">
+        <span class="careers-benefit-icon"><i class="fas fa-graduation-cap"></i></span>
+        <b>Professional Development</b>
+        <div>Training, courses, and real advancement opportunities.</div>
+      </div>
+      <div class="careers-benefit-card">
+        <span class="careers-benefit-icon"><i class="fas fa-hand-holding-usd"></i></span>
+        <b>Excellent Conditions</b>
+        <div>Competitive salary, car/travel reimbursements, additional benefits.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-card" data-aos="fade-up">
+    <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Want to join us?</h3>
+    <p class="cta-desc">Send your CV to <a href="mailto:jobs@droner.co.il" style="color:var(--color-gold);text-decoration:underline;">jobs@droner.co.il</a> or fill out the form and we will get back to you soon.</p>
+    <a href="contact.html" class="btn btn-cta btn-lg px-5 py-3">Contact Form</a>
+  </section>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">Client Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">Forgot your password? Contact us for support</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/972502222222" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async">
+  </a>
+
+  <!-- Footer for pages folder -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="products/g-smart.html" class="footer-link">G-SMART</a>
+            <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. All rights reserved. | Design: DRONER Team
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/hero-mobile-img.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+      let lang = localStorage.getItem('siteLang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>

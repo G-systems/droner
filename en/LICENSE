@@ -1,0 +1,16 @@
+/g-system
+    /web
+        /en
+            index.html
+            dugma2.html
+            data-deletion.html
+            privacy-policy.html
+            contact.html
+            careers.html
+            about.html
+            404.html
+            /products
+                g-smart.html
+                g-control.html
+                dock-dji.html
+                dock-d135.html

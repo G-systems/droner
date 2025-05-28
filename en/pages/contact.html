@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – DRONER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style-en.css">
+  <link rel="preload" as="image" href="../assets/images/contact-hero_result.webp" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <style>
+    :root {
+      --color-dark-bg: #121212;
+      --color-gold: #FFC65C; /* changed from #b08d57 */
+      --color-brand: #FFC65C; /* was #b08d57 */
+      --color-light: #f4f4f4;
+    }
+    .contact-hero {
+      color: #fff;
+      background: var(--color-dark-bg);
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .contact-hero .image-container {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+    }
+    .contact-hero .image-container img {
+      width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);
+    }
+    .contact-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 220px;
+      text-align: center;
+      background: none;
+    }
+    .contact-hero h1 {
+      color: var(--color-gold);
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      letter-spacing: 2px;
+      animation: fadeInDown 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .contact-hero p {
+      color: var(--color-light);
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+      animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+    }
+    .contact-section {
+      background: #141414;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+      border: 1px solid var(--color-gold);
+      color: var(--color-light);
+      padding: 2.7rem 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-section h2 {
+      color: var(--color-gold);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: right;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .contact-info-card {
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      border: 1px solid var(--color-gold);
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(255,235,59,0.08);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .contact-info-card h5 {
+      color: var(--color-brand);
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .contact-info-card a {
+      color: var(--color-light);
+      font-weight: 500;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .contact-info-card a:hover {
+      color: var(--color-gold);
+    }
+    .contact-section .form-label {
+      color: var(--color-light);
+      font-weight: 500;
+    }
+    .contact-section .form-control, .contact-section textarea {
+      border-radius: 8px;
+      border: 1px solid var(--color-gold);
+      background: var(--color-dark-bg);
+      color: var(--color-light);
+      transition: border-color 0.2s;
+    }
+    /* Make placeholders white with lower opacity */
+    .contact-section .form-control::placeholder,
+    .contact-section textarea::placeholder {
+      color: #fff !important;
+      opacity: 0.55;
+      font-weight: 400;
+    }
+    .contact-section .form-control:focus, .contact-section textarea:focus {
+      border-color: var(--color-brand);
+      box-shadow: 0 0 0 2px rgba(255,198,92,0.2); /* changed from rgba(10,209,0,0.2) */
+    }
+    .btn-yellow {
+      background-color: var(--color-gold);
+      color: var(--color-black);
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 15px rgba(255,198,92,0.13); /* replaced green/bronze with gold */
+    }
+    .btn-yellow:hover {
+      background: var(--color-gold);
+      color: var(--color-black);
+      transform: translateY(-2px) scale(1.04);
+    }
+    /* Force all .small text to white */
+    .small, small {
+      color: #fff !important;
+    }
+    @media (max-width: 768px) {
+      .contact-hero .hero-content { padding: 2rem 0.7rem 1.2rem 0.7rem; }
+      .contact-hero h1 { font-size: 1.5rem; }
+      .contact-section { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container justify-content-center d-flex">
+      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
+        <img src="../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" />
+      </a>
+      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
+        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="products/g-smart.html">G-SMART</a></li>
+              <li class="dropdown-submenu dropstart">
+                <a class="dropdown-item dropdown-toggle" href="#">G-DOCK</a>
+                <ul class="dropdown-menu shadow border-0">
+                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
+                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="products/g-control.html">G-CONTROL</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers at DRONER</a></li>
+          <li class="nav-item"><a class="nav-link" href="workingonit.html">Remote Support</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fa fa-user me-1"></i> Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Section -->
+  <header class="contact-hero hero-section-padding">
+    <div class="image-container">
+      <img src="../assets/images/contact-hero_result.webp" alt="Contact Background" decoding="async" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+    </div>
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p class="lead">We are happy to talk, advise, and tailor an advanced security solution for your organization</p>
+    </div>
+  </header>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section" data-aos="fade-up">
+    <div class="container">
+      <h2><i class="fa fa-envelope ms-2"></i>Leave your details and we will get back to you</h2>
+      <form class="row g-4" autocomplete="off">
+        <div class="col-md-6">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Yael Cohen" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
+        </div>
+        <div class="col-md-6">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="052-1234567">
+        </div>
+        <div class="col-md-6">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-control" placeholder="Short title">
+        </div>
+        <div class="col-12">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button type="submit" class="btn btn-yellow px-5 py-2 fs-5">Send Message</button>
+        </div>
+      </form>
+      <div class="row mt-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="contact-info-card h-100">
+            <h5><i class="fa fa-phone ms-2"></i>Phone</h5>
+            <a href="tel:52-387-6112" class="fs-5">052-387-6112</a>
+            <h5 class="mt-3"><i class="fa fa-envelope ms-2"></i>Email</h5>
+            <a href="mailto:info@droner.co.il" class="fs-5">info@droner.co.il</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="contact-info-card h-100">
+            <h5><i class="fa fa-location-dot ms-2"></i>Offices</h5>
+            <div class="fs-5">5 HaHaroshet St, Rosh HaAyin</div>
+            <div class="mt-3">
+              <a href="https://maps.app.goo.gl/your-google-maps-link" target="_blank" class="btn btn-outline-dark mt-2"><i class="fa fa-map-marker-alt ms-2"></i>View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-card" data-aos="fade-up">
+    <div class="container text-center">
+      <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Want to know more?</h3>
+      <p class="cta-desc">We are happy to assist and provide the optimal solution for your organization.</p>
+      <a href="faq.html" class="btn btn-cta btn-lg px-5 py-3">FAQ</a>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">Client Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-yellow">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">Forgot your password? Contact us for support</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/97252-387-611" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
+    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async">
+  </a>
+
+  <!-- Footer for pages folder -->
+  <footer class="main-footer-modern py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4 text-center text-md-end mb-3 mb-md-0">
+          <!-- Logo removed -->
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
+            <a href="../index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="products/g-smart.html" class="footer-link">G-SMART</a>
+            <a href="products/dock-d135.html" class="footer-link">G-DOCK</a>
+            <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-contact mb-2">
+            <a href="https://wa.me/97252-387-6112" target="_blank" class="text-decoration-none text-reset">
+              <i class="fa fa-phone ms-2"></i>052-387-6112
+            </a>
+          </div>
+          <div class="footer-contact mb-2">
+            <a href="mailto:info@droner.co.il" class="text-decoration-none text-reset">
+              <i class="fa fa-envelope ms-2"></i>info@droner.co.il
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="https://wa.me/97252-387-6112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="text-center small footer-copyright">
+        &copy; 2025 DRONER. All rights reserved. | Design: DRONER Team
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/hero-mobile-img.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Toggle
+      const toggleButton = document.getElementById('translateToggle');
+      if (!toggleButton) return;
+      let lang = localStorage.getItem('siteLang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+      toggleButton.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
+        localStorage.setItem('siteLang', lang);
+      });
+    });
+  </script>
+</body>
+</html>
