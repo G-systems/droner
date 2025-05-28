@@ -440,6 +440,8 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
 }
 .main-footer-modern .footer-contact i {
   color: var(--color-gold) !important;
+  /* Add margin for spacing between icon and text */
+  margin-left: 0.4em;
 }
 .main-footer-modern .footer-social-link {
   color: var(--color-light) !important;
@@ -623,6 +625,20 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
 @media (max-width: 768px) {
   .contact-section { padding: 1.5rem 1rem; }
   .page-hero h1 { font-size: 1.5rem; }
+}
+
+/* === Disable AOS Animations: Show all sections instantly === */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  pointer-events: auto !important;
+  filter: none !important;
+  will-change: auto !important;
+  /* Remove any delay or duration */
+  transition-delay: 0s !important;
+  transition-duration: 0s !important;
+  animation: none !important;
 }
 
 /* === Remove dark overlay from images/videos in cards/sections === */

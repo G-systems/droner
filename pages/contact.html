@@ -125,6 +125,13 @@
       color: var(--color-light);
       transition: border-color 0.2s;
     }
+    /* Make placeholders white with lower opacity */
+    .contact-section .form-control::placeholder,
+    .contact-section textarea::placeholder {
+      color: #fff !important;
+      opacity: 0.55;
+      font-weight: 400;
+    }
     .contact-section .form-control:focus, .contact-section textarea:focus {
       border-color: var(--color-brand);
       box-shadow: 0 0 0 2px rgba(255,198,92,0.2); /* changed from rgba(10,209,0,0.2) */
@@ -220,23 +227,23 @@
       <h2><i class="fa fa-envelope ms-2"></i>השאירו פרטים ונחזור אליכם</h2>
       <form class="row g-4" autocomplete="off">
         <div class="col-md-6">
-          <label for="name" class="form-label">שם מלא</label>
+          <label for="name">שם מלא</label>
           <input type="text" id="name" name="name" class="form-control" placeholder="לדוגמה: יעל כהן" required>
         </div>
         <div class="col-md-6">
-          <label for="email" class="form-label">דוא״ל</label>
+          <label for="email">דוא״ל</label>
           <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
         </div>
         <div class="col-md-6">
-          <label for="phone" class="form-label">טלפון</label>
+          <label for="phone">טלפון</label>
           <input type="tel" id="phone" name="phone" class="form-control" placeholder="052-1234567">
         </div>
         <div class="col-md-6">
-          <label for="subject" class="form-label">נושא הפנייה</label>
+          <label for="subject">נושא הפנייה</label>
           <input type="text" id="subject" name="subject" class="form-control" placeholder="כותרת קצרה">
         </div>
         <div class="col-12">
-          <label for="message" class="form-label">הודעה</label>
+          <label for="message">הודעה</label>
           <textarea id="message" name="message" rows="5" class="form-control" placeholder="כתבו כאן את ההודעה שלכם..." required></textarea>
         </div>
         <div class="col-12 text-center mt-4">
