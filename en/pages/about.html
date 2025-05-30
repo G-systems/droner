@@ -51,19 +51,23 @@
     }
     .about-collab-logos {
       display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
+      flex-direction: row;
+      flex-wrap: nowrap !important;
       align-items: center;
       justify-content: center;
+      gap: 2rem;
       margin: 2rem 0 1rem 0;
+      white-space: nowrap;
     }
     .about-collab-logos img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
       height: 48px;
       background: none;
       border-radius: 12px;
       padding: 0;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      margin-bottom: 0.5rem;
       transition: transform 0.2s;
     }
     .about-collab-logos img:hover {
@@ -219,10 +223,10 @@
           <img src="../assets/images/logo-droneryellow-dark_result.webp" alt="DRONER Logo" style="height: 110px; border-radius: 12px; padding: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); background: none; margin-top: 0.5rem;" decoding="async">
         </h1>
         <p class="text-center">Advanced Autonomous Drone Solutions for Security and Monitoring</p>
-        <div class="about-collab-logos mt-4">
-          <img src="../assets/images/logo-gsystem.png" alt="G-System" title="G-System" style="height: 120px; max-width: 300px;" loading="lazy" decoding="async" height="120">
-          <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" loading="lazy" decoding="async" height="48">
-          <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="filter: drop-shadow(0 0 8px #2196f3);" loading="lazy" decoding="async" height="48">
+        <div class="about-collab-logos mt-4" style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 2rem; white-space: nowrap;">
+          <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="filter: drop-shadow(0 0 8px #2196f3); display: inline-block; vertical-align: middle; height: 48px; margin-bottom: 0;" loading="lazy" decoding="async">
+          <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" style="display: inline-block; vertical-align: middle; height: 48px; margin-bottom: 0;" loading="lazy" decoding="async">
+          <img src="../assets/images/logo-gsystem.png" alt="G-System" title="G-System" style="display: inline-block; vertical-align: middle; height: 120px; max-width: 300px; margin-bottom: 0;" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -334,7 +338,7 @@
     <!-- Our Clients -->
     <section class="about-section" data-aos="fade-up">
       <h2><i class="fa fa-building ms-2"></i>Our Clients</h2>
-      <div class="about-collab-logos mb-3">
+      <div class="about-collab-logos mb-3" style="animation: none !important;">
         <img src="../assets/images/costumers.webp" alt="DRONER Clients" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
       </div>
       <p>

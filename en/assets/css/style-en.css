@@ -2066,146 +2066,83 @@ button.btn-warning .fa-user {
   }
 }
 
-/* === Index Page: Center "Who We Are" Section (LTR) === */
+/* === Index Page: Center "Who We Are" Section (EN) === */
 .index-who-we-are {
-  text-align: left !important;
+  text-align: center !important;
 }
 .index-who-we-are .row {
-  justify-content: flex-start !important;
-  text-align: left !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
 .index-who-we-are .about-content,
 .index-who-we-are h2,
 .index-who-we-are .about-text,
 .index-who-we-are .section-line {
-  text-align: left !important;
-  margin-left: 0 !important;
+  text-align: center !important;
+  margin-left: auto !important;
   margin-right: auto !important;
   display: block;
 }
 .index-who-we-are .section-line {
-  float: left !important;
+  float: none !important;
 }
 
-/* === Make Index Page Header Logo Bigger === */
-.index-header-logo,
-.header-logo.index-header-logo,
-.hero-section .index-header-logo {
-  height: 160px !important;
-  max-height: 160px !important;
-  max-width: 98vw !important;
-  width: auto !important;
-  display: block;
-  margin: 0 auto 1rem auto !important;
-  border-radius:  16px;
-  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
-  background: none;
-}
-
-@media (max-width: 767px) {
-  .index-header-logo,
-  .header-logo.index-header-logo,
-  .hero-section .index-header-logo {
-    height: 100px !important;
-    max-height: 100px !important;
-    margin-bottom: 0.7rem !important;
-    margin-top: 0.5rem !important;
-  }
-}
-
-/* === Center headlines in advantages and video sections on product pages (LTR) === */
-.section-wrap h2,
-.section-wrap > h2,
-.section-wrap .text-center > h2,
-.section-wrap > .text-center > h2 {
-  text-align: left !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  display: flex !important;
-  width: 100%;
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
-
-.section-wrap h2 .fa,
-.section-wrap h2 i {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.section-wrap .cta-title,
-.section-wrap .cta-desc {
-  text-align: center !important;
-}
-
-/* --- Solutions Card Headline: force left alignment --- */
-.solution-title,
-.solution-card h3,
-.solution-card h4 {
-  text-align: left !important;
-}
-
-/* Ensure all text inside .advantage-card, .futuristic-adv-card, .use-case-card, and their headings and paragraphs are left-aligned for English */
-.advantage-card,
+/* === Center Key Advantages Section (EN) === */
 .futuristic-adv-card,
-.use-case-card {
-  text-align: left !important;
-}
-
-.advantage-card *,
-.futuristic-adv-card *,
-.use-case-card * {
-  text-align: left !important;
-  margin-left: 0 !important;
+.futuristic-adv-card * {
+  text-align: center !important;
+  margin-left: auto !important;
   margin-right: auto !important;
   display: block;
 }
 
-.hero-section + div[style*="background:var(--color-gold)"] {
-  margin-bottom: 0.7rem !important;
+/* === Center Use Cases Section (EN) === */
+.use-case-card,
+.use-case-card * {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
 }
 
-/* Prevent animation/hover effect for the costumers image in הלקוחות שלנו */
-.about-collab-logos img[src*="costumers.webp"] {
+/* === About Collaboration Logos === */
+.about-collab-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 1rem 0;
+  white-space: nowrap;
+  animation: none !important;
+}
+.about-collab-logos img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+  height: 48px;
+  background: none;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  /* Remove hover transform for client logos */
   transition: none !important;
-  transform: none !important;
+  animation: none !important;
   pointer-events: none !important;
 }
-.about-collab-logos img[src*="costumers.webp"]:hover {
+.about-collab-logos img:hover {
+  /* Remove hover effect completely */
   transform: none !important;
 }
 
-/* === Force left alignment for the first section headline after hero === */
-.gdock-card-content > h2:first-child,
-.gsmart-card-content > h2:first-child,
-.gdock-card-content > h3:first-child,
-.gsmart-card-content > h3:first-child {
+/* Left-align specific product audience headlines */
+.col-12.mb-3 > h3[style*="Who Is This Service For?"],
+.col-12.mb-3 > h3[style*="Who Is G-SERVICE For?"] {
   text-align: left !important;
   justify-content: flex-start !important;
   align-items: flex-start !important;
   margin-left: 0 !important;
   margin-right: auto !important;
   display: block !important;
-}
-
-/* === Force Centering for Products Pages Section Headlines === */
-/* Remove centering from the first section headline after hero (usually .gdock-card-content > h2 or similar) */
-.section-wrap > h2,
-.section-wrap > h3,
-.section-wrap > .text-center,
-.section-wrap > .mb-4,
-.gsmart-advantage-flip-list,
-.gsmart-advantage-flip-list *,
-.gdock-card-content > h2:not(:first-child),
-.gdock-card-content > h3:not(:first-child),
-.gdock-card-content > .text-center:not(:first-child),
-.gdock-card-content > .mb-4:not(:first-child),
-.gdock-card-content.text-center > h2,
-.gdock-card-content.text-center > h3,
-.gdock-card-content.text-center > .mb-4 {
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }

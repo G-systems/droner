@@ -890,26 +890,12 @@
           class="main-video rounded-4 shadow-lg"
           src="assets/videos/1.webm"
           controls
-          autoplay
           muted
           volume="0.15"
           style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;"
           preload="metadata"
         ></video>
       </div>
-      <script>
-        // Ensure main video plays at low volume (not muted, but low)
-        document.addEventListener('DOMContentLoaded', function() {
-          const mainVideo = document.getElementById('mainVideo');
-          if (mainVideo) {
-        mainVideo.volume = 0.15;
-        // If muted, unmute for low volume (if browser allows)
-        mainVideo.muted = false;
-        // Try to play (some browsers require user interaction)
-        mainVideo.play().catch(() => {});
-          }
-        });
-      </script>
       <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
       <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
         <div class="video-thumb-window" data-video="assets/videos/video2.webm">
@@ -1030,6 +1016,7 @@
         mainVideo.setAttribute('src', videoSrc);
         if (poster) mainVideo.setAttribute('poster', poster);
         mainVideo.load();
+        // Only play after user click
         mainVideo.play();
         setActiveThumb(videoSrc);
       });

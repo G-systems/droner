@@ -604,35 +604,33 @@
             muted 
             playsinline
           ></video>
-<script>
-  // Pause about video when not visible in viewport
-  document.addEventListener('DOMContentLoaded', function() {
-    const aboutVideo = document.getElementById('aboutVideo');
-    if (!aboutVideo) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            aboutVideo.play();
-          } else {
-            aboutVideo.pause();
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(aboutVideo);
-  });
-</script>
+          <script>
+            // Pause about video when not visible in viewport
+            document.addEventListener('DOMContentLoaded', function() {
+              const aboutVideo = document.getElementById('aboutVideo');
+              if (!aboutVideo) return;
+              const observer = new IntersectionObserver(
+                (entries) => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      aboutVideo.play();
+                    } else {
+                      aboutVideo.pause();
+                    }
+                  });
+                },
+                { threshold: 0.2 }
+              );
+              observer.observe(aboutVideo);
+            });
+          </script>
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
           <div class="about-content w-100 text-center d-flex flex-column align-items-center justify-content-center" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;" dir="ltr" lang="en">
-            <div class="w-100 d-flex flex-column align-items-center justify-content-center">
-              <h2 class="mb-3 text-center position-relative section-title" style="font-size:2.2rem;" dir="ltr">
-                Who We Are
-              </h2>
-              <span class="section-line" style="display:block; margin-left:auto; margin-right:auto; width:60px; height:4px; background:var(--color-gold); border-radius:2px;"></span>
-            </div>
+            <h2 class="mb-3 text-center position-relative section-title" style="font-size:2.2rem;" dir="ltr">
+              <span>Who We Are</span>
+            </h2>
+            <span class="section-line mx-auto"></span>
             <div class="about-text text-center w-100" style="font-size:1.22rem; font-weight:500; line-height:2.15; display:flex; align-items:center; justify-content:center;" dir="ltr">
               DRONER G-System Ltd is an advanced Israeli company developing and operating autonomous aerial systems for security, maintenance, and monitoring.
             </div>
@@ -654,12 +652,12 @@
     </div>
   </section>
   <!-- G-SMART Section -->
-  <section class="solution-section py-4 bg-dark" style="margin-top: -1rem;">
+  <section class="solution-section py-4 bg-dark" style="margin-top: -1rem;" dir="ltr">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
           <div class="solution-card h-100">
-            <h3 class="solution-title" style="text-align:left;">G-SMART – Smart Drone Control Kit</h3>
+            <h3 class="solution-title text-end" dir="ltr">G-SMART – Smart Drone Control Kit</h3>
             <p class="solution-text">
               Enables autonomous flight based on secure cellular communication (BVLOS), with no range limitation. Automatic mission planning, AI-based object detection, real-time documentation, and instant sharing.
             </p>
@@ -682,12 +680,12 @@
   </section>
 
   <!-- G-DOCK Section -->
-  <section class="solution-section py-5 bg-dark">
+  <section class="solution-section py-5 bg-dark" dir="ltr">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
           <div class="solution-card h-100">
-            <h3 class="solution-title" style="text-align:left;">G-DOCK – Autonomous Docking Stations</h3>
+            <h3 class="solution-title text-end" dir="ltr">G-DOCK – Autonomous Docking Stations</h3>
             <p class="solution-text">
               Autonomous docking and operation of drones for daily and advanced observation missions. Fully automatic operation in all weather and environments, with built-in charging, protection, and self-monitoring systems.
             </p>
@@ -710,12 +708,12 @@
   </section>
 
   <!-- G-CONTROL Section -->
-  <section class="solution-section py-5 bg-dark">
+  <section class="solution-section py-5 bg-dark" dir="ltr">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
-           <div class="solution-card h-100">
-            <h3 class="solution-title" style="text-align:left;">G-CONTROL – 24/7 Remote Manned Control Center</h3>
+          <div class="solution-card h-100">
+            <h3 class="solution-title text-end" dir="ltr">G-CONTROL – 24/7 Remote Control Center</h3>
             <p class="solution-text">
               Full professional operation, scenario management, and real-time response, including emergency reactions, routine patrols, and operational documentation.
             </p>
@@ -735,43 +733,35 @@
   <section class="py-5 bg-dark" id="advantages">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <h2 class="text-center mb-3 position-relative section-title" dir="ltr">
-         <span>Key Advantages</span>
+        <span>Key Advantages</span>
       </h2>
       <span class="section-line mx-auto"></span>
       <div class="futuristic-adv-grid">
-        <div class="futuristic-adv-card text-center" dir="ltr">
-          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h4 class="advantage-title text-center" dir="ltr">Full Control from Anywhere</h4>
-          <p class="advantage-text text-center" dir="ltr">Live video streaming, remote control and monitoring, encrypted cellular communication – unlimited range.</p>
+        <div class="futuristic-adv-card text-center d-flex flex-column align-items-center justify-content-center">
+          <div class="futuristic-adv-icon d-flex align-items-center justify-content-center"><i class="fas fa-globe"></i></div>
+          <h4 class="advantage-title text-center">Full Remote Control</h4>
+          <p class="advantage-text text-center">Live video streaming, remote control and monitoring, encrypted cellular communication – unlimited range.</p>
         </div>
-        <div class="futuristic-adv-card text-center" dir="ltr">
-          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h4 class="advantage-title text-center" dir="ltr">Immediate Event Response</h4>
-          <p class="advantage-text text-center" dir="ltr">The drone takes off autonomously in less than 3 minutes, documents, and provides real-time information.</p>
+        <div class="futuristic-adv-card text-center d-flex flex-column align-items-center justify-content-center">
+          <div class="futuristic-adv-icon d-flex align-items-center justify-content-center"><i class="fas fa-bolt"></i></div>
+          <h4 class="advantage-title text-center">Immediate Response</h4>
+          <p class="advantage-text text-center">The drone launches autonomously in under 3 minutes, records and provides real-time information.</p>
         </div>
-        <div class="futuristic-adv-card text-center" dir="ltr">
-          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h4 class="advantage-title text-center" dir="ltr">Nationwide Human Service</h4>
-          <p class="advantage-text text-center" dir="ltr">Professional operations center, pilot and technician team, 24/7 support, and binding SLA.</p>
+        <div class="futuristic-adv-card text-center d-flex flex-column align-items-center justify-content-center">
+          <div class="futuristic-adv-icon d-flex align-items-center justify-content-center"><i class="fas fa-headset"></i></div>
+          <h4 class="advantage-title text-center">Nationwide Human Service</h4>
+          <p class="advantage-text text-center">Professional operations center, pilot and technician team, 24/7 support and binding SLA.</p>
         </div>
-        <div class="futuristic-adv-card text-center" dir="ltr">
-          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h4 class="advantage-title text-center" dir="ltr">Proven Operational & Economic Benefit</h4>
-          <p class="advantage-text text-center" dir="ltr">An efficient system that reduces manpower load, improves response, and saves costs in the short and long term.</p>
+        <div class="futuristic-adv-card text-center d-flex flex-column align-items-center justify-content-center">
+          <div class="futuristic-adv-icon d-flex align-items-center justify-content-center"><i class="fas fa-chart-line"></i></div>
+          <h4 class="advantage-title text-center">Proven Operational & Economic Benefit</h4>
+          <p class="advantage-text text-center">Efficient system reduces manpower load, improves response, and saves costs short and long term.</p>
         </div>
       </div>
     </div>
   </section>
   <script>
-    // filepath: c:\Users\ארי מילר\Sites\g-system\web\index.html
+    // filepath: c:\Users\ארי מילר\Sites\g-system\web\en\index.html
     // Neon orbit carousel animation (2026 style)
     document.addEventListener('DOMContentLoaded', function() {
       const orbit = document.querySelector('.orbit-carousel');
@@ -801,81 +791,80 @@
       </h2>
       <span class="section-line mx-auto"></span>
       <div class="text-center mb-4">
-        <h4 class="fw-bold mb-2 section-title text-center">One System. Endless Applications.</h4>
-        <p class="lead mb-0 text-center" dir="ltr">
-          DRONER operates in all weather and scenarios – from emergency response to routine maintenance. The platform is flexible, customizable, and based on G-DOCK, G-SMART, and G-CONTROL systems.
+        <h4 class="fw-bold mb-2 section-title">One System. Endless Applications.</h4>
+        <p class="lead mb-0">
+          DRONER operates in all weather and every scenario – from emergency response to routine maintenance. The platform is flexible, customizable, and based on G-DOCK, G-SMART, and G-CONTROL systems.
         </p>
       </div>
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);" dir="ltr">
+          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);">
             <div class="mb-4">
-              <!-- All icons: gold color, solid background -->
-              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                 </svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Smart Security</h5>
-              <p class="mb-3 small text-center" dir="ltr">Autonomous patrols, event response, suspicious motion detection, and full documentation – 24/7, even without on-site personnel.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center">Smart Security</h5>
+              <p class="mb-3 small text-center">Autonomous patrols, event response, suspicious movement detection, and full documentation – 24/7, even without on-site personnel.</p>
             </div>
             <div class="mb-4">
-              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 3.25 2.5 6.5 6.5 11.54a1 1 0 0 0 1.5 0C16.5 15.5 19 12.25 19 9c0-3.87-3.13-7-7-7zm0 16.88C9.09 14.09 7 11.36 7 9a5 5 0 0 1 10 0c0 2.36-2.09 5.09-5 9.88zM12 11a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/>
                 </svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Fire Safety and Early Detection</h5>
-              <p class="mb-3 small text-center" dir="ltr">Planned patrols for smoke detection, abnormal temperature measurement, early warning, and real-time disaster prevention.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center">Fire Safety & Early Detection</h5>
+              <p class="mb-3 small text-center">Planned patrols for smoke detection, abnormal heat measurement, early warning, and real-time disaster prevention.</p>
             </div>
             <div>
-              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M17 10c0-2.76-2.24-5-5-5S7 7.24 7 10c0 2.08 1.28 3.84 3.09 4.58L12 21l1.91-6.42C15.72 13.84 17 12.08 17 10zm-5 3c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
                 </svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Public Order and Traffic Monitoring</h5>
-              <p class="mb-0 small text-center" dir="ltr">Aerial observation at events, monitoring crowds and vehicles, recording for documentation, and guiding forces on the ground.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center">Public Order & Traffic Monitoring</h5>
+              <p class="mb-0 small text-center">Aerial observation at events, crowd and vehicle tracking, recording for documentation, and field force guidance.</p>
             </div>
             <div class="text-center mt-4">
-              <img src="assets/images/usecase-left_result.webp" alt="Main Uses" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+              <img src="assets/images/usecase-left_result.webp" alt="Main Use Cases" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);" dir="ltr">
+          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);">
             <div class="mb-4">
-              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M21 7l-1.41-1.41L12 13.17l-4.59-4.58L6 7l6 6z"/></svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Operational Supervision and Control</h5>
-              <p class="mb-3 small text-center" dir="ltr">Monitoring construction sites, infrastructure, work areas, and warehouses – to improve processes and prevent defects.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center">Operational Supervision & Control</h5>
+              <p class="mb-3 small text-center">Monitoring construction sites, infrastructure, work areas, and warehouses – improving processes and preventing faults.</p>
             </div>
             <div class="mb-4">
-              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M20 8h-3V6a5 5 0 0 0-10 0v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-9 0V6a3 3 0 0 1 6 0v2h-6zm9 12H4V10h16z"/></svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Aerial Deliveries</h5>
-              <p class="mb-3 small text-center" dir="ltr">Delivery between secure sites (e.g., medical or technological equipment), according to BVLOS requirements and appropriate licensing.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center">Aerial Deliveries</h5>
+              <p class="mb-3 small text-center">Delivery between secure sites (such as medical or tech equipment), in accordance with BVLOS requirements and proper licensing.</p>
             </div>
             <div>
-              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+              <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M3 13h2v-2H3v2zm2 0h2v-2H5v2zm2 0h2v-2H7v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2z"/></svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">High-Rise Cleaning</h5>
-              <p class="mb-0 small text-center" dir="ltr">Integrative drone for cleaning building facades from the roof – without cranes, rappelling, or personnel dependent on height.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center">High-Rise Cleaning</h5>
+              <p class="mb-0 small text-center">Integrated drone for cleaning building facades from the roof – no cranes, rappelling, or height-dependent personnel.</p>
             </div>
             <div class="text-center mt-4">
-              <img src="assets/images/usecase-right_result.webp" alt="Additional Uses" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+              <img src="assets/images/usecase-right_result.webp" alt="Additional Use Cases" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
             </div>
           </div>
         </div>
@@ -889,32 +878,19 @@
     <h2 class="section-title mb-4 text-center" style="text-align:center !important;"><i class="fas fa-play-circle ms-2"></i>Video Gallery – DRONER in Action</h2>
     <div class="video-gallery-center-wrap d-flex flex-column align-items-center justify-content-center text-center" style="text-align:center;">
       <!-- Main Video -->
-      <div class="main-video-wrapper mb-4" style="display:flex;justify-content:center;align-items:center;">
+      <div class="main-video-wrapper mb-4">
         <video
           id="mainVideo"
           class="main-video rounded-4 shadow-lg"
           src="assets/videos/1.webm"
           controls
-          autoplay
           muted
           volume="0.15"
           style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;"
           preload="metadata"
         ></video>
       </div>
-      <script>
-        // Ensure main video plays at low volume (not muted, but low)
-        document.addEventListener('DOMContentLoaded', function() {
-          const mainVideo = document.getElementById('mainVideo');
-          if (mainVideo) {
-        mainVideo.volume = 0.15;
-        // If muted, unmute for low volume (if browser allows)
-        mainVideo.muted = false;
-        // Try to play (some browsers require user interaction)
-        mainVideo.play().catch(() => {});
-          }
-        });
-      </script>
+      <!-- Removed script that auto-plays the main video on DOMContentLoaded -->
       <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
       <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
         <div class="video-thumb-window" data-video="assets/videos/video2.webm">
@@ -1035,13 +1011,13 @@
         mainVideo.setAttribute('src', videoSrc);
         if (poster) mainVideo.setAttribute('poster', poster);
         mainVideo.load();
+        // Only play after user click
         mainVideo.play();
         setActiveThumb(videoSrc);
       });
     });
   });
 </script>
-<!-- === Video Gallery Section End === -->
 
   <!-- CTA Section -->
   <section class="cta-card text-center" data-aos="fade-up">
