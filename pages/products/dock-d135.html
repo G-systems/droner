@@ -227,7 +227,7 @@
         <img src="../../assets/images/logo-droner-dark_result.webp" alt="לוגו DRONER" height="40" decoding="async" width="120">
       </a>
       <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
-        <button id="translateToggle" class="btn btn-outline-dark">English</button>
+        <a href="../../en/pages/products/dock-d135.html" class="btn btn-outline-dark">English</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -700,29 +700,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../../js/hero-mobile-img.js"></script>
-  <script>
-    // AOS.init({
-    //   duration: 800,
-    //   once: true,
-    //   offset: 100
-    // });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Language Toggle
-      const toggleButton = document.getElementById('translateToggle');
-      if (!toggleButton) return;
-      let lang = localStorage.getItem('siteLang') || 'he';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-      toggleButton.addEventListener('click', () => {
-        lang = lang === 'he' ? 'en' : 'he';
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-        localStorage.setItem('siteLang', lang);
-      });
-    });
-  </script>
 </body>
 </html>

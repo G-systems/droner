@@ -526,19 +526,15 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
 </head>
 <body>
-  <div class="lang-toggle-wrapper">
-    <button id="translate-btn" class="translate-btn">עברית</button>
-  </div>
-
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container justify-content-center d-flex">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm position-relative w-100 d-flex">
+    <div class="lang-toggle-wrapper position-absolute start-0 ms-3" style="z-index:1051;">
+      <a href="/index.html" class="btn btn-outline-dark">עברית</a>
+    </div>
+    <div class="container">
       <a class="navbar-brand d-flex align-items-center mx-auto" href="index.html">
-        <img src="assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" decoding="async" />
+        <img src="assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" />
       </a>
-      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
-        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
-      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -585,8 +581,8 @@
     <div class="hero-content position-relative d-flex flex-column align-items-center justify-content-center text-center w-100" style="min-height: 32vh; z-index:1;">
       <div class="container d-flex flex-column align-items-center justify-content-center">
         <img src="assets/images/logo-droneryellow-dark_result.webp" alt="DRONER Logo" class="hero-logo" style="height:130px;max-width:100%;width:auto;" decoding="async">
-        <span class="d-block mt-2 fw-bold section-title" style="font-size:2.3rem; font-weight: 700; letter-spacing: 0;">Combining technology, control, and operational experience</span>
-        <p class="lead mb-0 mt-4" style="font-size:1.5rem; font-weight:500;">
+        <span class="d-block mt-2 fw-bold section-title text-center" style="font-size:2.3rem; font-weight: 700; letter-spacing: 0;">Combining technology, control, and operational experience</span>
+        <p class="lead mb-0 mt-4 text-center" style="font-size:1.5rem; font-weight:500;">
           Autonomous drone systems for on-site security and monitoring
         </p>
       </div>
@@ -630,12 +626,14 @@
 </script>
         </div>
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <div class="about-content w-100 text-center" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;" dir="ltr" lang="en">
-            <h2 class="mb-3 text-center position-relative section-title" style="font-size:2.2rem;" dir="ltr">
-              <span>Who We Are</span>
-            </h2>
-            <span class="section-line mx-auto"></span>
-            <div class="about-text text-center" style="font-size:1.22rem; font-weight:500; line-height:2.15;" dir="ltr">
+          <div class="about-content w-100 text-center d-flex flex-column align-items-center justify-content-center" style="background:var(--color-dark-bg); border-radius:18px; box-shadow:0 5px 25px rgba(0,0,0,0.07); padding:2.8rem 2.2rem;" dir="ltr" lang="en">
+            <div class="w-100 d-flex flex-column align-items-center justify-content-center">
+              <h2 class="mb-3 text-center position-relative section-title" style="font-size:2.2rem;" dir="ltr">
+                Who We Are
+              </h2>
+              <span class="section-line" style="display:block; margin-left:auto; margin-right:auto; width:60px; height:4px; background:var(--color-gold); border-radius:2px;"></span>
+            </div>
+            <div class="about-text text-center w-100" style="font-size:1.22rem; font-weight:500; line-height:2.15; display:flex; align-items:center; justify-content:center;" dir="ltr">
               DRONER G-System Ltd is an advanced Israeli company developing and operating autonomous aerial systems for security, maintenance, and monitoring.
             </div>
             <div class="text-center mt-4" dir="ltr">
@@ -661,7 +659,7 @@
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
           <div class="solution-card h-100">
-            <h3 class="solution-title">G-SMART – Smart Drone Control Kit</h3>
+            <h3 class="solution-title" style="text-align:left;">G-SMART – Smart Drone Control Kit</h3>
             <p class="solution-text">
               Enables autonomous flight based on secure cellular communication (BVLOS), with no range limitation. Automatic mission planning, AI-based object detection, real-time documentation, and instant sharing.
             </p>
@@ -689,7 +687,7 @@
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
           <div class="solution-card h-100">
-            <h3 class="solution-title">G-DOCK – Autonomous Docking Stations</h3>
+            <h3 class="solution-title" style="text-align:left;">G-DOCK – Autonomous Docking Stations</h3>
             <p class="solution-text">
               Autonomous docking and operation of drones for daily and advanced observation missions. Fully automatic operation in all weather and environments, with built-in charging, protection, and self-monitoring systems.
             </p>
@@ -717,7 +715,7 @@
       <div class="row align-items-center gy-4">
         <div class="col-lg-6 order-lg-2">
            <div class="solution-card h-100">
-            <h3 class="solution-title">G-CONTROL – 24/7 Remote Manned Control Center</h3>
+            <h3 class="solution-title" style="text-align:left;">G-CONTROL – 24/7 Remote Manned Control Center</h3>
             <p class="solution-text">
               Full professional operation, scenario management, and real-time response, including emergency reactions, routine patrols, and operational documentation.
             </p>
@@ -736,30 +734,38 @@
   <!-- Advantages Section -->
   <section class="py-5 bg-dark" id="advantages">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
-      <h2 class="text-center mb-3 position-relative section-title">
+      <h2 class="text-center mb-3 position-relative section-title" dir="ltr">
          <span>Key Advantages</span>
       </h2>
       <span class="section-line mx-auto"></span>
       <div class="futuristic-adv-grid">
-        <div class="futuristic-adv-card">
-          <div class="futuristic-adv-icon"><i class="fas fa-globe"></i></div>
-          <h4 class="advantage-title">Full Control from Anywhere</h4>
-          <p class="advantage-text">Live video streaming, remote control and monitoring, encrypted cellular communication – unlimited range.</p>
+        <div class="futuristic-adv-card text-center" dir="ltr">
+          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h4 class="advantage-title text-center" dir="ltr">Full Control from Anywhere</h4>
+          <p class="advantage-text text-center" dir="ltr">Live video streaming, remote control and monitoring, encrypted cellular communication – unlimited range.</p>
         </div>
-        <div class="futuristic-adv-card">
-          <div class="futuristic-adv-icon"><i class="fas fa-bolt"></i></div>
-          <h4 class="advantage-title">Immediate Event Response</h4>
-          <p class="advantage-text">The drone takes off autonomously in less than 3 minutes, documents, and provides real-time information.</p>
+        <div class="futuristic-adv-card text-center" dir="ltr">
+          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h4 class="advantage-title text-center" dir="ltr">Immediate Event Response</h4>
+          <p class="advantage-text text-center" dir="ltr">The drone takes off autonomously in less than 3 minutes, documents, and provides real-time information.</p>
         </div>
-        <div class="futuristic-adv-card">
-          <div class="futuristic-adv-icon"><i class="fas fa-headset"></i></div>
-          <h4 class="advantage-title">Nationwide Human Service</h4>
-          <p class="advantage-text">Professional operations center, pilot and technician team, 24/7 support, and binding SLA.</p>
+        <div class="futuristic-adv-card text-center" dir="ltr">
+          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4 class="advantage-title text-center" dir="ltr">Nationwide Human Service</h4>
+          <p class="advantage-text text-center" dir="ltr">Professional operations center, pilot and technician team, 24/7 support, and binding SLA.</p>
         </div>
-        <div class="futuristic-adv-card">
-          <div class="futuristic-adv-icon"><i class="fas fa-chart-line"></i></div>
-          <h4 class="advantage-title">Proven Operational & Economic Benefit</h4>
-          <p class="advantage-text">An efficient system that reduces manpower load, improves response, and saves costs in the short and long term.</p>
+        <div class="futuristic-adv-card text-center" dir="ltr">
+          <div class="futuristic-adv-icon" style="display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4 class="advantage-title text-center" dir="ltr">Proven Operational & Economic Benefit</h4>
+          <p class="advantage-text text-center" dir="ltr">An efficient system that reduces manpower load, improves response, and saves costs in the short and long term.</p>
         </div>
       </div>
     </div>
@@ -791,85 +797,85 @@
   <section class="py-5 bg-dark text-white" id="scenarios">
     <div class="container" data-aos="fade-up" data-aos-duration="800">
       <h2 class="text-center mb-3 position-relative section-title">
-        <span>תחומי שימוש</span>
+        <span>Use Cases</span>
       </h2>
       <span class="section-line mx-auto"></span>
       <div class="text-center mb-4">
-        <h4 class="fw-bold mb-2 section-title">מערכת אחת. אינסוף יישומים.</h4>
-        <p class="lead mb-0">
-          DRONER פועלת בכל מזג אוויר ובכל תרחיש – ממענה חירום ועד תחזוקה שוטפת. הפלטפורמה גמישה, מותאמת אישית, ומבוססת על מערכות גי דוק, גי סמארט וגי קונטרול.
+        <h4 class="fw-bold mb-2 section-title text-center">One System. Endless Applications.</h4>
+        <p class="lead mb-0 text-center" dir="ltr">
+          DRONER operates in all weather and scenarios – from emergency response to routine maintenance. The platform is flexible, customizable, and based on G-DOCK, G-SMART, and G-CONTROL systems.
         </p>
       </div>
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="card h-100 p-4 border-0 shadow use-case-card" style="background: var(--color-black);">
+          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);" dir="ltr">
             <div class="mb-4">
               <!-- All icons: gold color, solid background -->
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                 </svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2" dir="rtl">אבטחה חכמה</h5>
-              <p class="mb-3 small" dir="rtl">סיורים אוטונומיים, תגובה לאירועים, זיהוי תנועות חשודות ותיעוד מלא – 24/7, גם ללא כוח אדם בשטח.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Smart Security</h5>
+              <p class="mb-3 small text-center" dir="ltr">Autonomous patrols, event response, suspicious motion detection, and full documentation – 24/7, even without on-site personnel.</p>
             </div>
             <div class="mb-4">
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 3.25 2.5 6.5 6.5 11.54a1 1 0 0 0 1.5 0C16.5 15.5 19 12.25 19 9c0-3.87-3.13-7-7-7zm0 16.88C9.09 14.09 7 11.36 7 9a5 5 0 0 1 10 0c0 2.36-2.09 5.09-5 9.88zM12 11a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/>
                 </svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2" dir="rtl">בטיחות אש וגילוי מוקדם</h5>
-              <p class="mb-3 small" dir="rtl">סיורים מתוכננים לגילוי עשן, מדידת חום חריג, התראה מוקדמת ומניעת אסונות בזמן אמת.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Fire Safety and Early Detection</h5>
+              <p class="mb-3 small text-center" dir="ltr">Planned patrols for smoke detection, abnormal temperature measurement, early warning, and real-time disaster prevention.</p>
             </div>
             <div>
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M17 10c0-2.76-2.24-5-5-5S7 7.24 7 10c0 2.08 1.28 3.84 3.09 4.58L12 21l1.91-6.42C15.72 13.84 17 12.08 17 10zm-5 3c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
                 </svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2" dir="rtl">סדר ציבורי ומעקב תנועה</h5>
-              <p class="mb-0 small" dir="rtl">תצפית אווירית באירועים, מעקב אחר קהל ורכבים, הקלטה לתיעוד והכוונת כוחות בשטח.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Public Order and Traffic Monitoring</h5>
+              <p class="mb-0 small text-center" dir="ltr">Aerial observation at events, monitoring crowds and vehicles, recording for documentation, and guiding forces on the ground.</p>
             </div>
             <div class="text-center mt-4">
-              <img src="assets/images/usecase-left_result.webp" alt="שימושים עיקריים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+              <img src="assets/images/usecase-left_result.webp" alt="Main Uses" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="card h-100 p-4 border-0 shadow use-case-card" style="background: var(--color-black);">
+          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);" dir="ltr">
             <div class="mb-4">
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M21 7l-1.41-1.41L12 13.17l-4.59-4.58L6 7l6 6z"/></svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2" dir="rtl">פיקוח ובקרה תפעולית</h5>
-              <p class="mb-3 small" dir="rtl">מעקב אחר אתרי בנייה, תשתיות, אזורי עבודה ומחסנים – לשיפור תהליכים ומניעת ליקויים.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Operational Supervision and Control</h5>
+              <p class="mb-3 small text-center" dir="ltr">Monitoring construction sites, infrastructure, work areas, and warehouses – to improve processes and prevent defects.</p>
             </div>
             <div class="mb-4">
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M20 8h-3V6a5 5 0 0 0-10 0v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-9 0V6a3 3 0 0 1 6 0v2h-6zm9 12H4V10h16z"/></svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2" dir="rtl">משלוחים אוויריים</h5>
-              <p class="mb-3 small" dir="rtl">שילוח בין אתרים בטוחים (כגון ציוד רפואי או טכנולוגי), בהתאם לדרישות BVLOS ורישוי מתאים.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">Aerial Deliveries</h5>
+              <p class="mb-3 small text-center" dir="ltr">Delivery between secure sites (e.g., medical or technological equipment), according to BVLOS requirements and appropriate licensing.</p>
             </div>
             <div>
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
-                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
+                style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);display:flex;align-items:center;justify-content:center;margin-left:auto;margin-right:auto;">
                 <svg width="32" height="32" fill="#0b0c10" viewBox="0 0 24 24">
                   <path d="M3 13h2v-2H3v2zm2 0h2v-2H5v2zm2 0h2v-2H7v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2zm2 0h2v-2h-2v2z"/></svg>
               </span>
-              <h5 class="fw-bold use-case-title mb-2" dir="rtl">ניקוי רבי־קומות</h5>
-              <p class="mb-0 small" dir="rtl">רחפן אינטגרטיבי לניקוי חזיתות מבנים מגג הבניין – ללא מנופים, סנפלינג או כוח אדם תלוי־גובה.</p>
+              <h5 class="fw-bold use-case-title mb-2 text-center" style="text-align:center !important;" dir="ltr">High-Rise Cleaning</h5>
+              <p class="mb-0 small text-center" dir="ltr">Integrative drone for cleaning building facades from the roof – without cranes, rappelling, or personnel dependent on height.</p>
             </div>
             <div class="text-center mt-4">
-              <img src="assets/images/usecase-right_result.webp" alt="שימושים נוספים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+              <img src="assets/images/usecase-right_result.webp" alt="Additional Uses" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
             </div>
           </div>
         </div>
@@ -880,10 +886,10 @@
   <!-- === Video Gallery Section Start === -->
 <section class="section-wrap video-gallery-section py-5" style="background:rgba(255,198,92,0.05);">
   <div class="container">
-    <h2 class="section-title mb-4"><i class="fas fa-play-circle ms-2"></i>גלריית וידאו – דרונר בפעולה</h2>
-    <div class="video-gallery-center-wrap d-flex flex-column align-items-center justify-content-center">
+    <h2 class="section-title mb-4 text-center" style="text-align:center !important;"><i class="fas fa-play-circle ms-2"></i>Video Gallery – DRONER in Action</h2>
+    <div class="video-gallery-center-wrap d-flex flex-column align-items-center justify-content-center text-center" style="text-align:center;">
       <!-- Main Video -->
-      <div class="main-video-wrapper mb-4">
+      <div class="main-video-wrapper mb-4" style="display:flex;justify-content:center;align-items:center;">
         <video
           id="mainVideo"
           class="main-video rounded-4 shadow-lg"
@@ -1038,12 +1044,10 @@
 <!-- === Video Gallery Section End === -->
 
   <!-- CTA Section -->
-  <section class="cta-card" data-aos="fade-up">
-    <div class="container text-center">
-      <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>מוכן לשלב הבא?</h3>
-      <p class="cta-desc">צור איתנו קשר והצטרף למהפכת האבטחה האווירית.</p>
-      <a href="pages/contact.html" class="btn btn-cta btn-lg px-5 py-3">צור קשר</a>
-    </div>
+  <section class="cta-card text-center" data-aos="fade-up">
+    <h3 class="cta-title text-center"><i class="fa fa-paper-plane ms-2"></i>Ready for a safer future?</h3>
+    <p class="cta-desc">The DRONER team is happy to advise and provide the optimal solution for your organization.</p>
+    <a href="pages/contact.html" class="btn btn-cta btn-lg px-5 py-3">Contact Us</a>
   </section>
 
   <!-- WhatsApp Button -->
@@ -1060,12 +1064,12 @@
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <nav class="footer-links d-flex flex-wrap justify-content-center gap-3">
-            <a href="index.html" class="footer-link">בית</a>
-            <a href="pages/about.html" class="footer-link">אודות</a>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="pages/about.html" class="footer-link">About</a>
             <a href="pages/products/g-smart.html" class="footer-link">G-SMART</a>
             <a href="pages/products/dock-d135.html" class="footer-link">G-DOCK</a>
             <a href="pages/products/g-control.html" class="footer-link">G-CONTROL</a>
-            <a href="pages/contact.html" class="footer-link">צור קשר</a>
+            <a href="pages/contact.html" class="footer-link">Contact</a>
           </nav>
         </div>
         <div class="col-md-4 text-center text-md-start">
@@ -1088,7 +1092,7 @@
       </div>
       <hr class="footer-divider my-4">
       <div class="text-center small footer-copyright">
-        &copy; 2025 DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER
+        &copy; 2025 DRONER. All rights reserved. | Design: DRONER Team
       </div>
     </div>
   </footer>
@@ -1098,26 +1102,26 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
         <div class="modal-header border-warning">
-          <h5 class="modal-title">כניסת לקוחות</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
+          <h5 class="modal-title">Customer Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="loginEmail" class="form-label">אימייל</label>
+              <label for="loginEmail" class="form-label">Email</label>
               <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
             </div>
             <div class="mb-3">
-              <label for="loginPassword" class="form-label">סיסמה</label>
+              <label for="loginPassword" class="form-label">Password</label>
               <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
             </div>
             <div class="d-grid">
-              <button type="submit" class="btn btn-warning">התחבר</button>
+              <button type="submit" class="btn btn-warning">Login</button>
             </div>
           </form>
         </div>
         <div class="modal-footer border-warning text-center">
-          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
+          <small class="text-muted w-100">Forgot password? Contact us for support</small>
         </div>
       </div>
     </div>
@@ -1132,60 +1136,6 @@
       once: true,
       offset: 100
     });
-    document.addEventListener('DOMContentLoaded', () => {
-      // Language Toggle
-      const toggleButton = document.getElementById('translateToggle');
-      if (!toggleButton) return;
-      let lang = localStorage.getItem('siteLang') || 'en';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-      toggleButton.addEventListener('click', () => {
-        lang = lang === 'he' ? 'en' : 'he';
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-        localStorage.setItem('siteLang', lang);
-      });
-    });
   </script>
-  <script src="assets/js/translate.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', async () => {
-  const toggleButton = document.getElementById('translateToggle');
-  let lang = localStorage.getItem('siteLang');
-
-  if (!lang || lang === 'he') {
-    // ברירת מחדל = עברית
-    lang = 'he';
-    document.documentElement.lang = 'he';
-    document.documentElement.dir = 'rtl';
-    toggleButton.textContent = 'English';
-  } else {
-    // משתמש שכבר בחר אנגלית בעבר
-    document.documentElement.lang = 'en';
-    document.documentElement.dir = 'ltr';
-    toggleButton.textContent = 'עברית';
-    await translatePageToEnglish();
-  }
-
-  toggleButton.addEventListener('click', async () => {
-    if (lang === 'he') {
-      toggleButton.textContent = '...Translating';
-      await translatePageToEnglish();
-      lang = 'en';
-      toggleButton.textContent = 'עברית';
-      document.documentElement.lang = 'en';
-      document.documentElement.dir = 'ltr';
-    } else {
-      lang = 'he';
-      location.reload(); // חזרה לעברית מהתחלה
-    }
-
-    localStorage.setItem('siteLang', lang);
-  });
-});
-
-</script>
 </body>
 </html>

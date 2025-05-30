@@ -22,6 +22,7 @@ body, html {
   font-family: var(--font-main);
   background: var(--color-dark-bg);
   color: var(--color-light);
+  direction: rtl;
 }
 
 /* === Typography === */

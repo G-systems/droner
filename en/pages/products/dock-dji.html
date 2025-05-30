@@ -231,8 +231,8 @@
       <a class="navbar-brand d-flex align-items-center mx-auto" href="../../index.html">
         <img src="../../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" decoding="async" width="120">
       </a>
-      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
-        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      <div class="lang-toggle-wrapper position-absolute end-0 me-3">
+        <a href="/pages/products/dock-dji.html" class="btn btn-outline-dark">עברית</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -274,7 +274,7 @@
 
   <!-- HERO -->
   <section class="hero-section" style="background: url('../../assets/images/dockdjihero_result.webp') center center/cover no-repeat;">
-    <div class="hero-content">
+    <div class="hero-content text-center">
       <h1>DJI Dock 2 & DJI Dock 3</h1>
       <p class="lead">Autonomous docking stations by DJI for DRONER – full integration, high reliability, easy control</p>
     </div>
@@ -309,7 +309,7 @@
         </div>
       </div>
       <!-- Feature Grid -->
-      <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
+      <div class="row g-4 justify-content-center align-items-stretch text-center" style="--bs-gutter-x:2.5rem;">
         <div class="col-12 col-md-6 col-lg-4 d-flex">
           <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
             <div class="feature-tile-icon mb-3"><i class="fas fa-cubes"></i></div>
@@ -402,7 +402,7 @@
   </section>
   <!-- Advantages Section (flip cards style) -->
   <section class="section-wrap" data-aos="fade-up">
-    <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Advantages</h2>
+    <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Benefits</h2>
     <div class="gsmart-advantage-flip-list justify-content-center text-center">
       <div class="gsmart-advantage-flip-card">
         <div class="gsmart-advantage-flip-inner">
@@ -457,8 +457,8 @@
   <!-- Video Card -->
   <section class="gdock-card section-wrap" data-aos="fade-up">
     <div class="gdock-card-content text-center">
-      <h2 class="mb-4"><i class="fas fa-video ms-2"></i>See DJI Dock Stations in Action</h2>
-      <div class="row justify-content-center g-4">
+      <h2 class="mb-4"><i class="fas fa-video ms-2"></i>See DJI Dock in Action</h2>
+      <div class="row justify-content-center g-4 text-center">
         <div class="col-12 col-md-6">
           <div class="ratio ratio-16x9 rounded shadow overflow-hidden">
             <iframe width="897" height="505" src="https://www.youtube.com/embed/OwUwgpqgcMA" title="Introducing DJI Dock 3: Rise to Any Challenge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
@@ -480,7 +480,7 @@
     </p>
   </div>
   <!-- CTA Card -->
-  <section class="cta-card section-wrap" data-aos="fade-up">
+  <section class="cta-card section-wrap text-center" data-aos="fade-up">
     <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Want to See DJI Dock in Action?</h3>
     <p class="cta-desc">Contact the DRONER team and we will be happy to demonstrate the station at your site.</p>
     <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">Schedule a Demo</a>
@@ -563,45 +563,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../../js/hero-mobile-img.js"></script>
-  <script>
-    // AOS.init({
-    //   duration: 800,
-    //   once: true,
-    //   offset: 100
-    // });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Rolling effect for features
-      const featureList = document.querySelector('.gdock-feature-list');
-      const featureCards = featureList ? featureList.querySelectorAll('.gdock-feature-item') : [];
-      featureList && featureList.addEventListener('scroll', () => {
-        const listRect = featureList.getBoundingClientRect();
-        featureCards.forEach(card => {
-          const cardRect = card.getBoundingClientRect();
-          const cardCenter = cardRect.left + cardRect.width / 2;
-          const listCenter = listRect.left + listRect.width / 2;
-          const offset = (cardCenter - listCenter) / listRect.width;
-          card.style.transform = `rotateY(${offset * 18}deg) scale(${1 - Math.abs(offset) * 0.08})`;
-        });
-      });
-      featureList && featureList.dispatchEvent(new Event('scroll'));
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleButton = document.getElementById('translateToggle');
-      if (!toggleButton) return;
-      let lang = localStorage.getItem('siteLang') || 'he';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-      toggleButton.addEventListener('click', () => {
-        lang = lang === 'he' ? 'en' : 'he';
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-        localStorage.setItem('siteLang', lang);
-      });
-    });
-  </script>
 </body>
 </html>

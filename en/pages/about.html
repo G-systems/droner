@@ -163,14 +163,14 @@
 </head>
 <body>
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container justify-content-center d-flex">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm position-relative w-100 d-flex">
+    <div class="lang-toggle-wrapper position-absolute start-0 ms-3" style="z-index:1051;">
+      <a href="/pages/about.html" class="btn btn-outline-dark">עברית</a>
+    </div>
+    <div class="container">
       <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
         <img src="../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" />
       </a>
-      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
-        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
-      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -218,11 +218,11 @@
           <br>
           <img src="../assets/images/logo-droneryellow-dark_result.webp" alt="DRONER Logo" style="height: 110px; border-radius: 12px; padding: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.07); background: none; margin-top: 0.5rem;" decoding="async">
         </h1>
-        <p>Advanced Autonomous Drone Solutions for Security and Monitoring</p>
+        <p class="text-center">Advanced Autonomous Drone Solutions for Security and Monitoring</p>
         <div class="about-collab-logos mt-4">
-          <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="filter: drop-shadow(0 0 8px #2196f3);" loading="lazy" decoding="async" height="48">
-          <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" loading="lazy" decoding="async" height="48">
           <img src="../assets/images/logo-gsystem.png" alt="G-System" title="G-System" style="height: 120px; max-width: 300px;" loading="lazy" decoding="async" height="120">
+          <img src="../assets/images/logo-flightops.png" alt="FlightOps" title="FlightOps" loading="lazy" decoding="async" height="48">
+          <img src="../assets/images/logo-heisha.png" alt="HEISHA" title="HEISHA" style="filter: drop-shadow(0 0 8px #2196f3);" loading="lazy" decoding="async" height="48">
         </div>
       </div>
     </div>
@@ -437,23 +437,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../js/hero-mobile-img.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Language Toggle
-      const toggleButton = document.getElementById('translateToggle');
-      if (!toggleButton) return;
-      let lang = localStorage.getItem('siteLang') || 'en';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-      toggleButton.addEventListener('click', () => {
-        lang = lang === 'he' ? 'en' : 'he';
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-        localStorage.setItem('siteLang', lang);
-      });
-    });
-  </script>
 </body>
 </html>

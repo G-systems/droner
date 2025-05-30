@@ -226,8 +226,8 @@
       <a class="navbar-brand d-flex align-items-center mx-auto" href="../../index.html">
         <img src="../../assets/images/logo-droner-dark_result.webp" alt="DRONER Logo" height="40" decoding="async" width="120">
       </a>
-      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
-        <button id="translateToggle" class="btn btn-outline-dark">עברית</button>
+      <div class="lang-toggle-wrapper position-absolute end-0 me-3">
+        <a href="/pages/products/dock-d135.html" class="btn btn-outline-dark">עברית</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -269,7 +269,7 @@
 
   <!-- HERO -->
 <section class="hero-section" style="background: url('../../assets/images/doc135hero_result.webp') center center/cover no-repeat;">
-  <div class="hero-content">
+  <div class="hero-content text-center">
     <h1>G-DOCK</h1>
     <p class="lead">Autonomous docking stations for Matrice 300/350 and Matrice 30 drones – full integration, high reliability, easy control</p>
   </div>
@@ -308,7 +308,7 @@
       </div>
     </div>
     <!-- NEW: Feature Grid for D135 -->
-    <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
+    <div class="row g-4 justify-content-center align-items-stretch text-center" style="--bs-gutter-x:2.5rem;">
       <div class="col-12 col-md-6 col-lg-4 d-flex">
         <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
           <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
@@ -542,7 +542,7 @@
 </section>
 <!-- יתרונות ללקוח (flip cards) -->
 <section class="section-wrap" data-aos="fade-up">
-  <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Advantages</h2>
+  <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Benefits</h2>
   <div class="gsmart-advantage-flip-list justify-content-center text-center">
     <div class="gsmart-advantage-flip-card">
       <div class="gsmart-advantage-flip-inner">
@@ -596,8 +596,8 @@
 </section>
 <!-- Video Section -->
 <section class="section-wrap my-5" data-aos="fade-up">
-  <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>See the D135 and D100 Stations in Action</h2>
-  <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
+  <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>See D135 & D100 in Action</h2>
+  <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto text-center" style="max-width: 900px;">
     <iframe
       src="https://www.youtube.com/embed/vObzXoIOyNA"
       title="See the D135 and D100 Stations in Action"
@@ -700,29 +700,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../../js/hero-mobile-img.js"></script>
-  <script>
-    // AOS.init({
-    //   duration: 800,
-    //   once: true,
-    //   offset: 100
-    // });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Language Toggle
-      const toggleButton = document.getElementById('translateToggle');
-      if (!toggleButton) return;
-      let lang = localStorage.getItem('siteLang') || 'he';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-      toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-      toggleButton.addEventListener('click', () => {
-        lang = lang === 'he' ? 'en' : 'he';
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-        toggleButton.textContent = lang === 'he' ? 'English' : 'עברית';
-        localStorage.setItem('siteLang', lang);
-      });
-    });
-  </script>
 </body>
 </html>
