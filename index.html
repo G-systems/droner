@@ -524,6 +524,10 @@
 
   </style>
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 </head>
 <body>
   <div class="lang-toggle-wrapper">
@@ -608,6 +612,7 @@
             loop 
             muted 
             playsinline
+            loading="lazy"
           ></video>
 <script>
   // Pause about video when not visible in viewport
@@ -894,30 +899,31 @@
           volume="0.15"
           style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;"
           preload="metadata"
+          loading="lazy"
         ></video>
       </div>
       <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
       <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
         <div class="video-thumb-window" data-video="assets/videos/video2.webm">
-          <video src="assets/videos/video2.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/video2.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video3.webm">
-          <video src="assets/videos/video3.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/video3.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video4.webm">
-          <video src="assets/videos/video4.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/video4.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video5.webm">
-          <video src="assets/videos/video5.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/video5.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video6.webm">
-          <video src="assets/videos/video6.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/video6.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video7.webm">
-          <video src="assets/videos/video7.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/video7.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/1.webm">
-          <video src="assets/videos/1.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata"></video>
+          <video src="assets/videos/1.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
         </div>
       </div>
     </div>
