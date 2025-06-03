@@ -2124,3 +2124,45 @@ button.btn-warning .fa-user {
 .about-collab-logos img[src*="costumers.webp"]:hover {
   transform: none !important;
 }
+
+/* === Force Center Hero Section Text and Consistent Sizing === */
+.hero-section .hero-content,
+.hero-section .hero-content *,
+.hero-section h1,
+.hero-section p,
+.hero-section .lead {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+  width: 100%;
+}
+
+.hero-section h1 {
+  font-size: 2.3rem !important;
+  color: var(--color-gold) !important;
+  font-weight: 700;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  margin-bottom: 1rem;
+}
+
+.hero-section p,
+.hero-section .lead {
+  font-size: 1.35rem !important;
+  color: var(--color-light) !important;
+  text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive: match font size on mobile */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.5rem !important;
+  }
+  .hero-section p,
+  .hero-section .lead {
+    font-size: 1.05rem !important;
+  }
+}
