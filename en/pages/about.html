@@ -20,8 +20,10 @@
     .about-hero {
       position: relative;
       min-height: 340px;
+      height: 38vw;
+      max-height: 420px;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       overflow: hidden;
       z-index: 1;
@@ -30,6 +32,7 @@
     .about-hero .container {
       position: relative;
       z-index: 2;
+      width: 100%;
     }
     .about-hero h1 {
       /* Remove font-size, font-family, letter-spacing, etc. to use global style */
@@ -217,14 +220,18 @@
   <!-- Navbar End -->
 
   <!-- Hero Section -->
-  <section class="about-hero" style="background: url('../assets/images/hero-bg_result.webp') center center/cover no-repeat;">
-    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 340px; padding-top: 80px;">
-      <div class="text-center" data-aos="fade-up">
+  <section class="about-hero" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
+    <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
+      <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+    </div>
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="width:100%;position:relative;z-index:2;">
+      <div class="text-center" data-aos="fade-up" style="padding-bottom:2.5rem;">
         <span class="d-block mt-2 fw-bold section-title text-center" style="font-size:2.3rem; font-weight:700; color:var(--color-gold);">DRONER - The Company Behind the Solution</span>
         
         <p class="text-center">Meet the structure, experience, and people that enable us to deliver operational excellence at the frontline</p>
       </div>
     </div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:1;"></div>
   </section>
   <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 

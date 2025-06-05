@@ -33,7 +33,7 @@
       top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
     }
     .careers-hero .image-container img {
-      width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);
+      width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
     }
     .careers-hero .hero-content {
       position: relative;
@@ -205,14 +205,15 @@
   <!-- Navbar End -->
 
   <!-- Hero Section -->
-  <section class="careers-hero hero-section-padding">
-    <div class="image-container">
-      <img src="../assets/images/hero-bg_result.webp" alt="רקע קריירה" decoding="async" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.55);">
+  <section class="careers-hero hero-section-padding" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
+    <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
+      <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
-    <div class="hero-content">
+    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;">
       <h1>קריירה בדרונר</h1>
       <p class="lead">הצטרפו אלינו והיו חלק מצוות פורץ דרך בתחום האבטחה האווירית והרחפנים האוטונומיים</p>
     </div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:1;"></div>
   </section>
   <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 

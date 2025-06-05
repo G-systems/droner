@@ -284,94 +284,59 @@ h3, h4, h5 {
 
 /* === Hero Section === */
 .hero-section {
+  /* Remove min-height/height and let image define height */
   position: relative;
   width: 100%;
-  min-height: 340px;
-  display: flex;
-  align-items: center; /* vertically center */
-  justify-content: center; /* horizontally center */
-  background: var(--color-dark-bg);
+  height: auto;
+  border-radius: 0 0 28px 28px;
   overflow: hidden;
-  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+  padding: 0; /* Remove padding that forces height */
 }
-.hero-section .video-container,
-.hero-section video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.hero-section .video-container { z-index: 1; overflow: hidden; }
-.hero-section video {
-  object-fit: cover;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 1;
-  pointer-events: none;
+.hero-section .image-container,
+.hero-section img {
   display: block;
-  background: #000;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  /* No fixed height, let image aspect ratio define section height */
+  filter: brightness(0.55);
 }
 .hero-section .hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 5rem 2rem 2.5rem 2rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center; /* vertically center content inside hero-content */
-  height: 100%;
-  min-height: 220px;
-  text-align: left;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: none;
+  height: 100%;
+  padding: 0 2rem;
+  pointer-events: none;
 }
-.hero-section h1,
-.hero-section .display-4 {
-  font-size: 2.8rem;
-  margin-bottom: 1.2rem;
-  color: var(--color-gold);
-  text-shadow: 0 4px 24px rgba(0,0,0,0.45);
-  letter-spacing: 1px;
-  text-align: left;
+.hero-section .hero-content > * {
+  pointer-events: auto;
 }
-.hero-section p,
-.hero-section .lead {
-  font-size: 1.35rem;
-  margin-bottom: 1.5rem;
-  color: var(--color-light);
-  text-shadow: 0 2px 8px rgba(255,214,0,0.15);
-  text-align: left;
-}
-.hero-section .btn {
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
-  background: var(--color-gold);
-  color: var(--color-black);
-  border: none;
-  transition: background var(--transition), color var(--transition);
-}
-.hero-section .btn:hover {
-  background: var(--color-brand);
-  color: var(--color-black);
-}
-.hero-section .hero-logo,
-.hero-section .logo-hero,
-.hero-section img.hero-logo {
-  height: 130px !important;
-  max-width: 100%;
-  width: auto;
-}
-@media (max-width: 767px) {
-  .hero-section .hero-content { padding-top: 4rem; padding-bottom: 0.7rem; }
-  .hero-section { min-height: 340px; }
-  .hero-section h1,
-  .hero-section .display-4 { font-size: 2rem; }
-  .hero-section p,
-  .hero-section .lead { font-size: 1.05rem; }
+@media (max-width: 768px) {
+  .hero-section {
+    /* Remove min-height, let image scale */
+    padding: 0;
+  }
+  .hero-section .hero-content {
+    padding: 0 0.7rem;
+  }
 }
 
 /* Center hero and about-hero sections on all pages */
