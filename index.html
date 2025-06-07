@@ -16,6 +16,7 @@
       font-family: 'Rubik', sans-serif;
       background: var(--color-dark-bg);
       color: var(--color-light);
+      padding-top: 70px; /* Height of navbar */
     }
     .section-title {
       color: var(--color-gold) !important;
@@ -84,6 +85,27 @@
     }
     .form-label {
       color: var(--color-gold) !important;
+    }
+    /* Reserve space for navbar to prevent layout shift */
+    .navbar {
+      min-height: 70px;
+    }
+    /* Reserve space for hero section */
+    .hero-section {
+      min-height: 340px;
+      height: 38vw;
+      max-height: 420px;
+    }
+    /* Ensure all images and videos have aspect-ratio or fixed size */
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: attr(width) / attr(height);
+    }
+    /* Prevent layout shift for modal */
+    .modal-dialog {
+      min-height: 300px;
     }
     /* Responsive */
     @media (max-width: 768px) {
@@ -519,9 +541,10 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 </head>
 <body>
-  <div class="lang-toggle-wrapper">
+  <!-- Remove this duplicate language toggle -->
+  <!-- <div class="lang-toggle-wrapper">
     <a href="en/index.html" class="btn btn-outline-dark">English</a>
-  </div>
+  </div> -->
 
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
@@ -573,7 +596,7 @@
   <!-- Hero Section -->
   <section class="hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
     <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
-      <img src="assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+      <img src="assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" width="1920" height="420">
     </div>
     <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:none;">
       <div class="container d-flex flex-column align-items-center justify-content-center">
@@ -603,6 +626,7 @@
             muted 
             playsinline
             loading="lazy"
+            width="820" height="410"
           ></video>
 <script>
   // Pause about video when not visible in viewport
@@ -833,7 +857,7 @@
               <p class="mb-0 small" dir="rtl">תצפית אווירית באירועים, מעקב אחר קהל ורכבים, הקלטה לתיעוד והכוונת כוחות בשטח.</p>
             </div>
             <div class="text-center mt-4">
-              <img src="assets/images/usecase-left_result.webp" alt="שימושים עיקריים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+              <img src="assets/images/usecase-left_result.webp" alt="שימושים עיקריים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy" width="380" height="220">
             </div>
           </div>
         </div>
@@ -867,7 +891,7 @@
               <p class="mb-0 small" dir="rtl">רחפן אינטגרטיבי לניקוי חזיתות מבנים מגג הבניין – ללא מנופים, סנפלינג או כוח אדם תלוי־גובה.</p>
             </div>
             <div class="text-center mt-4">
-              <img src="assets/images/usecase-right_result.webp" alt="שימושים נוספים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy">
+              <img src="assets/images/usecase-right_result.webp" alt="שימושים נוספים" class="img-fluid rounded-3 shadow" style="max-width: 380px; width: 100%; height: auto;" loading="lazy" width="380" height="220">
             </div>
           </div>
         </div>
@@ -892,30 +916,31 @@
           style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;"
           preload="metadata"
           loading="lazy"
+          width="700" height="394"
         ></video>
       </div>
       <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
       <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
         <div class="video-thumb-window" data-video="assets/videos/video2.webm">
-          <video src="assets/videos/video2.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/video2.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video3.webm">
-          <video src="assets/videos/video3.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/video3.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video4.webm">
-          <video src="assets/videos/video4.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/video4.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video5.webm">
-          <video src="assets/videos/video5.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/video5.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video6.webm">
-          <video src="assets/videos/video6.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/video6.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/video7.webm">
-          <video src="assets/videos/video7.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/video7.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
         <div class="video-thumb-window" data-video="assets/videos/1.webm">
-          <video src="assets/videos/1.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+          <video src="assets/videos/1.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy" width="140" height="79"></video>
         </div>
       </div>
     </div>
