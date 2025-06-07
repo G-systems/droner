@@ -1946,17 +1946,6 @@ button.btn-warning .fa-user {
     padding-bottom: 0.7rem !important;
     scroll-snap-type: x mandatory !important;
   }
-  .gdock-feature-item,
-  .gsmart-feature-item,
-  .gsmart-advantage-flip-card,
-  .gdock-advantage-flip-card,
-  .advantage-card,
-  .feature-card {
-    min-width: 220px !important;
-    max-width: 260px !important;
-    flex: 0 0 220px !important;
-    scroll-snap-align: start !important;
-  }
 }
 
 /* Hide scrollbars for horizontal lists */
@@ -2165,4 +2154,20 @@ button.btn-warning .fa-user {
   .hero-section .lead {
     font-size: 1.05rem !important;
   }
+}
+
+/* === Font Faces === */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7FqjXw.woff2') format('woff2');
 }
