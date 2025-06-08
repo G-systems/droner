@@ -1204,69 +1204,67 @@
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="background:var(--color-dark-bg); color:var(--color-light);">
-        <div class="modal-header border-0">
-          <h5 class="modal-title" id="loginModalLabel" style="color:var(--color-gold);">כניסה למערכת</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="loginModalLabel">כניסת לקוחות</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
         </div>
         <div class="modal-body">
-          <form id="loginForm">
+          <form>
             <div class="mb-3">
-              <label for="username" class="form-label" style="color:var(--color-gold);">שם משתמש</label>
-              <input type="text" class="form-control" id="username" required style="background:var(--color-dark-bg); color:var(--color-light); border:1px solid var(--color-gold);">
+              <label for="loginEmail" class="form-label">אימייל</label>
+              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label" style="color:var(--color-gold);">סיסמה</label>
-              <input type="password" class="form-control" id="password" required style="background:var(--color-dark-bg); color:var(--color-light); border:1px solid var(--color-gold);">
+              <label for="loginPassword" class="form-label">סיסמה</label>
+              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
             </div>
-            <div class="mb-4 text-center">
-              <button type="submit" class="btn btn-cta btn-lg px-4 py-2" style="width:100%; max-width:300px;">כניסה</button>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-warning">התחבר</button>
             </div>
           </form>
-          <div class="text-center">
-            <a href="#" class="text-decoration-none" style="color:var(--color-gold);">שכחת סיסמה?</a>
-          </div>
+        </div>
+        <div class="modal-footer border-warning text-center">
+          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
         </div>
       </div>
     </div>
   </div>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/972523876112" class="whatsapp-float" target="_blank" aria-label="WhatsApp" style="position:fixed;bottom:24px;left:24px;z-index:1200;width:60px;height:60px;display:block;padding:0;background:none;box-shadow:none;border:none;">
-  <img src="assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async" style="width:60px;height:60px;display:block;background:none;box-shadow:none;border:none;">
-</a>
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    left: 24px;
-    z-index: 1200;
-    width: 60px;
-    height: 60px;
-    display: block;
-    padding: 0;
-    background: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    transition: transform 0.18s;
-  }
-  .whatsapp-float:hover {
-    transform: scale(1.08);
-  }
-  @media (max-width: 600px) {
-    .whatsapp-float {
-      width: 48px;
-      height: 48px;
-      left: 12px;
-      bottom: 12px;
+  <!-- Add custom modal positioning styles -->
+  <style>
+    /* Ensure modal is centered vertically */
+    .modal-dialog.modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      min-height: calc(100% - 1rem);
+      margin: 0 auto;
     }
-    .whatsapp-float img {
-      width: 48px;
-      height: 48px;
+    
+    /* Fix modal backdrop to cover entire viewport */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
-  }
-</style>
+    
+    /* Ensure modal shows in center of screen */
+    .modal {
+      display: none;
+    }
+    
+    .modal.show {
+      display: block;
+      padding-right: 17px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  </style>
+
   <!-- Defer all scripts -->
+  <script src="../../assets/js/whatsapp.js"></script>
   <script src="../../assets/js/accessibility.js" defer></script>
   <script src="../../assets/js/starfield-overlay.js" defer></script>
   <script src="../../assets/js/gradient-background.js" defer></script>
