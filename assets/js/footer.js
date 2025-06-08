@@ -30,7 +30,7 @@
       const footer = document.createElement('footer');
       footer.className = 'main-footer-modern py-5';
       footer.innerHTML = isEnglish ? generateFooter({
-        logoUrl: `${getRelativePath()}assets/images/bothlogos.webp`,
+        logoUrl: `${getRelativePath()}assets/images/bothlogos3.webp`,
         links: [
           { href: `${getRelativePath()}index.html`, label: 'Home' },
           { href: `${getRelativePath()}pages/about.html`, label: 'About' },
@@ -47,7 +47,7 @@
         copyright: `&copy; ${new Date().getFullYear()} DRONER. All rights reserved. | Design: DRONER Team`,
         dir: 'ltr'
       }) : generateFooter({
-        logoUrl: `${getRelativePath()}assets/images/bothlogos.webp`,
+        logoUrl: `${getRelativePath()}assets/images/bothlogos3.webp`,
         links: [
           { href: `${getRelativePath()}index.html`, label: 'בית' },
           { href: `${getRelativePath()}pages/about.html`, label: 'אודות' },
