@@ -426,9 +426,41 @@
     </div>
   </div>
 
-  <a href="https://wa.me/972523876112" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
-    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" decoding="async">
-  </a>
+  <!-- WhatsApp Button -->
+<a href="https://wa.me/972523876112" class="whatsapp-float" target="_blank" aria-label="WhatsApp" style="position:fixed;bottom:24px;left:24px;z-index:1200;width:60px;height:60px;display:block;padding:0;background:none;box-shadow:none;border:none;">
+  <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async" style="width:60px;height:60px;display:block;background:none;box-shadow:none;border:none;">
+</a>
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 1200;
+    width: 60px;
+    height: 60px;
+    display: block;
+    padding: 0;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    transition: transform 0.18s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+  }
+  @media (max-width: 600px) {
+    .whatsapp-float {
+      width: 48px;
+      height: 48px;
+      left: 12px;
+      bottom: 12px;
+    }
+    .whatsapp-float img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>
   <script src="../assets/js/accessibility.js" defer></script>
   <script src="../assets/js/starfield-overlay.js" defer></script>
   <script src="../assets/js/gradient-background.js" defer></script>

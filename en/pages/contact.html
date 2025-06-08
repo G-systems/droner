@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact DRONER</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style-en.css">
+  <link rel="preload" as="image" href="../assets/images/hero-bg_result.webp" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
   <meta http-equiv="Cache-control" content="public">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" as="image" href="../assets/images/contact-hero.webp" fetchpriority="high">
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32" />
   <style>
     :root {
       --color-dark-bg: #121212;
@@ -354,10 +354,49 @@
     </div>
   </div>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/972523876112" class="whatsapp-float d-flex align-items-center justify-content-center" target="_blank" aria-label="WhatsApp" style="width: 60px; height: 60px;">
-    <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async">
-  </a>
+   <!-- WhatsApp Button -->
+<a href="https://wa.me/972523876112" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <img src="../assets/images/whatsapp-1623579_1920.png" alt="WhatsApp" width="60" height="60" loading="lazy" decoding="async">
+</a>
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1200;
+    width: 60px;
+    height: 60px;
+    display: block;
+    padding: 0;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    transition: transform 0.18s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+  }
+  .whatsapp-float img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+  @media (max-width: 600px) {
+    .whatsapp-float {
+      width: 48px;
+      height: 48px;
+      right: 12px;
+      bottom: 12px;
+    }
+    .whatsapp-float img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>
 
   <!-- Footer for pages folder -->
   <footer class="main-footer-modern py-5">
@@ -375,8 +414,8 @@
             <a href="products/g-control.html" class="footer-link">G-CONTROL</a>
             <a href="contact.html" class="footer-link">Contact</a>
             <a href="FAQ.html" class="footer-link">FAQ</a>
-            <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-            <a href="../terms-of-service.html" class="footer-link">Terms of Service</a>
+            <a href="privacy-policy.html" class="footer-link">Terms of Service</a>
+            <a href="../terms-of-service.html" class="footer-link">Privacy Policy</a>
           </nav>
         </div>
         <div class="col-md-4 text-center text-md-start">
