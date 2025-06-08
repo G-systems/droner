@@ -43,13 +43,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const style = document.createElement("style");
   style.innerHTML = `
     #accessibility-button {
-      position: fixed; bottom: 20px; left: 20px; z-index: 9999;
-      background: #FFD700; color: white; border-radius: 50%;
-      font-size: 1.5rem; width: 48px; height: 48px;
-      text-align: center; line-height: 48px; cursor: pointer;
+      position: fixed; bottom: 5px; left: 20px; z-index: 9999;
+      background: transparent; color: #0066cc;
+      font-size: 3rem; cursor: pointer;
+      border: none; outline: none; box-shadow: none;
+      display: flex; align-items: center; justify-content: center;
     }
     #accessibility-bar {
-      position: fixed; bottom: 80px; left: 20px;
+      position: fixed; bottom: 65px; left: 20px;
       background: #fff; color: #000; padding: 1rem;
       border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.2);
       display: none; flex-direction: column; gap: 0.5rem;
