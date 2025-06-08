@@ -930,43 +930,45 @@
   <div class="container">
     <h2 class="section-title mb-4 text-center" style="text-align:center !important;"><i class="fas fa-play-circle ms-2"></i>Video Gallery – DRONER in Action</h2>
     <div class="video-gallery-center-wrap d-flex flex-column align-items-center justify-content-center text-center" style="text-align:center;">
-      <!-- Main Video -->
+      <!-- Main Video (Vimeo) -->
       <div class="main-video-wrapper mb-4">
-        <video
-          id="mainVideo"
-          class="main-video rounded-4 shadow-lg"
-          src="assets/videos/1.webm"
-          controls
-          muted
-          volume="0.15"
-          style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;"
-          preload="metadata"
-          loading="lazy"
-        ></video>
+        <div id="mainVimeoWrapper" class="main-video rounded-4 shadow-lg" style="width: min(95vw, 700px); max-width: 700px; aspect-ratio: 16/9; background:#000;">
+          <iframe id="mainVimeoFrame"
+            src="https://player.vimeo.com/video/1091659879?h=c617e29cb7&autoplay=0&title=0&byline=0&portrait=0"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="DRONER Aerial Solutions"
+            loading="lazy">
+          </iframe>
+        </div>
       </div>
-      <!-- Removed script that auto-plays the main video on DOMContentLoaded -->
-      <!-- Surrounding Thumbnails (now just videos, no poster/thumbnail) -->
+      <!-- Vimeo Thumbnails -->
       <div class="video-thumbnails-wrap d-flex flex-wrap justify-content-center gap-3" style="max-width:900px;">
-        <div class="video-thumb-window" data-video="assets/videos/video2.webm">
-          <video src="assets/videos/video2.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659879">
+          <img data-vimeo-thumb="1091659879" alt="Video 1" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
-        <div class="video-thumb-window" data-video="assets/videos/video3.webm">
-          <video src="assets/videos/video3.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659894">
+          <img data-vimeo-thumb="1091659894" alt="Video 2" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
-        <div class="video-thumb-window" data-video="assets/videos/video4.webm">
-          <video src="assets/videos/video4.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659913">
+          <img data-vimeo-thumb="1091659913" alt="Video 3" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
-        <div class="video-thumb-window" data-video="assets/videos/video5.webm">
-          <video src="assets/videos/video5.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659924">
+          <img data-vimeo-thumb="1091659924" alt="Video 4" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
-        <div class="video-thumb-window" data-video="assets/videos/video6.webm">
-          <video src="assets/videos/video6.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659946">
+          <img data-vimeo-thumb="1091659946" alt="Video 5" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
-        <div class="video-thumb-window" data-video="assets/videos/video7.webm">
-          <video src="assets/videos/video7.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659968">
+          <img data-vimeo-thumb="1091659968" alt="Video 6" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
-        <div class="video-thumb-window" data-video="assets/videos/1.webm">
-          <video src="assets/videos/1.webm" muted class="thumb-video rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" preload="metadata" loading="lazy"></video>
+        <div class="video-thumb-window" data-vimeo-id="1091659976">
+          <img data-vimeo-thumb="1091659976" alt="Video 7" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
+        </div>
+        <div class="video-thumb-window" data-vimeo-id="1091660007">
+          <img data-vimeo-thumb="1091660007" alt="Video 8" class="thumb-img rounded-3" style="width: 140px; aspect-ratio: 16/9; object-fit:cover; background:#000;" loading="lazy">
         </div>
       </div>
     </div>
@@ -988,6 +990,7 @@
     border: 3px solid var(--color-gold);
     box-shadow: 0 8px 32px rgba(255,198,92,0.13);
     transition: box-shadow 0.2s, border-color 0.2s;
+    position: relative;
   }
   .main-video:focus {
     outline: 2px solid var(--color-gold);
@@ -1009,63 +1012,71 @@
     background: #000;
     transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
     position: relative;
-  }
-  .video-thumb-window:hover, .video-thumb-window.active {
-    transform: scale(1.07) translateY(-4px);
-    box-shadow: 0 8px 32px rgba(255,198,92,0.18);
-    border-color: #fffde7;
-    z-index: 2;
-  }
-  .thumb-video {
     width: 140px;
+    height: 79px;
+    flex: 0 0 auto;
+  }
+  .thumb-img {
+    width: 140px;
+    height: 79px;
     aspect-ratio: 16/9;
     object-fit: cover;
     background: #000;
     pointer-events: none;
     transition: filter 0.2s;
     filter: brightness(0.92) grayscale(0.08);
-  }
-  .video-thumb-window:hover .thumb-video, .video-thumb-window.active .thumb-video {
-    filter: brightness(1.05) grayscale(0);
+    display: block;
   }
   @media (max-width: 991px) {
     .main-video { max-width: 98vw; }
-    .thumb-video { width: 90px; }
+    .video-thumb-window, .thumb-img { width: 90px; height: 51px; }
   }
   @media (max-width: 600px) {
     .main-video { max-width: 100vw; }
-    .thumb-video { width: 60px; }
     .video-thumbnails-wrap { gap: 0.5rem; }
+    .video-thumb-window, .thumb-img { width: 60px; height: 34px; }
+    .video-thumb-window::after { font-size: 1rem; }
   }
 </style>
-<!-- Video Gallery JS -->
+<!-- Video Gallery JS - Updated for Vimeo -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const mainVideo = document.getElementById('mainVideo');
+    const mainVimeoWrapper = document.getElementById('mainVimeoWrapper');
+    const mainVimeoFrame = document.getElementById('mainVimeoFrame');
     const thumbWindows = document.querySelectorAll('.video-thumb-window');
-    // Set the first thumb as active if matches main video
-    function setActiveThumb(src) {
-      thumbWindows.forEach(win => {
-        if (win.getAttribute('data-video') === src) {
-          win.classList.add('active');
-        } else {
-          win.classList.remove('active');
-        }
-      });
-    }
-    setActiveThumb(mainVideo.getAttribute('src'));
+    
+    // Set the first thumb as active
+    thumbWindows[0].classList.add('active');
+    
+    // Handle thumbnail clicks
     thumbWindows.forEach(win => {
       win.addEventListener('click', function() {
-        const videoSrc = win.getAttribute('data-video');
-        const poster = win.getAttribute('data-poster');
-        mainVideo.pause();
-        mainVideo.setAttribute('src', videoSrc);
-        if (poster) mainVideo.setAttribute('poster', poster);
-        mainVideo.load();
-        // Only play after user click
-        mainVideo.play();
-        setActiveThumb(videoSrc);
+        // Update active state
+        thumbWindows.forEach(w => w.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Get Vimeo ID and update iframe
+        const vimeoId = this.getAttribute('data-vimeo-id');
+        mainVimeoFrame.setAttribute('src', 
+          `https://player.vimeo.com/video/${vimeoId}?h=c617e29cb7&autoplay=1&title=0&byline=0&portrait=0`);
       });
+    });
+
+    // Add this to fetch thumbnails automatically from Vimeo
+    document.querySelectorAll('img[data-vimeo-thumb]').forEach(function(img) {
+      const vimeoId = img.getAttribute('data-vimeo-thumb');
+      fetch(`https://vimeo.com/api/v2/video/${vimeoId}.json`)
+        .then(response => response.json())
+        .then(data => {
+          if (data && data[0] && data[0].thumbnail_large) {
+            img.src = data[0].thumbnail_large;
+          } else if (data && data[0] && data[0].thumbnail_medium) {
+            img.src = data[0].thumbnail_medium;
+          }
+        })
+        .catch(() => {
+          img.src = 'https://via.placeholder.com/140x79?text=No+Thumbnail';
+        });
     });
   });
 </script>
