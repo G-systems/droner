@@ -1,0 +1,131 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.droner.app/#organization",
+      "name": "DRONER",
+      "url": "https://www.droner.app/",
+      "sameAs": [
+        "https://www.facebook.com/dronerapp",
+        "https://www.linkedin.com/company/droner-app",
+        "https://www.instagram.com/droner_app"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.droner.app/#logo",
+        "url": "https://www.droner.app/assets/images/bothlogos3.webp",
+        "width": 120,
+        "height": 40,
+        "caption": "DRONER - Autonomous Drone Solutions"
+      },
+      "image": {
+        "@id": "https://www.droner.app/#logo"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+972-3-000-0000",
+        "contactType": "customer service",
+        "email": "info@droner.app",
+        "availableLanguage": ["Hebrew", "English"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.droner.app/#website",
+      "url": "https://www.droner.app/",
+      "name": "DRONER - Autonomous Drone Solutions",
+      "publisher": {
+        "@id": "https://www.droner.app/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.droner.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "he"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.droner.app/#webpage",
+      "url": "https://www.droner.app/",
+      "name": "DRONER - פתרונות רחפן אוטונומיים לאבטחה וניטור",
+      "isPartOf": {
+        "@id": "https://www.droner.app/#website"
+      },
+      "about": {
+        "@id": "https://www.droner.app/#organization"
+      },
+      "inLanguage": "he"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.droner.app/en/#webpage",
+      "url": "https://www.droner.app/en/",
+      "name": "DRONER - Autonomous Drone Solutions for Security and Monitoring",
+      "isPartOf": {
+        "@id": "https://www.droner.app/#website"
+      },
+      "about": {
+        "@id": "https://www.droner.app/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.droner.app/en/pages/products/g-smart.html#product",
+      "name": "G-SMART",
+      "description": "Advanced smart drone management with AI capabilities, BVLOS control, and real-time monitoring for aerial security and operations.",
+      "brand": {
+        "@type": "Brand",
+        "name": "DRONER"
+      },
+      "image": "https://www.droner.app/assets/images/hero-g-smart_result.webp",
+      "url": "https://www.droner.app/en/pages/products/g-smart.html"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.droner.app/en/pages/products/g-control.html#product",
+      "name": "G-CONTROL",
+      "description": "24/7 remote drone control center offering real-time monitoring, immediate response, and advanced operation management for security drones.",
+      "brand": {
+        "@type": "Brand",
+        "name": "DRONER"
+      },
+      "image": "https://www.droner.app/assets/images/herocontrol_result.webp",
+      "url": "https://www.droner.app/en/pages/products/g-control.html"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.droner.app/en/pages/products/dock-dji.html#product",
+      "name": "DJI Dock 2 & DJI Dock 3",
+      "description": "Autonomous docking stations by DJI for DRONER - full integration, high reliability, easy control.",
+      "brand": {
+        "@type": "Brand",
+        "name": "DJI",
+        "subOrganization": {
+          "@type": "Organization",
+          "name": "DRONER"
+        }
+      },
+      "image": "https://www.droner.app/assets/images/dockdjihero_result.webp",
+      "url": "https://www.droner.app/en/pages/products/dock-dji.html"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.droner.app/en/pages/products/dock-d135.html#product",
+      "name": "G-DOCK – D135 & D100 Stations",
+      "description": "Advanced autonomous docking stations by DRONER and HEISHA - reliable and innovative solutions for drone operation in all weather conditions.",
+      "brand": {
+        "@type": "Brand",
+        "name": "G-DOCK",
+        "subOrganization": {
+          "@type": "Organization",
+          "name": "DRONER"
+        }
+      },
+      "image": "https://www.droner.app/assets/images/doc135hero_result.webp",
+      "url": "https://www.droner.app/en/pages/products/dock-d135.html"
+    }
+  ]
+}

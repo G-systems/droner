@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2aec4175efb0ac6c01d0a8e1b7693e84a739e52e17ddfd283729339081a770d8
-size 70
+# robots.txt for www.droner.app
+User-agent: *
+Allow: /
+Allow: /en/
+
+# Sitemaps
+Sitemap: https://www.droner.app/sitemap.xml
+
+# Disallow unnecessary paths
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/fonts/
+
+# Allow access to image assets for better image search indexing
+Allow: /assets/images/
