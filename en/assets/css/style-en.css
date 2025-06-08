@@ -1036,14 +1036,6 @@ button.btn-warning .fa-user {
   }
 }
 
-/* Rolling effect on scroll (3D tilt) */
-.gsmart-feature-list,
-.gdock-feature-list,
-.gsmart-advantage-list,
-.gdock-advantage-list {
-  /* perspective: 1200px; */ /* Remove this line to prevent rolling effect */
-}
-
 /* === Creative Advantages Timeline Section === */
 .advantages-timeline {
   position: relative;

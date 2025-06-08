@@ -271,7 +271,7 @@ h3, h4, h5 {
   justify-content: center; /* vertically center content inside hero-content */
   height: 100%;
   min-height: 220px;
-  text-align: center;
+  text-align: center !important; /* Ensure text alignment is always centered */
   background: none;
 }
 .hero-section h1,
@@ -281,6 +281,8 @@ h3, h4, h5 {
   color: var(--color-gold);
   text-shadow: 0 4px 24px rgba(0,0,0,0.45);
   letter-spacing: 1px;
+  text-align: center !important; /* Ensure text alignment is always centered */
+  width: 100%; /* Ensure full width */
 }
 .hero-section p,
 .hero-section .lead {
@@ -288,6 +290,8 @@ h3, h4, h5 {
   margin-bottom: 1.5rem;
   color: var(--color-light);
   text-shadow: 0 2px 8px rgba(255,214,0,0.15);
+  text-align: center !important; /* Ensure text alignment is always centered */
+  width: 100%; /* Ensure full width */
 }
 .hero-section .btn {
   font-size: 1rem;
@@ -339,7 +343,8 @@ h3, h4, h5 {
 }
 
 .hero-section .hero-content,
-.about-hero .container {
+.about-hero .container,
+.about-hero .hero-content {  /* Added .about-hero .hero-content */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -347,10 +352,16 @@ h3, h4, h5 {
   width: 100%;
   height: 100%;
   min-height: 220px;
-  text-align: center;
+  text-align: center !important; /* Force center alignment */
   background: none;
   padding-top: 7rem;      /* much more space above */
   padding-bottom: 1.5rem; /* less space below */
+}
+
+/* Force center text for all elements in hero content */
+.hero-content *,
+.about-hero .hero-content * {
+  text-align: center !important;
 }
 
 /* === WhatsApp Button === */
@@ -1019,14 +1030,6 @@ button.btn-warning .fa-user {
     min-height: 1.7rem;
     line-height: 1.7rem;
   }
-}
-
-/* Rolling effect on scroll (3D tilt) */
-.gsmart-feature-list,
-.gdock-feature-list,
-.gsmart-advantage-list,
-.gdock-advantage-list {
-  /* perspective: 1200px; */ /* Remove this line to prevent rolling effect */
 }
 
 /* === Creative Advantages Timeline Section === */
@@ -2185,9 +2188,15 @@ button.btn-warning .fa-user {
 /* === Force Center Hero Section Text and Consistent Sizing === */
 .hero-section .hero-content,
 .hero-section .hero-content *,
+.about-hero .hero-content,
+.about-hero .hero-content *,
 .hero-section h1,
 .hero-section p,
-.hero-section .lead {
+.hero-section .lead,
+.about-hero h1,
+.about-hero p,
+.about-hero .lead,
+.about-hero .section-title {
   text-align: center !important;
   justify-content: center !important;
   align-items: center !important;

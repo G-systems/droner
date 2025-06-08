@@ -165,11 +165,40 @@
       background: var(--color-black);
     }
     @media (max-width: 768px) {
-      .about-hero h1 { font-size: 1.5rem !important; }
-      .about-section { padding: 1.5rem 1rem; }
-      .about-collab-logos { gap: 1rem; }
-      .about-gallery-row { gap: 0.7rem; }
-      .about-gallery-row img, .about-gallery-row video { width: 100%; height: 120px; }
+      .about-hero {
+        position: relative !important;
+        min-height: 380px !important;
+        height: auto !important;
+      }
+      .hero-content {
+        position: absolute !important;
+        bottom: -30px !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: auto !important;
+        padding: 1.5rem 0 4rem 0 !important;
+        margin: 0 !important;
+        background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.8) 70%, rgba(18,18,18,0.4) 100%);
+      }
+      .hero-content .section-title {
+        font-size: clamp(1.5rem, 5vw, 2rem) !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .hero-content p {
+        font-size: 1rem !important;
+        padding: 0 1.2rem !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .about-hero {
+        min-height: 360px !important;
+      }
+      .hero-content {
+        bottom: -40px !important;
+        padding: 1.5rem 0 5rem 0 !important;
+        background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.9) 75%, rgba(18,18,18,0.5) 100%);
+      }
     }
   </style>
 </head>
@@ -226,15 +255,51 @@
     <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
       <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
-    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:none;">
-      <div class="container d-flex flex-column align-items-center justify-content-center">
-        <span class="d-block mt-2 fw-bold section-title" style="font-size:2.3rem; font-weight:700; letter-spacing:0;">דרונר - החברה שמאחורי הפתרון</span>
-        <p class="lead mb-0 mt-4" style="font-size:1.3rem; font-weight:500;">
-          הכירו את המבנה, הניסיון והאנשים שמאפשרים לנו להוביל מצוינות תפעולית בחזית
-        </p>
-      </div>
+    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <span class="d-block mt-2 fw-bold section-title" style="font-size:clamp(1.8rem, 5vw, 2.3rem); font-weight:700; letter-spacing:0; color:#FFC65C; text-shadow:0 2px 10px rgba(0,0,0,0.5); margin-bottom:0.7rem;">דרונר - החברה שמאחורי הפתרון</span>
+      <p class="lead mb-0" style="font-size:clamp(1rem, 2.5vw, 1.3rem); font-weight:500; max-width:850px; text-shadow:0 2px 8px rgba(0,0,0,0.7); padding:0 1rem;">
+        הכירו את המבנה, הניסיון והאנשים שמאפשרים לנו להוביל מצוינות תפעולית בחזית
+      </p>
     </div>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:1;"></div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
+    <style>
+      @media (max-width: 768px) {
+        .about-hero {
+          position: relative !important;
+          min-height: 380px !important;
+          height: auto !important;
+        }
+        .hero-content {
+          position: absolute !important;
+          bottom: -30px !important;
+          left: 0 !important;
+          right: 0 !important;
+          top: auto !important;
+          padding: 1.5rem 0 4rem 0 !important;
+          margin: 0 !important;
+          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.8) 70%, rgba(18,18,18,0.4) 100%);
+        }
+        .hero-content .section-title {
+          font-size: clamp(1.5rem, 5vw, 2rem) !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .hero-content p {
+          font-size: 1rem !important;
+          padding: 0 1.2rem !important;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .about-hero {
+          min-height: 360px !important;
+        }
+        .hero-content {
+          bottom: -40px !important;
+          padding: 1.5rem 0 5rem 0 !important;
+          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.9) 75%, rgba(18,18,18,0.5) 100%);
+        }
+      }
+    </style>
   </section>
   <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 

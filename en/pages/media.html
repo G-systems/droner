@@ -198,16 +198,55 @@
   <!-- Navbar End -->
 
   <!-- Hero Section -->
-  <section class="media-hero hero-section-padding" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
+  <section class="hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
     <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
       <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
-    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;">
-      <h1>Media – Blogs, Events & Success Stories</h1>
-      <p class="lead">All the news, successes, and innovations from the world of drones and aerial security</p>
+    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#FFC65C;">Media – Blogs, Events & Success Stories</h1>
+      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">All the news, successes, and innovations from the world of drones and aerial security</p>
     </div>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:1;"></div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
+    <style>
+      @media (max-width: 768px) {
+        .hero-section {
+          position: relative !important;
+          min-height: 380px !important;
+          height: auto !important;
+        }
+        .hero-content {
+          position: absolute !important;
+          bottom: -30px !important;
+          left: 0 !important;
+          right: 0 !important;
+          top: auto !important;
+          padding: 1.5rem 0 4rem 0 !important;
+          margin: 0 !important;
+          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.8) 70%, rgba(18,18,18,0.4) 100%);
+        }
+        .hero-content h1 {
+          font-size: clamp(1.5rem, 5vw, 2rem) !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .hero-content p {
+          font-size: 1rem !important;
+          padding: 0 1.2rem !important;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .hero-section {
+          min-height: 360px !important;
+        }
+        .hero-content {
+          bottom: -40px !important;
+          padding: 1.5rem 0 5rem 0 !important;
+          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.9) 75%, rgba(18,18,18,0.5) 100%);
+        }
+      }
+    </style>
   </section>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 
   <!-- Blogs and Articles -->
   <section class="media-section" data-aos="fade-up">
