@@ -1,8 +1,8 @@
 (() => {
   // Configurable parameters
   const STAR_COUNT = window.innerWidth < 600 ? 40 : 90;
-  const STAR_COLOR = 'rgba(255, 215, 0, 0.75)'; // Gold, subtle
-  const STAR_COLOR_DIM = 'rgba(255, 215, 0, 0.25)';
+  const STAR_COLOR = 'rgba(57, 169, 220, 0.75)'; // Updated to --color-gold (#39A9DC)
+  const STAR_COLOR_DIM = 'rgba(57, 169, 220, 0.25)'; // Dim version
   const STAR_SIZE_MIN = 0.7;
   const STAR_SIZE_MAX = 2.2;
   const STAR_SPEED_MIN = 0.02;
@@ -113,7 +113,7 @@
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
       ctx.fillStyle = star.color;
-      ctx.shadowColor = '#ffd700';
+      ctx.shadowColor = '#39A9DC'; // Updated to --color-gold
       ctx.shadowBlur = 8 * twinkle;
       ctx.fill();
       ctx.shadowBlur = 0;

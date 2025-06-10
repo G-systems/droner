@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
       for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
-        ctx.fillStyle = `rgba(255, 215, 0, ${p.a})`;
+        ctx.fillStyle = `rgba(57, 169, 220, ${p.a})`; // Updated to --color-gold (#39A9DC)
         ctx.fill();
 
         p.x += p.dx;
@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(255, 215, 0, ${1 - dist / 100})`;
+            ctx.strokeStyle = `rgba(57, 169, 220, ${1 - dist / 100})`; // Updated to --color-gold
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

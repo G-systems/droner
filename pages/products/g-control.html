@@ -69,9 +69,9 @@
       src: url('https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7FqjXw.woff2') format('woff2');
     }
     :root {
-      --color-dark-bg: #121212;
-      --color-gold: #FFC65C;
-      --color-brand: #FFC65C;
+      --color-dark-bg: #1E1E1E;
+      --color-gold: #39A9DC;
+      --color-brand: #2A5D94;
       --color-light: #f4f4f4;
     }
     body {
@@ -80,7 +80,7 @@
       font-family: 'Rubik', sans-serif;
     }
     .gdock-card {
-      background: #141414 !important;
+      background: #22304A !important;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
@@ -145,7 +145,7 @@
     .gsmart-advantage-flip-front i {
       font-size: 2.5rem;
       margin-bottom: 0.7rem;
-      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+      filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
     }
     .gsmart-advantage-flip-back {
       background: #181818;
@@ -154,11 +154,27 @@
       font-size: 1.08rem;
       padding: 1.2rem;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+      box-shadow: 0 2px 12px rgba(57,169,220,0.13);
     }
     /* Make all icons gold by default */
     i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
       color: var(--color-gold) !important;
+    }
+    .main-footer-modern {
+      background: linear-gradient(120deg, var(--color-dark-bg) 70%, var(--color-gold) 120%) !important;
+    }
+    .main-footer-modern .footer-link:hover,
+    .main-footer-modern .footer-link:focus {
+      color: var(--color-gold);
+    }
+    .main-footer-modern .footer-contact i {
+      color: var(--color-gold);
+    }
+    .main-footer-modern .footer-social-link:hover {
+      color: var(--color-gold);
+    }
+    .main-footer-modern .footer-divider {
+      border-color: var(--color-gold);
     }
     /* --- Responsive improvements --- */
     @media (max-width: 991px) {
@@ -235,7 +251,7 @@
       <img src="../../assets/images/herocontrol_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
     <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 3.5rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#FFC65C;">G-CONTROL</h1>
+      <h1 style="font-size:clamp(2rem, 6vw, 3.5rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#2A5D94;">G-CONTROL</h1>
       <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">מוקד שליטה מרחוק 24/7 – שליטה מלאה, ניטור ותגובה</p>
     </div>
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
@@ -278,11 +294,11 @@
       }
     </style>
   </section>
-  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+  <div style="width:100%;height:2px;background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%);box-shadow:0 2px 16px 0 rgba(57,169,220,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 
   <!-- Headline for G-CONTROL -->
   <div class="text-center mb-5" style="position:relative;">
-    <span style="display:inline-block; background:linear-gradient(90deg,rgba(255,198,92,0.13) 0%,rgba(255,198,92,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(255,198,92,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
+    <span style="display:inline-block; background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(57,169,220,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
       <i class="fas fa-bolt ms-2"></i>
       G-CONTROL – מוקד שליטה חכם ומתקדם
       <i class="fas fa-eye me-2"></i>
@@ -342,7 +358,7 @@
       <div class="gsmart-advantage-flip-list justify-content-center text-center w-100">
         <div class="gsmart-advantage-flip-card">
           <div class="gsmart-advantage-flip-inner">
-            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
               <i class="fas fa-piggy-bank"></i>
               <div><b>חיסכון במשאבים</b></div>
             </div>
@@ -354,7 +370,7 @@
         </div>
         <div class="gsmart-advantage-flip-card">
           <div class="gsmart-advantage-flip-inner">
-            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
               <i class="fas fa-bolt"></i>
               <div><b>תגובה בזמן אמת</b></div>
             </div>
@@ -366,7 +382,7 @@
         </div>
         <div class="gsmart-advantage-flip-card">
           <div class="gsmart-advantage-flip-inner">
-            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
               <i class="fas fa-user-shield"></i>
               <div><b>אמינות ובטיחות</b></div>
             </div>
@@ -378,7 +394,7 @@
         </div>
         <div class="gsmart-advantage-flip-card">
           <div class="gsmart-advantage-flip-inner">
-            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+            <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
               <i class="fas fa-peace"></i>
               <div><b>שקט נפשי ללקוח</b></div>
             </div>
@@ -424,7 +440,7 @@
 
   <!-- Divider -->
   <div class="my-5 text-center">
-    <span style="display:inline-block; background:linear-gradient(90deg,rgba(255,198,92,0.13) 0%,rgba(255,198,92,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; font-size:1.5rem; font-weight:700; color:var(--color-gold); letter-spacing:2px;">
+    <span style="display:inline-block; background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; font-size:1.5rem; font-weight:700; color:var(--color-gold); letter-spacing:2px;">
       <i class="fas fa-tools ms-2"></i>G-SERVICE – שירות טכני ותחזוקה
     </span>
   </div>
@@ -475,7 +491,7 @@
     <div class="gsmart-advantage-flip-list justify-content-center text-center w-100 mt-5">
       <div class="gsmart-advantage-flip-card">
         <div class="gsmart-advantage-flip-inner">
-          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
             <i class="fas fa-bolt"></i>
             <div><b>זמינות גבוהה</b></div>
           </div>
@@ -487,7 +503,7 @@
       </div>
       <div class="gsmart-advantage-flip-card">
         <div class="gsmart-advantage-flip-inner">
-          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
             <i class="fas fa-user-check"></i>
             <div><b>מקצועיות ואמינות</b></div>
           </div>
@@ -499,7 +515,7 @@
       </div>
       <div class="gsmart-advantage-flip-card">
         <div class="gsmart-advantage-flip-inner">
-          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
             <i class="fas fa-hands-helping"></i>
             <div><b>תמיכה לאורך זמן</b></div>
           </div>
@@ -511,7 +527,7 @@
       </div>
       <div class="gsmart-advantage-flip-card">
         <div class="gsmart-advantage-flip-inner">
-          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#FFC65C 100%) !important;">
+          <div class="gsmart-advantage-flip-front" style="background:linear-gradient(120deg,#181818 60%,#2A5D94 100%) !important;">
             <i class="fas fa-peace"></i>
             <div><b>שקט תפעולי מלא</b></div>
           </div>

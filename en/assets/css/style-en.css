@@ -1,16 +1,16 @@
 /* === Unified Color Variables (from g-smart.html) === */
 :root {
-  --color-dark:  #121212;
-  --color-dark-bg: #121212;
-  --color-black: #0b0c10;
-  --color-gold: #FFC65C;
-  --color-brand: #FFC65C;
+  --color-dark:  #1E1E1E;
+  --color-dark-bg: #1E1E1E;
+  --color-black: #1E1E1E;
+  --color-gold: #39A9DC;
+  --color-brand: #2A5D94;
   --color-light: #f4f4f4;
   --color-white: #fff;
-  --color-bronze: #FFC65C; /* changed from #b08d57 */
+  --color-bronze: #39A9DC;
   --radius: 18px;
   --transition: 0.2s;
-  --shadow: 0 8px 32px rgba(0,0,0,0.10);
+  --shadow: 0 8px 32px rgba(57,169,220,0.10);
   --font-main: 'Rubik', sans-serif;
 }
 
@@ -221,7 +221,7 @@ h3, h4, h5 {
   text-align: left;
   padding: 0.25rem 0;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 32px rgba(57,169,220,0.10);
   z-index: 1050;
 }
 .dropdown-item {
@@ -410,9 +410,9 @@ h3, h4, h5 {
 /* === Cards & Features === */
 .card, .gsmart-card, .advantage-card, .solution-card, .use-case-card, .cta-card, .contact-section {
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 32px rgba(57,169,220,0.10);
   /* border: 1px solid var(--color-gold); */ /* Remove gold border */
-  background: #141414 !important;
+  background: #22304A !important;
   color: var(--color-light) !important;
 }
 .gsmart-card-content, .advantage-card > div, .solution-card > div, .use-case-card > div {
@@ -473,14 +473,14 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
 
 /* === Inputs === */
 .form-control, .form-label, input, textarea {
-  background: #141414 !important;
+  background: #22304A !important;
   color: var(--color-light) !important;
   border: 1.5px solid var(--color-gold) !important;
   border-radius: 10px;
 }
 .form-control:focus, textarea:focus {
   border-color: var(--color-brand) !important;
-  box-shadow: 0 0 0 2px rgba(255,198,92,0.15);
+  box-shadow: 0 0 0 2px rgba(57,169,220,0.15);
 }
 .form-label {
   color: var(--color-gold) !important;
@@ -491,7 +491,7 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
   background: linear-gradient(120deg, var(--color-dark) 70%, var(--color-gold) 120%) !important;
   color: var(--color-light) !important;
   border-radius: 0 0 18px 18px;
-  box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
+  box-shadow: 0 -2px 18px rgba(57,169,220,0.10);
   font-family: var(--font-main);
 }
 .main-footer-modern .footer-logo {

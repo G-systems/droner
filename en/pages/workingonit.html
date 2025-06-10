@@ -41,8 +41,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <style>
     body {
-      background: #121212;
-      color: #fff;
+      background: var(--color-dark-bg);
+      color: var(--color-light);
       font-family: 'Rubik', Arial, sans-serif;
       min-height: 100vh;
       margin: 0;
@@ -62,7 +62,7 @@
     }
     .working-icon {
       font-size: 5rem;
-      color: #FFC65C;
+      color: var(--color-gold);
       margin-bottom: 1.5rem;
       animation: spin 2.5s linear infinite;
     }
@@ -72,7 +72,7 @@
       100% { transform: rotate(-10deg);}
     }
     h1 {
-      color: #FFC65C;
+      color: var(--color-gold);
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
@@ -81,23 +81,23 @@
     }
     .subtitle {
       font-size: 1.3rem;
-      color: #fff;
+      color: var(--color-light);
       margin-bottom: 2.2rem;
       opacity: 0.92;
     }
     .progress-bar-animated {
       width: 220px;
       height: 10px;
-      background: #333;
+      background: #22304A;
       border-radius: 8px;
       overflow: hidden;
       margin: 0 auto 2.2rem auto;
-      box-shadow: 0 2px 12px #FFC65C33;
+      box-shadow: 0 2px 12px var(--color-gold)33;
       position: relative;
     }
     .progress-bar-inner {
       height: 100%;
-      background: linear-gradient(90deg, #FFC65C 0%, #FFD700 100%);
+      background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-brand) 100%);
       width: 0;
       animation: progressMove 2.5s infinite linear;
     }
@@ -108,7 +108,7 @@
     }
     .fun-message {
       font-size: 1.1rem;
-      color: #FFC65C;
+      color: var(--color-gold);
       margin-bottom: 2.5rem;
       animation: fadeIn 2s infinite alternate;
     }
@@ -117,21 +117,21 @@
       to { opacity: 1; }
     }
     .back-btn {
-      background: #FFC65C;
-      color: #121212;
+      background: var(--color-gold);
+      color: var(--color-dark-bg);
       border: none;
       border-radius: 30px;
       padding: 0.7rem 2.2rem;
       font-size: 1.1rem;
       font-weight: 600;
-      box-shadow: 0 4px 15px rgba(255,198,92,0.13);
+      box-shadow: 0 4px 15px rgba(57,169,220,0.13);
       transition: background 0.2s, color 0.2s, transform 0.2s;
       text-decoration: none;
       display: inline-block;
     }
     .back-btn:hover {
-      background: #FFD700;
-      color: #000;
+      background: var(--color-brand);
+      color: var(--color-black);
       transform: translateY(-2px) scale(1.04);
       text-decoration: none;
     }

@@ -53,9 +53,9 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <style>
     :root {
-      --color-dark-bg: #121212;
-      --color-gold: #FFC65C;
-      --color-brand: #FFC65C;
+      --color-dark-bg: #1E1E1E;
+      --color-gold: #39A9DC;
+      --color-brand: #2A5D94;
       --color-light: #f4f4f4;
     }
     body {
@@ -64,14 +64,13 @@
       font-family: 'Rubik', sans-serif;
     }
     .gdock-card, .gsmart-card {
-      background: #141414 !important;
+      background: #1E1E1E !important;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
       overflow: hidden;
       position: relative;
       transition: box-shadow 0.2s;
-      /* border: 1px solid var(--color-gold); */ /* Remove gold border */
       padding: 0;
     }
     .gdock-card-content, .gsmart-card-content {
@@ -101,7 +100,7 @@
     .d135-timeline-dot {
       width: 54px;
       height: 54px;
-      background: linear-gradient(120deg, #FFC65C 60%, #FFD700 100%);
+      background: linear-gradient(120deg, #39A9DC 60%, #2A5D94 100%);
       color: #181818;
       border-radius: 50%;
       display: flex;
@@ -114,7 +113,7 @@
       z-index: 2;
     }
     .d135-timeline-card {
-      background: linear-gradient(120deg, #181818 60%, #FFC65C 100%);
+      background: linear-gradient(120deg, #181818 60%, #2A5D94 100%);
       color: #fff;
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(255,198,92,0.09);
@@ -160,14 +159,14 @@
       position: relative;
       background: none;
       border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+      box-shadow: 0 2px 12px rgba(57,169,220,0.13);
       overflow: visible;
       margin-bottom: 0.5rem;
     }
     .d135-image-float-main {
       z-index: 2;
       transform: translateY(0) scale(1.08) rotate(-2deg);
-      box-shadow: 0 8px 32px rgba(255,198,92,0.13);
+      box-shadow: 0 8px 32px rgba(57,169,220,0.13);
     }
     .d135-image-caption {
       display: block;
@@ -178,7 +177,7 @@
       border-radius: 12px;
       padding: 0.3em 1em;
       margin-top: 0.7em;
-      box-shadow: 0 2px 8px rgba(255,198,92,0.13);
+      box-shadow: 0 2px 8px rgba(57,169,220,0.13);
       text-align: center;
     }
     .gsmart-advantage-flip-list {
@@ -221,23 +220,23 @@
       justify-content: center;
       font-size: 1.13rem;
       font-weight: 500;
-      background: linear-gradient(120deg, #181818 60%, var(--color-gold) 100%) !important;
+      background: linear-gradient(120deg, #181818 60%, #39A9DC 100%) !important;
       color: #fff;
       transition: background 0.2s;
     }
     .gsmart-advantage-flip-front i {
       font-size: 2.5rem;
       margin-bottom: 0.7rem;
-      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+      filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
     }
     .gsmart-advantage-flip-back {
-      background: #181818;
+      background: #181818 !important;
       color: var(--color-gold);
       transform: rotateY(180deg);
       font-size: 1.08rem;
       padding: 1.2rem;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(255,198,92,0.13);
+      box-shadow: 0 2px 12px rgba(57,169,220,0.13);
     }
     /* Make all icons gold by default */
     i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
@@ -259,22 +258,21 @@
     }
     /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\g-smart.html (inline style for feature grid) */
     .feature-tile {
-      background: linear-gradient(120deg, rgba(255,198,92,0.10) 60%, #181818 100%);
+      background: linear-gradient(120deg, #181818 60%, #39A9DC 100%);
       border: 2px solid var(--color-gold);
-      border-radius: 22px;
-      box-shadow: 0 4px 18px rgba(255,198,92,0.10);
+      box-shadow: 0 4px 18px rgba(57,169,220,0.10);
       color: var(--color-light);
       transition: box-shadow 0.2s, transform 0.2s;
       min-height: 220px;
     }
     .feature-tile:hover {
-      box-shadow: 0 8px 32px rgba(255,198,92,0.18);
+      box-shadow: 0 8px 32px rgba(57,169,220,0.18);
       transform: translateY(-4px) scale(1.03);
     }
     .feature-tile-icon {
       font-size: 2.7rem;
       color: var(--color-gold);
-      filter: drop-shadow(0 2px 8px rgba(255,198,92,0.18));
+      filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
     }
     .feature-tile-title {
       font-size: 1.18rem;
@@ -296,7 +294,7 @@
       .feature-tile-icon { font-size: 1.4rem; }
     }
     .main-footer-modern {
-      background: linear-gradient(120deg, var(--color-dark) 70%, var(--color-gold) 120%);
+      background: linear-gradient(120deg, var(--color-dark-bg) 70%, var(--color-gold) 120%) !important;
       color: #fff;
       border-radius: 0 0 18px 18px;
       box-shadow: 0 -2px 18px rgba(0,0,0,0.10);
@@ -429,10 +427,10 @@
       <img src="../../assets/images/hero-g-smart_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
     <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#FFC65C;">G-SMART</h1>
+      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#39A9DC;">G-SMART</h1>
       <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">The smart system for drone control and monitoring – autonomous control, AI, cloud documentation, and advanced data security</p>
     </div>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(30,30,30,0.3), rgba(30,30,30,0.7));z-index:1;"></div>
     <style>
       @media (max-width: 768px) {
         .hero-section {
@@ -448,7 +446,7 @@
           top: auto !important;
           padding: 1.5rem 0 4rem 0 !important;
           margin: 0 !important;
-          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.8) 70%, rgba(18,18,18,0.4) 100%);
+          background: linear-gradient(to top, #1E1E1E 90%, rgba(30,30,30,0.4) 100%);
         }
         .hero-content h1 {
           font-size: clamp(1.5rem, 5vw, 2rem) !important;
@@ -459,7 +457,6 @@
           padding: 0 1.2rem !important;
         }
       }
-      
       @media (max-width: 576px) {
         .hero-section {
           min-height: 360px !important;
@@ -467,12 +464,12 @@
         .hero-content {
           bottom: -40px !important;
           padding: 1.5rem 0 5rem 0 !important;
-          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.9) 75%, rgba(18,18,18,0.5) 100%);
+          background: linear-gradient(to top, #1E1E1E 95%, rgba(30,30,30,0.5) 100%);
         }
       }
     </style>
   </section>
-  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(57,169,220,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
   
   <!-- Intro Card -->
   <div class="gdock-card" data-aos="fade-up">
@@ -488,7 +485,7 @@
   <section class="section-wrap my-5" data-aos="fade-up">
     <div class="container">
       <div class="text-center mb-5" style="position:relative;">
-        <span style="display:inline-block; background:linear-gradient(90deg,rgba(255,198,92,0.13) 0%,rgba(255,198,92,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(255,198,92,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
+        <span style="display:inline-block; background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(57,169,220,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
           <i class="fas fa-bolt ms-2"></i>
           G-SMART – Key Capabilities
           <i class="fas fa-brain me-2"></i>

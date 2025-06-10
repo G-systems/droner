@@ -469,14 +469,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       overflow: hidden;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       transition: transform 0.4s;
+      animation: adv-glow 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes adv-glow {
+      0%   { box-shadow: 0 0 32px 0 rgba(57,169,220,0.10), 0 0 0 0 #39A9DC; }
+      100% { box-shadow: 0 0 64px 16px #39A9DC, 0 0 0 0 #39A9DC; }
     }
     .futuristic-adv-card:hover {
-      transform: translateY(-8px);
+      border-color: #39A9DC;
+      box-shadow: 0 0 64px 16px #39A9DC, 0 0 0 0 #39A9DC;
+      z-index: 2;
     }
     .futuristic-adv-icon {
-      font-size: 2.5rem;
-      color: var(--color-gold);
-      margin-bottom: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -486,7 +490,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-right: auto;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
+      box-shadow: 0 0 18px 4px rgba(57,169,220,0.18);
+      border: 2.5px solid var(--color-gold);
+      transition: box-shadow 0.3s;
+    }
+    .futuristic-adv-card:hover .futuristic-adv-icon {
+      box-shadow: 0 0 32px 8px var(--color-gold), 0 0 0 0 rgba(57,169,220,0.18);
     }
     /* Responsive */
     @media (max-width: 768px) {
