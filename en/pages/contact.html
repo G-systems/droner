@@ -60,6 +60,7 @@
       --color-brand: #2A5D94;
       --color-light: #f4f4f4;
     }
+    body { background: var(--color-dark-bg); }
     .contact-hero {
       color: #fff;
       background: var(--color-dark-bg);
@@ -126,7 +127,7 @@
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
-      text-align: right;
+      text-align: left;
       letter-spacing: 1px;
       display: flex;
       align-items: center;
@@ -166,7 +167,6 @@
       color: var(--color-light);
       transition: border-color 0.2s;
     }
-    /* Make placeholders white with lower opacity */
     .contact-section .form-control::placeholder,
     .contact-section textarea::placeholder {
       color: #fff !important;
@@ -191,7 +191,6 @@
       color: var(--color-dark-bg);
       transform: translateY(-2px) scale(1.04);
     }
-    /* Force all .small text to white */
     .small, small {
       color: #fff !important;
     }
@@ -258,13 +257,15 @@
   <!-- Navbar End -->
 
   <!-- Hero Section -->
-  <section class="hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
+  <section class="contact-hero hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
     <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
       <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
     <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#FFC65C;">Contact Us</h1>
-      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">We are happy to talk, advise, and tailor an advanced security solution for your organization</p>
+      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#39A9DC;">Contact Us</h1>
+      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">
+        We are happy to talk, advise, and tailor an advanced security solution for your organization
+      </p>
     </div>
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
     <style>
@@ -293,7 +294,6 @@
           padding: 0 1.2rem !important;
         }
       }
-      
       @media (max-width: 576px) {
         .hero-section {
           min-height: 360px !important;
@@ -349,7 +349,7 @@
         <div class="col-md-6">
           <div class="contact-info-card h-100">
             <h5><i class="fa fa-location-dot me-2"></i>Offices</h5>
-            <div class="fs-5 mb-3">HaAtzmaut St, Gan Yavne</div>
+            <div class="fs-5 mb-3">HaAtzmaut 6, Gan Yavne</div>
             <div class="mt-3">
               <a href="https://maps.app.goo.gl/9RPYZh2XUwtsRtCF8" target="_blank" class="btn btn-outline-dark mt-2">
                 <i class="fa fa-map-marker-alt me-2"></i>View on Map

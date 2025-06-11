@@ -44,7 +44,7 @@
         ],
         phone: '052-387-6112',
         email: 'info@droner.app',
-        copyright: `&copy; ${new Date().getFullYear()} DRONER. All rights reserved. | Design: DRONER Team`,
+        copyright: `&copy; ${new Date().getFullYear()} G-SYSTEM. All rights reserved. | Design: G-SYSTEM Team`,
         dir: 'ltr'
       }) : generateFooter({
         logoUrl: `${getRelativePath()}assets/images/bothlogos3.webp`,
@@ -61,7 +61,7 @@
         ],
         phone: '052-387-6112',
         email: 'info@droner.app',
-        copyright: `&copy; ${new Date().getFullYear()} DRONER. כל הזכויות שמורות. | עיצוב: צוות DRONER`,
+        copyright: `&copy; ${new Date().getFullYear()} G-SYSTEM. כל הזכויות שמורות. | עיצוב: צוות G-SYSTEM`,
         dir: 'rtl'
       });
 

@@ -64,7 +64,7 @@
       font-family: 'Rubik', sans-serif;
     }
     .gdock-card {
-      background: #1E1E1E !important;
+      background: linear-gradient(120deg, #22304A 60%, #2A5D94 100%) !important;
       border-radius: 22px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.10);
       margin-bottom: 2.5rem;
@@ -317,9 +317,11 @@
     <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
       <img src="../../assets/images/doc135hero_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
-    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#39A9DC;">D100 / D135 Dock</h1>
-      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">Advanced autonomous docking stations by HEISHA – simple, reliable, powerful</p>
+    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <h1 style="font-size:clamp(2rem, 6vw, 3.5rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#39A9DC;">G-DOCK</h1>
+      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">
+        Autonomous docking stations for Matrice 300/350 and Matrice 30 – full integration, high reliability, easy control
+      </p>
     </div>
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(30,30,30,0.3), rgba(30,30,30,0.7));z-index:1;"></div>
     <style>
@@ -360,355 +362,341 @@
       }
     </style>
   </section>
-  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(57,169,220,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
-  
-  <!-- Intro Card -->
+  <div style="width:100%;height:2px;background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%);box-shadow:0 2px 16px 0 rgba(57,169,220,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
+  <!-- Description Section Start -->
   <section class="container my-4" data-aos="fade-up">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="p-4 rounded-4 shadow-sm" style="background:rgba(57,169,220,0.10); border:1px solid var(--color-gold);">
-          <h2 class="mb-3 text-start" style="color:var(--color-gold);font-size:1.5rem;"><i class="fas fa-info-circle ms-2"></i>About G-DOCK Stations</h2>
-          <p style="font-size:1.13rem; color:var(--color-light);">
-            The G-DOCK autonomous docking stations provide an advanced, reliable, and innovative solution for the operation, charging, and management of Matrice 300/350 and Matrice 30 drones. The stations integrate cutting-edge technology, high durability, remote control, and real-time monitoring – enabling full operation without manual intervention, in all terrains and weather conditions.
-          </p>
+    <div class="gdock-card">
+      <div class="gdock-card-content">
+        <h2 class="mb-3" style="color:#fff;font-size:2rem;font-weight:700;letter-spacing:0.5px;margin-bottom:1.2rem;">About G-DOCK Stations</h2>
+        <p style="font-size:1.15rem; color:var(--color-light);font-weight:400;line-height:1.7;">
+          G-DOCK autonomous docking stations by DRONER provide an advanced, reliable, and innovative solution for operating, charging, and managing Matrice 300/350 and Matrice 30 drones. The stations combine breakthrough technology, high durability, remote control, and real-time monitoring – enabling full operation without manual intervention, in any terrain and weather.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- ...existing divider lines... -->
+
+  <!-- D135 Section -->
+  <section class="section-wrap my-5" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5" style="position:relative;">
+        <span style="display:inline-block; background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(57,169,220,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
+          <i class="fas fa-crown ms-2"></i>
+          D135 – DRONER's Flagship Station
+          <i class="fas fa-rocket me-2"></i>
+        </span>
+        <div style="font-size:1.1rem; color:#fff; opacity:0.7; margin-top:0.5rem;">
+          Power, reliability, and breakthrough technology – the choice of drone professionals
+        </div>
+      </div>
+      <!-- Feature Grid for D135 -->
+      <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Dimensions</div>
+            <div class="feature-tile-desc small">1645×1290×1575 mm (Closed), 1645×1290×962 mm (Open)</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-weight-hanging"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Weight</div>
+            <div class="feature-tile-desc small">275 kg</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">GPS-Free Flight</div>
+            <div class="feature-tile-desc small">Autonomous flight even in areas without GPS reception</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-shield-alt"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Durability Standard</div>
+            <div class="feature-tile-desc small">IP54 – High resistance to harsh environments</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-thermometer-half"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Temperature Control</div>
+            <div class="feature-tile-desc small">Smart and automatic</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-bolt"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Automatic Charging</div>
+            <div class="feature-tile-desc small">Fast drone charging</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-satellite-dish"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Real-Time Monitoring</div>
+            <div class="feature-tile-desc small">Station status, meteorological sensors, RTK antenna</div>
+          </div>
+        </div>
+      </div>
+      <!-- D135 Floating Image -->
+      <div class="row justify-content-center align-items-center flex-lg-row-reverse mt-5">
+        <div class="col-lg-6 d-flex flex-column align-items-center">
+          <div class="d135-images-float">
+            <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+              <img src="../../assets/images/dock-d135-img1_result.webp" alt="D135 Station Image 1" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="600" height="400">
+              <span class="d135-image-caption">D135 – External View</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\dock-d135.html (inline style for feature grid) */
+        .feature-tile {
+          background: linear-gradient(120deg, #181818 60%, #39A9DC 100%);
+          border: 2px solid var(--color-gold);
+          box-shadow: 0 4px 18px rgba(57,169,220,0.10);
+          color: var(--color-light);
+          transition: box-shadow 0.2s, transform 0.2s;
+          min-height: 180px;
+        }
+        .feature-tile:hover {
+          box-shadow: 0 8px 32px rgba(57,169,220,0.18);
+          transform: translateY(-4px) scale(1.03);
+        }
+        .feature-tile-icon {
+          color: var(--color-gold);
+          filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
+        }
+        .feature-tile-title {
+          color: var(--color-gold);
+          font-size: 1.18rem;
+          font-weight: 700;
+        }
+        .feature-tile-desc {
+          color: var(--color-light);
+          font-size: 1.01rem;
+          font-weight: 400;
+        }
+        @media (max-width: 991px) {
+          .feature-tile { min-height: 120px; padding: 1.2rem 0.7rem; }
+          .feature-tile-icon { font-size: 2rem; }
+          .feature-tile-title { font-size: 1.05rem; }
+        }
+        @media (max-width: 600px) {
+          .feature-tile { min-height: 90px; padding: 0.7rem 0.5rem; }
+          .feature-tile-icon { font-size: 1.4rem; }
+        }
+      </style>
+    </div>
+  </section>
+
+  <!-- Creative Divider between D135 and D100 -->
+  <div class="creative-divider my-5" style="position:relative;z-index:2;">
+    <div style="width:100%;display:flex;align-items:center;justify-content:center;position:relative;">
+      <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
+      <span style="background:var(--color-dark-bg);padding:0 2.5rem;border-radius:2rem;box-shadow:0 2px 12px rgba(255,198,92,0.13);font-size:1.4rem;font-weight:700;color:var(--color-gold);display:flex;align-items:center;gap:0.7rem;">
+        <i class="fas fa-exchange-alt fa-rotate-90"></i>
+        Switch to D100
+        <i class="fas fa-arrow-down"></i>
+      </span>
+      <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
+    </div>
+    <div style="width:100%;text-align:center;margin-top:0.5rem;">
+      <span style="color:#fff;opacity:0.7;font-size:1rem;letter-spacing:1px;">Meet the D100 Station – compact, durable, and innovative</span>
+    </div>
+  </div>
+
+  <!-- D100 Section -->
+  <section class="section-wrap my-5" data-aos="fade-up">
+    <div class="container">
+      <!-- Feature Grid for D100 -->
+      <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Dimensions</div>
+            <div class="feature-tile-desc small">1370×1280×1300 mm (Closed), 1070×800×1020 mm (Open)</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-weight-hanging"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Weight</div>
+            <div class="feature-tile-desc small">120 kg</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">GPS-Free Flight</div>
+            <div class="feature-tile-desc small">Autonomous flight even in areas without GPS reception</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-shield-alt"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Durability Standard</div>
+            <div class="feature-tile-desc small">IP55 – High resistance to diverse environments</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-thermometer-half"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Temperature Control</div>
+            <div class="feature-tile-desc small">Smart and automatic</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-bolt"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Automatic Charging</div>
+            <div class="feature-tile-desc small">Fast and autonomous charging system</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="feature-tile-icon mb-3"><i class="fas fa-broadcast-tower"></i></div>
+            <div class="feature-tile-title fw-bold mb-2">Monitoring & Alerts</div>
+            <div class="feature-tile-desc small">Self-monitoring systems and automatic alerts</div>
+          </div>
+        </div>
+      </div>
+      <!-- D100 Floating Image -->
+      <div class="row justify-content-center align-items-center flex-lg-row-reverse mt-5">
+        <div class="col-lg-6 d-flex flex-column align-items-center">
+          <div class="d135-images-float">
+            <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
+              <img src="../../assets/images/dock-d100-img1_result.webp" alt="D100 Station Image 1" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="600" height="400">
+              <span class="d135-image-caption">D100 – External View</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\dock-d135.html (inline style for feature grid) */
+        .feature-tile {
+          background: linear-gradient(120deg, #181818 60%, #39A9DC 100%);
+          border: 2px solid var(--color-gold);
+          box-shadow: 0 4px 18px rgba(57,169,220,0.10);
+          color: var(--color-light);
+          transition: box-shadow 0.2s, transform 0.2s;
+          min-height: 180px;
+        }
+        .feature-tile:hover {
+          box-shadow: 0 8px 32px rgba(57,169,220,0.18);
+          transform: translateY(-4px) scale(1.03);
+        }
+        .feature-tile-icon {
+          color: var(--color-gold);
+          filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
+        }
+        .feature-tile-title {
+          color: var(--color-gold);
+          font-size: 1.18rem;
+          font-weight: 700;
+        }
+        .feature-tile-desc {
+          color: var(--color-light);
+          font-size: 1.01rem;
+          font-weight: 400;
+        }
+        @media (max-width: 991px) {
+          .feature-tile { min-height: 120px; padding: 1.2rem 0.7rem; }
+          .feature-tile-icon { font-size: 2rem; }
+          .feature-tile-title { font-size: 1.05rem; }
+        }
+        @media (max-width: 600px) {
+          .feature-tile { min-height: 90px; padding: 0.7rem 0.5rem; }
+          .feature-tile-icon { font-size: 1.4rem; }
+        }
+      </style>
+    </div>
+  </section>
+  <!-- Customer Benefits (flip cards) -->
+  <section class="section-wrap" data-aos="fade-up">
+    <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Benefits</h2>
+    <div class="gsmart-advantage-flip-list justify-content-center text-center">
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-user-cog"></i>
+            <div><b>Professional & Tailored Solution</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <i class="fas fa-user-cog" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+            <span style="display:block;">Dedicated docking stations for Matrice models, fully integrated with control systems.</span>
+          </div>
+        </div>
+      </div>
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-bolt"></i>
+            <div><b>Fully Autonomous Operation</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <i class="fas fa-bolt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+            <span style="display:block;">Charging, monitoring, documentation, and operation – all automatic, no manual intervention.</span>
+          </div>
+        </div>
+      </div>
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-shield-alt"></i>
+            <div><b>Reliability & Service</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <i class="fas fa-shield-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+            <span style="display:block;">Professional support, minimal maintenance, and high reliability over time.</span>
+          </div>
+        </div>
+      </div>
+      <div class="gsmart-advantage-flip-card">
+        <div class="gsmart-advantage-flip-inner">
+          <div class="gsmart-advantage-flip-front">
+            <i class="fas fa-sync-alt"></i>
+            <div><b>Environmental Adaptation</b></div>
+          </div>
+          <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <i class="fas fa-sync-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
+            <span style="display:block;">High durability, temperature control, advanced sensors, and a convenient management interface.</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Description Section End -->
-  <div class="product-divider"></div>
-  <div class="section-line"></div>
-  <div class="section-line-thin"></div>
-
-  <!-- D135 Section (vertical timeline with floating image and highlight cards) -->
-<section class="section-wrap my-5" data-aos="fade-up">
-  <div class="container">
-    <!-- Creative Headline Start -->
-    <div class="text-center mb-5" style="position:relative;">
-      <span style="display:inline-block; background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%); border-radius:2rem; padding:0.7rem 2.5rem; box-shadow:0 2px 18px rgba(57,169,220,0.10); font-size:2.1rem; font-weight:800; color:var(--color-gold); letter-spacing:2px; text-shadow:0 2px 12px #0002;">
-        <i class="fas fa-crown ms-2"></i>
-        D135 – Flagship Station of DRONER
-        <i class="fas fa-rocket me-2"></i>
-      </span>
-      <div style="font-size:1.1rem; color:#fff; opacity:0.7; margin-top:0.5rem;">
-        Power, reliability, and groundbreaking technology – the choice of drone professionals
-      </div>
+  <!-- Video Section -->
+  <section class="section-wrap my-5" data-aos="fade-up">
+    <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>See D135 & D100 in Action</h2>
+    <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto" style="max-width: 900px;">
+      <iframe
+        src="https://www.youtube.com/embed/vObzXoIOyNA"
+        title="See D135 & D100 in Action"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        class="w-100 h-100"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
     </div>
-    <!-- NEW: Feature Grid for D135 -->
-    <div class="row g-4 justify-content-center align-items-stretch text-center" style="--bs-gutter-x:2.5rem;">
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Dimensions</div>
-          <div class="feature-tile-desc small">1645×1290×1575 mm (Closed), 1645×1290×962 mm (Open)</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-weight-hanging"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Weight</div>
-          <div class="feature-tile-desc small">275 kg</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">GPS-Free Flight</div>
-          <div class="feature-tile-desc small">Autonomous flight capability even in areas without GPS reception</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-shield-alt"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Durability Standard</div>
-          <div class="feature-tile-desc small">IP54 – High resistance to harsh environmental conditions</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-thermometer-half"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Temperature Control</div>
-          <div class="feature-tile-desc small">Smart and automatic</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-bolt"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Automatic Charging</div>
-          <div class="feature-tile-desc small">Fast charging of the drone</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-satellite-dish"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Real-Time Monitoring</div>
-          <div class="feature-tile-desc small">Station status, meteorological sensors, RTK antenna</div>
-        </div>
-      </div>
-    </div>
-    <!-- END Feature Grid for D135 -->
-    <!-- D135 Floating Image (only one image) -->
-    <div class="row justify-content-center align-items-center flex-lg-row-reverse mt-5">
-      <div class="col-lg-6 d-flex flex-column align-items-center">
-        <div class="d135-images-float">
-          <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
-            <img src="../../assets/images/dock-d135-img1_result.webp" alt="D135 Station Image 1" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="600" height="400">
-            <span class="d135-image-caption">D135 – External View</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <style>
-      /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\dock-d135.html (inline style for feature grid) */
-      .feature-tile {
-        background: linear-gradient(120deg, #181818 60%, #39A9DC 100%);
-        border: 2px solid var(--color-gold);
-        border-radius: 22px;
-        box-shadow: 0 4px 18px rgba(57,169,220,0.10);
-        color: var(--color-light);
-        transition: box-shadow 0.2s, transform 0.2s;
-        min-height: 180px;
-      }
-      .feature-tile:hover {
-        box-shadow: 0 8px 32px rgba(57,169,220,0.18);
-        transform: translateY(-4px) scale(1.03);
-      }
-      .feature-tile-icon {
-        font-size: 2.7rem;
-        color: var(--color-gold);
-        filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
-      }
-      .feature-tile-title {
-        font-size: 1.18rem;
-        color: var(--color-gold);
-        font-weight: 700;
-      }
-      .feature-tile-desc {
-        color: var(--color-light);
-        font-size: 1.01rem;
-        font-weight: 400;
-      }
-      @media (max-width: 991px) {
-        .feature-tile { min-height: 120px; padding: 1.2rem 0.7rem; }
-        .feature-tile-icon { font-size: 2rem; }
-        .feature-tile-title { font-size: 1.05rem; }
-      }
-      @media (max-width: 600px) {
-        .feature-tile { min-height: 90px; padding: 0.7rem 0.5rem; }
-        .feature-tile-icon { font-size: 1.4rem; }
-      }
-    </style>
+  </section>
+  <!-- Support Card -->
+  <div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
+    <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>Service & Support</h2>
+    <p>
+      The G-SYSTEM support team is available 24/7, providing installation, training, ongoing operation, and quick response to any issue or question. Customized SLA for each client, including phone support, remote control, and on-site visits if needed.
+    </p>
   </div>
-</section>
-
-<!-- Creative Divider between D135 and D100 -->
-<div class="creative-divider my-5" style="position:relative;z-index:2;">
-  <div style="width:100%;display:flex;align-items:center;justify-content:center;position:relative;">
-    <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
-    <span style="background:var(--color-dark-bg);padding:0 2.5rem;border-radius:2rem;box-shadow:0 2px 12px rgba(255,198,92,0.13);font-size:1.4rem;font-weight:700;color:var(--color-gold);display:flex;align-items:center;gap:0.7rem;">
-      <i class="fas fa-exchange-alt fa-rotate-90"></i>
-      Switch to D100
-      <i class="fas fa-arrow-down"></i>
-    </span>
-    <hr style="flex:1;border:0;height:3px;background:linear-gradient(90deg,rgba(255,198,92,0) 0%,rgba(255,198,92,0.7) 50%,rgba(255,198,92,0) 100%);margin:0 1rem;">
-  </div>
-  <div style="width:100%;text-align:center;margin-top:0.5rem;">
-    <span style="color:#fff;opacity:0.7;font-size:1rem;letter-spacing:1px;">Also meet the D100 Station – a compact, durable, and innovative solution</span>
-  </div>
-</div>
-
-<!-- D100 Section (vertical timeline with floating image and highlight cards, like D135) -->
-<section class="section-wrap my-5" data-aos="fade-up">
-  <div class="container">
-    <!-- NEW: Feature Grid for D100 -->
-    <div class="row g-4 justify-content-center align-items-stretch" style="--bs-gutter-x:2.5rem;">
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-ruler-combined"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Dimensions</div>
-            <div class="feature-tile-desc small">1370×1280×1300 mm (Closed), 1070×800×1020 mm (Open)</div>
-
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-weight-hanging"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Weight</div>
-          <div class="feature-tile-desc small">120 kg</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-location-slash"></i><i class="fas fa-signal ms-2"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">GPS-Free Flight</div>
-          <div class="feature-tile-desc small">Autonomous flight capability even in areas without GPS reception</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-shield-alt"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Durability Standard</div>
-          <div class="feature-tile-desc small">IP55 – High resistance to diverse environmental conditions</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-thermometer-half"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Temperature Control</div>
-          <div class="feature-tile-desc small">Smart and automatic</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-bolt"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Automatic Charging</div>
-          <div class="feature-tile-desc small">Fast and autonomous charging system</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="feature-tile flex-fill text-center p-4 rounded-4 shadow-lg bg-dark bg-opacity-75 h-100 d-flex flex-column align-items-center justify-content-center">
-          <div class="feature-tile-icon mb-3"><i class="fas fa-broadcast-tower"></i></div>
-          <div class="feature-tile-title fw-bold mb-2">Monitoring and Alerts</div>
-          <div class="feature-tile-desc small">Self-monitoring systems and automatic alerts</div>
-        </div>
-      </div>
-    </div>
-    <!-- END Feature Grid for D100 -->
-    <!-- D100 Floating Image (only one image) -->
-    <div class="row justify-content-center align-items-center flex-lg-row-reverse mt-5">
-      <div class="col-lg-6 d-flex flex-column align-items-center">
-        <div class="d135-images-float">
-          <div class="d135-image-float d135-image-float-main" data-aos="zoom-in" data-aos-delay="100">
-            <img src="../../assets/images/dock-d100-img1_result.webp" alt="D100 Station Image 1" class="img-fluid rounded-4 shadow" loading="lazy" decoding="async" width="600" height="400">
-            <span class="d135-image-caption">D100 – מבט חיצוני</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <style>
-      /* filepath: c:\Users\ארי מילר\Sites\g-system\web\pages\products\dock-d135.html (inline style for feature grid) */
-      .feature-tile {
-        background: linear-gradient(120deg, #181818 60%, #39A9DC 100%);
-        border: 2px solid var(--color-gold);
-        border-radius: 22px;
-        box-shadow: 0 4px 18px rgba(57,169,220,0.10);
-        color: var(--color-light);
-        transition: box-shadow 0.2s, transform 0.2s;
-        min-height: 180px;
-      }
-      .feature-tile:hover {
-        box-shadow: 0 8px 32px rgba(57,169,220,0.18);
-        transform: translateY(-4px) scale(1.03);
-      }
-      .feature-tile-icon {
-        font-size: 2.7rem;
-        color: var(--color-gold);
-        filter: drop-shadow(0 2px 8px rgba(57,169,220,0.18));
-      }
-      .feature-tile-title {
-        font-size: 1.18rem;
-        color: var(--color-gold);
-        font-weight: 700;
-      }
-      .feature-tile-desc {
-        color: var(--color-light);
-        font-size: 1.01rem;
-        font-weight: 400;
-      }
-      @media (max-width: 991px) {
-        .feature-tile { min-height: 120px; padding: 1.2rem 0.7rem; }
-        .feature-tile-icon { font-size: 2rem; }
-        .feature-tile-title { font-size: 1.05rem; }
-      }
-      @media (max-width: 600px) {
-        .feature-tile { min-height: 90px; padding: 0.7rem 0.5rem; }
-        .feature-tile-icon { font-size: 1.4rem; }
-      }
-    </style>
-  </div>
-</section>
-<!-- יתרונות ללקוח (flip cards) -->
-<section class="section-wrap" data-aos="fade-up">
-  <h2 class="text-center mb-4"><i class="fas fa-star ms-2"></i>Customer Benefits</h2>
-  <div class="gsmart-advantage-flip-list justify-content-center text-center">
-    <div class="gsmart-advantage-flip-card">
-      <div class="gsmart-advantage-flip-inner">
-        <div class="gsmart-advantage-flip-front">
-          <i class="fas fa-user-cog"></i>
-          <div><b>Professional and Customized Solution</b></div>
-        </div>
-        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <i class="fas fa-user-cog" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
-          <span style="display:block;">Docking stations tailored for Matrice, fully integrated.</span>
-        </div>
-      </div>
-    </div>
-    <div class="gsmart-advantage-flip-card">
-      <div class="gsmart-advantage-flip-inner">
-        <div class="gsmart-advantage-flip-front">
-          <i class="fas fa-bolt"></i>
-          <div><b>Full Autonomous Operation</b></div>
-        </div>
-        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <i class="fas fa-bolt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
-          <span style="display:block;">Charging, monitoring, and operation are fully automatic.</span>
-        </div>
-      </div>
-    </div>
-    <div class="gsmart-advantage-flip-card">
-      <div class="gsmart-advantage-flip-inner">
-        <div class="gsmart-advantage-flip-front">
-          <i class="fas fa-shield-alt"></i>
-          <div><b>Reliability and Service</b></div>
-        </div>
-        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <i class="fas fa-shield-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
-          <span style="display:block;">Professional support, minimal maintenance, high reliability.</span>
-        </div>
-      </div>
-    </div>
-    <div class="gsmart-advantage-flip-card">
-      <div class="gsmart-advantage-flip-inner">
-        <div class="gsmart-advantage-flip-front">
-          <i class="fas fa-sync-alt"></i>
-          <div><b>Environmental Adaptability</b></div>
-        </div>
-        <div class="gsmart-advantage-flip-back" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <i class="fas fa-sync-alt" style="font-size:2.2rem;margin-bottom:0.7rem;"></i>
-          <span style="display:block;">Durable, temperature-controlled, with advanced sensors.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Video Section -->
-<section class="section-wrap my-5" data-aos="fade-up">
-  <h2 class="text-center mb-4"><i class="fas fa-play-circle ms-2"></i>See D135 & D100 in Action</h2>
-  <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden mx-auto text-center" style="max-width: 900px;">
-    <iframe
-      src="https://www.youtube.com/embed/vObzXoIOyNA"
-      title="See the D135 and D100 Stations in Action"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      class="w-100 h-100"
-      style="border:0;"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
-<!-- Support Card -->
-<div class="gdock-card gsmart-support-card" data-aos="fade-up" style="max-width:950px;margin:0 auto 2.5rem auto;padding:2.5rem 2rem;">
-  <h2 class="mb-3"><i class="fas fa-headset ms-2"></i>Service and Support</h2>
-  <p>
-    The DRONER support team is available for you 24/7, providing installation, training, ongoing operation, and quick response to any malfunction or question. Customized SLA for each client, including telephone support, remote control, and on-site visit if necessary.
-  </p>
-</div>
-<!-- CTA Card -->
-<section class="cta-card section-wrap text-center" data-aos="fade-up">
-  <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Want to See G-DOCK in Action?</h3>
-  <p class="cta-desc">Contact the DRONER team and we will be happy to demonstrate the station at your site.</p>
-  <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">Schedule a Demo</a>
-</section>
+  <!-- CTA Card -->
+  <section class="cta-card section-wrap text-center" data-aos="fade-up">
+    <h3 class="cta-title"><i class="fa fa-paper-plane ms-2"></i>Want to see G-DOCK in action?</h3>
+    <p class="cta-desc">Contact the G-SYSTEM team and we'll be happy to demonstrate the station at your site.</p>
+    <a href="../contact.html" class="btn btn-cta btn-lg px-5 py-3">Schedule a Demo</a>
+  </section>
 
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">

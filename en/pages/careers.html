@@ -38,7 +38,7 @@
   
   <!-- Existing head content -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style-en.css">
@@ -53,6 +53,12 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <style>
+    :root {
+      --color-dark-bg: #1E1E1E;
+      --color-gold: #39A9DC;
+      --color-brand: #2A5D94;
+      --color-light: #f4f4f4;
+    }
     body { background: var(--color-dark-bg); }
     .careers-hero {
       color: var(--color-light);
@@ -70,7 +76,7 @@
       top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
     }
     .careers-hero .image-container img {
-      width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);
+      width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
     }
     .careers-hero .hero-content {
       position: relative;
@@ -120,7 +126,7 @@
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
-      text-align: right;
+      text-align: left;
       position: relative;
       z-index: 1;
       letter-spacing: 1px;
@@ -137,7 +143,7 @@
     }
     .careers-list li {
       position: relative;
-      padding-right: 2rem;
+      padding-left: 2rem;
       margin-bottom: 1.2rem;
       font-size: 1.1rem;
       transition: background 0.2s, color 0.2s;
@@ -152,7 +158,7 @@
       font-weight: 900;
       color: var(--color-gold);
       position: absolute;
-      right: 0.7rem;
+      left: 0.7rem;
       top: 0.9rem;
       font-size: 1.1em;
       transition: color 0.2s;
@@ -184,7 +190,6 @@
       font-weight: 500;
       border-radius: 14px;
     }
-    
     @media (max-width: 768px) {
       .careers-hero .hero-content { padding: 2rem 0.7rem 1.2rem 0.7rem; }
       .careers-hero h1 { font-size: 1.5rem; }
@@ -249,13 +254,15 @@
   <!-- Navbar End -->
 
   <!-- Hero Section -->
-  <section class="hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
+  <section class="careers-hero hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
     <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
       <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
     <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#FFC65C;">Careers at DRONER</h1>
-      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">Join us and be part of a pioneering team in aerial security and autonomous drones</p>
+      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#39A9DC;">Careers at G-SYSTEM</h1>
+      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">
+        Join us and be part of a pioneering team in aerial security and autonomous drones
+      </p>
     </div>
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
     <style>
@@ -284,7 +291,6 @@
           padding: 0 1.2rem !important;
         }
       }
-      
       @media (max-width: 576px) {
         .hero-section {
           min-height: 360px !important;
@@ -311,19 +317,19 @@
         <ul class="careers-list">
           <li>
             <b>Installation & Support Technician</b><br>
-            Installing drone systems and docking stations, providing service and support to clients.
+            Install drone systems and docking stations, provide service and support to clients.
           </li>
           <li>
             <b>Full Stack Software Developer</b><br>
-            Developing control, monitoring, and AI systems, working with advanced technologies.
+            Develop control, monitoring, and AI systems, work with advanced technologies.
           </li>
           <li>
             <b>Operational Drone Pilot</b><br>
-            Performing field missions, operating autonomous systems, documentation, and training.
+            Perform field missions, operate autonomous systems, documentation, and training.
           </li>
           <li>
             <b>Technology Project Manager</b><br>
-            Managing and leading projects with business and government clients.
+            Manage and lead projects with business and government clients.
           </li>
         </ul>
       </div>
@@ -332,8 +338,8 @@
 
   <!-- Benefits -->
   <section class="careers-section" data-aos="fade-up">
-    <h2 class="text-center"><i class="fa fa-star ms-2"></i>Why Work With Us?</h2>
-    <div class="careers-benefits justify-content-center text-center">
+    <h2><i class="fa fa-star ms-2"></i>Why work with us?</h2>
+    <div class="careers-benefits">
       <div class="careers-benefit-card">
         <span class="careers-benefit-icon"><i class="fas fa-rocket"></i></span>
         <b>Technological Innovation</b>
