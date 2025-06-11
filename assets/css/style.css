@@ -30,7 +30,6 @@ body, html {
   direction: rtl;
 }
 
-/* === Unified Header Styles === */
 h1, .section-title {
   font-family: var(--header-font);
   color: var(--header-color);

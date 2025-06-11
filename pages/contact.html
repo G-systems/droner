@@ -43,6 +43,7 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/banner.css">
   <meta http-equiv="Cache-control" content="public">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -271,56 +272,19 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- Hero Section -->
-  <section class="hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
-    <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
-      <img src="../assets/images/hero-bg_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+<!-- Full-width, Full-height Image Section with Text Block (Above Hero) -->
+  <section class="top-image-section">
+    <div class="top-image-section-text">
+      <h2 class="mb-3">צור קשר</h2>
+      <p>
+נשמח לשוחח, לייעץ ולהתאים פתרון אבטחה מתקדם לארגון שלך </p>
+      <a href="#" class="learn-more-btn" onclick="scrollToNextSection(event)">
+        <i class="fas fa-arrow-down me-2"></i>גלה עוד
+      </a>
     </div>
-    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 2.7rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#FFC65C;">צור קשר</h1>
-      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.3rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">נשמח לשוחח, לייעץ ולהתאים פתרון אבטחה מתקדם לארגון שלך</p>
-    </div>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));z-index:1;"></div>
-    <style>
-      @media (max-width: 768px) {
-        .hero-section {
-          position: relative !important;
-          min-height: 380px !important;
-          height: auto !important;
-        }
-        .hero-content {
-          position: absolute !important;
-          bottom: -30px !important;
-          left: 0 !important;
-          right: 0 !important;
-          top: auto !important;
-          padding: 1.5rem 0 4rem 0 !important;
-          margin: 0 !important;
-          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.8) 70%, rgba(18,18,18,0.4) 100%);
-        }
-        .hero-content h1 {
-          font-size: clamp(1.5rem, 5vw, 2rem) !important;
-          margin-bottom: 0.5rem !important;
-        }
-        .hero-content p {
-          font-size: 1rem !important;
-          padding: 0 1.2rem !important;
-        }
-      }
-      
-      @media (max-width: 576px) {
-        .hero-section {
-          min-height: 360px !important;
-        }
-        .hero-content {
-          bottom: -40px !important;
-          padding: 1.5rem 0 5rem 0 !important;
-          background: linear-gradient(to top, rgba(18,18,18,1), rgba(18,18,18,0.9) 75%, rgba(18,18,18,0.5) 100%);
-        }
-      }
-    </style>
+    <img src="../assets/images/top-banner.webp" alt="Top Banner" class="top-image-section-img">
+    <div class="top-image-section-overlay"></div>
   </section>
-  <div style="width:100%;height:2px;background:var(--color-gold);box-shadow:0 2px 16px 0 rgba(176,141,87,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
 
   <!-- Contact Form Section -->
   <section class="contact-section" data-aos="fade-up">
@@ -424,6 +388,7 @@
   <script src="../assets/js/accessibility.js" defer></script>
   <script src="../assets/js/starfield-overlay.js" defer></script>
   <script src="../assets/js/gradient-background.js" defer></script>
+  <script src="../assets/js/banner-scroll.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   <script src="../js/hero-mobile-img.js" defer></script>

@@ -46,6 +46,7 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style-en.css">
+  <link rel="stylesheet" href="../../assets/css/banner.css">
   <link rel="preload" as="image" href="../../assets/images/dockdjihero_result.webp" fetchpriority="high">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32">
   <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
@@ -318,73 +319,34 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- HERO -->
-  <section class="hero-section" style="position:relative;min-height:340px;height:38vw;max-height:420px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
-    <div class="image-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;">
-      <img src="../../assets/images/dockdjihero_result.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+  <!-- Banner Section replacing Hero -->
+  <section class="top-image-section">
+    <img src="../../assets/images/dockdjihero_result.webp" alt="DJI Dock 2 & DJI Dock 3" class="top-image-section-img">
+    <div class="top-image-section-overlay"></div>
+    <div class="top-image-section-text">
+      <h2>DJI Dock 2 & DJI Dock 3</h2>
+      <p>Autonomous docking stations by DJI for DRONER – full integration, high reliability, easy control for professional drone operations.</p>
+      <a href="#intro-card" class="learn-more-btn">Learn More</a>
     </div>
-    <div class="hero-content text-center" style="position:relative;z-index:2;width:100%;max-width:900px;margin:0 auto;padding-bottom:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-      <h1 style="font-size:clamp(2rem, 6vw, 3.5rem);font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,0.5);margin-bottom:0.7rem;color:#39A9DC;">DJI Dock 2 & DJI Dock 3</h1>
-      <p class="lead" style="font-size:clamp(1rem, 2.5vw, 1.35rem);max-width:850px;text-shadow:0 2px 8px rgba(0,0,0,0.7);font-weight:500;padding:0 1rem;">
-        Autonomous docking stations by DJI for DRONER – full integration, high reliability, easy control
-      </p>
-    </div>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(30,30,30,0.3), rgba(30,30,30,0.7));z-index:1;"></div>
-    <style>
-      @media (max-width: 768px) {
-        .hero-section {
-          position: relative !important;
-          min-height: 380px !important;
-          height: auto !important;
-        }
-        .hero-content {
-          position: absolute !important;
-          bottom: -30px !important;
-          left: 0 !important;
-          right: 0 !important;
-          top: auto !important;
-          padding: 1.5rem 0 4rem 0 !important;
-          margin: 0 !important;
-          background: linear-gradient(to top, #1E1E1E 90%, rgba(30,30,30,0.4) 100%);
-        }
-        .hero-content h1 {
-          font-size: clamp(1.5rem, 5vw, 2rem) !important;
-          margin-bottom: 0.5rem !important;
-        }
-        .hero-content p {
-          font-size: 1rem !important;
-          padding: 0 1.2rem !important;
-        }
-      }
-      @media (max-width: 576px) {
-        .hero-section {
-          min-height: 360px !important;
-        }
-        .hero-content {
-          bottom: -40px !important;
-          padding: 1.5rem 0 5rem 0 !important;
-          background: linear-gradient(to top, #1E1E1E 95%, rgba(30,30,30,0.5) 100%);
-        }
-      }
-    </style>
   </section>
-  <div style="width:100%;height:2px;background:linear-gradient(90deg,rgba(57,169,220,0.13) 0%,rgba(57,169,220,0.33) 100%);box-shadow:0 2px 16px 0 rgba(57,169,220,0.18);border-radius:0 0 18px 18px;margin-bottom:2.5rem;"></div>
   
   <!-- Intro Card -->
-  <div class="gdock-card" data-aos="fade-up">
-    <div class="gdock-card-content">
-      <h2 class="mb-3">DJI's Official Solution for Autonomous Operation</h2>
-      <p>
-        <b>DJI Dock 2</b> and <b>DJI Dock 3</b> are advanced autonomous docking stations for organizations demanding reliability, full DJI drone integration, and simple operation. The docks enable remote control, automatic charging, scheduled operation, and a user-friendly management interface – all with official importer warranty and service as part of the DRONER product line.
-      </p>
-      <ul>
-        <li>Full compatibility with DJI Matrice 3D/3TD and Matrice 4D Series</li>
-        <li>Simple operation, quick installation, and intuitive interface</li>
-        <li>Official importer service and support in Israel</li>
-        <li>High reliability, minimal maintenance</li>
-      </ul>
+  <section id="intro-card" class="container my-4">
+    <div class="gdock-card" data-aos="fade-up">
+      <div class="gdock-card-content">
+        <h2 class="mb-3">DJI's Official Solution for Autonomous Operation</h2>
+        <p>
+          <b>DJI Dock 2</b> and <b>DJI Dock 3</b> are advanced autonomous docking stations for organizations demanding reliability, full DJI drone integration, and simple operation. The docks enable remote control, automatic charging, scheduled operation, and a user-friendly management interface – all with official importer warranty and service as part of the DRONER product line.
+        </p>
+        <ul>
+          <li>Full compatibility with DJI Matrice 3D/3TD and Matrice 4D Series</li>
+          <li>Simple operation, quick installation, and intuitive interface</li>
+          <li>Official importer service and support in Israel</li>
+          <li>High reliability, minimal maintenance</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
   <!-- Features Section -->
   <section class="section-wrap my-5" data-aos="fade-up">
     <div class="container">
@@ -612,5 +574,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../../js/hero-mobile-img.js"></script>
+  <script src="../../assets/js/banner-scroll.js"></script>
 </body>
 </html>
