@@ -134,7 +134,8 @@
 /* --- MOBILE FIX: Stack text then image, both fully visible --- */
 @media (max-width: 991px) {
   .top-image-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
     min-height: unset;
     height: auto;
     max-height: none;
@@ -163,6 +164,7 @@
     white-space: normal !important;
     word-break: break-word !important;
     text-align: left;
+    order: 1;
   }
   .top-image-section-text h2 {
     display: block !important;
@@ -214,6 +216,7 @@
     pointer-events: none;
     user-select: none;
     margin: 0 auto;
+    order: 2;
   }
   .top-image-section-overlay {
     display: none;
@@ -222,7 +225,8 @@
 
 @media (max-width: 600px) {
   .top-image-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
     min-height: unset;
     height: auto;
     max-height: none;
@@ -249,6 +253,7 @@
     white-space: normal !important;
     word-break: break-word !important;
     text-align: left;
+    order: 1;
   }
   .top-image-section-text h2 {
     display: block !important;
@@ -302,6 +307,7 @@
     pointer-events: none;
     user-select: none;
     margin: 0 auto;
+    order: 2;
   }
   .top-image-section-overlay {
     display: none;
