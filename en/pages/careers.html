@@ -207,53 +207,6 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container justify-content-center d-flex">
-      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
-        <img src="../assets/images/bothlogos3.webp" alt="DRONER Logo" height="40" decoding="async" width="120">
-      </a>
-      <div class="lang-toggle-wrapper position-absolute end-0 me-3">
-        <a href="/pages/careers.html" class="btn btn-outline-dark">עברית</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Our Products
-            </a>
-            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
-              <li><a class="dropdown-item" href="products/SMARTER.html">SMARTER</a></li>
-              <li class="dropdown-submenu dropstart">
-                <a class="dropdown-item dropdown-toggle" href="#">DOCKER</a>
-                <ul class="dropdown-menu shadow border-0">
-                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
-                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="products/CONTROLLER.html">CONTROLLER</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="workingonit.html">Media</a></li>
-          <li class="nav-item"><a class="nav-link active" href="careers.html">Careers At DRONER</a></li>
-          <li class="nav-item"><a class="nav-link" href="workingonit.html">Remote Support</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item">
-            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <i class="fa fa-user me-1"></i> Login
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
-
 <!-- Banner Section replacing Hero -->
   <section class="top-image-section">
     <img src="../assets/images/top-banner.webp" alt="Top Banner" class="top-image-section-img">
@@ -330,39 +283,6 @@
     <a href="contact.html" class="btn btn-cta btn-lg px-5 py-3">Contact Form</a>
   </section>
 
-  <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
-        <div class="modal-header border-warning">
-          <h5 class="modal-title" id="loginModalLabel">Client Login</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="loginEmail" class="form-label">Email</label>
-              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
-            </div>
-            <div class="mb-3">
-              <label for="loginPassword" class="form-label">Password</label>
-              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-warning">Login</button>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer border-warning text-center">
-          <small class="text-muted w-100">Forgot your password? Contact us for support</small>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-
-  
   <script src="../../assets/js/footer.js"></script>
   <script src="../../assets/js/whatsapp.js"></script>
   <script src="../../assets/js/accessibility.js" defer></script>
@@ -372,5 +292,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   <script src="../js/hero-mobile-img.js" defer></script>
+  <script src="../../assets/js/banner-scroll.js" defer></script>
+  <script src="../../assets/js/navbar.js"></script>
 </body>
 </html>

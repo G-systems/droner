@@ -217,53 +217,6 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container justify-content-center d-flex">
-      <a class="navbar-brand d-flex align-items-center mx-auto" href="../index.html">
-        <img src="../assets/images/bothlogos3.webp" alt="לוגו DRONER" height="40" />
-      </a>
-      <div class="lang-toggle-wrapper position-absolute start-0 ms-3">
-        <a href="../en/pages/careers.html" class="btn btn-outline-dark">English</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html#hero">בית</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">אודות</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              המוצרים שלנו
-            </a>
-            <ul class="dropdown-menu text-end shadow border-0" aria-labelledby="productsDropdown">
-              <li><a class="dropdown-item" href="products/SMARTER.html">SMARTER</a></li>
-              <li class="dropdown-submenu dropstart">
-                <a class="dropdown-item dropdown-toggle" href="#">DOCKER</a>
-                <ul class="dropdown-menu shadow border-0">
-                  <li><a class="dropdown-item" href="products/dock-d135.html">D100 / D135</a></li>
-                  <li><a class="dropdown-item" href="products/dock-dji.html">DJI Dock 2 / 3</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="products/CONTROLLER.html">CONTROLLER</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="workingonit.html">מדיה</a></li>
-          <li class="nav-item"><a class="nav-link active" href="careers.html">קריירה בדרונר</a></li>
-          <li class="nav-item"><a class="nav-link" href="workingonit.html">תמיכה מרחוק</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></li>
-          <li class="nav-item">
-            <button class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <i class="fa fa-user me-1"></i> כניסה
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
-
 <!-- Full-width, Full-height Image Section with Text Block (Above Hero) -->
   <section class="top-image-section">
     <div class="top-image-section-text">
@@ -342,38 +295,9 @@
     <a href="contact.html" class="btn btn-cta btn-lg px-5 py-3">לטופס יצירת קשר</a>
   </section>
 
-  <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white border border-warning rounded-3 shadow">
-        <div class="modal-header border-warning">
-          <h5 class="modal-title" id="loginModalLabel">כניסת לקוחות</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="סגור"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="loginEmail" class="form-label">אימייל</label>
-              <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com" required>
-            </div>
-            <div class="mb-3">
-              <label for="loginPassword" class="form-label">סיסמה</label>
-              <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword" placeholder="••••••••" required>
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-warning">התחבר</button>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer border-warning text-center">
-          <small class="text-muted w-100">שכחת סיסמה? פנה אלינו לתמיכה</small>
-        </div>
-      </div>
-    </div>
-  </div>
-
  
 
+  <script src="../assets/js/navbar.js"></script>
   <script src="../assets/js/footer.js"></script>
   <script src="../assets/js/whatsapp.js"></script>
   <script src="../assets/js/accessibility.js" defer></script>
