@@ -15,7 +15,7 @@
   --header-font: 'Rubik', Arial, sans-serif;
   --header-color: var(--color-gold, #39A9DC);
   --header-align: center;
-  --header-shadow: 0 4px 24px rgba(42,93,148,0.45);
+  --header-shadow: 0 4px 24px #2a5d9473;
   --header-margin-bottom: 1.2rem;
 }
 
@@ -622,8 +622,8 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
 }
 
 .use-case-card { 
-  background: var(--color-black); 
-  color: var(--color-light); 
+  background: #22304A !important;
+  color: var(--color-light) !important;
   padding:2rem; 
   border-radius:10px; 
   text-align: center !important; 
@@ -899,7 +899,6 @@ button.btn-warning .fa-user {
   border: 1px solid var(--color-gold);
   padding: 1.7rem 1.2rem 1.3rem 1.2rem;
   font-size: 1.09rem;
-  text-align: center;
 }
 .gdock-feature-item b,
 .gsmart-feature-item b,
@@ -2247,4 +2246,10 @@ button.btn-warning .fa-user {
   font-weight: 700;
   font-display: swap;
   src: url('https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7FqjXw.woff2') format('woff2');
+}
+
+/* === Force use-case-card to dark blue background and light text, even if .card is present === */
+.card.use-case-card {
+  background: #22304A !important;
+  color: var(--color-light) !important;
 }

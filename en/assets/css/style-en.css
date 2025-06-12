@@ -12,6 +12,12 @@
   --transition: 0.2s;
   --shadow: 0 8px 32px rgba(57,169,220,0.10);
   --font-main: 'Rubik', sans-serif;
+  /* Add missing header variables */
+  --header-font: 'Rubik', Arial, sans-serif;
+  --header-color: var(--color-gold, #39A9DC);
+  --header-align: center;
+  --header-shadow: 0 4px 24px #2a5d9473;
+  --header-margin-bottom: 1.2rem;
 }
 
 /* === Global Reset === */
@@ -628,8 +634,8 @@ i, .fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
 }
 
 .use-case-card { 
-  background: var(--color-black); 
-  color: var(--color-light); 
+  background: #22304A !important;
+  color: var(--color-light) !important;
   padding:2rem; 
   border-radius:10px; 
   text-align: center !important; 
@@ -1691,7 +1697,7 @@ button.btn-warning .fa-user {
   background: rgba(24, 24, 24, 0.92);
   border: 2.5px solid var(--color-gold);
   border-radius: 22px;
-  box-shadow: 0 0 32px 0 rgba(255,198,92,0.10), 0 0 0 0 #FFC65C;
+  box-shadow: 0 0 32px 0 rgba(57,169,220,0.10), 0 0 0 0 #39A9DC;
   position: relative;
   padding: 2.1rem 1.2rem 1.5rem 1.2rem;
   text-align: center;
@@ -1702,16 +1708,16 @@ button.btn-warning .fa-user {
   animation: adv-glow 3.5s ease-in-out infinite alternate;
 }
 @keyframes adv-glow {
-  0%   { box-shadow: 0 0 32px 0 rgba(255,198,92,0.10), 0 0 0 0 #FFC65C; }
-  100% { box-shadow: 0 0 64px 16px #FFC65C, 0 0 0 0 #FFC65C; }
+  0%   { box-shadow: 0 0 32px 0 rgba(57,169,220,0.10), 0 0 0 0 #39A9DC; }
+  100% { box-shadow: 0 0 64px 16px #39A9DC, 0 0 0 0 #39A9DC; }
 }
 .futuristic-adv-card:hover {
-  border-color: #FFC65C;
-  box-shadow: 0 0 64px 16px #FFC65C, 0 0 0 0 #FFC65C;
+  border-color: #39A9DC;
+  box-shadow: 0 0 64px 16px #39A9DC, 0 0 0 0 #39A9DC;
   z-index: 2;
 }
 .futuristic-adv-icon {
-  background: rgba(255,198,92,0.13);
+  background: rgba(57,169,220,0.13); /* light blue background */
   border-radius: 50%;
   width: 58px;
   height: 58px;
@@ -1721,12 +1727,9 @@ button.btn-warning .fa-user {
   margin: 0 auto 1.1rem auto;
   font-size: 2.1rem;
   color: var(--color-gold);
-  box-shadow: 0 0 18px 4px rgba(255,198,92,0.18);
+  box-shadow: 0 0 18px 4px rgba(57,169,220,0.18);
   border: 2.5px solid var(--color-gold);
   transition: box-shadow 0.3s;
-}
-.futuristic-adv-card:hover .futuristic-adv-icon {
-  box-shadow: 0 0 32px 8px var(--color-gold), 0 0 0 0 rgba(255,198,92,0.18);
 }
 .futuristic-adv-card .advantage-title {
   color: var(--color-gold);
@@ -1979,6 +1982,8 @@ button.btn-warning .fa-user {
 @media (max-width: 600px) {
   .form-control,
   .form-label,
+ 
+ 
   input,
   textarea {
     font-size: 1rem !important;
@@ -2171,4 +2176,10 @@ button.btn-warning .fa-user {
   margin-left: 0 !important;
   margin-right: auto !important;
   display: block !important;
+}
+
+/* === Force use-case-card to dark blue background and light text, even if .card is present === */
+.card.use-case-card {
+  background: #22304A !important;
+  color: var(--color-light) !important;
 }

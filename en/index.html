@@ -41,66 +41,37 @@
       background: var(--color-dark-bg);
       color: var(--color-light);
     }
-    .section-title {
-      color: var(--color-gold) !important;
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      min-height: 70px;
     }
-    .solution-card,
-    .advantage-card,
-    .use-case-card,
-    .gsmart-card,
-    .cta-card,
-    .modal-content {
-      background: var(--color-dark-bg) !important;
-      color: var(--color-light) !important;
+    .navbar.scrolled {
+      background-color: var(--color-dark-bg) !important;
+      box-shadow: var(--shadow) !important;
     }
-    .solution-title,
-    .advantage-title,
-    .use-case-title,
-    .cta-title,
-    .modal-title {
-      color: var(--color-gold) !important;
-    }
-    .bg-white,
-    .bg-light {
-      background: var(--color-dark-bg) !important;
-      color: var(--color-light) !important;
-    }
-    .footer-link {
-      color: var(--color-light) !important;
-    }
-    .footer-link:hover {
-      color: var(--color-gold) !important;
-    }
-    .whatsapp-float {
-      background-color: var(--color-gold) !important;
-      color: var(--color-black) !important;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-    /* Ensure all cards and sections have gold headline and dark background */
     h1, h2, h3, h4, h5 {
       color: var(--color-gold) !important;
     }
-    /* Remove white backgrounds from Bootstrap */
     .card, .modal-content, .navbar, .dropdown-menu {
       background: var(--color-dark-bg) !important;
       color: var(--color-light) !important;
     }
-    /* Section line accent */
     .section-line {
       background: var(--color-gold) !important;
     }
-    /* Fix for video gallery */
     #video-gallery .big-video .ratio {
       background: var(--color-black) !important;
     }
-    /* Fix for modal */
     .modal-content {
       background: var(--color-dark-bg) !important;
       color: var(--color-light) !important;
     }
-    /* Fix for input fields in modal */
     .form-control {
       background: var(--color-dark-bg) !important;
       color: var(--color-light) !important;
@@ -109,441 +80,22 @@
     .form-label {
       color: var(--color-gold) !important;
     }
-    /* Responsive */
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .modal-dialog {
+      min-height: 300px;
+    }
     @media (max-width: 768px) {
       .solution-image-wrapper { height: 250px; }
       .solution-card { padding: 2rem; }
       .section-title { font-size: 1.75rem; }
     }
-    /* Make use-case icons gold */
     .use-case-icon i {
       color: var(--color-gold) !important;
     }
-    /* Timeline styles for advantages section */
-    .advantages-timeline {
-      position: relative;
-      padding: 2rem 0;
-    }
-    .advantage-timeline-item {
-      position: relative;
-      margin: 1.5rem 0;
-      padding: 1.5rem;
-      background: var(--color-dark-bg);
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-    .advantage-timeline-item.left {
-      margin-left: 2rem;
-    }
-    .advantage-timeline-item.right {
-      margin-right: 2rem;
-    }
-    .advantage-timeline-content {
-      display: flex;
-      align-items: center;
-    }
-    .advantage-timeline-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      margin-left: -28px;
-      margin-right: 1rem;
-      background: var(--color-gold);
-      color: #000;
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
-    }
-    .advantage-timeline-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 4px;
-      background: var(--color-gold);
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    /* Responsive adjustments for timeline */
-    @media (max-width: 768px) {
-      .advantage-timeline-item {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 1rem;
-      }
-      .advantage-timeline-icon {
-        width: 48px;
-        height: 48px;
-        margin-left: -24px;
-        margin-right: 0.5rem;
-      }
-    }
-
-    /* Cube Animation for Advantages Section */
-    .advantages-cube-wrapper {
-      perspective: 1000px;
-      margin-top: 2rem;
-    }
-    .advantages-cube {
-      width: 300px;
-      height: 300px;
-      position: relative;
-      transform-style: preserve-3d;
-      transform: rotateY(0deg);
-      transition: transform 0.8s;
-    }
-    .cube-face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-    .cube-face-front  { background: rgba(255, 255, 255, 0.1); }
-    .cube-face-back   { background: rgba(255, 255, 255, 0.1); transform: rotateY(180deg); }
-    .cube-face-right  { background: rgba(255, 255, 255, 0.1); transform: rotateY(90deg); }
-    .cube-face-left   { background: rgba(255, 255, 255, 0.1); transform: rotateY(-90deg); }
-
-    .cube-icon {
-      font-size: 2.5rem;
-      color: var(--color-gold);
-      margin-bottom: 1rem;
-    }
-    /* Rotate cube on hover */
-    .advantages-cube:hover {
-      transform: rotateY(180deg);
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .advantages-cube {
-        width: 200px;
-        height: 200px;
-      }
-    }
-
-    /* Radial Burst Animation for Advantages Section */
-    .advantages-radial-burst {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .burst-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--color-gold);
-      color: #000;
-      border-radius: 50%;
-      box-shadow: 0 4px 16px rgba(255, 198, 92, 0.18);
-      z-index: 2;
-    }
-    .burst-item {
-      position: relative;
-      width: 200px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .burst-item-1 { transform: rotate(0deg) translateY(-10px); }
-    .burst-item-2 { transform: rotate(90deg) translateY(-10px); }
-    .burst-item-3 { transform: rotate(180deg) translateY(-10px); }
-    .burst-item-4 { transform: rotate(270deg) translateY(-10px); }
-    .advantages-radial-burst:hover .burst-item {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .advantages-radial-burst {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-      .burst-item {
-        width: 100%;
-        max-width: 250px;
-      }
-    }
-
-    /* Floating Glass Cards for Advantages Section */
-    .advantages-glass-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s;
-    }
-    .glass-card:hover {
-      transform: translateY(-8px);
-    }
-    .glass-icon {
-      font-size: 2.5rem;
-      color: var(--color-gold);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      margin-left: auto;
-      margin-right: auto;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .glass-card {
-        padding: 1.5rem;
-      }
-      .glass-icon {
-        width: 48px;
-        height: 48px;
-      }
-    }
-
-    /* Hologram Stack for Advantages Section */
-    .holo-stack {
-      perspective: 1000px;
-      margin-top: 2rem;
-    }
-    .holo-card {
-      position: relative;
-      margin: 1rem 0;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.6s, box-shadow 0.6s;
-    }
-    .holo-icon {
-      font-size: 2.5rem;
-      color: var(--color-gold);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      margin-left: auto;
-      margin-right: auto;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
-    }
-    /* Hologram stack parallax effect (2025/2026 style) */
-    #holoStack {
-      position: relative;
-      overflow: hidden;
-    }
-    #holoStack .holo-card {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0;
-      padding: 2rem;
-      opacity: 0.9;
-      transition: transform 0.6s, opacity 0.6s;
-    }
-    #holoStack .holo-card-1 { background: rgba(255, 198, 92, 0.1); }
-    #holoStack .holo-card-2 { background: rgba(92, 198, 255, 0.1); }
-    #holoStack .holo-card-3 { background: rgba(92, 255, 92, 0.1); }
-    #holoStack .holo-card-4 { background: rgba(255, 92, 92, 0.1); }
-    #holoStack:hover .holo-card {
-      transform: translateY(-8px);
-    }
-
-    /* Neon Orbit Carousel for Advantages Section */
-    .orbit-carousel {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      margin-top: 2rem;
-      overflow: hidden;
-      border-radius: 18px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-    .orbit-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-    .orbit-card {
-      position: absolute;
-      width: 280px;
-      padding: 2rem;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.6s;
-    }
-    .orbit-card:hover {
-      transform: scale(1.05);
-    }
-    .orbit-icon {
-      font-size: 2.5rem;
-      color: var(--color-gold);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      margin-left: auto;
-      margin-right: auto;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(255, 198, 92, 0.18);
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .orbit-carousel {
-        height: 300px;
-      }
-      .orbit-card {
-        width: 200px;
-        padding: 1.5rem;
-      }
-    }
-
-    /* Futuristic Advantages Grid */
-    .futuristic-adv-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .futuristic-adv-card {
-      background: var(--color-dark-bg);
-      border-radius: 18px;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s;
-      animation: adv-glow 3.5s ease-in-out infinite alternate;
-    }
-    @keyframes adv-glow {
-      0%   { box-shadow: 0 0 32px 0 rgba(57,169,220,0.10), 0 0 0 0 #39A9DC; }
-      100% { box-shadow: 0 0 64px 16px #39A9DC, 0 0 0 0 #39A9DC; }
-    }
-    .futuristic-adv-card:hover {
-      border-color: #39A9DC;
-      box-shadow: 0 0 64px 16px #39A9DC, 0 0 0 0 #39A9DC;
-      z-index: 2;
-    }
-    .futuristic-adv-icon {
-      font-size: 2.5rem;
-      color: var(--color-gold);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      margin-left: auto;
-      margin-right: auto;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      box-shadow: 0 0 18px 4px rgba(57,169,220,0.18);
-      border: 2.5px solid var(--color-gold);
-      transition: box-shadow 0.3s;
-    }
-    .futuristic-adv-card:hover .futuristic-adv-icon {
-      box-shadow: 0 0 32px 8px var(--color-gold), 0 0 0 0 rgba(57,169,220,0.18);
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .futuristic-adv-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Video Gallery Section Styles */
-    .video-gallery-grid .video-card {
-      cursor: pointer;
-      background: #181818;
-      min-height: 220px;
-      transition: transform 0.18s, box-shadow 0.18s;
-      border: 2px solid var(--color-gold);
-      box-shadow: 0 4px 18px rgba(255, 198, 92, 0.10);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-    }
-    .video-gallery-grid .video-card:hover {
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 8px 32px rgba(255, 198, 92, 0.18);
-      z-index: 2;
-    }
-    .video-thumb {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      filter: brightness(0.92) grayscale(0.08);
-      transition: filter 0.2s;
-    }
-    .video-card:hover .video-thumb {
-      filter: brightness(1.05) grayscale(0);
-    }
-    .video-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(120deg,rgba(0,0,0,0.18) 60%,rgba(255,198,92,0.13) 100%);
-      opacity: 0.85;
-      transition: background 0.2s, opacity 0.2s;
-      pointer-events: none;
-    }
-    .video-card:hover .video-overlay {
-      background: linear-gradient(120deg,rgba(0,0,0,0.08) 60%,rgba(255,198,92,0.18) 100%);
-      opacity: 1;
-    }
-    .video-overlay i {
-      font-size: 3.5rem;
-      color: var(--color-gold);
-      filter: drop-shadow(0 2px 8px rgba(255, 198, 92, 0.18));
-      pointer-events: none;
-    }
-    @media (max-width: 991px) {
-      .video-thumb { height: 140px; }
-      .video-card { min-height: 140px; }
-    }
-    @media (max-width: 600px) {
-      .video-thumb { height: 90px; }
-      .video-card { min-height: 90px; }
-      .video-overlay i { font-size: 2rem; }
-    }
-
   </style>
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32">
   <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
@@ -776,7 +328,7 @@
       </div>
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);">
+          <div class="card h-100 p-4 border-0 shadow use-case-card text-center">
             <div class="mb-4">
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
                 style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
@@ -813,7 +365,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="card h-100 p-4 border-0 shadow use-case-card text-center" style="background: var(--color-black);">
+          <div class="card h-100 p-4 border-0 shadow use-case-card text-center">
             <div class="mb-4">
               <span class="use-case-icon d-inline-flex align-items-center justify-content-center rounded-circle mb-3 mx-auto"
                 style="width:56px;height:56px;background:var(--color-gold);box-shadow:0 2px 8px rgba(255,198,92,0.18);">
