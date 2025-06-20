@@ -74,8 +74,8 @@
     if (!btn) return;
     const theme = document.documentElement.getAttribute('data-theme') || 'dark';
     btn.innerHTML = theme === 'dark'
-      ? '<i class="fa fa-sun" style="color:#fff !important;"></i> <span style="display:inline-block;width:0.15em;"></span><strong>Light</strong>'
-      : '<i class="fa fa-moon"></i> <span style="display:inline-block;width:0.15em;"></span><strong>Dark</strong>';
+      ? '<i class="fa fa-sun" style="color:#fff !important;"></i>'
+      : '<i class="fa fa-moon"></i>';
     btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
   }
 
@@ -160,10 +160,8 @@
               <span style="display:inline-block; width:0.15em;"></span>
               <strong style="color:#111 !important;">${navItems[navItems.length-1].text}</strong>
             </a>
-            <button id="theme-toggle-btn" class="btn btn-outline-dark ms-2" type="button" aria-label="Switch theme">
+            <button id="theme-toggle-btn" class="btn btn-icon theme-toggle" type="button" aria-label="Switch theme">
               <i class="fa fa-sun"></i>
-              <span style="display:inline-block; width:0.15em;"></span>
-              <strong>Light</strong>
             </button>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -382,18 +380,36 @@
       /* Theme toggle button styles */
       #theme-toggle-btn {
         color: var(--color-light, #f4f4f4) !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid var(--color-gold, #39A9DC);
+        background: transparent;
+        transition: all 0.2s ease;
+      }
+      
+      #theme-toggle-btn:hover {
+        background: var(--color-gold, #39A9DC) !important;
+        transform: translateY(-1px);
       }
       
       #theme-toggle-btn .fa-sun,
-      #theme-toggle-btn .fa-moon,
-      #theme-toggle-btn strong {
+      #theme-toggle-btn .fa-moon {
         color: var(--color-light, #f4f4f4) !important;
+        font-size: 1.2rem;
       }
       
       html[data-theme="light"] #theme-toggle-btn,
-      html[data-theme="light"] #theme-toggle-btn .fa-moon,
-      html[data-theme="light"] #theme-toggle-btn strong {
+      html[data-theme="light"] #theme-toggle-btn .fa-moon {
         color: #222 !important;
+      }
+      
+      .btn-icon.theme-toggle {
+        min-width: 40px;
       }
       
       /* Mobile responsive */
@@ -1185,8 +1201,11 @@
         html[data-theme="light"] .navbar .lang-toggle-wrapper .btn-outline-dark,
         html[data-theme="light"] .navbar .lang-toggle-wrapper .btn-outline-dark * ,
         html[data-theme="light"] .navbar .lang-toggle-wrapper .fa-globe,
-        html[data-theme="light"] .navbar .lang-toggle-wrapper .fa-sun,
         html[data-theme="light"] .navbar .lang-toggle-wrapper .fa-moon {
+          color: #222 !important;
+        }
+        
+        html[data-theme="light"] .navbar .lang-toggle-wrapper .fa-sun {
           color: #222 !important;
         }
         
