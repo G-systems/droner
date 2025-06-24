@@ -42,7 +42,7 @@
           { href: `${getRelativePath()}pages/privacy-policy.html`, label: 'Privacy Policy' },
           { href: `${getRelativePath()}terms-of-service.html`, label: 'Terms of Service' }
         ],
-        phone: '052-387-6112',
+        phone: '050-363-5555',
         email: 'info@droner.app',
         copyright: `&copy; ${new Date().getFullYear()} G-SYSTEM. All rights reserved. | Design: G-SYSTEM Team`,
         dir: 'ltr'
