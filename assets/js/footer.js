@@ -97,14 +97,14 @@
           <hr class="footer-divider footer-divider-links">
           <div class="footer-contact-row-with-logo">
             <div class="footer-contact-row">
-              <a href="https://wa.me/972523876112" target="_blank" class="footer-contact-link">
+              <a href="https://wa.me/972503635555" target="_blank" class="footer-contact-link">
                 <i class="fa fa-phone"></i> ${phone}
               </a>
               <a href="mailto:${email}" class="footer-contact-link">
                 <i class="fa fa-envelope"></i> ${email}
               </a>
               <div class="footer-social">
-                <a href="https://wa.me/972523876112" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/972503635555" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
                 <a href="#" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="LinkedIn" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
               </div>
