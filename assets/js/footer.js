@@ -60,7 +60,7 @@
           { href: `${getRelativePath()}pages/contact.html`, label: 'צור קשר' }
         ],
         phone: '050-363-5555',
-        email: 'info@droner.app',
+        email: 'gal@g-system.co.il',
         copyright: `&copy; ${new Date().getFullYear()} G-SYSTEM. כל הזכויות שמורות. | עיצוב: צוות G-SYSTEM`,
         dir: 'rtl'
       });
